@@ -15,14 +15,13 @@ Please ensure you have the following installed:
 Clone this repo, and the Book theme as a submodule:
 
 ```console
-$ git clone --recurse-submodules --depth 1 git@github.com:regolith-linux/regolith-desktop-website.git regolith-desktop-website
-$ cd regolith-desktop-website
+$ git clone --recurse-submodules --depth 1 git@github.com:regolith-linux/regolith-desktop.com.git regolith-desktop.com
+$ cd regolith-desktop.com
 ```
 
-Install dependencies and launch Hugo server:
+Launch the Hugo server:
 
 ```console
-$ npm install
 $ hugo server
 ```
 
