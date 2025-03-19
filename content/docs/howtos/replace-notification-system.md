@@ -11,16 +11,15 @@ We will use [dunst](https://dunst-project.org/) as an example but similar steps 
 
 1. Replace `rofication` with `dunst`:
 
-```bash
-$ sudo apt install dunst libnotify-bin
-```
+   ```bash
+   sudo apt install dunst libnotify-bin
+   ```
 
-This should remove Rofication automatically as the package-manager sees the conflict and resolves it. If this is not removed automatically, you can do it manually. Also, if you want to remove the remaining configuration, the following works as well:
+   This should remove Rofication automatically as the package-manager sees the conflict and resolves it. If this is not removed automatically, you can do it manually. Also, if you want to remove the remaining configuration, the following works as well:
 
-```bash
-$ sudo apt purge regolith-rofication # remove any remaining config as well
-```
+   ```bash
+   sudo apt purge regolith-rofication # remove any remaining config as well
+   ```
 
 2. Log out and back in.
 3. Test your notifications with `notify-send test123`. You should see a pop-up notification from `dunst`.
-
