@@ -14,6 +14,7 @@ Regolith 3.3 is a minor release focusing on Ubuntu 25.04 support, numerous build
 ## Features
 
 * Ubuntu 25.04 (Plucky) support
+* Ubuntu 24.10 (Oracular) support (without `regolith-control-center`)
 
 ## Known Issues
 
