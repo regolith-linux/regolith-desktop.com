@@ -22,8 +22,8 @@ supported on which OS distributions.
 | Lunar (23.04) | - | {{< icon name="check" attributes="height=21" >}} | - | - | - |
 | Mantic (23.10) | - | - | {{< icon name="check" attributes="height=21" >}} | - | - |
 | Noble (24.04 LTS) | - | - | - | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} |
-| Oracular (24.10) | - | - | - | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} |
-| Plucky (25.04) | - | - | - | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} |
+| Oracular (24.10) | - | - | - | - | {{< icon name="check" attributes="height=21" >}} |
+| Plucky (25.04) | - | - | - | - | {{< icon name="check" attributes="height=21" >}} |
 
 ## Debian
 
