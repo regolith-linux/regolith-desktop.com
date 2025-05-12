@@ -74,6 +74,7 @@ supported on which OS distributions.&lt;/p>
 &lt;th style="text-align: center">v3.0&lt;/th>
 &lt;th style="text-align: center">v3.1&lt;/th>
 &lt;th style="text-align: center">v3.2&lt;/th>
+&lt;th style="text-align: center">v3.3&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
@@ -86,9 +87,12 @@ supported on which OS distributions.&lt;/p>
 &lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
 &lt;/td>
 &lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align: left">Jammy (22.04 LTS)&lt;/td>
+&lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
+&lt;/td>
 &lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
 &lt;/td>
 &lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
@@ -105,12 +109,14 @@ supported on which OS distributions.&lt;/p>
 &lt;td style="text-align: center">-&lt;/td>
 &lt;td style="text-align: center">-&lt;/td>
 &lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align: left">Lunar (23.04)&lt;/td>
 &lt;td style="text-align: center">-&lt;/td>
 &lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
 &lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
 &lt;td style="text-align: center">-&lt;/td>
 &lt;td style="text-align: center">-&lt;/td>
 &lt;/tr>
@@ -121,9 +127,30 @@ supported on which OS distributions.&lt;/p>
 &lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
 &lt;/td>
 &lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align: left">Noble (24.04 LTS)&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
+&lt;/td>
+&lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">Oracular (24.10)&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">Plucky (25.04)&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
 &lt;td style="text-align: center">-&lt;/td>
 &lt;td style="text-align: center">-&lt;/td>
 &lt;td style="text-align: center">-&lt;/td>
@@ -141,6 +168,7 @@ supported on which OS distributions.&lt;/p>
 &lt;th style="text-align: center">v3.0&lt;/th>
 &lt;th style="text-align: center">v3.1&lt;/th>
 &lt;th style="text-align: center">v3.2&lt;/th>
+&lt;th style="text-align: center">v3.3&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
@@ -153,10 +181,13 @@ supported on which OS distributions.&lt;/p>
 &lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
 &lt;/td>
 &lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align: left">Bookworm (12)&lt;/td>
 &lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
+&lt;/td>
 &lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
 &lt;/td>
 &lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
@@ -2241,7 +2272,212 @@ title="Copy code"
 &lt;li>For an example read the &lt;a href="https://github.com/regolith-linux/voulage/blob/main/.github/workflows/build-deb-v4.yml" target="_blank" rel="noopener">Debian v4 build workflow&lt;/a>&lt;/li>
 &lt;li>Refer to the &lt;a href="https://github.com/regolith-linux/voulage/blob/main/.github/scripts/ext-debian.sh" target="_blank" rel="noopener">Debian extension script&lt;/a> that the workflow uses&lt;/li>
 &lt;li>Create an extension script that maps from the git source of each package to the target distro&amp;rsquo;s packaging format&lt;/li>
-&lt;/ol></description></item><item><title>3.2 Release Notes</title><link>https://regolith-desktop.com/docs/reference/releases/regolith-3.2-release-notes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/reference/releases/regolith-3.2-release-notes/</guid><description>
+&lt;/ol></description></item><item><title>3.3 Release Notes</title><link>https://regolith-desktop.com/docs/reference/releases/regolith-3.3-release-notes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/reference/releases/regolith-3.3-release-notes/</guid><description>
+&lt;h2>Regolith 3.3 Release Notes (Beta 1)&lt;span class="hx-absolute -hx-mt-20" id="regolith-33-release-notes-beta-1">&lt;/span>
+&lt;a href="#regolith-33-release-notes-beta-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Regolith 3.3 is a minor release focusing on Ubuntu 25.04 support, numerous build system improvements, and sway 1.10.&lt;/p>
+&lt;h2>Features&lt;span class="hx-absolute -hx-mt-20" id="features">&lt;/span>
+&lt;a href="#features" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ul>
+&lt;li>Ubuntu 25.04 (Plucky) support&lt;/li>
+&lt;li>Ubuntu 24.10 (Oracular) support (without &lt;code>regolith-control-center&lt;/code>)&lt;/li>
+&lt;/ul>
+&lt;h2>Known Issues&lt;span class="hx-absolute -hx-mt-20" id="known-issues">&lt;/span>
+&lt;a href="#known-issues" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ul>
+&lt;li>&lt;code>regolith-control-center&lt;/code> has &lt;em>not&lt;/em> been ported to GNOME 47 (but has for GNOME 48) and so users on Ubuntu 24.10 need to use &lt;code>gnome-control-center&lt;/code> for all system configuration tasks.&lt;/li>
+&lt;/ul>
+&lt;h2>Installation Instructions&lt;span class="hx-absolute -hx-mt-20" id="installation-instructions">&lt;/span>
+&lt;a href="#installation-instructions" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Beta 1&lt;span class="hx-absolute -hx-mt-20" id="beta-1">&lt;/span>
+&lt;a href="#beta-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>The &lt;code>apt&lt;/code> URL for 3.3 beta 1 for Ubuntu 25.04 (Plucky) is:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;pre>&lt;code>deb [arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] https://archive.regolith-desktop.com/ubuntu/testing plucky main&lt;/code>&lt;/pre>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>Refer to the installation instructions to update the line for other Debian variants.&lt;/p>
+&lt;p>Installation on a freshly installed Ubuntu or Debian system can follow the standard installation instructions. When upgrading from a previous release
+using &lt;code>do-release-upgrade&lt;/code>, the Regolith package repo has to be re-added to your system as the installer removes it. Ensure the following packages are installed after the Ubuntu release process has completed and the Regolith package repository has been added back to your &lt;code>apt&lt;/code> configuration:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>regolith-i3-ilia&lt;/code> and/or &lt;code>regolith-sway-ilia&lt;/code>&lt;/li>
+&lt;li>&lt;code>regolith-i3-control-center-gnome&lt;/code> and/or &lt;code>regolith-sway-control-center-gnome&lt;/code> on Ubuntu 24.10 only.&lt;/li>
+&lt;/ul>
+&lt;p>After &lt;code>apt upgrade&lt;/code> is complete, verify that Regolith 3.3 is installed by:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> cat /etc/regolith/version
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">REGOLITH_VERSION=3.3
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h2>Changes since Regolith 3.2&lt;span class="hx-absolute -hx-mt-20" id="changes-since-regolith-32">&lt;/span>
+&lt;a href="#changes-since-regolith-32" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Changes in &lt;code>i3-next-workspace&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-i3-next-workspace">&lt;/span>
+&lt;a href="#changes-in-i3-next-workspace" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;pre>&lt;code>b38150d fix: workspace regex&lt;/code>&lt;/pre>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;code>ilia&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-ilia">&lt;/span>
+&lt;a href="#changes-in-ilia" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;pre>&lt;code>0c84c06 Merge pull request #105 from manthanabc/clipboard
+6bc2cc7 fix: modified ctrl-v past behavior
+be6542c enhanced searchBox of ilia
+e8d8678 updated the deprecated meson.source_root
+b49f0f8 changed to not use nohup, but execute command directly (output is shown by invoking shell)
+ceb3dbe changed command execution from bash to nohup (part of coreutils)
+66a7c42 added -q option to --help message
+c9bd471 added -q option to CommandPage.vala to allow quiet execution (i.e., no x-terminal-emulator is started and output is discarded)&lt;/code>&lt;/pre>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;code>picom&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-picom">&lt;/span>
+&lt;a href="#changes-in-picom" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;pre>&lt;code>4235b67 feat: use newer version of libpcre which is 2 not 3!&lt;/code>&lt;/pre>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;code>regolith-archive-keyring&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-archive-keyring">&lt;/span>
+&lt;a href="#changes-in-regolith-archive-keyring" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;pre>&lt;code>b57b588 feat: d/ initial commit
+b6cac12 feat: add archive-key.asc file
+9b0f177 Initial commit&lt;/code>&lt;/pre>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;code>regolith-control-center&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-control-center">&lt;/span>
+&lt;a href="#changes-in-regolith-control-center" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;ul>
+&lt;li>New port from GNOME-48&lt;/li>
+&lt;/ul>
+&lt;h3>Changes in &lt;code>regolith-desktop&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-desktop">&lt;/span>
+&lt;a href="#changes-in-regolith-desktop" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;pre>&lt;code>200b6fc chore: prepare for regolith v3.3 release (#1106)
+9a08e39 chore: remove trailing empty line from version file&lt;/code>&lt;/pre>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;code>regolith-session&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-session">&lt;/span>
+&lt;a href="#changes-in-regolith-session" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;pre>&lt;code>d2709e2 fix: remove deprecated package from control file. gnome-flashback no longer requires it, has it&amp;#39;s own policykit impl (#45)
+38b14dd Fix/app centre (#41)&lt;/code>&lt;/pre>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;code>regolith-wm-config&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-wm-config">&lt;/span>
+&lt;a href="#changes-in-regolith-wm-config" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;pre>&lt;code>da9f594 fix: cause conflicts on control center packages so only one can be installed at a time
+7b44c91 chore: remove startup for gnome-flashback-media-keys
+dbe5776 fix: add gnome-control-center configs for sway&lt;/code>&lt;/pre>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;code>remontoire&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-remontoire">&lt;/span>
+&lt;a href="#changes-in-remontoire" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;pre>&lt;code>7511383 Update main.vala
+5ea9cd8 Fixing version on main.vala&lt;/code>&lt;/pre>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;code>sway-regolith&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-sway-regolith">&lt;/span>
+&lt;a href="#changes-in-sway-regolith" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;ul>
+&lt;li>Ported Sway v1.10 to &lt;code>sway-regolith&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h3>Changes in &lt;code>trawl&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-trawl">&lt;/span>
+&lt;a href="#changes-in-trawl" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;pre>&lt;code>c879c18 fix: update build files for changed service file location
+051214c Fix typos in README.md&lt;/code>&lt;/pre>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;code>ubiquity-slideshow-regolith&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-ubiquity-slideshow-regolith">&lt;/span>
+&lt;a href="#changes-in-ubiquity-slideshow-regolith" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;pre>&lt;code>5381645 feat: overall redesign of regoilth slides
+84c7f94 chore: upgrade to version 202 from upstream&lt;/code>&lt;/pre>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;code>xdg-desktop-portal-regolith&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-xdg-desktop-portal-regolith">&lt;/span>
+&lt;a href="#changes-in-xdg-desktop-portal-regolith" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;pre>&lt;code>cd012f8 fix: build regression on plucky. Seems like meson cannot find correct dependency without updating debian package dependency to slightly different name (#13)
+3d73f37 feat: Implement set_wallpaper_uri method in Wallpaper.Portal (#3)
+67214d1 Fix/jammy build (#6)&lt;/code>&lt;/pre>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div></description></item><item><title>3.2 Release Notes</title><link>https://regolith-desktop.com/docs/reference/releases/regolith-3.2-release-notes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/reference/releases/regolith-3.2-release-notes/</guid><description>
 &lt;h2>Regolith 3.2 Release Notes&lt;span class="hx-absolute -hx-mt-20" id="regolith-32-release-notes">&lt;/span>
 &lt;a href="#regolith-32-release-notes" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Regolith 3.2 is a minor release focusing on Ubuntu 24.04 support, init system overhaul, and bug fixes.&lt;/p>
 &lt;h2>Features&lt;span class="hx-absolute -hx-mt-20" id="features">&lt;/span>
@@ -7007,33 +7243,4 @@ title="Copy code"
 &lt;/div>
 &lt;/div>
 &lt;h2>Further Reading&lt;span class="hx-absolute -hx-mt-20" id="further-reading">&lt;/span>
-&lt;a href="#further-reading" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>See the &lt;a href="https://regolith-desktop.com/docs/reference/configurations/" >reference page for configurations&lt;/a> for more details about config files in Regolith.&lt;/p></description></item><item><title>Verify behavior against upstream</title><link>https://regolith-desktop.com/docs/howtos/gnome-flashback-session/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/gnome-flashback-session/</guid><description>
-&lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-red-200 hx-bg-red-100 hx-text-red-900 dark:hx-border-red-200/30 dark:hx-bg-red-900/30 dark:hx-text-red-200">
-&lt;div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2">&lt;/div>
-&lt;div class="hx-w-full hx-min-w-0 hx-leading-7">
-&lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">This page was copied from the &lt;a href="https://regolith-linux.org" target="_blank" rel="noopener">Regolith 1.x website&lt;/a> and has not been updated for Regolith 2. It may contain out of date information.&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;p>Regolith is composed of several existing open-source projects plus some additional custom packages. Sometimes when a bug is found in Regolith, actually it&amp;rsquo;s a bug in an upstream project. Determining the source of bugs is a first step in getting them fixed.&lt;/p>
-&lt;h2>Check &lt;code>gnome-flashback&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="check-gnome-flashback">&lt;/span>
-&lt;a href="#check-gnome-flashback" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Most of Regolith&amp;rsquo;s GNOME support comes from the &lt;code>gnome-flashback&lt;/code> project. To run a &lt;code>gnome-flashback&lt;/code> session, install the session and log back in to your account after selecting that session from the login screen.&lt;/p>
-&lt;ol>
-&lt;li>Install the &lt;code>gnome-session-flashback&lt;/code> session:&lt;/li>
-&lt;/ol>
-&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt install gnome-session-flashback&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
-&lt;button
-class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
-title="Copy code"
->
-&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
-&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
-&lt;/button>
-&lt;/div>
-&lt;/div>
-&lt;ol start="2">
-&lt;li>Restart your computer and then select the &lt;code>GNOME Flashback (Metacity)&lt;/code> session as shown here:&lt;/li>
-&lt;/ol>
-&lt;ol start="3">
-&lt;li>Verify your behavior against Regolith. If the problematic behavior also exists in &lt;code>gnome-flashback&lt;/code> then the bug is likely there. If the bug does not exist in the &lt;code>gnome-flashback&lt;/code> then it&amp;rsquo;s likely to be in Regolith.&lt;/li>
-&lt;/ol></description></item></channel></rss>
+&lt;a href="#further-reading" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>See the &lt;a href="https://regolith-desktop.com/docs/reference/configurations/" >reference page for configurations&lt;/a> for more details about config files in Regolith.&lt;/p></description></item></channel></rss>
