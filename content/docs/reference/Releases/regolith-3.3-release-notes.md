@@ -30,7 +30,13 @@ The `apt` URL for 3.3 beta 1 for Ubuntu 25.04 (Plucky) is:
 deb [arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] https://archive.regolith-desktop.com/ubuntu/testing plucky main
 ```
 
-Refer to the installation instructions to update the line for other Debian variants.
+Note the `amd64` architecture.  For ARM-based systems, change that to `arm64`.  For Ubuntu 24.04 (Noble) it is:
+
+```
+deb [arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] https://archive.regolith-desktop.com/ubuntu/testing noble main
+```
+
+Refer to the [installation instructions](/docs/using-regolith/install/) to update the line for other Debian variants.
 
 Installation on a freshly installed Ubuntu or Debian system can follow the standard installation instructions.  When upgrading from a previous release
 using `do-release-upgrade`, the Regolith package repo has to be re-added to your system as the installer removes it.  Ensure the following packages are installed after the Ubuntu release process has completed and the Regolith package repository has been added back to your `apt` configuration:
