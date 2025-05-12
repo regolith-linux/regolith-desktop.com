@@ -15,7 +15,7 @@ supported on which OS distributions.
 ## Ubuntu
 
 | Distro Name / Regolith Version  |  v2.2  |  v3.0  |  v3.1  |  v3.2  |  v3.3  |
-|:--------------------------------|:------:|:------:|:------:|:------:|
+|:--------------------------------|:------:|:------:|:------:|:------:|:------:|
 | Focal (20.04 LTS) | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | - | - |
 | Jammy (22.04 LTS) | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} |
 | Kinetic (22.10) | {{< icon name="check" attributes="height=21" >}} | - | - | - | - |
@@ -28,6 +28,6 @@ supported on which OS distributions.
 ## Debian
 
 | Distro Name / Regolith Version  |  v2.2  |  v3.0  |  v3.1  |  v3.2  |  v3.3  |
-|:--------------------------------|:------:|:------:|:------:|:------:|
+|:--------------------------------|:------:|:------:|:------:|:------:|:------:|
 | Bullseye (11) | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | - | - |
 | Bookworm (12) | - | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} |
