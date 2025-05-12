@@ -24,7 +24,19 @@ title="Copy code"
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;p>Refer to the installation instructions to update the line for other Debian variants.&lt;/p>
+&lt;p>Note the &lt;code>amd64&lt;/code> architecture. For ARM-based systems, change that to &lt;code>arm64&lt;/code>. For Ubuntu 24.04 (Noble) it is:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;pre>&lt;code>deb [arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] https://archive.regolith-desktop.com/ubuntu/testing noble main&lt;/code>&lt;/pre>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>Refer to the &lt;a href="https://regolith-desktop.com/docs/using-regolith/install/" >installation instructions&lt;/a> to update the line for other Debian variants.&lt;/p>
 &lt;p>Installation on a freshly installed Ubuntu or Debian system can follow the standard installation instructions. When upgrading from a previous release
 using &lt;code>do-release-upgrade&lt;/code>, the Regolith package repo has to be re-added to your system as the installer removes it. Ensure the following packages are installed after the Ubuntu release process has completed and the Regolith package repository has been added back to your &lt;code>apt&lt;/code> configuration:&lt;/p>
 &lt;ul>
