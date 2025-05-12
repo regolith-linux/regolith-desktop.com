@@ -3,11 +3,11 @@ title: "3.3 Release Notes"
 linkTitle: "3.3 Release Notes"
 weight: 84
 description: >
-  Release notes for Regolith 3.3
+  Release notes for Regolith 3.3 (Beta 1)
 prev: /docs/reference/releases
 ---
 
-## Regolith 3.3 Release Notes
+## Regolith 3.3 Release Notes (Beta 1)
 
 Regolith 3.3 is a minor release focusing on Ubuntu 25.04 support, numerous build system improvements, and sway 1.10.
 
