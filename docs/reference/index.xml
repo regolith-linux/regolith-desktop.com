@@ -346,7 +346,7 @@ title="Copy code"
 &lt;/tr>
 &lt;tr>
 &lt;td>wm.bar.separator.color&lt;/td>
-&lt;td>Color of seperator between blocks&lt;/td>
+&lt;td>Color of separator between blocks&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>wm.bar.separatorchar&lt;/td>

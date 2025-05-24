@@ -230,7 +230,7 @@ title="Copy code"
 &lt;/div>
 &lt;/div>
 &lt;ol start="2">
-&lt;li>Recharger la configuraiton &lt;code>Xresources&lt;/code>:&lt;/li>
+&lt;li>Recharger la configuration &lt;code>Xresources&lt;/code>:&lt;/li>
 &lt;/ol>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">regolith-look refresh&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">

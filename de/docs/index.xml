@@ -1188,7 +1188,7 @@ das &lt;a href="https://i3wm.org/docs/userguide.html" target="_blank" rel="noope
 &lt;/tr>
 &lt;tr>
 &lt;td>wm.bar.separator.color&lt;/td>
-&lt;td>Color of seperator between blocks&lt;/td>
+&lt;td>Color of separator between blocks&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>wm.bar.statusline.color&lt;/td>
