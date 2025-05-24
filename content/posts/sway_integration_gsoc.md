@@ -30,7 +30,7 @@ After having a discussion with Ken, we decided that the most important part of a
 
 Ilia is written in `vala` and `GTK`. This means, ilia had support for wayland right out of the box. Despite this inherent compatibility, ilia seemed to crash everytime. After looking into the logs, I realised that the issue was not with `ilia` but with the way `wayland roots` (wlr) handles windows that need to be ignored by the compositor. Turns out, wlr provides an extension to the wayland protocols called `wlr-layer-shell` in order to handle panels and other applications that need to be positioned automatically. A client implementation of this protocol for GTK based applications is provided by the library `gtk-layer-shell`. To maintain support for both `X11` and `wayland`, I check the `XDG_SESSION_TYPE` environment variable and use gtk-layer-shell library only if the session type is wayland.
 
-Currently, the wayland compatible version of `ilia` is not packaged and exists in a [seperate branch](https://github.com/regolith-linux/ilia/tree/ubuntu/jammy-wayland).
+Currently, the wayland compatible version of `ilia` is not packaged and exists in a [separate branch](https://github.com/regolith-linux/ilia/tree/ubuntu/jammy-wayland).
 
 ### Trawl - A backend agnostic configuration manager
 

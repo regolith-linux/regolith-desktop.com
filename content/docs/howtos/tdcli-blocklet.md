@@ -52,7 +52,7 @@ set_from_resource $wm.bindsym.program.1 wm.bindsym.program.1 :
 bindsym $mod+$wm.bindsym.1 exec --no-startup-id "$wm.bindsym.program.1"
 ```
 
-Then, add the followings to your `Xresources` file:
+Then, add the following lines to your `Xresources` file:
 
 ```yaml {filename="~/.config/regolith3/Xresources"}
 wm.bindsym.1: Ctrl+d

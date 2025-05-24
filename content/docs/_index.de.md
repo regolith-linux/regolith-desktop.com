@@ -11,7 +11,7 @@ next: /docs/getting-started
 - [Basic Usage](/docs/using-regolith/basics/)
 - [Configuration](/docs/using-regolith/configuration/)
 
-## Usefull References
+## Useful References
 
 - [Keybindings](/docs/reference/keybindings/)
 - [Config Files](/docs/reference/configurations/)
