@@ -29,7 +29,7 @@ Regolith version 3.0 onward replaces "i3-wm" with "wm" in Xresource keys.  The c
 | wm.alt                                          | Key mapping for Alt key. See the [i3 User Guide](https://i3wm.org/docs/userguide.html#_using_i3) for details.                 |
 | wm.bar.background.color                         | Bar Background Color                                                                                                          |
 | wm.bar.position                                 | Bar Screen Position                                                                                                           |
-| wm.bar.separator.color                          | Color of seperator between blocks                                                                                             |
+| wm.bar.separator.color                          | Color of separator between blocks                                                                                             |
 | wm.bar.statusline.color                         |                                                                                                                               |
 | wm.bar.trayoutput                               | Enable or disable the [app tray](https://i3wm.org/docs/userguide.html#_tray_output) in i3bar                                  |
 | wm.bar.workspace.active.background.color        |                                                                                                                               |

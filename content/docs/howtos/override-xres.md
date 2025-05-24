@@ -43,7 +43,7 @@ wm.bar.background.color:	#1F2430
 
 ## Examples
 
-Note that the commands presented below append text to a file, so running the command more than once will result in duplicate entires.
+Note that the commands presented below append text to a file, so running the command more than once will result in duplicate entries.
 
 ### Example - Update the UI for High DPI Screens
 

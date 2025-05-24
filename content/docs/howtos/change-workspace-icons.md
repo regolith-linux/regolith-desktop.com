@@ -64,7 +64,7 @@ wm.workspace.03.name: 3: Chat
 
 ### Atom
 
-- Append the name of the icon font to `Settings > Editor > Font Familly`.
+- Append the name of the icon font to `Settings > Editor > Font Family`.
 - Example: `Menlo, Consolas, DejaVu Sans Mono, monospace, Material Design Icons`
 
 ## Further Reading

@@ -60,7 +60,7 @@ L'outil `xrdb` peut être utilisé pour détemriner les valeurs actuels des vari
 Xft.dpi: 192
 ```
 
-2. Recharger la configuraiton `Xresources`:
+2. Recharger la configuration `Xresources`:
 
 ```bash
 regolith-look refresh
