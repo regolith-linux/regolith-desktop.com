@@ -15,7 +15,41 @@ If you're upgrading from an earlier version of Regolith, you may be interested i
 
 ### Ubuntu
 
-{{< tabs items="Ubuntu 24.04,Ubuntu 22.04" >}}
+{{< tabs items="Ubuntu 25.04,Ubuntu 24.04,Ubuntu 22.04" >}}
+{{< tab >}}
+Regolith can be installed as system packages.  This makes updating and removing easier and more consistent.  The following steps describe how
+to configure your system to read packages from the Regolith package repository and install the desktop package.
+
+1. Register the Regolith public key to your local `apt`:
+
+   ```bash
+   wget -qO - https://archive.regolith-desktop.com/regolith.key | \
+   gpg --dearmor | sudo tee /usr/share/keyrings/regolith-archive-keyring.gpg > /dev/null
+   ```
+
+1. Add the repository URL to your local `apt`:
+
+   ```bash
+   echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
+   https://archive.regolith-desktop.com/ubuntu/stable plucky v3.3" | \
+   sudo tee /etc/apt/sources.list.d/regolith.list
+   ```
+
+1. Update `apt` and install Regolith
+
+   ```bash
+   sudo apt update
+   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
+   ```
+1. System Restart
+
+The login manager will need to be restarted for the new desktop session to be recognized. The easiest way of restarting it is to reboot your system.
+
+{{< callout type="info" >}}
+Replace `amd64` with `arm64` in the two places in the above line to install on ARM-based systems.
+{{< /callout >}}
+{{< /tab >}}
+
 {{< tab >}}
 Regolith can be installed as system packages.  This makes updating and removing easier and more consistent.  The following steps describe how
 to configure your system to read packages from the Regolith package repository and install the desktop package.
@@ -214,7 +248,7 @@ deb [arch=amd64] https://archive.regolith-desktop.com/ubuntu/unstable noble main
 
 ### Distro Version/Codename
 
-These labels are determined by their respective upstream communities.  Examples are `noble`, `bookworm`, `focal`.
+These labels are determined by their respective upstream communities.  Examples are `plucky`, `noble`, `bookworm`.
 
 ### Examples
 
