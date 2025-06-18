@@ -8,9 +8,9 @@ layout: "hextra-home"
   imageTitle="Die Regolith Desktop Umgebung"
   imageWidth="853"
 >}}
-{{< hextra/hero-badge link="/docs/reference/releases/regolith-3.2-release-notes" >}}
+{{< hextra/hero-badge link="/docs/reference/releases/regolith-3.3-release-notes" >}}
   <div class="hx-w-2 hx-h-2 hx-rounded-full hx-bg-primary-400"></div>
-  <span>Latest version: v3.2</span>
+  <span>Latest version: v3.3</span>
   {{< icon name="arrow-circle-right" attributes="height=14" >}}
 {{< /hextra/hero-badge >}}
 

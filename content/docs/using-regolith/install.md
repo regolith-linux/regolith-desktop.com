@@ -7,15 +7,11 @@ description: >
 prev: /docs/using-regolith
 ---
 
-## Upgrading to 3.x
-
-If you're upgrading from an earlier version of Regolith, you may be interested in reading [the release notes](/docs/reference/Releases/regolith-3.2-release-notes) and if coming from 2.x, the [migration guide](/docs/reference/Releases/regolith-3.0-release-notes/#migration-guide).
-
 ## Supported Operating Systems
 
 ### Ubuntu
 
-{{< tabs items="Ubuntu 24.04,Ubuntu 22.04" >}}
+{{< tabs items="Ubuntu 25.04,Ubuntu 24.04,Ubuntu 22.04" >}}
 {{< tab >}}
 Regolith can be installed as system packages.  This makes updating and removing easier and more consistent.  The following steps describe how
 to configure your system to read packages from the Regolith package repository and install the desktop package.
@@ -31,7 +27,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/ubuntu/stable noble v3.2" | \
+   https://archive.regolith-desktop.com/ubuntu/stable plucky v3.3" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -41,6 +37,42 @@ to configure your system to read packages from the Regolith package repository a
    sudo apt update
    sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
+
+1. System Restart
+
+The login manager will need to be restarted for the new desktop session to be recognized. The easiest way of restarting it is to reboot your system.
+
+{{< callout type="info" >}}
+Replace `amd64` with `arm64` in the two places in the above line to install on ARM-based systems.
+{{< /callout >}}
+{{< /tab >}}
+
+{{< tab >}}
+Regolith can be installed as system packages.  This makes updating and removing easier and more consistent.  The following steps describe how
+to configure your system to read packages from the Regolith package repository and install the desktop package.
+
+1. Register the Regolith public key to your local `apt`:
+
+   ```bash
+   wget -qO - https://archive.regolith-desktop.com/regolith.key | \
+   gpg --dearmor | sudo tee /usr/share/keyrings/regolith-archive-keyring.gpg > /dev/null
+   ```
+
+1. Add the repository URL to your local `apt`:
+
+   ```bash
+   echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
+   https://archive.regolith-desktop.com/ubuntu/stable noble v3.3" | \
+   sudo tee /etc/apt/sources.list.d/regolith.list
+   ```
+
+1. Update `apt` and install Regolith
+
+   ```bash
+   sudo apt update
+   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
+   ```
+
 1. System Restart
 
 The login manager will need to be restarted for the new desktop session to be recognized. The easiest way of restarting it is to reboot your system.
@@ -65,7 +97,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/ubuntu/stable jammy v3.2" | \
+   https://archive.regolith-desktop.com/ubuntu/stable jammy v3.3" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -75,6 +107,7 @@ to configure your system to read packages from the Regolith package repository a
    sudo apt update
    sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
+
 1. System Restart
 
 The login manager will need to be restarted for the new desktop session to be recognized. The easiest way of restarting it is to reboot your system.
@@ -115,7 +148,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/debian/stable bookworm v3.2" | \
+   https://archive.regolith-desktop.com/debian/stable bookworm v3.3" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -125,6 +158,7 @@ to configure your system to read packages from the Regolith package repository a
    sudo apt update
    sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
+
 1. System Restart
 
 The login manager will need to be restarted for the new desktop session to be recognized. The easiest way of restarting it is to reboot your system.
@@ -154,6 +188,7 @@ sudo apt install regolith-desktop regolith-session-flashback regolith-look-lasca
 
 * For the session, you may chose one or both of: `regolith-session-flashback` (X11), `regolith-session-sway` (Wayland)
 * For the look, you may chose *one* from any available look package:
+
 ```text
 regolith-look-ayu-dark
 regolith-look-ayu-mirage
@@ -214,7 +249,7 @@ deb [arch=amd64] https://archive.regolith-desktop.com/ubuntu/unstable noble main
 
 ### Distro Version/Codename
 
-These labels are determined by their respective upstream communities.  Examples are `noble`, `bookworm`, `focal`.
+These labels are determined by their respective upstream communities.  Examples are `plucky`, `noble`, `bookworm`.
 
 ### Examples
 
@@ -226,8 +261,12 @@ These labels are determined by their respective upstream communities.  Examples 
 
 ## Release Change Policy
 
-From Regolith 3.0 to 3.2 (inclusive), all releases will use unique names in the package repo URL.  This means that users will be in full control of when they wish to upgrade to a new release.  Users wishing to have their package manager always install the latest version, a special stage called `release-current` is provided.
+From Regolith 3.0 to 3.3 (inclusive), all releases will use unique names in the package repo URL.  This means that users will be in full control of when they wish to upgrade to a new release.  Users wishing to have their package manager always install the latest version, a special stage called `release-current` is provided.
 
 From Regolith 3.3 onward, all releases will be published in the common archive repository separated by a high level distro (e.g. `debian`, `ubuntu`) folder and corresponding codename subfolders. The structure is split furthermore into different suites and components. As such, users wishing to have their package manager always install the latest version, they should use `main` component of `stable` suite. Otherwise a fixed version component (for example `v3.3`, `v3.2`, etc) can be used alongside `stable` component.
 
 Note that `experimental`, `unstable`, and `testing` suites only have `main` component.
+
+## Upgrading from 2.x to 3.x
+
+If you're upgrading from an earlier major version of Regolith, you may be interested in reading [the release notes](/docs/reference/Releases/regolith-3.2-release-notes) and if coming from 2.x, the [migration guide](/docs/reference/Releases/regolith-3.0-release-notes/#migration-guide).

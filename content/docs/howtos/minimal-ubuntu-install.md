@@ -17,6 +17,8 @@ Follow online instructions for installing a fresh copy of Ubuntu Server versions
 
 Once Ubuntu Server has been installed, log into a terminal session.  Use the following URLs to download the installation directions as a text file:
 
+Ubuntu 25.04 (Plucky): [install-release-ubuntu-25.04-amd64.txt](/install-release-ubuntu-25.04-amd64.txt)  
+Ubuntu 24.10 (Oracular): [install-release-ubuntu-24.10-amd64.txt](/install-release-ubuntu-24.10-amd64.txt)  
 Ubuntu 24.04 LTS (Noble): [install-release-ubuntu-24.04-amd64.txt](/install-release-ubuntu-24.04-amd64.txt)  
 Ubuntu 23.10 (Mantic): [install-release-ubuntu-23.10-amd64.txt](/install-release-ubuntu-23.10-amd64.txt)  
 Ubuntu 23.04 (Lunar): [install-release-ubuntu-23.04-amd64.txt](/install-release-ubuntu-23.04-amd64.txt)  
