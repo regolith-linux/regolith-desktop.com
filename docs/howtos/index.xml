@@ -1001,7 +1001,9 @@ title="Copy code"
 &lt;a href="#install-ubuntu-server" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Follow online instructions for installing a fresh copy of Ubuntu Server versions either 20.04 or 22.04.&lt;/p>
 &lt;h3>Add Regolith&amp;rsquo;s package key and apt repository&lt;span class="hx-absolute -hx-mt-20" id="add-regoliths-package-key-and-apt-repository">&lt;/span>
 &lt;a href="#add-regoliths-package-key-and-apt-repository" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Once Ubuntu Server has been installed, log into a terminal session. Use the following URLs to download the installation directions as a text file:&lt;/p>
-&lt;p>Ubuntu 24.04 LTS (Noble): &lt;a href="https://regolith-desktop.com/install-release-ubuntu-24.04-amd64.txt" >install-release-ubuntu-24.04-amd64.txt&lt;/a>&lt;br>
+&lt;p>Ubuntu 25.04 (Plucky): &lt;a href="https://regolith-desktop.com/install-release-ubuntu-25.04-amd64.txt" >install-release-ubuntu-25.04-amd64.txt&lt;/a>&lt;br>
+Ubuntu 24.10 (Oracular): &lt;a href="https://regolith-desktop.com/install-release-ubuntu-24.10-amd64.txt" >install-release-ubuntu-24.10-amd64.txt&lt;/a>&lt;br>
+Ubuntu 24.04 LTS (Noble): &lt;a href="https://regolith-desktop.com/install-release-ubuntu-24.04-amd64.txt" >install-release-ubuntu-24.04-amd64.txt&lt;/a>&lt;br>
 Ubuntu 23.10 (Mantic): &lt;a href="https://regolith-desktop.com/install-release-ubuntu-23.10-amd64.txt" >install-release-ubuntu-23.10-amd64.txt&lt;/a>&lt;br>
 Ubuntu 23.04 (Lunar): &lt;a href="https://regolith-desktop.com/install-release-ubuntu-23.04-amd64.txt" >install-release-ubuntu-23.04-amd64.txt&lt;/a>&lt;br>
 Ubuntu 22.10 (Kinetic): &lt;a href="https://regolith-desktop.com/install-release-ubuntu-22.10-amd64.txt" >install-release-ubuntu-22.10-amd64.txt&lt;/a>&lt;br>

@@ -197,8 +197,6 @@ supported on which OS distributions.&lt;/p>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table></description></item><item><title>Install</title><link>https://regolith-desktop.com/docs/using-regolith/install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/using-regolith/install/</guid><description>
-&lt;h2>Upgrading to 3.x&lt;span class="hx-absolute -hx-mt-20" id="upgrading-to-3x">&lt;/span>
-&lt;a href="#upgrading-to-3x" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>If you&amp;rsquo;re upgrading from an earlier version of Regolith, you may be interested in reading &lt;a href="https://regolith-desktop.com/docs/reference/Releases/regolith-3.2-release-notes" >the release notes&lt;/a> and if coming from 2.x, the &lt;a href="https://regolith-desktop.com/docs/reference/Releases/regolith-3.0-release-notes/#migration-guide" >migration guide&lt;/a>.&lt;/p>
 &lt;h2>Supported Operating Systems&lt;span class="hx-absolute -hx-mt-20" id="supported-operating-systems">&lt;/span>
 &lt;a href="#supported-operating-systems" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Ubuntu&lt;span class="hx-absolute -hx-mt-20" id="ubuntu">&lt;/span>
 &lt;a href="#ubuntu" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-scrollbar hx-overflow-x-auto hx-overflow-y-hidden hx-overscroll-x-contain">
@@ -206,11 +204,15 @@ supported on which OS distributions.&lt;/p>
 class="hextra-tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 data-[state=selected]:dark:hx-border-primary-500 data-[state=selected]:dark:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white"
 role="tab"
 type="button"
-aria-controls="tabs-panel-0" aria-selected="true" tabindex="0" data-state="selected">Ubuntu 24.04&lt;/button>&lt;button
+aria-controls="tabs-panel-0" aria-selected="true" tabindex="0" data-state="selected">Ubuntu 25.04&lt;/button>&lt;button
 class="hextra-tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 data-[state=selected]:dark:hx-border-primary-500 data-[state=selected]:dark:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white"
 role="tab"
 type="button"
-aria-controls="tabs-panel-1">Ubuntu 22.04&lt;/button>&lt;/div>
+aria-controls="tabs-panel-1">Ubuntu 24.04&lt;/button>&lt;button
+class="hextra-tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 data-[state=selected]:dark:hx-border-primary-500 data-[state=selected]:dark:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white"
+role="tab"
+type="button"
+aria-controls="tabs-panel-2">Ubuntu 22.04&lt;/button>&lt;/div>
 &lt;/div>
 &lt;div>
 &lt;div
@@ -238,7 +240,7 @@ title="Copy code"
 &lt;p>Add the repository URL to your local &lt;code>apt&lt;/code>:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> deb &lt;span class="s2">&amp;#34;[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">https://archive.regolith-desktop.com/ubuntu/stable noble v3.2&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">https://archive.regolith-desktop.com/ubuntu/stable plucky v3.3&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="se">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span>sudo tee /etc/apt/sources.list.d/regolith.list&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
 class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
@@ -280,6 +282,70 @@ title="Copy code"
 &lt;div
 class="hextra-tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block"
 id="tabs-panel-1"
+role="tabpanel">&lt;p>Regolith can be installed as system packages. This makes updating and removing easier and more consistent. The following steps describe how
+to configure your system to read packages from the Regolith package repository and install the desktop package.&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Register the Regolith public key to your local &lt;code>apt&lt;/code>:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">wget -qO - https://archive.regolith-desktop.com/regolith.key &lt;span class="p">|&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span>gpg --dearmor &lt;span class="p">|&lt;/span> sudo tee /usr/share/keyrings/regolith-archive-keyring.gpg &amp;gt; /dev/null&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;/li>
+&lt;li>
+&lt;p>Add the repository URL to your local &lt;code>apt&lt;/code>:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> deb &lt;span class="s2">&amp;#34;[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">https://archive.regolith-desktop.com/ubuntu/stable noble v3.3&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span>sudo tee /etc/apt/sources.list.d/regolith.list&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;/li>
+&lt;li>
+&lt;p>Update &lt;code>apt&lt;/code> and install Regolith&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt update
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;/li>
+&lt;li>
+&lt;p>System Restart&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>The login manager will need to be restarted for the new desktop session to be recognized. The easiest way of restarting it is to reboot your system.&lt;/p>
+&lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
+&lt;div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2">&lt;/div>
+&lt;div class="hx-w-full hx-min-w-0 hx-leading-7">
+&lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">Replace &lt;code>amd64&lt;/code> with &lt;code>arm64&lt;/code> in the two places in the above line to install on ARM-based systems.&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div
+class="hextra-tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block"
+id="tabs-panel-2"
 role="tabpanel">&lt;p>Regolith can be installed as system packages. This makes updating and removing easier and more consistent. The following steps (also available as a &lt;a href="https://regolith-desktop.com/install-release-ubuntu-22.04-amd64.txt" >downloadable script&lt;/a>) describe how
 to configure your system to read packages from the Regolith package repository and install the desktop package.&lt;/p>
 &lt;ol>
@@ -302,7 +368,7 @@ title="Copy code"
 &lt;p>Add the repository URL to your local &lt;code>apt&lt;/code>:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> deb &lt;span class="s2">&amp;#34;[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">https://archive.regolith-desktop.com/ubuntu/stable jammy v3.2&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">https://archive.regolith-desktop.com/ubuntu/stable jammy v3.3&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="se">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span>sudo tee /etc/apt/sources.list.d/regolith.list&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
 class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
@@ -399,7 +465,7 @@ title="Copy code"
 &lt;p>Add the repository URL to your local &lt;code>apt&lt;/code>:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> deb &lt;span class="s2">&amp;#34;[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">https://archive.regolith-desktop.com/debian/stable bookworm v3.2&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">https://archive.regolith-desktop.com/debian/stable bookworm v3.3&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="se">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span>sudo tee /etc/apt/sources.list.d/regolith.list&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
 class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
@@ -604,7 +670,7 @@ title="Copy code"
 &lt;/tbody>
 &lt;/table>
 &lt;h3>Distro Version/Codename&lt;span class="hx-absolute -hx-mt-20" id="distro-versioncodename">&lt;/span>
-&lt;a href="#distro-versioncodename" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>These labels are determined by their respective upstream communities. Examples are &lt;code>noble&lt;/code>, &lt;code>bookworm&lt;/code>, &lt;code>focal&lt;/code>.&lt;/p>
+&lt;a href="#distro-versioncodename" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>These labels are determined by their respective upstream communities. Examples are &lt;code>plucky&lt;/code>, &lt;code>noble&lt;/code>, &lt;code>bookworm&lt;/code>.&lt;/p>
 &lt;h3>Examples&lt;span class="hx-absolute -hx-mt-20" id="examples">&lt;/span>
 &lt;a href="#examples" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;table>
 &lt;thead>
@@ -629,9 +695,11 @@ title="Copy code"
 &lt;/tbody>
 &lt;/table>
 &lt;h2>Release Change Policy&lt;span class="hx-absolute -hx-mt-20" id="release-change-policy">&lt;/span>
-&lt;a href="#release-change-policy" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>From Regolith 3.0 to 3.2 (inclusive), all releases will use unique names in the package repo URL. This means that users will be in full control of when they wish to upgrade to a new release. Users wishing to have their package manager always install the latest version, a special stage called &lt;code>release-current&lt;/code> is provided.&lt;/p>
+&lt;a href="#release-change-policy" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>From Regolith 3.0 to 3.3 (inclusive), all releases will use unique names in the package repo URL. This means that users will be in full control of when they wish to upgrade to a new release. Users wishing to have their package manager always install the latest version, a special stage called &lt;code>release-current&lt;/code> is provided.&lt;/p>
 &lt;p>From Regolith 3.3 onward, all releases will be published in the common archive repository separated by a high level distro (e.g. &lt;code>debian&lt;/code>, &lt;code>ubuntu&lt;/code>) folder and corresponding codename subfolders. The structure is split furthermore into different suites and components. As such, users wishing to have their package manager always install the latest version, they should use &lt;code>main&lt;/code> component of &lt;code>stable&lt;/code> suite. Otherwise a fixed version component (for example &lt;code>v3.3&lt;/code>, &lt;code>v3.2&lt;/code>, etc) can be used alongside &lt;code>stable&lt;/code> component.&lt;/p>
-&lt;p>Note that &lt;code>experimental&lt;/code>, &lt;code>unstable&lt;/code>, and &lt;code>testing&lt;/code> suites only have &lt;code>main&lt;/code> component.&lt;/p></description></item><item><title>Keybindings</title><link>https://regolith-desktop.com/docs/reference/keybindings/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/reference/keybindings/</guid><description>
+&lt;p>Note that &lt;code>experimental&lt;/code>, &lt;code>unstable&lt;/code>, and &lt;code>testing&lt;/code> suites only have &lt;code>main&lt;/code> component.&lt;/p>
+&lt;h2>Upgrading from 2.x to 3.x&lt;span class="hx-absolute -hx-mt-20" id="upgrading-from-2x-to-3x">&lt;/span>
+&lt;a href="#upgrading-from-2x-to-3x" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>If you&amp;rsquo;re upgrading from an earlier major version of Regolith, you may be interested in reading &lt;a href="https://regolith-desktop.com/docs/reference/Releases/regolith-3.2-release-notes" >the release notes&lt;/a> and if coming from 2.x, the &lt;a href="https://regolith-desktop.com/docs/reference/Releases/regolith-3.0-release-notes/#migration-guide" >migration guide&lt;/a>.&lt;/p></description></item><item><title>Keybindings</title><link>https://regolith-desktop.com/docs/reference/keybindings/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/reference/keybindings/</guid><description>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -2273,8 +2341,8 @@ title="Copy code"
 &lt;li>Refer to the &lt;a href="https://github.com/regolith-linux/voulage/blob/main/.github/scripts/ext-debian.sh" target="_blank" rel="noopener">Debian extension script&lt;/a> that the workflow uses&lt;/li>
 &lt;li>Create an extension script that maps from the git source of each package to the target distro&amp;rsquo;s packaging format&lt;/li>
 &lt;/ol></description></item><item><title>3.3 Release Notes</title><link>https://regolith-desktop.com/docs/reference/releases/regolith-3.3-release-notes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/reference/releases/regolith-3.3-release-notes/</guid><description>
-&lt;h2>Regolith 3.3 Release Notes (Beta 1)&lt;span class="hx-absolute -hx-mt-20" id="regolith-33-release-notes-beta-1">&lt;/span>
-&lt;a href="#regolith-33-release-notes-beta-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Regolith 3.3 is a minor release focusing on Ubuntu 25.04 support, numerous build system improvements, and sway 1.10.&lt;/p>
+&lt;h2>Regolith 3.3 Release Notes&lt;span class="hx-absolute -hx-mt-20" id="regolith-33-release-notes">&lt;/span>
+&lt;a href="#regolith-33-release-notes" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Regolith 3.3 is a minor release focusing on Ubuntu 25.04 support, numerous build system improvements, and sway 1.10.&lt;/p>
 &lt;h2>Features&lt;span class="hx-absolute -hx-mt-20" id="features">&lt;/span>
 &lt;a href="#features" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ul>
 &lt;li>Ubuntu 25.04 (Plucky) support&lt;/li>
@@ -2282,42 +2350,12 @@ title="Copy code"
 &lt;/ul>
 &lt;h2>Known Issues&lt;span class="hx-absolute -hx-mt-20" id="known-issues">&lt;/span>
 &lt;a href="#known-issues" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ul>
-&lt;li>&lt;code>regolith-control-center&lt;/code> has &lt;em>not&lt;/em> been ported to GNOME 47 (but has for GNOME 48) and so users on Ubuntu 24.10 need to use &lt;code>gnome-control-center&lt;/code> for all system configuration tasks.&lt;/li>
+&lt;li>&lt;code>regolith-control-center&lt;/code> has &lt;em>not&lt;/em> been ported to GNOME 47 (but has for GNOME 48) and so users on Ubuntu 24.10 need to use &lt;code>gnome-control-center&lt;/code> for all system configuration tasks. &lt;code>regolith-control-center&lt;/code> is available for GNOME 48 / Ubuntu 25.04.&lt;/li>
 &lt;/ul>
 &lt;h2>Installation Instructions&lt;span class="hx-absolute -hx-mt-20" id="installation-instructions">&lt;/span>
-&lt;a href="#installation-instructions" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Beta 1&lt;span class="hx-absolute -hx-mt-20" id="beta-1">&lt;/span>
-&lt;a href="#beta-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>The &lt;code>apt&lt;/code> URL for 3.3 beta 1 for Ubuntu 25.04 (Plucky) is:&lt;/p>
-&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-&lt;pre>&lt;code>deb [arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] https://archive.regolith-desktop.com/ubuntu/testing plucky main&lt;/code>&lt;/pre>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
-&lt;button
-class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
-title="Copy code"
->
-&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
-&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
-&lt;/button>
-&lt;/div>
-&lt;/div>
-&lt;p>Note the &lt;code>amd64&lt;/code> architecture. For ARM-based systems, change that to &lt;code>arm64&lt;/code>. For Ubuntu 24.04 (Noble) it is:&lt;/p>
-&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-&lt;pre>&lt;code>deb [arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] https://archive.regolith-desktop.com/ubuntu/testing noble main&lt;/code>&lt;/pre>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
-&lt;button
-class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
-title="Copy code"
->
-&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
-&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
-&lt;/button>
-&lt;/div>
-&lt;/div>
-&lt;p>Refer to the &lt;a href="https://regolith-desktop.com/docs/using-regolith/install/" >installation instructions&lt;/a> to update the line for other Debian variants.&lt;/p>
-&lt;p>Installation on a freshly installed Ubuntu or Debian system can follow the standard installation instructions. When upgrading from a previous release
-using &lt;code>do-release-upgrade&lt;/code>, the Regolith package repo has to be re-added to your system as the installer removes it. Ensure the following packages are installed after the Ubuntu release process has completed and the Regolith package repository has been added back to your &lt;code>apt&lt;/code> configuration:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>regolith-i3-ilia&lt;/code> and/or &lt;code>regolith-sway-ilia&lt;/code>&lt;/li>
-&lt;li>&lt;code>regolith-i3-control-center-gnome&lt;/code> and/or &lt;code>regolith-sway-control-center-gnome&lt;/code> on Ubuntu 24.10 only.&lt;/li>
-&lt;/ul>
-&lt;p>After &lt;code>apt upgrade&lt;/code> is complete, verify that Regolith 3.3 is installed by:&lt;/p>
+&lt;a href="#installation-instructions" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Refer to the &lt;a href="https://regolith-desktop.com/docs/using-regolith/install/" >installation instructions&lt;/a> to install or upgrade from a previous version.&lt;/p>
+&lt;p>When upgrading from a previous release using &lt;code>do-release-upgrade&lt;/code>, the Regolith package repo has to be re-added to your system as the Ubuntu upgrade script removes it. Ensure the Regolith package repository has been added back to your &lt;code>apt&lt;/code> configuration after the Ubuntu upgrade script completes.&lt;/p>
+&lt;p>After the Regolith upgrade is complete, verify that Regolith 3.3 is installed by:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> cat /etc/regolith/version
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">REGOLITH_VERSION=3.3
@@ -6829,7 +6867,9 @@ title="Copy code"
 &lt;a href="#install-ubuntu-server" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Follow online instructions for installing a fresh copy of Ubuntu Server versions either 20.04 or 22.04.&lt;/p>
 &lt;h3>Add Regolith&amp;rsquo;s package key and apt repository&lt;span class="hx-absolute -hx-mt-20" id="add-regoliths-package-key-and-apt-repository">&lt;/span>
 &lt;a href="#add-regoliths-package-key-and-apt-repository" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Once Ubuntu Server has been installed, log into a terminal session. Use the following URLs to download the installation directions as a text file:&lt;/p>
-&lt;p>Ubuntu 24.04 LTS (Noble): &lt;a href="https://regolith-desktop.com/install-release-ubuntu-24.04-amd64.txt" >install-release-ubuntu-24.04-amd64.txt&lt;/a>&lt;br>
+&lt;p>Ubuntu 25.04 (Plucky): &lt;a href="https://regolith-desktop.com/install-release-ubuntu-25.04-amd64.txt" >install-release-ubuntu-25.04-amd64.txt&lt;/a>&lt;br>
+Ubuntu 24.10 (Oracular): &lt;a href="https://regolith-desktop.com/install-release-ubuntu-24.10-amd64.txt" >install-release-ubuntu-24.10-amd64.txt&lt;/a>&lt;br>
+Ubuntu 24.04 LTS (Noble): &lt;a href="https://regolith-desktop.com/install-release-ubuntu-24.04-amd64.txt" >install-release-ubuntu-24.04-amd64.txt&lt;/a>&lt;br>
 Ubuntu 23.10 (Mantic): &lt;a href="https://regolith-desktop.com/install-release-ubuntu-23.10-amd64.txt" >install-release-ubuntu-23.10-amd64.txt&lt;/a>&lt;br>
 Ubuntu 23.04 (Lunar): &lt;a href="https://regolith-desktop.com/install-release-ubuntu-23.04-amd64.txt" >install-release-ubuntu-23.04-amd64.txt&lt;/a>&lt;br>
 Ubuntu 22.10 (Kinetic): &lt;a href="https://regolith-desktop.com/install-release-ubuntu-22.10-amd64.txt" >install-release-ubuntu-22.10-amd64.txt&lt;/a>&lt;br>

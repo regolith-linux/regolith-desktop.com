@@ -103,8 +103,6 @@ supported on which OS distributions.&lt;/p>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table></description></item><item><title>インストール</title><link>https://regolith-desktop.com/ja/docs/using-regolith/install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/ja/docs/using-regolith/install/</guid><description>
-&lt;h2>Upgrading to 3.x&lt;span class="hx-absolute -hx-mt-20" id="upgrading-to-3x">&lt;/span>
-&lt;a href="#upgrading-to-3x" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>以前のバージョンのRegolithからアップグレードする場合は&lt;a href="https://regolith-desktop.com/docs/reference/Releases/regolith-3.2-release-notes" >リリースノート&lt;/a> を、特に2.xからの場合は&lt;a href="https://regolith-desktop.com/docs/reference/Releases/regolith-3.0-release-notes/#migration-guide" >移行ガイド&lt;/a>を参照してください。&lt;/p>
 &lt;h2>サポートするOS&lt;span class="hx-absolute -hx-mt-20" id="サポートするos">&lt;/span>
 &lt;a href="#%e3%82%b5%e3%83%9d%e3%83%bc%e3%83%88%e3%81%99%e3%82%8bos" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>以下は、Regolithデスクトップのインストールを取り扱っている特定のLinuxベースのOSごとに分割されています。&lt;/p>
 &lt;h3>Ubuntu&lt;span class="hx-absolute -hx-mt-20" id="ubuntu">&lt;/span>
@@ -113,11 +111,15 @@ supported on which OS distributions.&lt;/p>
 class="hextra-tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 data-[state=selected]:dark:hx-border-primary-500 data-[state=selected]:dark:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white"
 role="tab"
 type="button"
-aria-controls="tabs-panel-0" aria-selected="true" tabindex="0" data-state="selected">Ubuntu 24.04&lt;/button>&lt;button
+aria-controls="tabs-panel-0" aria-selected="true" tabindex="0" data-state="selected">Ubuntu 25.04&lt;/button>&lt;button
 class="hextra-tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 data-[state=selected]:dark:hx-border-primary-500 data-[state=selected]:dark:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white"
 role="tab"
 type="button"
-aria-controls="tabs-panel-1">Ubuntu 22.04&lt;/button>&lt;/div>
+aria-controls="tabs-panel-1">Ubuntu 24.04&lt;/button>&lt;button
+class="hextra-tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 data-[state=selected]:dark:hx-border-primary-500 data-[state=selected]:dark:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white"
+role="tab"
+type="button"
+aria-controls="tabs-panel-2">Ubuntu 22.04&lt;/button>&lt;/div>
 &lt;/div>
 &lt;div>
 &lt;div
@@ -145,7 +147,7 @@ title="Copy code"
 &lt;p>ローカルの&lt;code>apt&lt;/code>にリポジトリのURLを追加する。&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> deb &lt;span class="s2">&amp;#34;[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">https://archive.regolith-desktop.com/ubuntu/stable noble v3.2&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">https://archive.regolith-desktop.com/ubuntu/stable noble v3.3&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="se">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span>sudo tee /etc/apt/sources.list.d/regolith.list&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
 class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
@@ -209,7 +211,7 @@ title="Copy code"
 &lt;p>ローカルの&lt;code>apt&lt;/code>にリポジトリのURLを追加する。&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> deb &lt;span class="s2">&amp;#34;[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">https://archive.regolith-desktop.com/ubuntu/stable jammy v3.2&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">https://archive.regolith-desktop.com/ubuntu/stable jammy v3.3&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="se">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span>sudo tee /etc/apt/sources.list.d/regolith.list&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
 class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
@@ -306,7 +308,7 @@ title="Copy code"
 &lt;p>ローカルの&lt;code>apt&lt;/code>にリポジトリのURLを追加する。&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> deb &lt;span class="s2">&amp;#34;[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">https://archive.regolith-desktop.com/debian/stable bookworm v3.2&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">https://archive.regolith-desktop.com/debian/stable bookworm v3.3&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="se">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span>sudo tee /etc/apt/sources.list.d/regolith.list&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
 class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
@@ -538,7 +540,9 @@ title="Copy code"
 &lt;h2>リリースの変更ポリシー&lt;span class="hx-absolute -hx-mt-20" id="リリースの変更ポリシー">&lt;/span>
 &lt;a href="#%e3%83%aa%e3%83%aa%e3%83%bc%e3%82%b9%e3%81%ae%e5%a4%89%e6%9b%b4%e3%83%9d%e3%83%aa%e3%82%b7%e3%83%bc" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>From Regolith 3.0 to 3.2 (inclusive) Regolith 3.2以降では、すべてのリリースにおいて、パッケージリポジトリのURLに一意の名前が使用されます。これは、ユーザーが、新しいリリースにアップグレードするタイミングを完全に制御できることを意味します。パッケージマネージャーに常に最新版をインストールしてほしいユーザーには、&lt;code>release-current&lt;/code> という特別な段階が提供されています。&lt;/p>
 &lt;p>From Regolith 3.3 onward, all releases will be published in the common archive repository separated by a high level distro (e.g. &lt;code>debian&lt;/code>, &lt;code>ubuntu&lt;/code>) folder and corresponding codename subfolders. The structure is split furthermore into different suites and components. As such, users wishing to have their package manager always install the latest version, they should use &lt;code>main&lt;/code> component of &lt;code>stable&lt;/code> suite. Otherwise a fixed version component (for example &lt;code>v3.3&lt;/code>, &lt;code>v3.2&lt;/code>, etc) can be used alongside &lt;code>stable&lt;/code> component.&lt;/p>
-&lt;p>Note that &lt;code>experimental&lt;/code>, &lt;code>unstable&lt;/code>, and &lt;code>testing&lt;/code> suites only have &lt;code>main&lt;/code> component.&lt;/p></description></item><item><title>初回起動</title><link>https://regolith-desktop.com/ja/docs/using-regolith/first-launch/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/ja/docs/using-regolith/first-launch/</guid><description>
+&lt;p>Note that &lt;code>experimental&lt;/code>, &lt;code>unstable&lt;/code>, and &lt;code>testing&lt;/code> suites only have &lt;code>main&lt;/code> component.&lt;/p>
+&lt;h2>Upgrading from 2.x to 3.x&lt;span class="hx-absolute -hx-mt-20" id="upgrading-from-2x-to-3x">&lt;/span>
+&lt;a href="#upgrading-from-2x-to-3x" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>以前のバージョンのRegolithからアップグレードする場合は&lt;a href="https://regolith-desktop.com/docs/reference/Releases/regolith-3.2-release-notes" >リリースノート&lt;/a> を、特に2.xからの場合は&lt;a href="https://regolith-desktop.com/docs/reference/Releases/regolith-3.0-release-notes/#migration-guide" >移行ガイド&lt;/a>を参照してください。&lt;/p></description></item><item><title>初回起動</title><link>https://regolith-desktop.com/ja/docs/using-regolith/first-launch/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/ja/docs/using-regolith/first-launch/</guid><description>
 &lt;p>Regolithの既定のインターフェースは、アプリケーションの起動方法やその他の一般的なタスクの実行方法に関する視覚的なヒントがありません。これは、初めて使う人にとって少し混乱するかもしれません。しかし、Regolithのインターフェースを使っていくときは、次の2つのキーバインドを記憶しておけば、比較的簡単に利用できるようになります。&lt;/p>
 &lt;table>
 &lt;thead>
