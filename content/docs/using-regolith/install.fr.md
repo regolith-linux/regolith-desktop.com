@@ -231,3 +231,7 @@ From Regolith 3.0 to 3.2 (inclusive), all releases will use unique names in the 
 From Regolith 3.3 onward, all releases will be published in the common archive repository separated by a high level distro (e.g. `debian`, `ubuntu`) folder and corresponding codename subfolders. The structure is split furthermore into different suites and components. As such, users wishing to have their package manager always install the latest version, they should use `main` component of `stable` suite. Otherwise a fixed version component (for example `v3.3`, `v3.2`, etc) can be used alongside `stable` component.
 
 Note that `experimental`, `unstable`, and `testing` suites only have `main` component.
+
+## Upgrading from 2.x to 3.x
+
+If you're upgrading from an earlier major version of Regolith, you may be interested in reading [the release notes](/docs/reference/Releases/regolith-3.2-release-notes) and if coming from 2.x, the [migration guide](/docs/reference/Releases/regolith-3.0-release-notes/#migration-guide).

@@ -7,10 +7,6 @@ description: >
 prev: /docs/using-regolith
 ---
 
-## Upgrading to 3.x
-
-If you're upgrading from an earlier version of Regolith, you may be interested in reading [the release notes](/docs/reference/Releases/regolith-3.2-release-notes) and if coming from 2.x, the [migration guide](/docs/reference/Releases/regolith-3.0-release-notes/#migration-guide).
-
 ## Supported Operating Systems
 
 ### Ubuntu
@@ -260,8 +256,12 @@ These labels are determined by their respective upstream communities.  Examples 
 
 ## Release Change Policy
 
-From Regolith 3.0 to 3.2 (inclusive), all releases will use unique names in the package repo URL.  This means that users will be in full control of when they wish to upgrade to a new release.  Users wishing to have their package manager always install the latest version, a special stage called `release-current` is provided.
+From Regolith 3.0 to 3.3 (inclusive), all releases will use unique names in the package repo URL.  This means that users will be in full control of when they wish to upgrade to a new release.  Users wishing to have their package manager always install the latest version, a special stage called `release-current` is provided.
 
 From Regolith 3.3 onward, all releases will be published in the common archive repository separated by a high level distro (e.g. `debian`, `ubuntu`) folder and corresponding codename subfolders. The structure is split furthermore into different suites and components. As such, users wishing to have their package manager always install the latest version, they should use `main` component of `stable` suite. Otherwise a fixed version component (for example `v3.3`, `v3.2`, etc) can be used alongside `stable` component.
 
 Note that `experimental`, `unstable`, and `testing` suites only have `main` component.
+
+## Upgrading from 2.x to 3.x
+
+If you're upgrading from an earlier major version of Regolith, you may be interested in reading [the release notes](/docs/reference/Releases/regolith-3.2-release-notes) and if coming from 2.x, the [migration guide](/docs/reference/Releases/regolith-3.0-release-notes/#migration-guide).
