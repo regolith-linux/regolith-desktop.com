@@ -37,6 +37,7 @@ to configure your system to read packages from the Regolith package repository a
    sudo apt update
    sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
+
 1. System Restart
 
 The login manager will need to be restarted for the new desktop session to be recognized. The easiest way of restarting it is to reboot your system.
@@ -61,7 +62,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/ubuntu/stable noble v3.2" | \
+   https://archive.regolith-desktop.com/ubuntu/stable noble v3.3" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -71,6 +72,7 @@ to configure your system to read packages from the Regolith package repository a
    sudo apt update
    sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
+
 1. System Restart
 
 The login manager will need to be restarted for the new desktop session to be recognized. The easiest way of restarting it is to reboot your system.
@@ -95,7 +97,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/ubuntu/stable jammy v3.2" | \
+   https://archive.regolith-desktop.com/ubuntu/stable jammy v3.3" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -105,6 +107,7 @@ to configure your system to read packages from the Regolith package repository a
    sudo apt update
    sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
+
 1. System Restart
 
 The login manager will need to be restarted for the new desktop session to be recognized. The easiest way of restarting it is to reboot your system.
@@ -145,7 +148,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/debian/stable bookworm v3.2" | \
+   https://archive.regolith-desktop.com/debian/stable bookworm v3.3" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -155,6 +158,7 @@ to configure your system to read packages from the Regolith package repository a
    sudo apt update
    sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
+
 1. System Restart
 
 The login manager will need to be restarted for the new desktop session to be recognized. The easiest way of restarting it is to reboot your system.
@@ -184,6 +188,7 @@ sudo apt install regolith-desktop regolith-session-flashback regolith-look-lasca
 
 * For the session, you may chose one or both of: `regolith-session-flashback` (X11), `regolith-session-sway` (Wayland)
 * For the look, you may chose *one* from any available look package:
+
 ```text
 regolith-look-ayu-dark
 regolith-look-ayu-mirage
