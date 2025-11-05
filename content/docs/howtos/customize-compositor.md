@@ -64,7 +64,7 @@ apt install regolith-compositor-picom
 can verify by checking the process list for `picom`:
 
 ```bash
-ps aux | grep picom
+pgrep -a picom
 ```
 
 ## Overriding Regolith default compositor configuration
