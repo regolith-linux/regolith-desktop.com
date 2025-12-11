@@ -1,4 +1,31 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Regolith Desktop – Releases</title><link>https://regolith-desktop.com/docs/reference/releases/</link><description>Recent content in Releases on Regolith Desktop</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://regolith-desktop.com/docs/reference/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>3.3 Release Notes</title><link>https://regolith-desktop.com/docs/reference/releases/regolith-3.3-release-notes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/reference/releases/regolith-3.3-release-notes/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Regolith Desktop – Releases</title><link>https://regolith-desktop.com/docs/reference/releases/</link><description>Recent content in Releases on Regolith Desktop</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://regolith-desktop.com/docs/reference/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>3.4 Release Notes</title><link>https://regolith-desktop.com/docs/reference/releases/regolith-3.4-release-notes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/reference/releases/regolith-3.4-release-notes/</guid><description>
+&lt;h2>Regolith 3.4 Release Notes&lt;span class="hx-absolute -hx-mt-20" id="regolith-34-release-notes">&lt;/span>
+&lt;a href="#regolith-34-release-notes" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Regolith 3.4 is a minor release focusing on Ubuntu 25.10 and Debian 13 support.&lt;/p>
+&lt;h2>Features&lt;span class="hx-absolute -hx-mt-20" id="features">&lt;/span>
+&lt;a href="#features" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ul>
+&lt;li>Ubuntu 25.10 (Questing) support&lt;/li>
+&lt;li>Debian 13 (Trixie) support&lt;/li>
+&lt;/ul>
+&lt;h2>Known Issues&lt;span class="hx-absolute -hx-mt-20" id="known-issues">&lt;/span>
+&lt;a href="#known-issues" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>TBA&lt;/p>
+&lt;h2>Installation Instructions&lt;span class="hx-absolute -hx-mt-20" id="installation-instructions">&lt;/span>
+&lt;a href="#installation-instructions" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Refer to the &lt;a href="https://regolith-desktop.com/docs/using-regolith/install/" >installation instructions&lt;/a> to install or upgrade from a previous version.&lt;/p>
+&lt;p>After the Regolith upgrade is complete, verify that Regolith 3.4 is installed by:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> cat /etc/regolith/version
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">REGOLITH_VERSION=3.4
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h2>Changes since Regolith 3.3&lt;span class="hx-absolute -hx-mt-20" id="changes-since-regolith-33">&lt;/span>
+&lt;a href="#changes-since-regolith-33" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>TBA&lt;/p></description></item><item><title>3.3 Release Notes</title><link>https://regolith-desktop.com/docs/reference/releases/regolith-3.3-release-notes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/reference/releases/regolith-3.3-release-notes/</guid><description>
 &lt;h2>Regolith 3.3 Release Notes&lt;span class="hx-absolute -hx-mt-20" id="regolith-33-release-notes">&lt;/span>
 &lt;a href="#regolith-33-release-notes" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Regolith 3.3 is a minor release focusing on Ubuntu 25.04 support, numerous build system improvements, and sway 1.10.&lt;/p>
 &lt;h2>Features&lt;span class="hx-absolute -hx-mt-20" id="features">&lt;/span>
