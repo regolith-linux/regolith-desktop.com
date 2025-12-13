@@ -33,7 +33,6 @@ REGOLITH_VERSION=3.4
 
 ## Changes since Regolith 3.3
 
-# Changelog for stage "testing" (05/18/2025 - 12/13/2025)
 ## [armesto](https://github.com/regolith-linux/armesto)
 
 ### [main](https://github.com/regolith-linux/armesto/tree/main)
