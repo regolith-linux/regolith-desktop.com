@@ -124,27 +124,7 @@ REGOLITH_VERSION=3.4
 ### sway-regolith <sup>[link](https://github.com/regolith-linux/sway-regolith)</sup>
 #### packaging/v1.11-regolith <sup>[link](https://github.com/regolith-linux/sway-regolith/tree/packaging/v1.11-regolith)</sup>
 - build: bump version to 1.11 <sup>[link](https://github.com/regolith-linux/sway-regolith/commit/990b23c0e584114c3694447344d6bbf44b2d748f)</sup>
-- server: fix socket path memory leak <sup>[link](https://github.com/regolith-linux/sway-regolith/commit/f4a33dcab56c595bc8f923f4b8653814c4da4ed5)</sup>
-- build: bump version to 1.11-rc4 <sup>[link](https://github.com/regolith-linux/sway-regolith/commit/8174ff2fe2b7dea3bf9f0830c7d745c7e199d894)</sup>
-- Log message on for_window command error <sup>[link](https://github.com/regolith-linux/sway-regolith/commit/2871700adef33a35351c6e87819e699df1984b16)</sup>
-- Improve example of input section in default config <sup>[link](https://github.com/regolith-linux/sway-regolith/commit/5038e4c7cee13a65ff7afdcfe4b264de37e1a3dc)</sup>
-- tree/workspace: Remove exclude arg from get_highest_available <sup>[link](https://github.com/regolith-linux/sway-regolith/commit/35c4d8e4ee32876d97a1f747c635a83ab0042ace)</sup>
-- output: Minimize interaction with output after destroy <sup>[link](https://github.com/regolith-linux/sway-regolith/commit/e811a7b7e8b449ce683a0f07f2e42379bf1f4a83)</sup>
-- transaction: fix floating fullscreen containers <sup>[link](https://github.com/regolith-linux/sway-regolith/commit/27509eb47be966efe759ddfad92d1465d8f52d62)</sup>
-- layer-shell: reclaim space from unmapped layer surfaces <sup>[link](https://github.com/regolith-linux/sway-regolith/commit/3c9294fc6b3a602d1816980ce4cebae2ed304427)</sup>
-- input: fix udev_device leak <sup>[link](https://github.com/regolith-linux/sway-regolith/commit/0611f9684d77bce6e25fb37ad58550a516e49c47)</sup>
-- transaction: reparent scenes of containers behind fullscreen containers <sup>[link](https://github.com/regolith-linux/sway-regolith/commit/eca8434695fb5aed0c5691a27becc3d38191b165)</sup>
-- transaction: fix size of child container decorations in stacking layouts <sup>[link](https://github.com/regolith-linux/sway-regolith/commit/d68ea7664baf65de6e93108fb117f49b283fd5f7)</sup>
-- ci: pin wlroots to 0.19.x <sup>[link](https://github.com/regolith-linux/sway-regolith/commit/9bf79b32cb16036c7cb624d3d2d2156b6a227934)</sup>
-- build: bump version to 1.11-rc3 <sup>[link](https://github.com/regolith-linux/sway-regolith/commit/ac54112fc77cded9c2d56a8c33abf8c2842ffbf4)</sup>
-- raise scratchpad container <sup>[link](https://github.com/regolith-linux/sway-regolith/commit/4f4cb563ff96235b270c9699bfc5d958d056c24e)</sup>
-- transaction: ensure border scene is enabled for floating containers <sup>[link](https://github.com/regolith-linux/sway-regolith/commit/860cd42ba19275981dda7327242be09a05dc9ac1)</sup>
-- move: fix broken titlebar when moving child to new workspace <sup>[link](https://github.com/regolith-linux/sway-regolith/commit/c70ac15525528dbb04a915498cb681bdeefca493)</sup>
-- input/seatop_down: Update decorations for touchscreen inputs <sup>[link](https://github.com/regolith-linux/sway-regolith/commit/557d8eaf6ddc283f627877c8dcf9b7e5289c6016)</sup>
-- transaction: Ensure all tabs are visible in tabbed mode <sup>[link](https://github.com/regolith-linux/sway-regolith/commit/05ffe545ea49639299f1e6793f6d040dd6b348b4)</sup>
-- config/output: Fix missing output config supersedes <sup>[link](https://github.com/regolith-linux/sway-regolith/commit/6db0dd5abf56257029d82c437a9dde18d09d48ac)</sup>
-- config/output: Use INT_MAX as x/y unset value <sup>[link](https://github.com/regolith-linux/sway-regolith/commit/983af1a9b674c68b67c4c18a26c60940eb91e2a2)</sup>
-- Fix includes with relative paths <sup>[link](https://github.com/regolith-linux/sway-regolith/commit/caeee85d8d50d9870c2cb35ad310bbca50cf4846)</sup>
+
 
 ### xdg-desktop-portal-regolith <sup>[link](https://github.com/regolith-linux/xdg-desktop-portal-regolith)</sup>
 #### debian-bookworm <sup>[link](https://github.com/regolith-linux/xdg-desktop-portal-regolith/tree/debian-bookworm)</sup>
