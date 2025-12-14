@@ -22,7 +22,7 @@ layout: "hextra-home"
 
 <div class="hx-mt-6 hx-mb-6">
 {{< hextra/hero-subtitle >}}
-  Productivity focused Ubuntu derivative and desktop environment
+  Productivity focused desktop environment for Debian and Ubuntu Linux
 {{< /hextra/hero-subtitle >}}
 </div>
 
