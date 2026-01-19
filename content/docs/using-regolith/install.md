@@ -70,7 +70,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    sudo apt update
-   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
+   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille xdg-desktop-portal-regolith
    ```
 
 1. System Restart
