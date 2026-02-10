@@ -11,7 +11,7 @@ prev: /docs/using-regolith
 
 ### Ubuntu
 
-{{< tabs items="Ubuntu 25.04,Ubuntu 24.04,Ubuntu 22.04" >}}
+{{< tabs items="Ubuntu 25.10 (Questing),Ubuntu 25.04 (Plucky),Ubuntu 24.04 (Noble),Ubuntu 22.04 (Jammy)" >}}
 {{< tab >}}
 Regolith can be installed as system packages.  This makes updating and removing easier and more consistent.  The following steps describe how
 to configure your system to read packages from the Regolith package repository and install the desktop package.
@@ -27,7 +27,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/ubuntu/stable plucky v3.3" | \
+   https://archive.regolith-desktop.com/ubuntu/stable questing v3.4" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -35,7 +35,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    sudo apt update
-   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
+   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille xdg-desktop-portal-regolith
    ```
 
 1. System Restart
@@ -62,7 +62,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/ubuntu/stable noble v3.3" | \
+   https://archive.regolith-desktop.com/ubuntu/stable plucky v3.4" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -70,7 +70,42 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    sudo apt update
-   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
+   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille xdg-desktop-portal-regolith
+   ```
+
+1. System Restart
+
+The login manager will need to be restarted for the new desktop session to be recognized. The easiest way of restarting it is to reboot your system.
+
+{{< callout type="info" >}}
+Replace `amd64` with `arm64` in the two places in the above line to install on ARM-based systems.
+{{< /callout >}}
+{{< /tab >}}
+
+{{< tab >}}
+Regolith can be installed as system packages.  This makes updating and removing easier and more consistent.  The following steps describe how
+to configure your system to read packages from the Regolith package repository and install the desktop package.
+
+1. Register the Regolith public key to your local `apt`:
+
+   ```bash
+   wget -qO - https://archive.regolith-desktop.com/regolith.key | \
+   gpg --dearmor | sudo tee /usr/share/keyrings/regolith-archive-keyring.gpg > /dev/null
+   ```
+
+1. Add the repository URL to your local `apt`:
+
+   ```bash
+   echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
+   https://archive.regolith-desktop.com/ubuntu/stable noble v3.4" | \
+   sudo tee /etc/apt/sources.list.d/regolith.list
+   ```
+
+1. Update `apt` and install Regolith
+
+   ```bash
+   sudo apt update
+   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille xdg-desktop-portal-regolith
    ```
 
 1. System Restart
@@ -97,7 +132,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/ubuntu/stable jammy v3.3" | \
+   https://archive.regolith-desktop.com/ubuntu/stable jammy v3.4" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -105,7 +140,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    sudo apt update
-   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
+   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille xdg-desktop-portal-regolith
    ```
 
 1. System Restart
@@ -120,7 +155,7 @@ Replace `amd64` with `arm64` in the two places in the above line to install on A
 
 ### Debian
 
-{{< tabs items="Debian Testing,Debian Bookworm" >}}
+{{< tabs items="Debian Testing,Debian Trixie,Debian Bookworm" >}}
 {{< tab >}}
 For Debian users that use the "Testing" release, Regolith can be installed, however there is no "release" version due to the nature of Debian Testing.  In order to install Regolith into a Debian Testing instance, the `apt` line contains `testing` instead of a `release` string.  For example:
 
@@ -131,6 +166,49 @@ For Debian users that use the "Testing" release, Regolith can be installed, howe
    ```
 
 Otherwise the installation steps are the same as an official Debian release.  Note that broken dependencies or components will occur from time to time.  If stability is important, consider installing into an officially released version of Debian or Ubuntu.
+{{< /tab >}}
+
+{{< tab >}}
+Regolith can be installed as system packages.  This makes updating and removing easier and more consistent.  The following steps (also available as a [downloadable script](/install-release-debian-13-amd64.txt)) describe how
+to configure your system to read packages from the Regolith package repository and install the desktop package.
+
+1. Register the Regolith public key to your local `apt`:
+
+   ```bash
+   wget -qO - https://archive.regolith-desktop.com/regolith.key | \
+   gpg --dearmor | sudo tee /usr/share/keyrings/regolith-archive-keyring.gpg > /dev/null
+   ```
+
+1. Add the repository URL to your local `apt`:
+
+   ```bash
+   echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
+   https://archive.regolith-desktop.com/debian/stable trixie v3.4" | \
+   sudo tee /etc/apt/sources.list.d/regolith.list
+   ```
+
+1. Update `apt` and install Regolith
+
+   ```bash
+   sudo apt update
+   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille xdg-desktop-portal-regolith
+   ```
+
+1. System Restart
+
+The login manager will need to be restarted for the new desktop session to be recognized. The easiest way of restarting it is to reboot your system.
+
+{{< callout type="info" >}}
+Replace `amd64` with `arm64` in the two places in the above line to install on ARM-based systems.
+{{< /callout >}}
+
+{{< callout type="info" >}}
+The `regolith-desktop` package installs a reasonable minimal configuration that should work on most hardware. To add additional package for a richer and more functional environment read [Recommended Packages for New Users](/docs/using-regolith/configuration/#recommended-packages-for-new-users).
+{{< /callout >}}
+
+{{< callout type="info" >}}
+The `regolith-compositor-picom-glx` compositor should work on most computers. If you experience driver or visual issues, [try another compositor](docs/howtos/customize-compositor).
+{{< /callout >}}
 {{< /tab >}}
 
 {{< tab >}}
@@ -148,7 +226,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/debian/stable bookworm v3.3" | \
+   https://archive.regolith-desktop.com/debian/stable bookworm v3.4" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -156,7 +234,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    sudo apt update
-   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
+   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille xdg-desktop-portal-regolith
    ```
 
 1. System Restart

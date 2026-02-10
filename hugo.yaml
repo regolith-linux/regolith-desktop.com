@@ -97,7 +97,7 @@ menu:
       url: "https://opencollective.com/regolith/donate"
 
 params:
-  description: Productivity focused Ubuntu derivative and desktop environment
+  description: Productivity focused desktop environment for Debian and Ubuntu Linux
 
   navbar:
     displayTitle: true

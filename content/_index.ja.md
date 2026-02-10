@@ -8,9 +8,9 @@ layout: "hextra-home"
   imageTitle="Regolithデスクトップ環境"
   imageWidth="853"
 >}}
-{{< hextra/hero-badge link="/docs/reference/releases/regolith-3.3-release-notes" >}}
+{{< hextra/hero-badge link="/docs/reference/releases/regolith-3.4-release-notes" >}}
   <div class="hx-w-2 hx-h-2 hx-rounded-full hx-bg-primary-400"></div>
-  <span>Latest version: v3.3</span>
+  <span>Latest version: v3.4</span>
   {{< icon name="arrow-circle-right" attributes="height=14" >}}
 {{< /hextra/hero-badge >}}
 
@@ -22,7 +22,7 @@ layout: "hextra-home"
 
 <div class="hx-mt-6 hx-mb-6">
 {{< hextra/hero-subtitle >}}
-  Productivity focused Ubuntu derivative and desktop environment
+  Productivity focused desktop environment for Debian and Ubuntu Linux
 {{< /hextra/hero-subtitle >}}
 </div>
 
