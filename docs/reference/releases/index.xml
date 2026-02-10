@@ -1,4 +1,836 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Regolith Desktop – Releases</title><link>https://regolith-desktop.com/docs/reference/releases/</link><description>Recent content in Releases on Regolith Desktop</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://regolith-desktop.com/docs/reference/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>3.3 Release Notes</title><link>https://regolith-desktop.com/docs/reference/releases/regolith-3.3-release-notes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/reference/releases/regolith-3.3-release-notes/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Regolith Desktop – Releases</title><link>https://regolith-desktop.com/docs/reference/releases/</link><description>Recent content in Releases on Regolith Desktop</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://regolith-desktop.com/docs/reference/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>3.4 Release Notes</title><link>https://regolith-desktop.com/docs/reference/releases/regolith-3.4-release-notes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/reference/releases/regolith-3.4-release-notes/</guid><description>
+&lt;h2>Regolith 3.4 Release Notes&lt;span class="hx-absolute -hx-mt-20" id="regolith-34-release-notes">&lt;/span>
+&lt;a href="#regolith-34-release-notes" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Regolith 3.4 is a minor release focusing on Ubuntu 25.10 and Debian 13 support.&lt;/p>
+&lt;h2>Features&lt;span class="hx-absolute -hx-mt-20" id="features">&lt;/span>
+&lt;a href="#features" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ul>
+&lt;li>Ubuntu 25.10 (Questing) support&lt;/li>
+&lt;li>Debian 13 (Trixie) support&lt;/li>
+&lt;/ul>
+&lt;h2>Known Issues&lt;span class="hx-absolute -hx-mt-20" id="known-issues">&lt;/span>
+&lt;a href="#known-issues" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>No known issues at the time of the release.&lt;/p>
+&lt;h2>Installation Instructions&lt;span class="hx-absolute -hx-mt-20" id="installation-instructions">&lt;/span>
+&lt;a href="#installation-instructions" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Refer to the &lt;a href="https://regolith-desktop.com/docs/using-regolith/install/" >installation instructions&lt;/a> to install or upgrade from a previous version.&lt;/p>
+&lt;p>After the Regolith upgrade is complete, verify that Regolith 3.4 is installed by:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> cat /etc/regolith/version
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">REGOLITH_VERSION=3.4
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h2>Changes since Regolith 3.3&lt;span class="hx-absolute -hx-mt-20" id="changes-since-regolith-33">&lt;/span>
+&lt;a href="#changes-since-regolith-33" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/arc-icon-theme/releases/v20251012-1" target="_blank" rel="noopener">&lt;code>arc-icon-theme&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-arc-icon-themehttpsgithubcomregolith-linuxarc-icon-themereleasesv20251012-1">&lt;/span>
+&lt;a href="#changes-in-arc-icon-themehttpsgithubcomregolith-linuxarc-icon-themereleasesv20251012-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">392d7cc feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/armesto/releases/v0.2.3ubuntu1" target="_blank" rel="noopener">&lt;code>armesto&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-armestohttpsgithubcomregolith-linuxarmestoreleasesv023ubuntu1">&lt;/span>
+&lt;a href="#changes-in-armestohttpsgithubcomregolith-linuxarmestoreleasesv023ubuntu1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">3bbb44e fix: use correct version spec to avoid newer, rustc-incompat dependencies
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">348a3d0 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/ayu-theme/releases/v0.2.4-1" target="_blank" rel="noopener">&lt;code>ayu-theme&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-ayu-themehttpsgithubcomregolith-linuxayu-themereleasesv024-1">&lt;/span>
+&lt;a href="#changes-in-ayu-themehttpsgithubcomregolith-linuxayu-themereleasesv024-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">e23b62d feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/childe/releases/v0.1.4" target="_blank" rel="noopener">&lt;code>childe&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-childehttpsgithubcomregolith-linuxchildereleasesv014">&lt;/span>
+&lt;a href="#changes-in-childehttpsgithubcomregolith-linuxchildereleasesv014" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">b7f4742 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/dracula-gtk/releases/v1.1.3" target="_blank" rel="noopener">&lt;code>dracula-gtk&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-dracula-gtkhttpsgithubcomregolith-linuxdracula-gtkreleasesv113">&lt;/span>
+&lt;a href="#changes-in-dracula-gtkhttpsgithubcomregolith-linuxdracula-gtkreleasesv113" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">f8c03d4 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/fonts-jetbrains-mono/releases/v1.0.3-1regolith1" target="_blank" rel="noopener">&lt;code>fonts-jetbrains-mono&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-fonts-jetbrains-monohttpsgithubcomregolith-linuxfonts-jetbrains-monoreleasesv103-1regolith1">&lt;/span>
+&lt;a href="#changes-in-fonts-jetbrains-monohttpsgithubcomregolith-linuxfonts-jetbrains-monoreleasesv103-1regolith1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">e835009 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/fonts-materialdesignicons-webfont/releases/v1.6.50-5regolith1" target="_blank" rel="noopener">&lt;code>fonts-materialdesignicons-webfont&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-fonts-materialdesignicons-webfonthttpsgithubcomregolith-linuxfonts-materialdesignicons-webfontreleasesv1650-5regolith1">&lt;/span>
+&lt;a href="#changes-in-fonts-materialdesignicons-webfonthttpsgithubcomregolith-linuxfonts-materialdesignicons-webfontreleasesv1650-5regolith1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">3dbf43c feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/fonts-source-code-pro-ttf/releases/v1.011-0ubuntu1-ppa3" target="_blank" rel="noopener">&lt;code>fonts-source-code-pro-ttf&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-fonts-source-code-pro-ttfhttpsgithubcomregolith-linuxfonts-source-code-pro-ttfreleasesv1011-0ubuntu1-ppa3">&lt;/span>
+&lt;a href="#changes-in-fonts-source-code-pro-ttfhttpsgithubcomregolith-linuxfonts-source-code-pro-ttfreleasesv1011-0ubuntu1-ppa3" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">5db0bb1 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/gruvbox-gtk/releases/v1.0.2-2" target="_blank" rel="noopener">&lt;code>gruvbox-gtk&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-gruvbox-gtkhttpsgithubcomregolith-linuxgruvbox-gtkreleasesv102-2">&lt;/span>
+&lt;a href="#changes-in-gruvbox-gtkhttpsgithubcomregolith-linuxgruvbox-gtkreleasesv102-2" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">edb2f30 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/gtklock/releases/v2.2.2" target="_blank" rel="noopener">&lt;code>gtklock&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-gtklockhttpsgithubcomregolith-linuxgtklockreleasesv222">&lt;/span>
+&lt;a href="#changes-in-gtklockhttpsgithubcomregolith-linuxgtklockreleasesv222" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">ef9761f feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/i3-next-workspace/releases/v1.0.6" target="_blank" rel="noopener">&lt;code>i3-next-workspace&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-i3-next-workspacehttpsgithubcomregolith-linuxi3-next-workspacereleasesv106">&lt;/span>
+&lt;a href="#changes-in-i3-next-workspacehttpsgithubcomregolith-linuxi3-next-workspacereleasesv106" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">f96fbb1 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/i3-snapshot/releases/v1.1-2ubuntu1-ppa1" target="_blank" rel="noopener">&lt;code>i3-snapshot&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-i3-snapshothttpsgithubcomregolith-linuxi3-snapshotreleasesv11-2ubuntu1-ppa1">&lt;/span>
+&lt;a href="#changes-in-i3-snapshothttpsgithubcomregolith-linuxi3-snapshotreleasesv11-2ubuntu1-ppa1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">d33744c fix: properly checkout submodules
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">123efe9 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/i3-swap-focus/releases/v0.4.5" target="_blank" rel="noopener">&lt;code>i3-swap-focus&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-i3-swap-focushttpsgithubcomregolith-linuxi3-swap-focusreleasesv045">&lt;/span>
+&lt;a href="#changes-in-i3-swap-focushttpsgithubcomregolith-linuxi3-swap-focusreleasesv045" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">6d35c33 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/i3status-rs_debian/releases/v0.32.1-2" target="_blank" rel="noopener">&lt;code>i3status-rs&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-i3status-rshttpsgithubcomregolith-linuxi3status-rs_debianreleasesv0321-2">&lt;/span>
+&lt;a href="#changes-in-i3status-rshttpsgithubcomregolith-linuxi3status-rs_debianreleasesv0321-2" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">304cd81 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/i3xrocks/releases/v1.3.6-2" target="_blank" rel="noopener">&lt;code>i3xrocks&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-i3xrockshttpsgithubcomregolith-linuxi3xrocksreleasesv136-2">&lt;/span>
+&lt;a href="#changes-in-i3xrockshttpsgithubcomregolith-linuxi3xrocksreleasesv136-2" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">7f5692e feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/ilia/releases/v0.18.0" target="_blank" rel="noopener">&lt;code>ilia&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-iliahttpsgithubcomregolith-linuxiliareleasesv0180">&lt;/span>
+&lt;a href="#changes-in-iliahttpsgithubcomregolith-linuxiliareleasesv0180" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">4822ffa Clean up leftover prints from debugging
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">6587204 Force remove sp_after_sparen
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">41d1cef Run uncrustify again
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c95be02 Default to using release build types
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">d04df63 Uncrustify everything
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">5d1a893 Fix screenshot link in readme
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">9230027 Added debug instructions and timers
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ecbdf9d Load icons async
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">7385909 Fix prefix matching to sort correct
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">20d2030 Extract app sorting into a dedicated function for testing
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">687835a Respect icon size=0 harder
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">d5782f5 Removed newlines in debug() statements
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3f89b1b gobject-introspection is not necessary when using wrapGAppsHook3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">6528a93 flake with packaging for ilia&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/lago/releases/v0.2.0-2" target="_blank" rel="noopener">&lt;code>lago&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-lagohttpsgithubcomregolith-linuxlagoreleasesv020-2">&lt;/span>
+&lt;a href="#changes-in-lagohttpsgithubcomregolith-linuxlagoreleasesv020-2" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">8a1cb1b feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/libtrawldb/releases/v0.1-4" target="_blank" rel="noopener">&lt;code>libtrawldb&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-libtrawldbhttpsgithubcomregolith-linuxlibtrawldbreleasesv01-4">&lt;/span>
+&lt;a href="#changes-in-libtrawldbhttpsgithubcomregolith-linuxlibtrawldbreleasesv01-4" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">16d1884 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/nordic/releases/v2.1.0-3" target="_blank" rel="noopener">&lt;code>nordic&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-nordichttpsgithubcomregolith-linuxnordicreleasesv210-3">&lt;/span>
+&lt;a href="#changes-in-nordichttpsgithubcomregolith-linuxnordicreleasesv210-3" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">b401873 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/picom/releases/v11.2.4" target="_blank" rel="noopener">&lt;code>picom&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-picomhttpsgithubcomregolith-linuxpicomreleasesv1124">&lt;/span>
+&lt;a href="#changes-in-picomhttpsgithubcomregolith-linuxpicomreleasesv1124" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">4f54e28 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/python3-i3ipc/releases/v2.1.1-1ubuntu1-ppa9" target="_blank" rel="noopener">&lt;code>python3-i3ipc&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-python3-i3ipchttpsgithubcomregolith-linuxpython3-i3ipcreleasesv211-1ubuntu1-ppa9">&lt;/span>
+&lt;a href="#changes-in-python3-i3ipchttpsgithubcomregolith-linuxpython3-i3ipcreleasesv211-1ubuntu1-ppa9" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">cb25e0f feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/avizo/releases/v0.1.5" target="_blank" rel="noopener">&lt;code>regolith-avizo&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-avizohttpsgithubcomregolith-linuxavizoreleasesv015">&lt;/span>
+&lt;a href="#changes-in-regolith-avizohttpsgithubcomregolith-linuxavizoreleasesv015" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">74db442 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-compositor-compton-glx/releases/v1.2.2" target="_blank" rel="noopener">&lt;code>regolith-compositor-compton-glx&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-compositor-compton-glxhttpsgithubcomregolith-linuxregolith-compositor-compton-glxreleasesv122">&lt;/span>
+&lt;a href="#changes-in-regolith-compositor-compton-glxhttpsgithubcomregolith-linuxregolith-compositor-compton-glxreleasesv122" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">3023a6a feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-compositor-none/releases/v1.0.4-2" target="_blank" rel="noopener">&lt;code>regolith-compositor-none&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-compositor-nonehttpsgithubcomregolith-linuxregolith-compositor-nonereleasesv104-2">&lt;/span>
+&lt;a href="#changes-in-regolith-compositor-nonehttpsgithubcomregolith-linuxregolith-compositor-nonereleasesv104-2" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">2738d16 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-compositor-picom-glx/releases/v1.4.0-1" target="_blank" rel="noopener">&lt;code>regolith-compositor-picom-glx&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-compositor-picom-glxhttpsgithubcomregolith-linuxregolith-compositor-picom-glxreleasesv140-1">&lt;/span>
+&lt;a href="#changes-in-regolith-compositor-picom-glxhttpsgithubcomregolith-linuxregolith-compositor-picom-glxreleasesv140-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">f83a5ea feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-compositor-xcompmgr/releases/v1.4.0-2" target="_blank" rel="noopener">&lt;code>regolith-compositor-xcompmgr&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-compositor-xcompmgrhttpsgithubcomregolith-linuxregolith-compositor-xcompmgrreleasesv140-2">&lt;/span>
+&lt;a href="#changes-in-regolith-compositor-xcompmgrhttpsgithubcomregolith-linuxregolith-compositor-xcompmgrreleasesv140-2" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">b152af8 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-control-center/releases/v1.46.0-5-gnome-46" target="_blank" rel="noopener">&lt;code>regolith-control-center&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-control-centerhttpsgithubcomregolith-linuxregolith-control-centerreleasesv1460-5-gnome-46">&lt;/span>
+&lt;a href="#changes-in-regolith-control-centerhttpsgithubcomregolith-linuxregolith-control-centerreleasesv1460-5-gnome-46" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">a24afe776 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-default-settings/releases/v2.0.6" target="_blank" rel="noopener">&lt;code>regolith-default-settings&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-default-settingshttpsgithubcomregolith-linuxregolith-default-settingsreleasesv206">&lt;/span>
+&lt;a href="#changes-in-regolith-default-settingshttpsgithubcomregolith-linuxregolith-default-settingsreleasesv206" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">b591be3 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-desktop/releases/v4.10.0" target="_blank" rel="noopener">&lt;code>regolith-desktop&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-desktophttpsgithubcomregolith-linuxregolith-desktopreleasesv4100">&lt;/span>
+&lt;a href="#changes-in-regolith-desktophttpsgithubcomregolith-linuxregolith-desktopreleasesv4100" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">0c0ca2d feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-displayd/releases/v0.3.3" target="_blank" rel="noopener">&lt;code>regolith-displayd&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-displaydhttpsgithubcomregolith-linuxregolith-displaydreleasesv033">&lt;/span>
+&lt;a href="#changes-in-regolith-displaydhttpsgithubcomregolith-linuxregolith-displaydreleasesv033" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">6d85c49 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-distro-ubuntu/releases/v2.0.0-3" target="_blank" rel="noopener">&lt;code>regolith-distro-ubuntu&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-distro-ubuntuhttpsgithubcomregolith-linuxregolith-distro-ubuntureleasesv200-3">&lt;/span>
+&lt;a href="#changes-in-regolith-distro-ubuntuhttpsgithubcomregolith-linuxregolith-distro-ubuntureleasesv200-3" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">6c891a9 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-ftue/releases/v2.2.2" target="_blank" rel="noopener">&lt;code>regolith-ftue&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-ftuehttpsgithubcomregolith-linuxregolith-ftuereleasesv222">&lt;/span>
+&lt;a href="#changes-in-regolith-ftuehttpsgithubcomregolith-linuxregolith-ftuereleasesv222" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">4a8afbf feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-i3xrocks-config/releases/v5.5.3" target="_blank" rel="noopener">&lt;code>regolith-i3xrocks-config&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-i3xrocks-confighttpsgithubcomregolith-linuxregolith-i3xrocks-configreleasesv553">&lt;/span>
+&lt;a href="#changes-in-regolith-i3xrocks-confighttpsgithubcomregolith-linuxregolith-i3xrocks-configreleasesv553" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">98fba35 volume: avoid logging error while detecting pulseaudio (#157)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">25628ec feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-inputd/releases/v0.4.1" target="_blank" rel="noopener">&lt;code>regolith-inputd&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-inputdhttpsgithubcomregolith-linuxregolith-inputdreleasesv041">&lt;/span>
+&lt;a href="#changes-in-regolith-inputdhttpsgithubcomregolith-linuxregolith-inputdreleasesv041" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">9f6b665 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-lightdm-config/releases/v1.3.8" target="_blank" rel="noopener">&lt;code>regolith-lightdm-config&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-lightdm-confighttpsgithubcomregolith-linuxregolith-lightdm-configreleasesv138">&lt;/span>
+&lt;a href="#changes-in-regolith-lightdm-confighttpsgithubcomregolith-linuxregolith-lightdm-configreleasesv138" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">c2011f2 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-look-default/releases/v0.8.4" target="_blank" rel="noopener">&lt;code>regolith-look-default&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-look-defaulthttpsgithubcomregolith-linuxregolith-look-defaultreleasesv084">&lt;/span>
+&lt;a href="#changes-in-regolith-look-defaulthttpsgithubcomregolith-linuxregolith-look-defaultreleasesv084" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">0d18541 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-look-extra/releases/v0.9.3" target="_blank" rel="noopener">&lt;code>regolith-look-extra&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-look-extrahttpsgithubcomregolith-linuxregolith-look-extrareleasesv093">&lt;/span>
+&lt;a href="#changes-in-regolith-look-extrahttpsgithubcomregolith-linuxregolith-look-extrareleasesv093" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">3b06fe5 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-powerd/releases/v0.7.0" target="_blank" rel="noopener">&lt;code>regolith-powerd&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-powerdhttpsgithubcomregolith-linuxregolith-powerdreleasesv070">&lt;/span>
+&lt;a href="#changes-in-regolith-powerdhttpsgithubcomregolith-linuxregolith-powerdreleasesv070" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">6787a7c fix: use the correct action command for locking
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1bcbf00 fix: swayidle doesn&amp;#39;t resume if timeout action in-flight
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">6067fe6 chore!: update the Xresource key for lock program
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">753d162 fix: prevent locking upto 5sec after display off
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">79ca736 feat: autolock 5 seconds after idle timeout
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">9c670f0 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-rofi-config/releases/v1.4.2-2" target="_blank" rel="noopener">&lt;code>regolith-rofi-config&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-rofi-confighttpsgithubcomregolith-linuxregolith-rofi-configreleasesv142-2">&lt;/span>
+&lt;a href="#changes-in-regolith-rofi-confighttpsgithubcomregolith-linuxregolith-rofi-configreleasesv142-2" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">531fcb1 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-rofication/releases/v1.5.3" target="_blank" rel="noopener">&lt;code>regolith-rofication&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-roficationhttpsgithubcomregolith-linuxregolith-roficationreleasesv153">&lt;/span>
+&lt;a href="#changes-in-regolith-roficationhttpsgithubcomregolith-linuxregolith-roficationreleasesv153" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">e0a4d20 fix: add new dependency in ubuntu-plucky and similar. Fixes build issue w/ distutils
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">997f79b Use xrescat in PATH (#21)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ca36bc6 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-session/releases/v1.2.0-1ubuntu1" target="_blank" rel="noopener">&lt;code>regolith-session&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-sessionhttpsgithubcomregolith-linuxregolith-sessionreleasesv120-1ubuntu1">&lt;/span>
+&lt;a href="#changes-in-regolith-sessionhttpsgithubcomregolith-linuxregolith-sessionreleasesv120-1ubuntu1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">df1a9e6 refactor: cause x11 session to be launched by systemd. (#60)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1696d3e feat: sway-audio-idle-inhibit as recommends dependency
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">f7ccf19 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-sway-touchpad-gestures/releases/v0.1.0-4" target="_blank" rel="noopener">&lt;code>regolith-sway-touchpad-gestures&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-sway-touchpad-gestureshttpsgithubcomregolith-linuxregolith-sway-touchpad-gesturesreleasesv010-4">&lt;/span>
+&lt;a href="#changes-in-regolith-sway-touchpad-gestureshttpsgithubcomregolith-linuxregolith-sway-touchpad-gesturesreleasesv010-4" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">e55f029 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-system-ubuntu/releases/v1.0.1-1" target="_blank" rel="noopener">&lt;code>regolith-system-ubuntu&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-system-ubuntuhttpsgithubcomregolith-linuxregolith-system-ubuntureleasesv101-1">&lt;/span>
+&lt;a href="#changes-in-regolith-system-ubuntuhttpsgithubcomregolith-linuxregolith-system-ubuntureleasesv101-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">9339206 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-unclutter-xfixes/releases/v1.5-4" target="_blank" rel="noopener">&lt;code>regolith-unclutter-xfixes&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-unclutter-xfixeshttpsgithubcomregolith-linuxregolith-unclutter-xfixesreleasesv15-4">&lt;/span>
+&lt;a href="#changes-in-regolith-unclutter-xfixeshttpsgithubcomregolith-linuxregolith-unclutter-xfixesreleasesv15-4" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">4f24f59 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-wm-config/releases/v4.11.11" target="_blank" rel="noopener">&lt;code>regolith-wm-config&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-wm-confighttpsgithubcomregolith-linuxregolith-wm-configreleasesv41111">&lt;/span>
+&lt;a href="#changes-in-regolith-wm-confighttpsgithubcomregolith-linuxregolith-wm-configreleasesv41111" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">fe8b80d chore!: use seperate Xresource keys for lock program
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">45f8a76 fix: set im-config preference to none
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">8c51ce1 Add stacking layout to default layout toggle list&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/solarc-theme/releases/v800c997-5" target="_blank" rel="noopener">&lt;code>solarc-theme&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-solarc-themehttpsgithubcomregolith-linuxsolarc-themereleasesv800c997-5">&lt;/span>
+&lt;a href="#changes-in-solarc-themehttpsgithubcomregolith-linuxsolarc-themereleasesv800c997-5" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">e989fe6 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/SwayAudioIdleInhibit/releases/v2.0.0" target="_blank" rel="noopener">&lt;code>sway-audio-idle-inhibit&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-sway-audio-idle-inhibithttpsgithubcomregolith-linuxswayaudioidleinhibitreleasesv200">&lt;/span>
+&lt;a href="#changes-in-sway-audio-idle-inhibithttpsgithubcomregolith-linuxswayaudioidleinhibitreleasesv200" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">110d61a feat: add systemd to handle process execution and failures
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">76cb8d4 Bumped version to 0.2.0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">234f1ab Updated build scripts
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">e903b34 Use systemd/elogind Inhibit instead of the wayland protocol
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3b092d3 Added .clang-format file
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">57bcbe9 Move registry_listener from stack into static memory
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c754fa8 Added gcc as build dependency
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">71dc6df Added COPR RPM spec file
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">58d57e7 feat: use build-only to test pull request
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">e660559 Bumped version to 0.1.2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">47e8150 Safe handling of ignoredSourceOutputs array&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/sway-regolith/releases/v1.9-18" target="_blank" rel="noopener">&lt;code>sway-regolith&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-sway-regolithhttpsgithubcomregolith-linuxsway-regolithreleasesv19-18">&lt;/span>
+&lt;a href="#changes-in-sway-regolithhttpsgithubcomregolith-linuxsway-regolithreleasesv19-18" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">c108121e feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/trawl/releases/v0.2.5-1" target="_blank" rel="noopener">&lt;code>trawl&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-trawlhttpsgithubcomregolith-linuxtrawlreleasesv025-1">&lt;/span>
+&lt;a href="#changes-in-trawlhttpsgithubcomregolith-linuxtrawlreleasesv025-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">a4b1915 Revert &amp;#34;Merge pull request #8 from manthanabc/master&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">20b6497 Revert &amp;#34;chore: update cargo.lock&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">39d333e Revert &amp;#34;chore: bump versions&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1967d03 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/WhiteSur-gtk-theme/releases/v1.1-2025.10.13" target="_blank" rel="noopener">&lt;code>whitesur-gtk-theme&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-whitesur-gtk-themehttpsgithubcomregolith-linuxwhitesur-gtk-themereleasesv11-20251013">&lt;/span>
+&lt;a href="#changes-in-whitesur-gtk-themehttpsgithubcomregolith-linuxwhitesur-gtk-themereleasesv11-20251013" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">68412a4 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/xdg-desktop-portal-regolith/releases/v0.3.11-1" target="_blank" rel="noopener">&lt;code>xdg-desktop-portal-regolith&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-xdg-desktop-portal-regolithhttpsgithubcomregolith-linuxxdg-desktop-portal-regolithreleasesv0311-1">&lt;/span>
+&lt;a href="#changes-in-xdg-desktop-portal-regolithhttpsgithubcomregolith-linuxxdg-desktop-portal-regolithreleasesv0311-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">9636a39 fix: disable newly added gnome xdp interfaces
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">d697c9c feat: use none instead of regolith backend for disabling interfaces
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">50aebb5 fix: dark mode not working (#18)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/xrescat/releases/v1.2.1-4" target="_blank" rel="noopener">&lt;code>xrescat&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-xrescathttpsgithubcomregolith-linuxxrescatreleasesv121-4">&lt;/span>
+&lt;a href="#changes-in-xrescathttpsgithubcomregolith-linuxxrescatreleasesv121-4" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">bfe72ef feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h2>Changes in &lt;code>debian bookworm&lt;/code> since Regolith 3.3&lt;span class="hx-absolute -hx-mt-20" id="changes-in-debian-bookworm-since-regolith-33">&lt;/span>
+&lt;a href="#changes-in-debian-bookworm-since-regolith-33" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-control-center/releases/v1.43.1-9-gnome-43" target="_blank" rel="noopener">&lt;code>regolith-control-center&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-control-centerhttpsgithubcomregolith-linuxregolith-control-centerreleasesv1431-9-gnome-43">&lt;/span>
+&lt;a href="#changes-in-regolith-control-centerhttpsgithubcomregolith-linuxregolith-control-centerreleasesv1431-9-gnome-43" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">c185e43e3 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-session/releases/v1.1.14-3-debian-bookworm-debian-bookworm" target="_blank" rel="noopener">&lt;code>regolith-session&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-sessionhttpsgithubcomregolith-linuxregolith-sessionreleasesv1114-3-debian-bookworm-debian-bookworm">&lt;/span>
+&lt;a href="#changes-in-regolith-sessionhttpsgithubcomregolith-linuxregolith-sessionreleasesv1114-3-debian-bookworm-debian-bookworm" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">40e90f9 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/xdg-desktop-portal-regolith/releases/v0.3.11-2" target="_blank" rel="noopener">&lt;code>xdg-desktop-portal-regolith&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-xdg-desktop-portal-regolithhttpsgithubcomregolith-linuxxdg-desktop-portal-regolithreleasesv0311-2">&lt;/span>
+&lt;a href="#changes-in-xdg-desktop-portal-regolithhttpsgithubcomregolith-linuxxdg-desktop-portal-regolithreleasesv0311-2" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">e5ed898 feat: branch on version compatible w/ xdg-desktop-portal v1.18
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">44463ff Revert &amp;#34;fix: disable newly added gnome xdp interfaces&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">4f3cc0f fix: disable newly added gnome xdp interfaces
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">540ec82 feat: use none instead of regolith backend for disabling interfaces
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">d0e02f6 fix: dark mode not working (#18)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">749f216 fix: remove systemd dep on jammy
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2cc2c32 feat: use build-only to test pull request
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">0bce843 fix: create release tag from correct git sha
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">254545d feat: enable github action to prepare release
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">5f17015 feat: enable github action to publish to testing
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">6f3d57a feat: enable github action to publish to unstable
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">04be23e feat: enable github action to test pull requests
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3d73f37 feat: Implement set_wallpaper_uri method in Wallpaper.Portal (#3)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">67214d1 Fix/jammy build (#6)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h2>Changes in &lt;code>ubuntu jammy&lt;/code> since Regolith 3.3&lt;span class="hx-absolute -hx-mt-20" id="changes-in-ubuntu-jammy-since-regolith-33">&lt;/span>
+&lt;a href="#changes-in-ubuntu-jammy-since-regolith-33" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/i3-wm/releases/v4.22-3" target="_blank" rel="noopener">&lt;code>i3-wm&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-i3-wmhttpsgithubcomregolith-linuxi3-wmreleasesv422-3">&lt;/span>
+&lt;a href="#changes-in-i3-wmhttpsgithubcomregolith-linuxi3-wmreleasesv422-3" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">b35b1e80 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/i3status-rs_debian/releases/v0.22.2-2-ubuntu-jammy" target="_blank" rel="noopener">&lt;code>i3status-rs&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-i3status-rshttpsgithubcomregolith-linuxi3status-rs_debianreleasesv0222-2-ubuntu-jammy">&lt;/span>
+&lt;a href="#changes-in-i3status-rshttpsgithubcomregolith-linuxi3status-rs_debianreleasesv0222-2-ubuntu-jammy" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">d3186f0 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-control-center/releases/v1.41.20-ubuntu-jammy" target="_blank" rel="noopener">&lt;code>regolith-control-center&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-control-centerhttpsgithubcomregolith-linuxregolith-control-centerreleasesv14120-ubuntu-jammy">&lt;/span>
+&lt;a href="#changes-in-regolith-control-centerhttpsgithubcomregolith-linuxregolith-control-centerreleasesv14120-ubuntu-jammy" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">7834d4c07 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-session/releases/v1.1.14-3-debian-bookworm-debian-bookworm" target="_blank" rel="noopener">&lt;code>regolith-session&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-sessionhttpsgithubcomregolith-linuxregolith-sessionreleasesv1114-3-debian-bookworm-debian-bookworm-1">&lt;/span>
+&lt;a href="#changes-in-regolith-sessionhttpsgithubcomregolith-linuxregolith-sessionreleasesv1114-3-debian-bookworm-debian-bookworm-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">40e90f9 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/sway-regolith/releases/v1.7-9-ubuntu-jammy" target="_blank" rel="noopener">&lt;code>sway-regolith&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-sway-regolithhttpsgithubcomregolith-linuxsway-regolithreleasesv17-9-ubuntu-jammy">&lt;/span>
+&lt;a href="#changes-in-sway-regolithhttpsgithubcomregolith-linuxsway-regolithreleasesv17-9-ubuntu-jammy" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">d5f17ada feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/xdg-desktop-portal-regolith/releases/v0.3.11-2" target="_blank" rel="noopener">&lt;code>xdg-desktop-portal-regolith&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-xdg-desktop-portal-regolithhttpsgithubcomregolith-linuxxdg-desktop-portal-regolithreleasesv0311-2-1">&lt;/span>
+&lt;a href="#changes-in-xdg-desktop-portal-regolithhttpsgithubcomregolith-linuxxdg-desktop-portal-regolithreleasesv0311-2-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">e5ed898 feat: branch on version compatible w/ xdg-desktop-portal v1.18
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">44463ff Revert &amp;#34;fix: disable newly added gnome xdp interfaces&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">4f3cc0f fix: disable newly added gnome xdp interfaces
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">540ec82 feat: use none instead of regolith backend for disabling interfaces
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">d0e02f6 fix: dark mode not working (#18)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h2>Changes in &lt;code>ubuntu plucky&lt;/code> since Regolith 3.3&lt;span class="hx-absolute -hx-mt-20" id="changes-in-ubuntu-plucky-since-regolith-33">&lt;/span>
+&lt;a href="#changes-in-ubuntu-plucky-since-regolith-33" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-control-center/releases/v1.48.1-10-gnome-48" target="_blank" rel="noopener">&lt;code>regolith-control-center&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-control-centerhttpsgithubcomregolith-linuxregolith-control-centerreleasesv1481-10-gnome-48">&lt;/span>
+&lt;a href="#changes-in-regolith-control-centerhttpsgithubcomregolith-linuxregolith-control-centerreleasesv1481-10-gnome-48" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">a24afe776 feat: use build-only to test pull request&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div></description></item><item><title>3.3 Release Notes</title><link>https://regolith-desktop.com/docs/reference/releases/regolith-3.3-release-notes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/reference/releases/regolith-3.3-release-notes/</guid><description>
 &lt;h2>Regolith 3.3 Release Notes&lt;span class="hx-absolute -hx-mt-20" id="regolith-33-release-notes">&lt;/span>
 &lt;a href="#regolith-33-release-notes" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Regolith 3.3 is a minor release focusing on Ubuntu 25.04 support, numerous build system improvements, and sway 1.10.&lt;/p>
 &lt;h2>Features&lt;span class="hx-absolute -hx-mt-20" id="features">&lt;/span>

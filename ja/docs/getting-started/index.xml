@@ -11,6 +11,8 @@ supported on which OS distributions.&lt;/p>
 &lt;th style="text-align: center">v3.0&lt;/th>
 &lt;th style="text-align: center">v3.1&lt;/th>
 &lt;th style="text-align: center">v3.2&lt;/th>
+&lt;th style="text-align: center">v3.3&lt;/th>
+&lt;th style="text-align: center">v3.4&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
@@ -23,9 +25,15 @@ supported on which OS distributions.&lt;/p>
 &lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
 &lt;/td>
 &lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align: left">Jammy (22.04 LTS)&lt;/td>
+&lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
+&lt;/td>
+&lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
+&lt;/td>
 &lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
 &lt;/td>
 &lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
@@ -42,12 +50,16 @@ supported on which OS distributions.&lt;/p>
 &lt;td style="text-align: center">-&lt;/td>
 &lt;td style="text-align: center">-&lt;/td>
 &lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align: left">Lunar (23.04)&lt;/td>
 &lt;td style="text-align: center">-&lt;/td>
 &lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
 &lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
 &lt;td style="text-align: center">-&lt;/td>
 &lt;td style="text-align: center">-&lt;/td>
 &lt;/tr>
@@ -58,9 +70,46 @@ supported on which OS distributions.&lt;/p>
 &lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
 &lt;/td>
 &lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align: left">Noble (24.04 LTS)&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
+&lt;/td>
+&lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
+&lt;/td>
+&lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">Oracular (24.10)&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
+&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">Plucky (25.04)&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
+&lt;/td>
+&lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">Questing (25.10)&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
 &lt;td style="text-align: center">-&lt;/td>
 &lt;td style="text-align: center">-&lt;/td>
 &lt;td style="text-align: center">-&lt;/td>
@@ -78,6 +127,8 @@ supported on which OS distributions.&lt;/p>
 &lt;th style="text-align: center">v3.0&lt;/th>
 &lt;th style="text-align: center">v3.1&lt;/th>
 &lt;th style="text-align: center">v3.2&lt;/th>
+&lt;th style="text-align: center">v3.3&lt;/th>
+&lt;th style="text-align: center">v3.4&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
@@ -90,6 +141,8 @@ supported on which OS distributions.&lt;/p>
 &lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
 &lt;/td>
 &lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align: left">Bookworm (12)&lt;/td>
@@ -98,6 +151,20 @@ supported on which OS distributions.&lt;/p>
 &lt;/td>
 &lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
 &lt;/td>
+&lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
+&lt;/td>
+&lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
+&lt;/td>
+&lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
+&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">Trixie (13)&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
+&lt;td style="text-align: center">-&lt;/td>
 &lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
 &lt;/td>
 &lt;/tr>
