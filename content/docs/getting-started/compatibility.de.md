@@ -24,7 +24,7 @@ supported on which OS distributions.
 | Noble (24.04 LTS) | - | - | - | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} |
 | Oracular (24.10) | - | - | - | - | {{< icon name="check" attributes="height=21" >}} | - |
 | Plucky (25.04) | - | - | - | - | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} |
-| Qusting (25.10) | - | - | - | - | - | {{< icon name="check" attributes="height=21" >}} |
+| Questing (25.10) | - | - | - | - | - | {{< icon name="check" attributes="height=21" >}} |
 
 ## Debian
 
