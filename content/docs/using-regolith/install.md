@@ -215,6 +215,10 @@ The `regolith-compositor-picom-glx` compositor should work on most computers. If
 Regolith can be installed as system packages.  This makes updating and removing easier and more consistent.  The following steps (also available as a [downloadable script](/install-release-debian-12-amd64.txt)) describe how
 to configure your system to read packages from the Regolith package repository and install the desktop package.
 
+{{< callout type="warning" >}}
+On Debian 12 (Bookworm), Regolith provides only the X11 session (`regolith-session-flashback`). The Wayland session (`regolith-session-sway`) needs Debian 13 (Trixie) or a supported Ubuntu release.
+{{< /callout >}}
+
 1. Register the Regolith public key to your local `apt`:
 
    ```bash
@@ -264,7 +268,7 @@ sudo apt install regolith-desktop regolith-session-flashback regolith-look-lasca
 #                ^-- base package ^-- session                ^ -- look 
 ```
 
-* For the session, you may chose one or both of: `regolith-session-flashback` (X11), `regolith-session-sway` (Wayland)
+* For the session, you may chose one or both of: `regolith-session-flashback` (X11), `regolith-session-sway` (Wayland). Debian 12 (Bookworm) has the X11 session only.
 * For the look, you may chose *one* from any available look package:
 
 ```text
@@ -283,7 +287,7 @@ regolith-look-nord
 regolith-look-solarized-dark
 ```
 
-An an example and alternative to the recommendation above, here is the `apt` line to install the Sway session with the Nord Look:
+An an example and alternative to the recommendation above, here is the `apt` line to install the Sway session with the Nord Look (not available on Debian 12 Bookworm):
 
 ```bash
 sudo apt install regolith-desktop regolith-session-sway regolith-look-nord
