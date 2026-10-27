@@ -14,10 +14,6 @@ If you maintain your own i3 config file, note that the copy shipped in Regolith 
 
 For R1.4 in particular @ploum has provided many of the ideas and validation. Gratitude goes out to Regolith contributors and users @cheginit, @nalderto, @baldrailers, @ivomarino, @Josh-Letts, @LawZava, @SkyyySi, @tomster, @gdeflaux, @appelgriebsch, @farsil, and @MrKovar for their time and attention. Also thanks to all that helped to test and filed issues for bugs and feature requests!
 
-## Known Issues
-
-Issues and fixes are being tracked in this project.
-
 ## Features
 
 | Feature                                              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                     |
@@ -36,10 +32,6 @@ Issues and fixes are being tracked in this project.
 | Picom (Compton) config can be overriden by user      | Users can provide their own Picom compositor config in their user directory.                                                                                                                                                                                                                                                                                                                                                                    |
 | i3 reload becomes Regolith reload                    | Refreshing the UI (look, colors, fonts, etc.) after making changes is now as easy as {{< keys "super,shift,r" >}}.                                                                                                                                                                                                                                                                                                                              |
 | Polish, polish, polish                               | Just as in previous releases, many tiny fixes and enhancements were added to Regolith in version 1.4.                                                                                                                                                                                                                                                                                                                                           |
-
-## Fixes
-
-Have a look at the R1.4 project page for a list of bug fixes.
 
 [^1]: This does **not** mean that Regolith uses Xfce4 or any other aspect of Xubuntu other than the install image.
 [^2]: The trade-off is that users need to install more of the software they require after installation.
