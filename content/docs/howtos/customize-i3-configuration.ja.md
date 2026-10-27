@@ -55,25 +55,25 @@ wm.workspace.01.name: 1:FOO
 削除したい部分設定を提供するパッケージの名前を特定するには次のコマンドを実行します。
 
 ```bash
-dpkg -S /usr/share/doc/regolith-i3-workspace-config
+dpkg -S /usr/share/regolith/common/config.d/40_workspace-config
 ```
 
 出力結果にパッケージの名前が含まれている場合：
 
 ```yaml
-regolith-i3-workspace-config: /usr/share/doc/regolith-i3-workspace-config
+regolith-wm-workspace-config: /usr/share/regolith/common/config.d/40_workspace-config
 ```
 
 このパッケージで提供されるファイルの完全なリストを確認し、何を削除しようとしているのかわかっている場合：
 
 ```bash
-dpkg -L regolith-i3-workspace-config
+dpkg -L regolith-wm-workspace-config
 ```
 
 部分設定を削除するには：
 
 ```bash
-sudo apt remove regolith-i3-workspace-config
+sudo apt remove regolith-wm-workspace-config
 ```
 
 ## 既定の部分設定をカスタマイズする方法
@@ -91,7 +91,7 @@ mkdir -p ~/.config/regolith3/i3/config.d
 次に、既定の設定を独自の設定ディレクトリにコピーします。
 
 ```bash
-cp /usr/share/regolith/i3/config.d/40_workspace-config ~/.config/regolith3/i3/config.d/
+cp /usr/share/regolith/common/config.d/40_workspace-config ~/.config/regolith3/i3/config.d/
 ```
 
 希望に沿った変更を加えます。
@@ -103,7 +103,7 @@ vim ~/.config/regolith3/i3/config.d/40_workspace-config
 既定に含まれているパッケージをクリーンアップします。
 
 ```bash
-sudo apt remove regolith-i3-workspace-config
+sudo apt remove regolith-wm-workspace-config
 ```
 
 最後に、**i3を再起動するか、ログアウトしてから戻ります**。
