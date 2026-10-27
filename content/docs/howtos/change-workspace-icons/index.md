@@ -56,6 +56,12 @@ wm.workspace.03.name: 3: Chat
 
 Keep the number and the colon at the start of each name: the workspace keybindings find workspaces by that number, and the bar hides it.
 
+With these three labels and the terminal glyph on workspace 6, the bar shows the workspaces like this, in the X11 session (top) and in the Wayland session (bottom):
+
+{{< img src="bar-x11.png" alt="Workspace buttons on the i3 bar: Terminal, Web, Chat and a terminal icon" >}}
+
+{{< img src="bar-sway.png" alt="Workspace buttons on the sway bar: Terminal, Web, Chat and a terminal icon" >}}
+
 ## Further Reading
 
 See the [reference page for configurations]({{< ref "/docs/Reference/configurations.md" >}}) for more details about config files in Regolith.
