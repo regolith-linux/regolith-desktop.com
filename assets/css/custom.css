@@ -98,6 +98,11 @@ body:is(html[class~="dark"] *) {
 /**************************/
 
 /** key shortcodes **/
+/* Keep a key combination on one line. */
+.text-nowrap {
+  white-space: nowrap;
+}
+
 .badge {
   display: inline-block;
   padding: 0.25em 0.4em;
