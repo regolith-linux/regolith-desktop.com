@@ -5,18 +5,21 @@ description: >
   Change the date/time format used in the bar
 ---
 
-The time format (12 or 24 hour) can be specified in Settings:
+The X11 (i3) and Wayland (sway) sessions use different bars, which are configured differently.
 
-{{< img "images/regolith-screenshot-settings-time-format.png" "">}}
+## X11 Session (i3)
 
-The date format can be specified by selecting the appropriate region in Settings. A preview of the date format is provided, and logging back in is required for changes to take effect.
+The time format (12 or 24 hour) can be specified in Settings, under **System > Date & Time > Time Format**. The bar picks up the change within about ten seconds.
 
-{{< img "images/regolith-screenshot-settings-region.png" "">}}
+The order of day and month follows the country of your `LC_TIME` locale: month first (`MM/DD`) for the United States, Canada, China, Japan and a few other countries, and day first (`DD/MM`) for all others.
 
-The date and time formats can also be explicitly set via `Xresources`. To do so, override the `i3xrocks.date.format2` `Xresource` key. The format specification for date is simply the arguments that would be passed to the `date` command on the command line. For example, to print the year in 4 digits, specify `+%Y`.
+The date and time formats can also be explicitly set via `Xresources`. To do so, override the `i3xrocks.date.format2` `Xresource` key in `~/.config/regolith3/Xresources`. The value is the format that would be passed to the `date` command on the command line, without the leading `+`. For example, the following line uses the `YYYY-MM-DD hh:mm` format:
 
-For example the following line can be added to use the `YYYY-MM-DD hh:mm` format:
-`i3xrocks.date.format2: %Y-%m-%d %H:%M`
+```yaml {filename="~/.config/regolith3/Xresources"}
+i3xrocks.date.format2: %Y-%m-%d %H:%M
+```
+
+Then run `regolith-look refresh`. While this key is set, the bar no longer follows the Time Format setting.
 
 The most useful formats that are supported are as follows:
 
@@ -27,5 +30,42 @@ The most useful formats that are supported are as follows:
 -   `%H` prints hours in 24 hour format
 -   `%I` prints hours in 12 hour format
 -   `%M` prints minute as `mm`
+-   `%p` prints `AM` or `PM`
 
 For more details and placeholders, please look at `date --help`.
+
+## Wayland Session (sway)
+
+The sway bar, `i3status-rs`, doesn't read `i3xrocks.date.format2` or the Time Format setting. Its date and time formats are part of its configuration file. To change them, use your own copy of that file:
+
+1. Copy the default configuration:
+
+   ```bash
+   mkdir -p ~/.config/regolith3/i3status-rust
+   cp /etc/regolith/i3status-rust/config.toml ~/.config/regolith3/i3status-rust/config.toml
+   ```
+
+2. In the copy, change the `format` of the two `time` blocks. By default, the date block uses `%a-%d/%m/%y` and the time block uses `%R` (24 hour `hh:mm`). For example, for `YYYY-MM-DD` and a 12 hour clock:
+
+   ```toml {filename="~/.config/regolith3/i3status-rust/config.toml"}
+   [[block]]
+   block = "time"
+   interval = 5
+   format = "\uf073 $timestamp.datetime(f:'%Y-%m-%d')"
+
+   [[block]]
+   block = "time"
+   interval = 5
+   format = "$icon $timestamp.datetime(f:'%I:%M %p')"
+   ```
+
+   On Ubuntu 22.04 and Debian, the file has a single `time` block with a plain format, `format = "%d/%m %R"`; change that one instead.
+
+3. Tell the bar to use your copy, and reload:
+
+   ```bash
+   echo "wm.bar.status_config: ~/.config/regolith3/i3status-rust/config.toml" >> ~/.config/regolith3/Xresources
+   regolith-look refresh
+   ```
+
+The placeholders are the same as for `date`, listed above. See the [`time` block documentation](https://docs.rs/i3status-rs/latest/i3status_rs/blocks/time/index.html) for the other options.
