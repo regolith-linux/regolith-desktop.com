@@ -22,6 +22,8 @@ Most of the GNOME support in Regolith's X11 session (`regolith-session-flashback
 
 2. Log out. On the login screen, select your user, choose the `GNOME Flashback (Metacity)` session (in GDM, from the gear button in the lower-right corner), and log in.
 
+   {{< img src="gdm-session-menu.png" alt="The GDM login screen with the session menu open from the gear button, and GNOME Flashback (Metacity) selected" >}}
+
 3. Verify your behavior against Regolith.  If the problematic behavior also exists in `gnome-flashback` then the bug is likely there.  If the bug does not exist in the `gnome-flashback` then it's likely to be in Regolith.
 
 4. When you are done, log back into the `Regolith / X11` session. To remove the GNOME Flashback session again, reinstall the package it replaced:
