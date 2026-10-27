@@ -165,7 +165,7 @@ sudo apt install regolith-desktop regolith-session-flashback regolith-look-lasca
 On ARM-based systems, replace `amd64` with `arm64` in the `Architectures:` line.
 {{< /callout >}}
 
-**Settings app.** If any of the following packages is not listed with `ii`, or `dpkg-query` reports that it finds no such package, the Settings app ({{< keys "super,c" >}}) is missing:
+**Settings app.** If any of the following packages is not listed with `ii`, or `dpkg-query` reports that it finds no such package, the Settings app (opened with {{< keys "super,c" >}}) is missing:
 
 ```bash
 dpkg-query -W -f='${db:Status-Abbrev} ${Package}\n' regolith-control-center regolith-i3-control-center-regolith regolith-sway-control-center-regolith
@@ -255,7 +255,7 @@ What to expect on the `testing` suite:
 
 | Symptom | Cause | Fix |
 |---|---|---|
-| <a id="black-screen-instead-of-the-login-screen"></a>**Black screen instead of the login screen** on the first 26.04 boot | The `sway-audio-idle-inhibit` link from step 3 is still there, and the reboot happened before step 5. | Press {{< keys "ctrl,alt,f3" >}}, log in, and run `sudo rm -f /etc/systemd/user/default.target.wants/sway-audio-idle-inhibit.service && sudo systemctl restart gdm3`. Then do step 5. |
+| <a id="black-screen-instead-of-the-login-screen"></a>**Black screen instead of the login screen** on the first 26.04 boot | The `sway-audio-idle-inhibit` link from step 3 is still there, and the reboot happened before step 5. | Press {{< keys "ctrl,alt,f3" >}}, log in, remove the link with the `sudo rm` command of [step 3](#3-remove-the-stale-sway-audio-idle-inhibit-link-if-it-exists), and run `sudo systemctl restart gdm3`. Then do step 5. |
 | `apt` finds no Regolith packages, and `regolith.list.disabled` is in `/etc/apt/sources.list.d/` | The upgrader disables every third-party repository. | Step 5. |
 | {{< keys "super,c" >}} does nothing | The upgrader removed the Settings app. | The Settings app part of step 5. |
 | X11 fonts and windows look smaller: your `Xft.dpi` setting is ignored | The X11 session on the `testing` suite starts GNOME's settings daemon, which sets the DPI to 96. | If this happens, set GNOME's text scaling to your DPI divided by 96, for example `gsettings set org.gnome.desktop.interface text-scaling-factor 1.15` for 110 DPI. |
@@ -270,7 +270,7 @@ What to expect on the `testing` suite:
 
 There is no supported way back from 26.04 to 25.10. Your backup is the real rollback. The cases below get you to a working 26.04 system.
 
-**The upgrade stopped halfway** (power loss, network failure, an error). From a text console ({{< keys "ctrl,alt,f3" >}}), or from the recovery mode root shell after `mount -o remount,rw /`:
+**The upgrade stopped halfway** (power loss, network failure, an error). From a text console (press {{< keys "ctrl,alt,f3" >}}), or from the recovery mode root shell after `mount -o remount,rw /`:
 
 ```bash
 sudo dpkg --configure -a
