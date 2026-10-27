@@ -26,16 +26,24 @@ Inspect the output of `apt` to verify you approve of the package changes.  When 
 Now that we are using the `lightdm` display manager, we can remove the unneeded packages:
 
 ```bash
-sudo apt remove gdm3 gnome-shell evolution-data-server*
+sudo apt remove gdm3 gnome-shell 'evolution-data-server*'
 ```
 
 Inspect the output of `apt` to verify you approve of the package changes.
+
+The Regolith sessions need `gnome-session-common`, but on Ubuntu 26.04 no remaining package depends on it, so `apt autoremove` would remove it and logging in would fail. Mark it as manually installed first:
+
+```bash
+sudo apt-mark manual gnome-session-common
+```
 
 Now we can remove all of the dependencies of those packages:
 
 ```bash
 sudo apt autoremove
 ```
+
+If logging in returns you to the login screen after this step, switch to a text console with {{< keys "ctrl,alt,f3" >}}, log in there and run `sudo apt install gnome-session-common`.
 
 ## Reboot
 
@@ -47,5 +55,7 @@ If you decide that you'd like to restore the existing setup, run the following a
 
 ```bash
 sudo apt install gdm3 gnome-shell evolution-data-server ubuntu-session
-sudo apt remove regolith-lightdm-session 
+sudo apt remove regolith-lightdm-config
 ```
+
+`lightdm` itself stays installed. Once `gdm3` is the default display manager, you can remove it with `sudo apt remove lightdm`.
