@@ -8,3 +8,4 @@ sudo tee /etc/apt/sources.list.d/regolith.list
 # Update apt
 sudo apt update
 echo Regolith Desktop can be installed by executing: sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
+echo Debian 12 has the X11 session only: regolith-session-sway is not available.
