@@ -1,24 +1,39 @@
-{{ $original := .Page.Resources.GetMatch (printf "%s" (.Get "src")) }}
-{{ if $original }}
-	{{/* We need this hash, otherwise we will always trigger the same modal instead of the one specific for the content */}}
-	{{ $hash := sha256 $original }}
-	{{ $preview := $original.Resize "636x" }}
-	{{ $alt := .Get 1 }}
-
-	{{ if lt $original.Width 636 }}
-	<img class="img-fluid rounded" src="{{ $original.RelPermalink }}" alt="{{ $alt }}" />
-	{{ else }}
-	<img data-toggle="modal" data-backdrop="false" data-target="#img-modal-{{ $hash }}" class="rounded img-fluid"
-		src="{{ $preview.RelPermalink }}" alt="{{ $alt }}" />
-
-	<div class="modal" id="img-modal-{{ $hash }}">
-		<div class="modal-dialog modal-xl modal-dialog-centered">
-			<div class="modal-content rounded">
-				<div class="modal-body">
-					<img class="img-fluid" data-dismiss="modal" src="{{ $original.RelPermalink }}" alt="{{ $alt }}" />
-				</div>
-			</div>
-		</div>
-	</div>
-	{{ end }}
-{{ end }}
+{{- /*
+  Image shortcode. Both forms work:
+    {{< img "images/example.png" "Alt text" >}}
+    {{< img src="images/example.png" alt="Alt text" >}}
+  The path is looked up as a page resource (page bundles), then under
+  assets/, then under static/. Large page and assets images are shown at
+  636 px wide, linked to the full-size file. A path that is found nowhere
+  renders nothing and logs a warning (id img-missing).
+*/ -}}
+{{- $src := "" -}}
+{{- $alt := "" -}}
+{{- if .IsNamedParams -}}
+  {{- $src = .Get "src" | default "" -}}
+  {{- $alt = .Get "alt" | default "" -}}
+{{- else -}}
+  {{- $src = .Get 0 | default "" -}}
+  {{- $alt = .Get 1 | default "" -}}
+{{- end -}}
+{{- $path := strings.TrimPrefix "/" $src -}}
+{{- $image := "" -}}
+{{- with .Page.Resources.GetMatch $path -}}
+  {{- $image = . -}}
+{{- else -}}
+  {{- with resources.Get $path -}}
+    {{- $image = . -}}
+  {{- end -}}
+{{- end -}}
+{{- if $image -}}
+  {{- if and (in (slice "image/png" "image/jpeg" "image/gif" "image/webp") $image.MediaType.Type) (gt $image.Width 636) -}}
+    {{- $preview := $image.Resize "636x" -}}
+<a href="{{ $image.RelPermalink }}"><img class="regolith-img" src="{{ $preview.RelPermalink }}" width="{{ $preview.Width }}" height="{{ $preview.Height }}" alt="{{ $alt }}" loading="lazy" /></a>
+  {{- else -}}
+<img class="regolith-img" src="{{ $image.RelPermalink }}" alt="{{ $alt }}" loading="lazy" />
+  {{- end -}}
+{{- else if and $path (fileExists (path.Join "static" $path)) -}}
+<img class="regolith-img" src="{{ (printf "/%s" $path) | relURL }}" alt="{{ $alt }}" loading="lazy" />
+{{- else -}}
+  {{- warnidf "img-missing" "%s: image %q not found in the page bundle, assets/ or static/" .Page.File.Path $src -}}
+{{- end -}}
