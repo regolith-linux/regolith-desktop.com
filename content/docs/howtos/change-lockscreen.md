@@ -38,7 +38,7 @@ echo "wm.program.lock_i3: /usr/bin/i3lock" >> ~/.config/regolith3/Xresources
 regolith-look refresh
 ```
 
-The lock screen keybinding ({{< keys "super,escape" >}}) then runs `i3lock`.
+The lock screen keybinding, {{< keys "super,escape" >}}, then runs `i3lock`.
 
 ## Wayland session
 
