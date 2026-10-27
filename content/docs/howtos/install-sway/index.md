@@ -16,6 +16,8 @@ To install the wayland session, follow these steps:
 2. Log out, or reboot.
 3. Select the "Regolith / Wayland" session in the login panel. In GDM, select your user and choose the session from the gear button in the lower-right corner.
 
+   {{< img src="gdm-session-menu.png" alt="The GDM login screen with the session menu open from the gear button, and Regolith / Wayland selected" >}}
+
 The X11 session ("Regolith / X11") stays installed, and you can choose either session at each login.
 
 {{< callout type="info" >}}
