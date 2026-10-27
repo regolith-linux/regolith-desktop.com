@@ -16,7 +16,7 @@ For R1.4 in particular @ploum has provided many of the ideas and validation. Gra
 
 ## Known Issues
 
-Issues and fixes are being tracked in [this project](https://github.com/orgs/regolith-linux/projects/13).
+Issues and fixes are being tracked in this project.
 
 ## Features
 
@@ -39,7 +39,7 @@ Issues and fixes are being tracked in [this project](https://github.com/orgs/reg
 
 ## Fixes
 
-Have a look at the R1.4 project page for a [list of bug fixes](https://github.com/orgs/regolith-linux/projects/11).
+Have a look at the R1.4 project page for a list of bug fixes.
 
 [^1]: This does **not** mean that Regolith uses Xfce4 or any other aspect of Xubuntu other than the install image.
 [^2]: The trade-off is that users need to install more of the software they require after installation.
