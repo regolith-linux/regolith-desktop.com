@@ -5,7 +5,7 @@ description: >
   Change which terminal Regolith loads by default
 ---
 
-The terminal keybinding ({{< keys "super,enter" >}}) runs `x-terminal-emulator`, which is `gnome-terminal` by default. Any terminal emulator can be used instead. Both methods below change the terminal of the X11 (i3) and the Wayland (sway) session alike. A Wayland-only terminal such as `foot` does not start in the X11 session, so choose one that runs in both unless you only use the Wayland session.
+The terminal keybinding, {{< keys "super,enter" >}}, runs `x-terminal-emulator`, which is `gnome-terminal` by default. Any terminal emulator can be used instead. Both methods below change the terminal of the X11 (i3) and the Wayland (sway) session alike. A Wayland-only terminal such as `foot` does not start in the X11 session, so choose one that runs in both unless you only use the Wayland session.
 
 ## For all users
 
