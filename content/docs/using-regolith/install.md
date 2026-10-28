@@ -35,7 +35,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    sudo apt update
-   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille xdg-desktop-portal-regolith
+   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
 
 1. System Restart
@@ -70,7 +70,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    sudo apt update
-   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille xdg-desktop-portal-regolith
+   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
 
 1. System Restart
@@ -105,7 +105,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    sudo apt update
-   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille xdg-desktop-portal-regolith
+   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
 
 1. System Restart
@@ -140,7 +140,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    sudo apt update
-   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille xdg-desktop-portal-regolith
+   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
 
 1. System Restart
@@ -191,7 +191,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    sudo apt update
-   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille xdg-desktop-portal-regolith
+   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
 
 1. System Restart
@@ -234,7 +234,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    sudo apt update
-   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille xdg-desktop-portal-regolith
+   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
 
 1. System Restart
