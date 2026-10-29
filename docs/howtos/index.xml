@@ -503,18 +503,14 @@ title="Copy code"
 &lt;/ul>
 &lt;h2>Further Reading&lt;span class="hx-absolute -hx-mt-20" id="further-reading">&lt;/span>
 &lt;a href="#further-reading" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>See the &lt;a href="https://regolith-desktop.com/docs/reference/configurations/" >reference page for configurations&lt;/a> for more details about config files in Regolith.&lt;/p></description></item><item><title>Disable Mouse Hiding (unclutter)</title><link>https://regolith-desktop.com/docs/howtos/disable-unclutter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/disable-unclutter/</guid><description>
-&lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-red-200 hx-bg-red-100 hx-text-red-900 dark:hx-border-red-200/30 dark:hx-bg-red-900/30 dark:hx-text-red-200">
-&lt;div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2">&lt;/div>
-&lt;div class="hx-w-full hx-min-w-0 hx-leading-7">
-&lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">This page was copied from the &lt;a href="https://regolith-linux.org" target="_blank" rel="noopener">Regolith 1.x website&lt;/a> and has not been updated for Regolith 2. It may contain out of date information.&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;p>By default the mouse cursor disappears if unused for a few seconds. If you prefer that the mouse cursor always remains visible on the screen, follow these steps:&lt;/p>
+&lt;p>By default the mouse cursor disappears if unused for a few seconds. If you prefer that the mouse cursor always remains visible on the screen, follow the steps for your session.&lt;/p>
+&lt;h2>X11 session&lt;span class="hx-absolute -hx-mt-20" id="x11-session">&lt;/span>
+&lt;a href="#x11-session" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>In the X11 session (i3), &lt;code>unclutter-xfixes&lt;/code> hides the cursor.&lt;/p>
 &lt;ol>
 &lt;li>Specify an empty value for the unclutter launcher program with an Xresources override:&lt;/li>
 &lt;/ol>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;i3-wm.program.unclutter: :&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;wm.program.unclutter: :&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
 class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
 title="Copy code"
@@ -526,7 +522,30 @@ title="Copy code"
 &lt;/div>
 &lt;ol start="2">
 &lt;li>Log out and back in for changes to take effect.&lt;/li>
-&lt;/ol></description></item><item><title>Find and Install Packages</title><link>https://regolith-desktop.com/docs/howtos/find-install-packages/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/find-install-packages/</guid><description>
+&lt;/ol>
+&lt;p>Alternatively, remove the package that starts it with &lt;code>sudo apt remove regolith-i3-unclutter&lt;/code>, then log out and back in.&lt;/p>
+&lt;h2>Wayland session&lt;span class="hx-absolute -hx-mt-20" id="wayland-session">&lt;/span>
+&lt;a href="#wayland-session" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>In the Wayland session, sway hides the cursor after 5 seconds without movement, and also while you type. To turn off both:&lt;/p>
+&lt;ol>
+&lt;li>Add these Xresources overrides (a timeout of &lt;code>0&lt;/code> turns off hiding):&lt;/li>
+&lt;/ol>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;wm.hide_cursor.timout: 0&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;wm.hide_cursor.show_when_typing: disable&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;ol start="2">
+&lt;li>Run &lt;code>regolith-look refresh&lt;/code>.&lt;/li>
+&lt;/ol>
+&lt;p>Alternatively, remove the package that sets this up with &lt;code>sudo apt remove regolith-sway-unclutter&lt;/code>, then log out and back in.&lt;/p>
+&lt;p>The key is spelled &lt;code>timout&lt;/code>, as in the Regolith configuration. Set &lt;code>wm.hide_cursor.timout&lt;/code> to another value in milliseconds to change the delay instead.&lt;/p></description></item><item><title>Find and Install Packages</title><link>https://regolith-desktop.com/docs/howtos/find-install-packages/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/find-install-packages/</guid><description>
 &lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-red-200 hx-bg-red-100 hx-text-red-900 dark:hx-border-red-200/30 dark:hx-bg-red-900/30 dark:hx-text-red-200">
 &lt;div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2">&lt;/div>
 &lt;div class="hx-w-full hx-min-w-0 hx-leading-7">
