@@ -52,7 +52,7 @@ Lancez la commande d'installation suivante pour changer le compositor.
 Cela installera `picom`:
 
 ```bash
-apt install regolith-compositor-picom
+sudo apt install regolith-compositor-picom-glx
 ```
 
 **Déconnectez puis reconnectez vous** et le nouveau compositor devrait être chargé.

@@ -57,7 +57,7 @@ i3の再起動では代替できません。
 `picom`をインストールする場合：
 
 ```bash
-apt install regolith-compositor-picom
+sudo apt install regolith-compositor-picom-glx
 ```
 
 **一度ログアウトして戻ってから**新しいコンポジターを読み込みます。
