@@ -7428,12 +7428,6 @@ title="Copy code"
 &lt;/ol>
 &lt;p>Alternatively, remove the package that sets this up with &lt;code>sudo apt remove regolith-sway-unclutter&lt;/code>, then log out and back in.&lt;/p>
 &lt;p>The key is spelled &lt;code>timout&lt;/code>, as in the Regolith configuration. Set &lt;code>wm.hide_cursor.timout&lt;/code> to another value in milliseconds to change the delay instead.&lt;/p></description></item><item><title>Find and Install Packages</title><link>https://regolith-desktop.com/docs/howtos/find-install-packages/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/find-install-packages/</guid><description>
-&lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-red-200 hx-bg-red-100 hx-text-red-900 dark:hx-border-red-200/30 dark:hx-bg-red-900/30 dark:hx-text-red-200">
-&lt;div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2">&lt;/div>
-&lt;div class="hx-w-full hx-min-w-0 hx-leading-7">
-&lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">This page was copied from the &lt;a href="https://regolith-linux.org" target="_blank" rel="noopener">Regolith 1.x website&lt;/a> and has not been updated for Regolith 2. It may contain out of date information.&lt;/div>
-&lt;/div>
-&lt;/div>
 &lt;p>Regolith is a Debian-based system. Debian packaging tools can be used to find and install packages.&lt;/p>
 &lt;h2>Find package via the command line&lt;span class="hx-absolute -hx-mt-20" id="find-package-via-the-command-line">&lt;/span>
 &lt;a href="#find-package-via-the-command-line" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>The &lt;code>apt&lt;/code> command can be used to query installed or all packages:&lt;/p>
@@ -7451,7 +7445,7 @@ title="Copy code"
 &lt;/div>
 &lt;p>For example, to list all official Regolith looks that could be installed, run:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> apt list regolith-look-*
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> apt list &lt;span class="s1">&amp;#39;regolith-look-*&amp;#39;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">...
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
@@ -7463,9 +7457,10 @@ title="Copy code"
 &lt;/button>
 &lt;/div>
 &lt;/div>
+&lt;p>Quote patterns such as &lt;code>regolith-look-*&lt;/code> so that the shell does not expand them to file names first.&lt;/p>
 &lt;p>To see which status indicators are installed on your system, run:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">apt list --installed i3xrocks-*&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">apt list --installed &lt;span class="s1">&amp;#39;i3xrocks-*&amp;#39;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
 class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
 title="Copy code"
@@ -7475,6 +7470,7 @@ title="Copy code"
 &lt;/button>
 &lt;/div>
 &lt;/div>
+&lt;p>The &lt;code>i3xrocks-*&lt;/code> status indicators are used by the bar of the X11 session. The bar of the Wayland session uses &lt;code>i3status-rs&lt;/code>, whose blocks are configured in a file rather than installed as packages. See &lt;a href="https://regolith-desktop.com/docs/howtos/install-sway/#bar-changes" >Install the Sway Compositor&lt;/a>.&lt;/p>
 &lt;h2>Install packages via the command line&lt;span class="hx-absolute -hx-mt-20" id="install-packages-via-the-command-line">&lt;/span>
 &lt;a href="#install-packages-via-the-command-line" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>To install packages via the command line, again we can us the &lt;code>apt&lt;/code> command, but must use sudo to gain the rights necessary for installation:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
@@ -7500,6 +7496,7 @@ title="Copy code"
 &lt;/button>
 &lt;/div>
 &lt;/div>
+&lt;p>New status indicators appear on the bar after &lt;code>regolith-look refresh&lt;/code> or the next login, unless you have &lt;a href="https://regolith-desktop.com/docs/howtos/add-remove-blocklets/#customize-bar" >staged your own i3xrocks configuration&lt;/a>. In that case, copy the indicator&amp;rsquo;s file from &lt;code>/usr/share/i3xrocks/conf.d/&lt;/code> as well.&lt;/p>
 &lt;h2>Find and Install Packages via GUI app&lt;span class="hx-absolute -hx-mt-20" id="find-and-install-packages-via-gui-app">&lt;/span>
 &lt;a href="#find-and-install-packages-via-gui-app" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>There are a number of apps that can provide a nice window interface on top of the apt packaging system, for example &lt;code>synaptic&lt;/code>. Refer to the documentation for the tool of your choice to learn how to search for and install packages.&lt;/p></description></item><item><title>Customize Compositor</title><link>https://regolith-desktop.com/docs/howtos/customize-compositor/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/customize-compositor/</guid><description>
 &lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
