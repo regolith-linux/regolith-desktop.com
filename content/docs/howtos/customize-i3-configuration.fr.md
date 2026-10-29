@@ -58,25 +58,25 @@ Si vous souhaitez remplacer entièrement ou supprimer des paramètres fournis pa
 Pour identifier le nom du paquet qui donne cette configuration:
 
 ```bash
-dpkg -S /usr/share/doc/regolith-i3-workspace-config
+dpkg -S /usr/share/regolith/common/config.d/40_workspace-config
 ```
 
 La sortie contient le nom du paquet:
 
 ```yaml
-regolith-i3-workspace-config: /usr/share/doc/regolith-i3-workspace-config
+regolith-wm-workspace-config: /usr/share/regolith/common/config.d/40_workspace-config
 ```
 
 Pour voir la liste complète des fichiers fournis par ce paquet (et savoir ce que l'on retire):
 
 ```bash
-dpkg -L regolith-i3-workspace-config
+dpkg -L regolith-wm-workspace-config
 ```
 
 Supprimer la configuration partielle:
 
 ```bash
-sudo apt remove regolith-i3-workspace-config
+sudo apt remove regolith-wm-workspace-config
 ```
 
 ## Comment personnaliser une configuration
@@ -96,7 +96,7 @@ mkdir -p ~/.config/regolith3/i3/config.d
 Ensuite, copier la configuration par défaut dans le dossier de configuration de l'utilisateur:
 
 ```bash
-cp /usr/share/regolith/i3/config.d/40_workspace-config ~/.config/regolith3/i3/config.d/
+cp /usr/share/regolith/common/config.d/40_workspace-config ~/.config/regolith3/i3/config.d/
 ```
 
 Faites les changements voulus:
@@ -108,7 +108,7 @@ vim ~/.config/regolith3/i3/config.d/40_workspace-config
 Retirez le paquet contenant la configuration par défaut:
 
 ```bash
-sudo apt remove regolith-i3-workspace-config
+sudo apt remove regolith-wm-workspace-config
 ```
 
 Finalement, redémarrer i3 ou sortez de la session et re-connectez vous pour appliquer les changements.
