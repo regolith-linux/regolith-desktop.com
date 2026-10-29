@@ -7846,28 +7846,9 @@ The next time you log in the bar should be hidden by default.&lt;/p></descriptio
 &lt;a href="#hardware-support" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Those using proprietary nvidia drivers for their graphics cards must set &lt;code>regolith.sway.unsupported_gpu: true&lt;/code> in their XResources. This is not an issue with the open source drivers nouveau. See more &lt;a href="https://github.com/swaywm/sway/issues/5392" target="_blank" rel="noopener">here&lt;/a>.&lt;/p>
 &lt;h2>Bar Changes&lt;span class="hx-absolute -hx-mt-20" id="bar-changes">&lt;/span>
 &lt;a href="#bar-changes" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>The wayland session uses &lt;a href="https://github.com/greshake/i3status-rust" target="_blank" rel="noopener">&lt;code>i3status-rs&lt;/code>&lt;/a> rather than &lt;code>i3xrocks&lt;/code>. &lt;code>i3status-rs&lt;/code> provides a crisper and more resource-efficient approach to system monitoring. However at this time the &lt;code>i3xrocks&lt;/code> packages for status indicators are not integrated with &lt;code>i3status-rs&lt;/code>. To use a custom configuration with &lt;code>i3status-rs&lt;/code>, users will need to put their config file at the location of their choosing and they&amp;rsquo;ll need to set the &lt;code>wm.bar.status_config&lt;/code> to the absolute path of their config file in their XResources. See the &lt;a href="https://docs.rs/i3status-rs/latest/i3status_rs/blocks/index.html" target="_blank" rel="noopener">upstream project documentation&lt;/a> for further details.&lt;/p></description></item><item><title>Launch an app in a Floating Window</title><link>https://regolith-desktop.com/docs/howtos/floating-window/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/floating-window/</guid><description>
-&lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-red-200 hx-bg-red-100 hx-text-red-900 dark:hx-border-red-200/30 dark:hx-bg-red-900/30 dark:hx-text-red-200">
-&lt;div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2">&lt;/div>
-&lt;div class="hx-w-full hx-min-w-0 hx-leading-7">
-&lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">This page was copied from the &lt;a href="https://regolith-linux.org" target="_blank" rel="noopener">Regolith 1.x website&lt;/a> and has not been updated for Regolith 2. It may contain out of date information.&lt;/div>
-&lt;/div>
-&lt;/div>
 &lt;p>Most X11 applications support a flag &lt;code>--class&lt;/code> to specify the &lt;code>class&lt;/code> under which the application runs. Regolith is configured such that apps with a class of &lt;code>floating_window&lt;/code> will launch with i3&amp;rsquo;s floating window mode.&lt;/p>
 &lt;h2>Examples&lt;span class="hx-absolute -hx-mt-20" id="examples">&lt;/span>
-&lt;a href="#examples" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>&lt;code>gnome-terminal&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="gnome-terminal">&lt;/span>
-&lt;a href="#gnome-terminal" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Launch the terminal in floating mode:&lt;/p>
-&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">gnome-terminal --class&lt;span class="o">=&lt;/span>floating_window&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
-&lt;button
-class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
-title="Copy code"
->
-&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
-&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
-&lt;/button>
-&lt;/div>
-&lt;/div>
-&lt;h3>Firefox&lt;span class="hx-absolute -hx-mt-20" id="firefox">&lt;/span>
+&lt;a href="#examples" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Firefox&lt;span class="hx-absolute -hx-mt-20" id="firefox">&lt;/span>
 &lt;a href="#firefox" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Launch Firefox in floating mode:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">firefox --class&lt;span class="o">=&lt;/span>floating_window&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
@@ -7879,7 +7860,55 @@ title="Copy code"
 &lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
 &lt;/button>
 &lt;/div>
-&lt;/div></description></item><item><title>Launch Default i3 Session</title><link>https://regolith-desktop.com/docs/howtos/vanilla-i3-gaps/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/vanilla-i3-gaps/</guid><description>
+&lt;/div>
+&lt;h3>Alacritty&lt;span class="hx-absolute -hx-mt-20" id="alacritty">&lt;/span>
+&lt;a href="#alacritty" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Launch the Alacritty terminal in floating mode:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">alacritty --class floating_window&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>&lt;code>gnome-terminal&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="gnome-terminal">&lt;/span>
+&lt;a href="#gnome-terminal" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>GNOME Terminal ignores &lt;code>--class&lt;/code>: its windows are created by a shared &lt;code>gnome-terminal-server&lt;/code> process, so they keep the class &lt;code>Gnome-terminal&lt;/code>. To float all GNOME Terminal windows instead, add a file to &lt;code>~/.config/regolith3/i3/config.d/&lt;/code> (see &lt;a href="https://regolith-desktop.com/docs/howtos/customize-i3-configuration/" >Customize i3 Configuration&lt;/a>) with the line &lt;code>for_window [class=&amp;quot;Gnome-terminal&amp;quot;] floating enable&lt;/code>, and reload i3 with &lt;span class="text-nowrap">
+&lt;span class="badge badge-warning">super&lt;/span>
+&lt;span class="badge badge-warning">shift&lt;/span>
+&lt;span class="badge badge-warning">c&lt;/span>&lt;/span>.&lt;/p>
+&lt;h2>Sway&lt;span class="hx-absolute -hx-mt-20" id="sway">&lt;/span>
+&lt;a href="#sway" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>In the Wayland session the &lt;code>floating_window&lt;/code> rule matches only X11 applications that run through XWayland. Native Wayland applications have an &lt;code>app_id&lt;/code> instead of a class. To float them, add a rule for that &lt;code>app_id&lt;/code> in &lt;code>~/.config/regolith3/sway/config.d/&lt;/code>:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div class="filename not-prose" dir="auto">~/.config/regolith3/sway/config.d/80_floating_window&lt;/div>&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">for_window [app_id=&amp;#34;floating_window&amp;#34;] floating enable&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>Then reload Sway with &lt;span class="text-nowrap">
+&lt;span class="badge badge-warning">super&lt;/span>
+&lt;span class="badge badge-warning">shift&lt;/span>
+&lt;span class="badge badge-warning">c&lt;/span>&lt;/span> and set the &lt;code>app_id&lt;/code> when launching the application:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">alacritty --class floating_window
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">firefox --name floating_window&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>&lt;code>swaymsg -t get_tree&lt;/code> shows the &lt;code>app_id&lt;/code> of open windows.&lt;/p></description></item><item><title>Launch Default i3 Session</title><link>https://regolith-desktop.com/docs/howtos/vanilla-i3-gaps/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/vanilla-i3-gaps/</guid><description>
 &lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-red-200 hx-bg-red-100 hx-text-red-900 dark:hx-border-red-200/30 dark:hx-bg-red-900/30 dark:hx-text-red-200">
 &lt;div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2">&lt;/div>
 &lt;div class="hx-w-full hx-min-w-0 hx-leading-7">
