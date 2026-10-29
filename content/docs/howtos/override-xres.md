@@ -13,32 +13,40 @@ In Regolith, `Xresources` values can be changed via two methods: supplying your 
 
 ## Initialization
 
-When a Regolith session is started, Xresources are loaded in the following order:
+When a Regolith session is started, Xresources are loaded in the following order. Later files override values from earlier ones:
 
-| File                            | Optional | Notes                                                                             |
-| ------------------------------- | -------- | --------------------------------------------------------------------------------- |
-| `~/.Xresources`                 | Y        | Intended for non-Regolith settings                                                |
-| `/usr/share/regolith-look/**/`     | N        | The Regolith `Xresources` associated with looks |
-| `~/.config/regolith3/Xresources` | Y        | Applies specific overrides to `Xresources` defaults                               |
+| File                             | Optional | Notes                                                                                                   |
+| -------------------------------- | -------- | ------------------------------------------------------------------------------------------------------- |
+| `~/.Xresources`                  | Y        | Intended for non-Regolith settings                                                                      |
+| `~/.config/regolith3/Xresources` | Y        | Loaded first so that it can select the look with `regolith.look.path`                                   |
+| `/usr/share/regolith-look/<look>/root` | N  | The Regolith `Xresources` associated with the selected look (`regolith-look set`), or with the most recently installed look if none is selected |
+| `~/.config/regolith3/Xresources` | Y        | Loaded again, so that your overrides take precedence over the look                                      |
 
-It is recommended to use `~/.config/regolith3/Xresources` for customization as it doesn't require the specification of redundant settings and is easier to maintain over time.
+It is recommended to use `~/.config/regolith3/Xresources` for customization as it doesn't require the specification of redundant settings and is easier to maintain over time. It may `#include` files from `~/.config/regolith3/Xresources.d`.
+
+In the X11 session the values are loaded into the X server with `xrdb`. In the Wayland (Sway) session the same files are loaded, in the same order, into the `trawl` configuration daemon instead.
 
 ## Determining which values can be changed
 
-The `xrdb` tool can be used to list the existing `Xresources` values. [There is a number of existing overrides]({{< ref "/docs/Reference/xresources.md" >}}) in the R2.1 release:
+The `xrdb` tool can be used to list the existing `Xresources` values in the X11 session. [There is a number of existing overrides]({{< ref "/docs/Reference/xresources.md" >}}):
 
 ```console
 $ xrdb -query
 [...]
-gnome.terminal.scrollbar:	never
-gnome.terminal.use-transparent-background:	true
-gtk.document_font_name:	Sans 12
-gtk.font_name:	Bitstream Vera Sans 12
-gtk.icon_theme_name:	Papirus-Dark
-gtk.monospace_font_name:	BitstreamVeraSansMono Nerd Font 13
-gtk.theme_name:	Ayu-Mirage-Dark
-wm.bar.background.color:	#1F2430
+gtk.document_font_name:	Sans 11
+gtk.font_name:	Bitstream Vera Sans 11
+gtk.icon_theme_name:	hicolor
+gtk.monospace_font_name:	BitstreamVeraSansMono Nerd Font 12
+gtk.theme_name:	Adwaita-dark
+wm.bar.background.color:	#393939
 [...]
+```
+
+In the Wayland session, `xrdb -query` shows nothing. Use `trawldb --query` instead, or `trawlcat <key>` to read a single value:
+
+```console
+$ trawldb --query wm.bar.position
+wm.bar.position :	bottom
 ```
 
 ## Examples
@@ -65,10 +73,12 @@ regolith-look refresh
 
 `192` is just an example value, please adjust as needed.
 
+`Xft.dpi` applies to the X11 session only. In the Wayland session, scale the output instead, for example with a file in `~/.config/regolith3/sway/config.d/` containing `output * scale 2`.
+
 ### Example - Change i3 bar position
 
 ```console
-$ xrdb -query | grep position
+$ xrdb -query | grep position     # trawldb --query wm.bar.position in the Wayland session
 wm.bar.position:	bottom
 $ echo "wm.bar.position:	top" >> ~/.config/regolith3/Xresources
 $ regolith-look refresh
@@ -77,9 +87,9 @@ $ regolith-look refresh
 ### Example - Change GTK Theme
 
 ```console
-$ xrdb -query | grep gtk
-gtk.theme_name:	Ayu-Mirage-Dark
-$ echo "gnome.gtk.theme:	Adwaita" >> ~/.config/regolith3/Xresources
+$ xrdb -query | grep gtk.theme_name
+gtk.theme_name:	Adwaita-dark
+$ echo "gtk.theme_name:	Adwaita" >> ~/.config/regolith3/Xresources
 $ regolith-look refresh
 ```
 
@@ -90,14 +100,20 @@ echo "wm.bar.trayoutput:	none" >> ~/.config/regolith3/Xresources
 regolith-look refresh
 ```
 
+This setting applies to the X11 session only.
+
 ### Example - Use Alt instead of Win as Super
 
 ```bash
 echo "wm.mod: Mod1" >> ~/.config/regolith3/Xresources
 echo "wm.alt: Mod4" >> ~/.config/regolith3/Xresources
+echo "wm.carry_container_to_ws_key: Mod4" >> ~/.config/regolith3/Xresources
+regolith-look refresh
 ```
 
-Then Reload i3 for the change to take effect.  Some settings may require logging back into the session, for example anything that i3 launches as a separate process.
+The third line keeps the "Carry Window to Workspace" bindings on {{< keys "super,alt" >}} after the swap. Without it, Regolith 3.4 and earlier give "Duplicate keybinding" errors, because the default for that binding is fixed to `Mod1`. In the Wayland session of those releases, the keyboard layout bindings also use a fixed `Mod1`, so after the swap {{< keys "alt,backspace" >}} switches the keyboard layout instead of toggling the split orientation.
+
+Reloading i3 alone does not read the file again: run `regolith-look refresh` as above, or log back into the session. Some settings may require logging back into the session, for example anything that i3 launches as a separate process.
 
 ## Further Reading
 

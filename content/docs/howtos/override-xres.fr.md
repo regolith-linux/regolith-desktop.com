@@ -82,9 +82,9 @@ $ regolith-look refresh
 ### Exemple - Changer le thème GTK
 
 ```console
-$ xrdb -query | grep gtk
-gnome.gtk.theme:	Ayu-Mirage-Dark
-$ echo "gnome.gtk.theme:	Adwaita" >> ~/.config/regolith3/Xresources
+$ xrdb -query | grep gtk.theme_name
+gtk.theme_name:	Adwaita-dark
+$ echo "gtk.theme_name:	Adwaita" >> ~/.config/regolith3/Xresources
 $ regolith-look refresh
 ```
 
