@@ -616,11 +616,19 @@ packaging system. This means that compositors can be switched out simply by
 installing the packages that contain them. The underlying packaging system will
 ensure there are no conflicts and that all the dependencies of a given
 compositor are also installed.&lt;/p>
+&lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
+&lt;div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2">&lt;/div>
+&lt;div class="hx-w-full hx-min-w-0 hx-leading-7">
+&lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">This page applies to the X11 session (i3) only. In the Wayland session, sway is
+itself the compositor, and the &lt;code>regolith-compositor-*&lt;/code> packages have no effect.&lt;/div>
+&lt;/div>
+&lt;/div>
 &lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-yellow-100 hx-bg-yellow-50 hx-text-yellow-900 dark:hx-border-yellow-200/30 dark:hx-bg-yellow-700/30 dark:hx-text-yellow-200">
 &lt;div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2">&lt;/div>
 &lt;div class="hx-w-full hx-min-w-0 hx-leading-7">
-&lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">In Regolith 2.x, the default compositor is &amp;ldquo;no compositor&amp;rdquo;. In
-Regolith 1.x, the default was Picom.&lt;/div>
+&lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">Since Regolith 3.0, the default compositor of the X11 session is Picom
+(&lt;code>regolith-compositor-picom-glx&lt;/code>). In Regolith 2.x, the default was &amp;ldquo;no
+compositor&amp;rdquo;; in Regolith 1.x, it was Picom.&lt;/div>
 &lt;/div>
 &lt;/div>
 &lt;h2>Finding available compositors&lt;span class="hx-absolute -hx-mt-20" id="finding-available-compositors">&lt;/span>
@@ -639,11 +647,11 @@ title="Copy code"
 &lt;/div>
 &lt;p>You should find at least the following:&lt;/p>
 &lt;ul>
-&lt;li>&lt;code>regolith-compositor-none&lt;/code> &lt;strong>[default]&lt;/strong>: No compositor. Best performance, no
-visual effects.&lt;/li>
-&lt;li>&lt;code>regolith-compositor-picom-glx&lt;/code>: Uses &lt;code>picom&lt;/code>. Recommended for most users to
+&lt;li>&lt;code>regolith-compositor-picom-glx&lt;/code> &lt;strong>[default]&lt;/strong>: Uses &lt;code>picom&lt;/code>. Recommended for most users to
 resolve screen tearing and add visual effects. Modern and well-maintained
-fork of &lt;code>compton&lt;/code>. Was the default compositor in Regolith 1.6.&lt;/li>
+fork of &lt;code>compton&lt;/code>.&lt;/li>
+&lt;li>&lt;code>regolith-compositor-none&lt;/code>: No compositor. Best performance, no
+visual effects.&lt;/li>
 &lt;li>&lt;code>regolith-compositor-compton-glx&lt;/code>: An ancestor of &lt;code>picom&lt;/code> which is no longer
 maintained.&lt;/li>
 &lt;li>&lt;code>regolith-compositor-xcompmgr&lt;/code>: An early compositor that may offer more
@@ -661,7 +669,7 @@ sufficient.&lt;/div>
 &lt;p>Run the following package install command to swap out the compositor. In this
 case we’ll install &lt;code>picom&lt;/code>:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">apt install regolith-compositor-picom&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt install regolith-compositor-picom-glx&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
 class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
 title="Copy code"
@@ -671,6 +679,7 @@ title="Copy code"
 &lt;/button>
 &lt;/div>
 &lt;/div>
+&lt;p>To run without a compositor, install &lt;code>regolith-compositor-none&lt;/code> the same way.&lt;/p>
 &lt;p>&lt;strong>Log out and then log back in&lt;/strong> and the new compositor should be loaded. You
 can verify by checking the process list for &lt;code>picom&lt;/code>:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
@@ -685,10 +694,33 @@ title="Copy code"
 &lt;/div>
 &lt;/div>
 &lt;h2>Overriding Regolith default compositor configuration&lt;span class="hx-absolute -hx-mt-20" id="overriding-regolith-default-compositor-configuration">&lt;/span>
-&lt;a href="#overriding-regolith-default-compositor-configuration" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Compton/Picom&lt;span class="hx-absolute -hx-mt-20" id="comptonpicom">&lt;/span>
-&lt;a href="#comptonpicom" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>To provide your own Compton/Picom compositor config, copy the default or create
-your own and save it as &lt;code>~/.config/regolith3/picom/config&lt;/code>. Upon next session it
-will be loaded instead of the default config &lt;code>/etc/regolith/picom/config&lt;/code>.&lt;/p></description></item><item><title>Customize i3 Configuration</title><link>https://regolith-desktop.com/docs/howtos/customize-i3-configuration/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/customize-i3-configuration/</guid><description>
+&lt;a href="#overriding-regolith-default-compositor-configuration" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Picom&lt;span class="hx-absolute -hx-mt-20" id="picom">&lt;/span>
+&lt;a href="#picom" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>To provide your own Picom compositor config, copy the default or create
+your own and save it as &lt;code>~/.config/regolith3/picom/config&lt;/code>. It is loaded instead
+of the default config &lt;code>/etc/regolith/picom/config&lt;/code> the next time i3 starts, so
+&lt;code>regolith-look refresh&lt;/code> (which restarts i3) applies it without logging out:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">mkdir -p ~/.config/regolith3/picom
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cp /etc/regolith/picom/config ~/.config/regolith3/picom/config&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>Some looks ship their own Picom config and select it with the Xresource
+&lt;code>regolith.compositor.picom.config&lt;/code>. A file in &lt;code>~/.config/regolith3/picom/config&lt;/code>
+takes precedence over it.&lt;/p>
+&lt;p>If the screen stops updating in the X11 session (new windows do not appear and
+workspace switches do not show), for example in a virtual machine without 3D
+acceleration, Picom&amp;rsquo;s &lt;code>glx&lt;/code> backend may not work with software rendering. Set
+&lt;code>backend = &amp;quot;xrender&amp;quot;;&lt;/code> in your config, or use &lt;code>regolith-compositor-none&lt;/code>.&lt;/p>
+&lt;h3>Compton&lt;span class="hx-absolute -hx-mt-20" id="compton">&lt;/span>
+&lt;a href="#compton" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;code>regolith-compositor-compton-glx&lt;/code> reads &lt;code>~/.config/regolith3/compton/config&lt;/code>
+instead of its default config &lt;code>/etc/regolith/compton/config&lt;/code>.&lt;/p></description></item><item><title>Customize i3 Configuration</title><link>https://regolith-desktop.com/docs/howtos/customize-i3-configuration/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/customize-i3-configuration/</guid><description>
 &lt;p>The default configurations are stored in &lt;code>/usr/share/regolith/i3/config.d&lt;/code>. These are loaded alphabetically. Then user configurations in &lt;code>~/.config/regolith3/i3/config.d&lt;/code> are loaded, also in alphabetical order. Regolith&amp;rsquo;s default configuration is built to be customized by setting &lt;code>Xresources&lt;/code> variables, adding user configuration, and adding or removing default configurations via &lt;code>apt&lt;/code>. For this reason, there are several approaches to customization of i3 in Regolith that can be used separately or in combination to achieve your configuration cleanly:&lt;/p>
 &lt;ul>
 &lt;li>Use &lt;code>Xresources&lt;/code> to override variables, e.g. keybindings, strings, program names, colors, etc.&lt;/li>
