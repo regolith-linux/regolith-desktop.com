@@ -2202,9 +2202,9 @@ title="Copy code"
 &lt;/div>
 &lt;h3>例 - GTKテーマを変更する&lt;span class="hx-absolute -hx-mt-20" id="例---gtkテーマを変更する">&lt;/span>
 &lt;a href="#%e4%be%8b---gtk%e3%83%86%e3%83%bc%e3%83%9e%e3%82%92%e5%a4%89%e6%9b%b4%e3%81%99%e3%82%8b" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> xrdb -query &lt;span class="p">|&lt;/span> grep gtk
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">gtk.theme_name: Ayu-Mirage-Dark
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="gp">$&lt;/span> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;gnome.gtk.theme: Adwaita&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> xrdb -query &lt;span class="p">|&lt;/span> grep gtk.theme_name
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">gtk.theme_name: Adwaita-dark
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="gp">$&lt;/span> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;gtk.theme_name: Adwaita&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> regolith-look refresh
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button

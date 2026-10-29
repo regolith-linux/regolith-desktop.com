@@ -8035,7 +8035,7 @@ title="Copy code"
 &lt;/div>
 &lt;/div>
 &lt;h2>Initialization&lt;span class="hx-absolute -hx-mt-20" id="initialization">&lt;/span>
-&lt;a href="#initialization" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>When a Regolith session is started, Xresources are loaded in the following order:&lt;/p>
+&lt;a href="#initialization" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>When a Regolith session is started, Xresources are loaded in the following order. Later files override values from earlier ones:&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -8051,32 +8051,50 @@ title="Copy code"
 &lt;td>Intended for non-Regolith settings&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>/usr/share/regolith-look/**/&lt;/code>&lt;/td>
+&lt;td>&lt;code>~/.config/regolith3/Xresources&lt;/code>&lt;/td>
+&lt;td>Y&lt;/td>
+&lt;td>Loaded first so that it can select the look with &lt;code>regolith.look.path&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>/usr/share/regolith-look/&amp;lt;look&amp;gt;/root&lt;/code>&lt;/td>
 &lt;td>N&lt;/td>
-&lt;td>The Regolith &lt;code>Xresources&lt;/code> associated with looks&lt;/td>
+&lt;td>The Regolith &lt;code>Xresources&lt;/code> associated with the selected look (&lt;code>regolith-look set&lt;/code>), or with the most recently installed look if none is selected&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;code>~/.config/regolith3/Xresources&lt;/code>&lt;/td>
 &lt;td>Y&lt;/td>
-&lt;td>Applies specific overrides to &lt;code>Xresources&lt;/code> defaults&lt;/td>
+&lt;td>Loaded again, so that your overrides take precedence over the look&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>It is recommended to use &lt;code>~/.config/regolith3/Xresources&lt;/code> for customization as it doesn&amp;rsquo;t require the specification of redundant settings and is easier to maintain over time.&lt;/p>
+&lt;p>It is recommended to use &lt;code>~/.config/regolith3/Xresources&lt;/code> for customization as it doesn&amp;rsquo;t require the specification of redundant settings and is easier to maintain over time. It may &lt;code>#include&lt;/code> files from &lt;code>~/.config/regolith3/Xresources.d&lt;/code>.&lt;/p>
+&lt;p>In the X11 session the values are loaded into the X server with &lt;code>xrdb&lt;/code>. In the Wayland (Sway) session the same files are loaded, in the same order, into the &lt;code>trawl&lt;/code> configuration daemon instead.&lt;/p>
 &lt;h2>Determining which values can be changed&lt;span class="hx-absolute -hx-mt-20" id="determining-which-values-can-be-changed">&lt;/span>
-&lt;a href="#determining-which-values-can-be-changed" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>The &lt;code>xrdb&lt;/code> tool can be used to list the existing &lt;code>Xresources&lt;/code> values. &lt;a href="https://regolith-desktop.com/docs/reference/xresources/" >There is a number of existing overrides&lt;/a> in the R2.1 release:&lt;/p>
+&lt;a href="#determining-which-values-can-be-changed" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>The &lt;code>xrdb&lt;/code> tool can be used to list the existing &lt;code>Xresources&lt;/code> values in the X11 session. &lt;a href="https://regolith-desktop.com/docs/reference/xresources/" >There is a number of existing overrides&lt;/a>:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> xrdb -query
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">[...]
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">gnome.terminal.scrollbar: never
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">gnome.terminal.use-transparent-background: true
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">gtk.document_font_name: Sans 12
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">gtk.font_name: Bitstream Vera Sans 12
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">gtk.icon_theme_name: Papirus-Dark
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">gtk.monospace_font_name: BitstreamVeraSansMono Nerd Font 13
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">gtk.theme_name: Ayu-Mirage-Dark
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">wm.bar.background.color: #1F2430
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">gtk.document_font_name: Sans 11
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">gtk.font_name: Bitstream Vera Sans 11
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">gtk.icon_theme_name: hicolor
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">gtk.monospace_font_name: BitstreamVeraSansMono Nerd Font 12
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">gtk.theme_name: Adwaita-dark
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">wm.bar.background.color: #393939
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">[...]
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>In the Wayland session, &lt;code>xrdb -query&lt;/code> shows nothing. Use &lt;code>trawldb --query&lt;/code> instead, or &lt;code>trawlcat &amp;lt;key&amp;gt;&lt;/code> to read a single value:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> trawldb --query wm.bar.position
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">wm.bar.position : bottom
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
 class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
@@ -8123,9 +8141,10 @@ title="Copy code"
 &lt;li>Open a new terminal to see the change take effect.&lt;/li>
 &lt;/ol>
 &lt;p>&lt;code>192&lt;/code> is just an example value, please adjust as needed.&lt;/p>
+&lt;p>&lt;code>Xft.dpi&lt;/code> applies to the X11 session only. In the Wayland session, scale the output instead, for example with a file in &lt;code>~/.config/regolith3/sway/config.d/&lt;/code> containing &lt;code>output * scale 2&lt;/code>.&lt;/p>
 &lt;h3>Example - Change i3 bar position&lt;span class="hx-absolute -hx-mt-20" id="example---change-i3-bar-position">&lt;/span>
 &lt;a href="#example---change-i3-bar-position" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> xrdb -query &lt;span class="p">|&lt;/span> grep position
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> xrdb -query &lt;span class="p">|&lt;/span> grep position &lt;span class="c1"># trawldb --query wm.bar.position in the Wayland session&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">wm.bar.position: bottom
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="gp">$&lt;/span> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;wm.bar.position: top&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> regolith-look refresh
@@ -8141,9 +8160,9 @@ title="Copy code"
 &lt;/div>
 &lt;h3>Example - Change GTK Theme&lt;span class="hx-absolute -hx-mt-20" id="example---change-gtk-theme">&lt;/span>
 &lt;a href="#example---change-gtk-theme" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> xrdb -query &lt;span class="p">|&lt;/span> grep gtk
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">gtk.theme_name: Ayu-Mirage-Dark
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="gp">$&lt;/span> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;gnome.gtk.theme: Adwaita&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> xrdb -query &lt;span class="p">|&lt;/span> grep gtk.theme_name
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">gtk.theme_name: Adwaita-dark
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="gp">$&lt;/span> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;gtk.theme_name: Adwaita&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> regolith-look refresh
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
@@ -8168,10 +8187,13 @@ title="Copy code"
 &lt;/button>
 &lt;/div>
 &lt;/div>
+&lt;p>This setting applies to the X11 session only.&lt;/p>
 &lt;h3>Example - Use Alt instead of Win as Super&lt;span class="hx-absolute -hx-mt-20" id="example---use-alt-instead-of-win-as-super">&lt;/span>
 &lt;a href="#example---use-alt-instead-of-win-as-super" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;wm.mod: Mod1&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;wm.alt: Mod4&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;wm.alt: Mod4&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;wm.carry_container_to_ws_key: Mod4&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">regolith-look refresh&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
 class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
 title="Copy code"
@@ -8181,7 +8203,12 @@ title="Copy code"
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;p>Then Reload i3 for the change to take effect. Some settings may require logging back into the session, for example anything that i3 launches as a separate process.&lt;/p>
+&lt;p>The third line keeps the &amp;ldquo;Carry Window to Workspace&amp;rdquo; bindings on &lt;span class="text-nowrap">
+&lt;span class="badge badge-warning">super&lt;/span>
+&lt;span class="badge badge-warning">alt&lt;/span>&lt;/span> after the swap. Without it, Regolith 3.4 and earlier give &amp;ldquo;Duplicate keybinding&amp;rdquo; errors, because the default for that binding is fixed to &lt;code>Mod1&lt;/code>. In the Wayland session of those releases, the keyboard layout bindings also use a fixed &lt;code>Mod1&lt;/code>, so after the swap &lt;span class="text-nowrap">
+&lt;span class="badge badge-warning">alt&lt;/span>
+&lt;span class="badge badge-warning">backspace&lt;/span>&lt;/span> switches the keyboard layout instead of toggling the split orientation.&lt;/p>
+&lt;p>Reloading i3 alone does not read the file again: run &lt;code>regolith-look refresh&lt;/code> as above, or log back into the session. Some settings may require logging back into the session, for example anything that i3 launches as a separate process.&lt;/p>
 &lt;h2>Further Reading&lt;span class="hx-absolute -hx-mt-20" id="further-reading">&lt;/span>
 &lt;a href="#further-reading" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>See the &lt;a href="https://regolith-desktop.com/docs/reference/configurations/" >reference page for configurations&lt;/a> for more details about config files in Regolith.&lt;/p></description></item><item><title>Remove Unneeded Dependencies</title><link>https://regolith-desktop.com/docs/howtos/remove-unneeded-deps/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/remove-unneeded-deps/</guid><description>
 &lt;p>When Regolith is installed via ISO, only the necessary desktop components or packages are installed by default. However when installing Regolith into an existing Ubuntu system, some desktop components that Regolith does not require will still be installed on the system. There is nothing wrong with keeping these additional packages, in fact they are important if you wish to switch back to the default Ubuntu session at some point, however some users prefer to remove them.&lt;/p>
