@@ -130,7 +130,8 @@ Regolithバージョン3.0ではXresourceキーが"i3-wm"から"wm"に置き換�
 | wm.program.logout              | ログアウトキーバインドを実行するコマンド                                                                                                                                                        |
 | wm.program.reboot              | 再起動キーバインドを実行するコマンド                                                                                                                                                        |
 | wm.program.shutdown            | シャットダウンキーバインドを実行するコマンド                                                                                                                                                      |
-| wm.program.lock                | 画面ロックキーバインドを実行するコマンド                                                                                                                                                   |
+| wm.program.lock_i3             | Command the lock screen keybinding runs in the X11 (i3) session. The default locks with GNOME Flashback's lock screen (`org.gnome.ScreenSaver.Lock`). Replaced `wm.program.lock` in Regolith 3.4 |
+| wm.program.lock_sway           | Command that locks the Wayland (sway) session: the lock screen keybinding, and the locks on idle, on lid close and before suspend. The default runs `gtklock` with `regolith.lockscreen.wallpaper.file` as its background |
 | wm.program.sleep               | スリープキーバインドを実行するコマンド                                                                                                                                                         |
 | wm.program.settings            | コントロールパネルキーバインドを実行するコマンド                                                                                                                                                 |
 | wm.program.display             | ディスプレイ設定キーバインドを実行するコマンド                                                                                                                                              |
@@ -139,6 +140,9 @@ Regolithバージョン3.0ではXresourceキーが"i3-wm"から"wm"に置き換�
 | wm.program.files               | ファイルブラウザキーバインドを実行するコマンド                                                                                                                                                  |
 | wm.program.notification_ui     | 通知UIキーバインドを実行するコマンド                                                                                                                                               |
 | wm.program.1...wm.program.3 | i3と開始するオプションのプログラム                                                                                                                                                                  |
+| wm.program.unclutter        | X11 (i3) only: command i3 starts to hide the mouse pointer when it is not used. The default is `/usr/bin/unclutter -b`; set it to `:` to keep the pointer visible. Takes effect at the next login |
+| wm.hide_cursor.timeout      | Wayland (sway) only: milliseconds without movement before the pointer is hidden (default `5000`, `0` turns hiding off). regolith-wm-config 4.11.12 and earlier read only the misspelled `wm.hide_cursor.timout`, which newer versions still accept |
+| wm.hide_cursor.show_when_typing | Wayland (sway) only: `enable` (default) hides the pointer while you type, `disable` keeps it visible                                                                                 |
 | i3xrocks.media-player.player-args | `media-player`i3xrocksブロックにおけるオプションの引数。これらの引数は`playerctl`に直接与えられます。例えば、`-p spotify`という値を設定すると、バーがSpotifyを表示・操作するだけになります。 |
 | i3xrocks.action.mic.left | マイクステータスインジケーターで左クリック時に実行するオプションのコマンド |
 | i3xrocks.action.mic.middle | マイクステータスインジケーターで中クリック時に実行するオプションのコマンド |
