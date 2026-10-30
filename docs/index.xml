@@ -8430,9 +8430,15 @@ title="Copy code"
 &lt;/div>
 &lt;/div>
 &lt;p>Regolith uses a number of configuration files to determine the behavior and look of various components. While it&amp;rsquo;s possible to simply edit these files directly, users who do so run the risk of having their configurations overwritten upon future updates. The Debian packaging system should ask users if they wish to take updates or keep the existing files, but this may have unintended side effects if users take partial updates of files. As such Regolith, upon login, will look for user-staged version of configuration files and load those &lt;em>instead of the defaults&lt;/em> if they exist. This is recommended over editing the files directly as it gives the user more control over their configuration. This page describes how to create these files.&lt;/p>
-&lt;p>Depending on what you wish to change, you may need your own copy if the i3 config file. If you&amp;rsquo;re looking to change the way Regolith looks, &lt;code>Xresources&lt;/code> may be all you need. If you want to update or add keybindings or swap out components, you&amp;rsquo;ll most likely need to stage the i3 config file.&lt;/p>
-&lt;h2>i3 Config&lt;span class="hx-absolute -hx-mt-20" id="i3-config">&lt;/span>
-&lt;a href="#i3-config" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ol>
+&lt;p>Depending on what you wish to change, you may need your own copy of the window manager config file: the i3 config file in the X11 session, or the sway config file in the Wayland session. If you&amp;rsquo;re looking to change the way Regolith looks, &lt;code>Xresources&lt;/code> may be all you need. If you want to update or add keybindings or swap out components, you&amp;rsquo;ll most likely need to stage the config file.&lt;/p>
+&lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
+&lt;div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2">&lt;/div>
+&lt;div class="hx-w-full hx-min-w-0 hx-leading-7">
+&lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">A staged copy replaces the default file completely, so changes that later Regolith updates make to the default file don&amp;rsquo;t reach you. To add or change a few settings, a config partial in &lt;code>~/.config/regolith3/i3/config.d/&lt;/code> (X11) or &lt;code>~/.config/regolith3/sway/config.d/&lt;/code> (Wayland) is often enough. See &lt;a href="https://regolith-desktop.com/docs/howtos/customize-i3-configuration/" target="_blank" rel="noopener">Customize i3 Configuration&lt;/a>.&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h2>i3 Config (X11 Session)&lt;span class="hx-absolute -hx-mt-20" id="i3-config-x11-session">&lt;/span>
+&lt;a href="#i3-config-x11-session" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ol>
 &lt;li>Copy the default Regolith i3 config file into your home directory:&lt;/li>
 &lt;/ol>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
@@ -8453,4 +8459,27 @@ title="Copy code"
 &lt;h3>Verify the Change&lt;span class="hx-absolute -hx-mt-20" id="verify-the-change">&lt;/span>
 &lt;a href="#verify-the-change" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;ol>
 &lt;li>Verify by running &lt;code>i3 --moreversion&lt;/code> and noting the config file that is printed as a result. It should be the copy you just created. If not, be sure the path is correct. It must exactly be &lt;code>~/.config/regolith3/i3/config&lt;/code> for Regolith to load it.&lt;/li>
+&lt;/ol>
+&lt;h2>Sway Config (Wayland Session)&lt;span class="hx-absolute -hx-mt-20" id="sway-config-wayland-session">&lt;/span>
+&lt;a href="#sway-config-wayland-session" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ol>
+&lt;li>Copy the default Regolith sway config file into your home directory:&lt;/li>
+&lt;/ol>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">mkdir -p ~/.config/regolith3/sway
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cp /etc/regolith/sway/config ~/.config/regolith3/sway/config&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;ol start="2">
+&lt;li>Log out and back in. The Regolith session will automatically detect and load your user-staged file.&lt;/li>
+&lt;/ol>
+&lt;h3>Verify the Change&lt;span class="hx-absolute -hx-mt-20" id="verify-the-change-1">&lt;/span>
+&lt;a href="#verify-the-change-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;ol>
+&lt;li>Verify by running &lt;code>pgrep -a -x sway&lt;/code>. The output shows the config file sway was started with, for example &lt;code>sway -c /home/user/.config/regolith3/sway/config&lt;/code>. It should be the copy you just created. If not, be sure the path is correct. It must exactly be &lt;code>~/.config/regolith3/sway/config&lt;/code> for Regolith to load it.&lt;/li>
 &lt;/ol></description></item></channel></rss>
