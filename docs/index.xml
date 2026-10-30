@@ -8011,23 +8011,17 @@ title="Copy code"
 &lt;p>This page describes how to install the Regolith Desktop into Ubuntu Server. This approach produces a minimal setup as many of the standard GNOME desktop packages present in a desktop install will be avoided.&lt;/p>
 &lt;h2>Steps&lt;span class="hx-absolute -hx-mt-20" id="steps">&lt;/span>
 &lt;a href="#steps" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Install Ubuntu Server&lt;span class="hx-absolute -hx-mt-20" id="install-ubuntu-server">&lt;/span>
-&lt;a href="#install-ubuntu-server" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Follow online instructions for installing a fresh copy of Ubuntu Server versions either 20.04 or 22.04.&lt;/p>
+&lt;a href="#install-ubuntu-server" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Follow online instructions for installing a fresh copy of Ubuntu Server, in a release that Regolith supports. See the &lt;a href="https://regolith-desktop.com/docs/getting-started/compatibility/" >Compatibility Matrix&lt;/a>.&lt;/p>
 &lt;h3>Add Regolith&amp;rsquo;s package key and apt repository&lt;span class="hx-absolute -hx-mt-20" id="add-regoliths-package-key-and-apt-repository">&lt;/span>
-&lt;a href="#add-regoliths-package-key-and-apt-repository" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Once Ubuntu Server has been installed, log into a terminal session. Use the following URLs to download the installation directions as a text file:&lt;/p>
-&lt;p>Ubuntu 25.04 (Plucky): &lt;a href="https://regolith-desktop.com/install-release-ubuntu-25.04-amd64.txt" >install-release-ubuntu-25.04-amd64.txt&lt;/a>&lt;br>
-Ubuntu 24.10 (Oracular): &lt;a href="https://regolith-desktop.com/install-release-ubuntu-24.10-amd64.txt" >install-release-ubuntu-24.10-amd64.txt&lt;/a>&lt;br>
+&lt;a href="#add-regoliths-package-key-and-apt-repository" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Once Ubuntu Server has been installed, log into a terminal session. Register the Regolith public key and add the repository URL for your release, as described in the first two steps of the &lt;a href="https://regolith-desktop.com/docs/using-regolith/install/" >Install page&lt;/a>. The same directions are available as text files:&lt;/p>
+&lt;p>Ubuntu 25.10 (Questing): &lt;a href="https://regolith-desktop.com/install-release-ubuntu-25.10-amd64.txt" >install-release-ubuntu-25.10-amd64.txt&lt;/a>&lt;br>
+Ubuntu 25.04 (Plucky): &lt;a href="https://regolith-desktop.com/install-release-ubuntu-25.04-amd64.txt" >install-release-ubuntu-25.04-amd64.txt&lt;/a>&lt;br>
 Ubuntu 24.04 LTS (Noble): &lt;a href="https://regolith-desktop.com/install-release-ubuntu-24.04-amd64.txt" >install-release-ubuntu-24.04-amd64.txt&lt;/a>&lt;br>
-Ubuntu 23.10 (Mantic): &lt;a href="https://regolith-desktop.com/install-release-ubuntu-23.10-amd64.txt" >install-release-ubuntu-23.10-amd64.txt&lt;/a>&lt;br>
-Ubuntu 23.04 (Lunar): &lt;a href="https://regolith-desktop.com/install-release-ubuntu-23.04-amd64.txt" >install-release-ubuntu-23.04-amd64.txt&lt;/a>&lt;br>
-Ubuntu 22.10 (Kinetic): &lt;a href="https://regolith-desktop.com/install-release-ubuntu-22.10-amd64.txt" >install-release-ubuntu-22.10-amd64.txt&lt;/a>&lt;br>
-Ubuntu 22.04 LTS (Jammy): &lt;a href="https://regolith-desktop.com/install-release-ubuntu-22.04-amd64.txt" >install-release-ubuntu-22.04-amd64.txt&lt;/a>&lt;br>
-Ubuntu 20.04 LTS (Focal): &lt;a href="https://regolith-desktop.com/install-release-ubuntu-20.04-amd64.txt" >install-release-ubuntu-20.04-amd64.txt&lt;/a>&lt;/p>
-&lt;p>Debian 12 (Bookworm): &lt;a href="https://regolith-desktop.com/install-release-debian-12-amd64.txt" >install-release-debian-12-amd64.txt&lt;/a>&lt;br>
-Debian 11 (Bullseye): &lt;a href="https://regolith-desktop.com/install-release-debian-11-amd64.txt" >install-release-debian-11-amd64.txt&lt;/a>&lt;/p>
+Ubuntu 22.04 LTS (Jammy): &lt;a href="https://regolith-desktop.com/install-release-ubuntu-22.04-amd64.txt" >install-release-ubuntu-22.04-amd64.txt&lt;/a>&lt;/p>
 &lt;p>Example:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">wget https://regolith-desktop.com/install-release-ubuntu-22.04-amd64.txt
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cat install-release-ubuntu-22.04-amd64.txt&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">wget https://regolith-desktop.com/install-release-ubuntu-24.04-amd64.txt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cat install-release-ubuntu-24.04-amd64.txt&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
 class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
 title="Copy code"
@@ -8042,6 +8036,19 @@ title="Copy code"
 &lt;a href="#install-the-regolith-ubuntu-system" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>There is a special package that is used in the ISO that can also be used in a minimal install such as this: &lt;code>regolith-system-ubuntu&lt;/code>. This package includes extra branding not used in typical desktop installs which may share multiple desktop environments. Run the following command to install Regolith Desktop and all of it&amp;rsquo;s dependencies:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt install regolith-system-ubuntu&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>This installs the X11 session (&lt;code>regolith-session-flashback&lt;/code>) and the &lt;code>lightdm&lt;/code> login manager. Some recommended packages also bring in &lt;code>gdm3&lt;/code> and GNOME Shell, so &lt;code>apt&lt;/code> asks which display manager to use by default: choose &lt;code>lightdm&lt;/code>. If you don&amp;rsquo;t want &lt;code>gdm3&lt;/code> and GNOME Shell, you can remove them afterwards with &lt;code>sudo apt remove gdm3 gnome-shell&lt;/code>.&lt;/p>
+&lt;p>To also install the Wayland session, run:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt install regolith-session-sway&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
 class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
 title="Copy code"
