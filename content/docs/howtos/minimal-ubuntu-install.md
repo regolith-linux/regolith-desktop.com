@@ -45,8 +45,7 @@ On a Raspberry Pi running Ubuntu Server 25.10 (arm64), `lightdm` shows a black s
 
 ```bash
 wget https://archive.raspberrypi.org/debian/pool/main/g/gldriver-test/gldriver-test_0.15_all.deb
-sudo dpkg -i gldriver-test_0.15_all.deb
-sudo apt install -f
+sudo apt install ./gldriver-test_0.15_all.deb
 ```
 
 ### Install the Regolith Ubuntu System
