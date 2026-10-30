@@ -7473,28 +7473,22 @@ title="Copy code"
 &lt;/div>
 &lt;p>The Regolith profile is updated, and open GNOME Terminal windows change to the new font.&lt;/p>
 &lt;p>This only applies to GNOME Terminal. If you &lt;a href="https://regolith-desktop.com/docs/howtos/change-terminal/" >use another terminal&lt;/a>, set the font in that terminal&amp;rsquo;s own configuration. To stop Regolith from changing the GNOME Terminal profile at all, set &lt;code>gnome.terminal.update: false&lt;/code>.&lt;/p></description></item><item><title>Change Workspace Icons and Labels</title><link>https://regolith-desktop.com/docs/howtos/change-workspace-icons/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/change-workspace-icons/</guid><description>
-&lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-red-200 hx-bg-red-100 hx-text-red-900 dark:hx-border-red-200/30 dark:hx-bg-red-900/30 dark:hx-text-red-200">
-&lt;div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2">&lt;/div>
-&lt;div class="hx-w-full hx-min-w-0 hx-leading-7">
-&lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">This page was copied from the &lt;a href="https://regolith-linux.org" target="_blank" rel="noopener">Regolith 1.x website&lt;/a> and has not been updated for Regolith 2. It may contain out of date information.&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;p>Adding icons to workspaces can give your desktop a nice and functional look.&lt;/p>
+&lt;p>Adding icons to workspaces can give your desktop a nice and functional look. The steps on this page work in both the X11 (i3) and the Wayland (sway) session.&lt;/p>
 &lt;h2>Finding icons&lt;span class="hx-absolute -hx-mt-20" id="finding-icons">&lt;/span>
-&lt;a href="#finding-icons" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Icons are actually characters from fonts installed by Regolith looks. Each look comes with a specific icon font. The icon font is defined in the &lt;code>typeface_bar&lt;/code> variable in the &lt;code>typeface&lt;/code> config file. For example, the look &amp;ldquo;Cahuella&amp;rdquo; uses the &lt;em>Material Design Icons&lt;/em> font (see file &lt;code>/etc/regolith/styles/cahuella/typeface&lt;/code>).&lt;/p>
-&lt;p>You can browse the icon font using the &lt;a href="https://wiki.gnome.org/action/show/Apps/Gucharmap?action=show&amp;amp;redirect=Gucharmap" target="_blank" rel="noopener">Gnome Character Map&lt;/a> application from the &lt;code>gucharmap&lt;/code> package:&lt;/p>
+&lt;a href="#finding-icons" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Icons are actually characters from fonts installed by Regolith looks. Every look uses a &lt;a href="https://www.nerdfonts.com/" target="_blank" rel="noopener">Nerd Font&lt;/a> for the bar, which contains thousands of icons. The bar font is set by the Xresource &lt;code>wm.bar.font&lt;/code>; you can see the current one with &lt;code>xrescat wm.bar.font&lt;/code> in the X11 session or &lt;code>trawlcat wm.bar.font&lt;/code> in the Wayland session. For example, the default look uses &lt;em>BitstreamVeraSansMono Nerd Font&lt;/em>.&lt;/p>
+&lt;p>You can browse the icons on the &lt;a href="https://www.nerdfonts.com/cheat-sheet" target="_blank" rel="noopener">Nerd Fonts cheat sheet&lt;/a>, or in the font itself using the &lt;a href="https://gitlab.gnome.org/GNOME/gucharmap" target="_blank" rel="noopener">GNOME Character Map&lt;/a> application from the &lt;code>gucharmap&lt;/code> package:&lt;/p>
 &lt;ol>
-&lt;li>Open &amp;ldquo;Gnome Character Map&amp;rdquo;.&lt;/li>
+&lt;li>Open &amp;ldquo;Character Map&amp;rdquo;.&lt;/li>
 &lt;li>Select your icon font in the top left combo.&lt;/li>
 &lt;li>In the &lt;em>script&lt;/em> pane select &lt;em>Common&lt;/em>.&lt;/li>
 &lt;li>Scroll down the characters pane until you find the icons.&lt;/li>
 &lt;li>Double click on the icon you are looking to use and press the &lt;em>Copy&lt;/em> button (bottom right).&lt;/li>
 &lt;/ol>
-&lt;p>&lt;strong>Tip:&lt;/strong> the icons are ordered alphabetically.&lt;/p>
+&lt;p>&lt;strong>Tip:&lt;/strong> the icons are in the Unicode private use areas, starting at U+E000.&lt;/p>
 &lt;h2>Changing Icons&lt;span class="hx-absolute -hx-mt-20" id="changing-icons">&lt;/span>
 &lt;a href="#changing-icons" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Follow these steps to override the default workspace label with your own:&lt;/p>
 &lt;ol>
-&lt;li>Find the character you want to use and copy to the clipboard. This example will use the Sigma glyph from Material Design Icons font ().&lt;/li>
+&lt;li>Find the character you want to use and copy to the clipboard. This example will use the terminal glyph (U+F120, &lt;code>nf-fa-terminal&lt;/code> on the cheat sheet): &lt;/li>
 &lt;li>Add a line to your &lt;code>Xresources&lt;/code> overrides file with the workspace number and character you wish to use:&lt;/li>
 &lt;/ol>
 &lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-yellow-100 hx-bg-yellow-50 hx-text-yellow-900 dark:hx-border-yellow-200/30 dark:hx-bg-yellow-700/30 dark:hx-text-yellow-200">
@@ -7504,7 +7498,7 @@ title="Copy code"
 &lt;/div>
 &lt;/div>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;wm.workspace.06.name: 6:&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;wm.workspace.06.name: 6:&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
 class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
 title="Copy code"
@@ -7528,7 +7522,9 @@ title="Copy code"
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;p>In i3, workspace labels are only updated when a workspace is created. Ensure you&amp;rsquo;re creating an new workspace 6 if following the example above:&lt;/p>
+&lt;p>Workspace labels are only updated when a workspace is created. Ensure you&amp;rsquo;re creating a new workspace 6 if following the example above, for example with &lt;span class="text-nowrap">
+&lt;span class="badge badge-warning">super&lt;/span>
+&lt;span class="badge badge-warning">6&lt;/span>&lt;/span> while workspace 6 does not exist.&lt;/p>
 &lt;h2>Changing Labels&lt;span class="hx-absolute -hx-mt-20" id="changing-labels">&lt;/span>
 &lt;a href="#changing-labels" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>The same approach can be used to specify textual descriptions of your workspaces. For example, adding the following lines to your &lt;code>~/.config/regolith3/Xresources&lt;/code> file will change the first three workspaces:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
@@ -7544,12 +7540,10 @@ title="Copy code"
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;h2>Adding support for icon fonts in text editors&lt;span class="hx-absolute -hx-mt-20" id="adding-support-for-icon-fonts-in-text-editors">&lt;/span>
-&lt;a href="#adding-support-for-icon-fonts-in-text-editors" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Atom&lt;span class="hx-absolute -hx-mt-20" id="atom">&lt;/span>
-&lt;a href="#atom" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;ul>
-&lt;li>Append the name of the icon font to &lt;code>Settings &amp;gt; Editor &amp;gt; Font Family&lt;/code>.&lt;/li>
-&lt;li>Example: &lt;code>Menlo, Consolas, DejaVu Sans Mono, monospace, Material Design Icons&lt;/code>&lt;/li>
-&lt;/ul>
+&lt;p>Keep the number and the colon at the start of each name: the workspace keybindings find workspaces by that number, and the bar hides it.&lt;/p>
+&lt;p>With these three labels and the terminal glyph on workspace 6, the bar shows the workspaces like this, in the X11 session (top) and in the Wayland session (bottom):&lt;/p>
+&lt;img class="regolith-img" src="https://regolith-desktop.com/docs/howtos/change-workspace-icons/bar-x11.png" alt="Workspace buttons on the i3 bar: Terminal, Web, Chat and a terminal icon" loading="lazy" />
+&lt;img class="regolith-img" src="https://regolith-desktop.com/docs/howtos/change-workspace-icons/bar-sway.png" alt="Workspace buttons on the sway bar: Terminal, Web, Chat and a terminal icon" loading="lazy" />
 &lt;h2>Further Reading&lt;span class="hx-absolute -hx-mt-20" id="further-reading">&lt;/span>
 &lt;a href="#further-reading" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>See the &lt;a href="https://regolith-desktop.com/docs/reference/configurations/" >reference page for configurations&lt;/a> for more details about config files in Regolith.&lt;/p></description></item><item><title>Disable Mouse Hiding (unclutter)</title><link>https://regolith-desktop.com/docs/howtos/disable-unclutter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/disable-unclutter/</guid><description>
 &lt;p>By default the mouse cursor disappears if unused for a few seconds. If you prefer that the mouse cursor always remains visible on the screen, follow the steps for your session.&lt;/p>
