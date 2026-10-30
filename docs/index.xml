@@ -5744,37 +5744,28 @@ title="Copy code"
 &lt;thead>
 &lt;tr>
 &lt;th>Feature&lt;/th>
-&lt;th>Screenshot&lt;/th>
 &lt;th>Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
 &lt;td>Return of Regolith Linux ISO&lt;/td>
-&lt;td>
-&lt;/td>
 &lt;td>Up to Regolith 1.4.1, we hand-built each ISO for major version releases. This became too brittle and time intensive, and so work began on &lt;a href="https://github.com/regolith-linux/regolith-ubuntu-iso-builder" target="_blank" rel="noopener">build automation to generate the ISO&lt;/a>. This took quite awhile to complete but is &lt;a href="https://github.com/regolith-linux/regolith-ubuntu-iso-builder/releases" target="_blank" rel="noopener">now available&lt;/a> for the 1.6 release.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>New Look: Midnight&lt;/td>
-&lt;td>
-&lt;/td>
 &lt;td>Fabian (naib864) has provided a distinctive new look with new font, icons, and GTK theme.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>New Look: Solarized Light&lt;/td>
-&lt;td>
-&lt;/td>
 &lt;td>Ricardo Pérez (ricpelo) has provided a solarized light theme.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>New Status Indicator: app-launcher&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>Regolith user Laurent provided the idea to add a status indicator to launch Rofi, and so &lt;code>i3xrocks-app-launcher&lt;/code> was added for those that prefer to use the mouse to launch apps.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Upgrades to i3-gaps and Rofi&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>&lt;a href="https://github.com/Airblader/i3/releases/tag/4.19.1" target="_blank" rel="noopener">i3-gaps is updated to 4.19.1&lt;/a> and &lt;a href="https://github.com/davatorium/rofi/releases/tag/1.6.1" target="_blank" rel="noopener">Rofi to 1.6.1&lt;/a>.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
@@ -6057,14 +6048,12 @@ title="Copy code"
 &lt;thead>
 &lt;tr>
 &lt;th>Feature&lt;/th>
-&lt;th>Screenshot&lt;/th>
 &lt;th>Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
 &lt;td>Next Free Workspace&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>A typical part of managing workspaces in an i3-based desktop is moving to unused workspaces and then loading some applications. Before this feature, a user has to determine which unused workspace they prefer. This is done by scanning the list of existing used workspaces to determine an unused one. Now, the system can do this automatically. The &lt;span class="text-nowrap">
 &lt;span class="badge badge-warning">super&lt;/span>
 &lt;span class="badge badge-warning">`&lt;/span>&lt;/span> keybinding will move to the next free workspace. &lt;span class="text-nowrap">
@@ -6074,8 +6063,6 @@ title="Copy code"
 &lt;/tr>
 &lt;tr>
 &lt;td>View and Change Looks via Rofi&lt;/td>
-&lt;td>
-&lt;/td>
 &lt;td>Looks can be changed now via a Rofi dialog rather than having to configure the &lt;code>Xresources&lt;/code> override via the command-line. To do this, use the keybinding &lt;span class="text-nowrap">
 &lt;span class="badge badge-warning">super&lt;/span>
 &lt;span class="badge badge-warning">alt&lt;/span>
@@ -6083,51 +6070,38 @@ title="Copy code"
 &lt;/tr>
 &lt;tr>
 &lt;td>GSettings Overrides&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>Regolith now uses &lt;a href="https://help.gnome.org/admin/system-admin-guide/stable/overrides.html.en" target="_blank" rel="noopener">GSettings overrides&lt;/a> to configure various GNOME settings for use with Regolith. In previous versions, settings were written globally to the user session from within the Regolith startup code. This could cause issues if the user works in multiple desktop environments. Now, the Regolith GNOME settings are defined in an override file that is only in effect while using a Regolith session. This allows switching between desktop environments without settings from Regolith impacting other environments.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>New Looks&lt;/td>
-&lt;td>
-&lt;br> 
-&lt;br> 
-&lt;/td>
 &lt;td>Users have contributed some new Looks to Regolith: Dracula, Gruvbox, and PopOs. Each of these looks presents a distinctive color palate, typeface, and GTK theme.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>i3-gaps upgraded to 4.18.2&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>See the &lt;a href="https://github.com/Airblader/i3/blob/a4a1a44275ea402b25d2d1365e1163e496024358/RELEASE-NOTES-4.18.2" target="_blank" rel="noopener">i3-gaps release notes&lt;/a> for more information&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>More Refined Customizations&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>Numerous small changes allow more granular system customization, such as specifying the temperature unit, custom Compositor settings, and a more comprehensive way of changing i3 keybindings without having to copy the entire config file.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>More Desktop Environment Packages&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>The following packages can be installed in place of &lt;code>regolith-desktop&lt;/code> for specific sets of packages based on user needs: &lt;code>regolith-desktop-minimal&lt;/code>, &lt;code>regolith-desktop-standard&lt;/code>, &lt;code>regolith-desktop-mobile&lt;/code>, and &lt;code>regolith-desktop-complete&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>New default compositor: Picom version 8&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>See the &lt;a href="https://github.com/yshui/picom/releases" target="_blank" rel="noopener">Picom release notes&lt;/a> for more information on what has changed.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Remontoire upgraded to version 1.4&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>Includes better multi-monitor support and other bug fixes and enhancements.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Optional integration with &lt;strong>td-cli&lt;/strong>&lt;/td>
-&lt;td>
-&lt;/td>
 &lt;td>Access a simple todo app via Rofi.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Documentation of development process&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>The &lt;a href="https://regolith-linux.org/docs/policy-and-process/development/" target="_blank" rel="noopener">Regolith development process&lt;/a> is now better documented for greater transparency and to foster inclusion.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
@@ -6630,79 +6604,60 @@ title="Copy code"
 &lt;thead>
 &lt;tr>
 &lt;th>Feature&lt;/th>
-&lt;th>Screenshot&lt;/th>
 &lt;th>Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
 &lt;td>Remontoire 1.3.1&lt;/td>
-&lt;td>
-&lt;/td>
 &lt;td>- Can render keybindings from i3 over socket or from any file. &lt;br> - Can be configured to display on any screen edge. &lt;br> - Visual updates and bug fixes. &lt;br> - Presentation changeable via CSS.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>New default look: Lascaille&lt;/td>
-&lt;td>
-&lt;/td>
 &lt;td>A new look with &lt;a href="https://www.jetbrains.com/lp/mono/" target="_blank" rel="noopener">a bolder, tighter typeface&lt;/a> and a &lt;a href="https://github.com/ayu-theme/ayu-colors" target="_blank" rel="noopener">darker, higher contrast color theme&lt;/a> has become Regolith&amp;rsquo;s default look in 1.4. Cahuella and other looks continue to be available and can be installed with a few commands.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>New File Search Dialog&lt;/td>
-&lt;td>
-&lt;/td>
 &lt;td>Based on &lt;a href="https://github.com/davatorium/rofi-scripts/tree/master/rofi-finder" target="_blank" rel="noopener">Rofi&lt;/a> and &lt;code>mlocate&lt;/code>, users can now quickly find files and launch their default editors from a global dialog.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Faster, Easier Customization&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>Virtually everything exportable from the i3 config can now be overridden directly with &lt;code>Xresources&lt;/code> declarations, from changing the meta key to specifying the command that launches the app search dialog. Additionally, up to 3 user configured programs can be set to start upon session initialization. All of this is possible without creating a user copy of the i3 config file, but rather by overriding a specific &lt;code>Xresources&lt;/code>.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>i3xrocks supports conf.d style configuration&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>The status indicators in the bar can now be installed and configured independently. This allows for a cleaner dependency model and more efficient runtime characteristics. It also provides future flexibility for user contributed modules and status indicators. Plus, users can provide their own block descriptors in the user directory to easily override the defaults without having to change the i3 config file.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>New architecture support: &lt;code>arm64&lt;/code>&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>With testing done on a Raspberry Pi 4, Regolith now is installable via PPA when using Ubuntu on arm64 devices with the necessary hardware support.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Rewrite of Rofication&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>Rofication has been rewritten to require less dependencies and be more stable by Regolith contributor @farsil.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>New Ubuntu release support: Focal Fossa&lt;/td>
-&lt;td>
-&lt;/td>
 &lt;td>Regolith runs as a desktop environment in Canonical&amp;rsquo;s latest release of Ubuntu: 20.04 &amp;ldquo;Focal Fossa&amp;rdquo;&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Time and Space Optimizations in ISO release&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>By switching from GDM3 to LightDM, Regolith avoids loading some unnecessary desktop components into RAM, resulting in between 200MB to 300MB savings on cold start. Additionally, the LiveCD installer is now based on the Xubuntu LiveCD which dramatically lowers the size of the installer and install image of the system&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>. Finally, with more fine-grained control of the bar status blocks, only the blocks you&amp;rsquo;ve installed will run.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Pluggable Desktop Notification Components&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>Users can now cleanly switch between desktop notification implementations such as &lt;code>dunst&lt;/code> and &lt;code>notify-osd&lt;/code>, in addition to Rofication without resorting to hacks.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Integrate &lt;code>gnome-terminal&lt;/code> over &lt;code>st-term&lt;/code> by Default&lt;/td>
-&lt;td>
-&lt;/td>
 &lt;td>Regolith 1.4 uses &lt;code>gnome-terminal&lt;/code> with a dynamically generated profile to overcome some character encoding and input devices. &lt;code>st&lt;/code> is still available, simply by installing the &lt;code>regolith-st&lt;/code> package.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Picom (Compton) config can be overriden by user&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>Users can provide their own Picom compositor config in their user directory.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>i3 reload becomes Regolith reload&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>Refreshing the UI (look, colors, fonts, etc.) after making changes is now as easy as &lt;span class="text-nowrap">
 &lt;span class="badge badge-warning">super&lt;/span>
 &lt;span class="badge badge-warning">shift&lt;/span>
@@ -6710,7 +6665,6 @@ title="Copy code"
 &lt;/tr>
 &lt;tr>
 &lt;td>Polish, polish, polish&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>Just as in previous releases, many tiny fixes and enhancements were added to Regolith in version 1.4.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
@@ -6740,53 +6694,40 @@ title="Copy code"
 &lt;thead>
 &lt;tr>
 &lt;th>Feature&lt;/th>
-&lt;th>Screenshot&lt;/th>
 &lt;th>Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
 &lt;td>Remontoire 1.1.1&lt;/td>
-&lt;td>
-&lt;/td>
 &lt;td>Provides a live view of active i3 keybindings, introduces a machine-readable comment format for i3 config files, and fixes several layout and presentation bugs reported by users.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Ayu Looks&lt;/td>
-&lt;td>
-&lt;/td>
 &lt;td>The community contributed Ayu themes have been fully integrated into Regolith with updates to package dependencies and configurations.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Rofi polishing&lt;/td>
-&lt;td>
-&lt;/td>
 &lt;td>Numerous updates to the Rofi themes for all provided looks.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Easier Customization&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>Now, overriding specific &lt;code>Xresources&lt;/code> values can be easily done by supplying only the overrides in &lt;code>~/.config/regolith3/Xresources&lt;/code> without needing to copying and update any existing files. Additionally, any &lt;code>Xresources&lt;/code> files in &lt;code>~/.config/regolith3/Xresources.d&lt;/code> can be referenced without absolute path, enabling easier multi-machine configurations.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Utilize GNOME and &lt;code>update-alternatives&lt;/code> for Default Apps&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>GNOME settings for default browser and &lt;code>update-alternatives&lt;/code> for preferred terminal are now used by Regolith. No custom configuration changes are required.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;code>Xresources&lt;/code> updates&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>More UI configuration pulled out of component configs and into Xresources provides more flexibility in how custom looks can be.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Locale used for date/time format&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>For those not using the US date and time formats, the bar clock will now automatically use the GNOME hour format and the locale &lt;code>LC_TIME&lt;/code> setting to automatically display date and time in the regional form without configuration.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>UI tweaks and polishing&lt;/td>
-&lt;td>
-&lt;/td>
 &lt;td>Many small updates across all UI components to further polish the interface, including a new optional dark background adapted from work by &lt;a href="https://www.reddit.com/r/unixporn/comments/ehdj6b/i3gaps_nordic_beauty/" target="_blank" rel="noopener">/u/InfernusZ9&lt;/a>.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
@@ -6803,72 +6744,56 @@ title="Copy code"
 &lt;thead>
 &lt;tr>
 &lt;th>Feature&lt;/th>
-&lt;th>Screenshot&lt;/th>
 &lt;th>Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
 &lt;td>Cahuella GTK Theme&lt;/td>
-&lt;td>
-&lt;/td>
 &lt;td>A new GTK theme was created for Regolith that more closely follows the standard GNOME theme, Adwaita.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Keybindings Dialog&lt;/td>
-&lt;td>
-&lt;/td>
 &lt;td>To allow for a more consistent look and collapsible content for various monitor dimensions, a custom shortcut dialog was developed called Remontoire.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Pluggable Compositors&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>The subsystem providing visual effects, the compositor, can behave differently based on hardware and driver support. Regolith now packages 3 compositor backends: compton-glx (based on Picom), xcompmgr, and none.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>i3-snapshot&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>In office environments it is common to switch between various display configurations (desk, meeting room&amp;hellip;). &lt;code>i3-snapshot&lt;/code> allows the user to quickly save and restore existing window layouts in a session.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>New Rofi theme&lt;/td>
-&lt;td>
-&lt;/td>
 &lt;td>Based on &lt;a href="https://www.reddit.com/r/unixporn/comments/ehdj6b/i3gaps_nordic_beauty/" target="_blank" rel="noopener">work by /u/InfernusZ9&lt;/a>, the Rofi launcher is less distracting.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>New notification UI based on &lt;a href="https://github.com/DaveDavenport/Rofication" target="_blank" rel="noopener">Rofication&lt;/a>&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>The previous notification UI was a hold over from more traditional desktop environments that prefer to present an on-screen dialog when a notification is received. Because user-focus is paramount, this was changed such that an indicator in the bar displays the number of unread notifications and the user decides when to view them via a keybinding or button click.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Floating Control Panel&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>The &lt;code>gnome-control-center&lt;/code> app can have a hard time adapting to constrained tiled layouts common with &lt;code>i3-wm&lt;/code>. Now when the control panel is loaded, it floats above the existing windows to allow for a quick settings change without impacting other apps.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Clickable Bar Status Actions&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>For convienence, the default blocks on the bar will launch configuration apps for the associated block. For example, the battery block will launch the power settings control panel, and the notification block will launch the notification viewer.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Discrete and packagable Looks&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>The underlying style framework used by Regolith has been revamped to allow for &amp;ldquo;looks&amp;rdquo;: colors, themes, typeface, and other thematic state. Looks can be switched with a single command.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>New bar status components&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>Network, keybindings, notifications, focused window, and other blocklets have been improved and added.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Build System&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>Build scripts were added and improved to allow for the generation of Regolith packages in an automated fashion, making it easier for others to roll their own.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Website&lt;/td>
-&lt;td>&lt;/td>
 &lt;td>An entirely new website is launching with R1.3, to integrate more content and make it faster for users to find information.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
