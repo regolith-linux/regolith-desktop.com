@@ -693,6 +693,10 @@ title="Copy code"
 &lt;td>The window under the mouse has focus if enabled&lt;/td>
 &lt;/tr>
 &lt;tr>
+&lt;td>wm.xwayland.mode&lt;/td>
+&lt;td>How sway runs XWayland: &lt;code>force&lt;/code> (default) starts it with sway and serves the GNOME theme, fonts and cursor to X11 apps (gsd-xsettings), &lt;code>enable&lt;/code> starts it only when an X11 app needs it, without those settings, and &lt;code>disable&lt;/code> turns it off. Takes effect at the next login&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>wm.program.launcher.app&lt;/td>
 &lt;td>Command i3 executes from the app launcher keybinding&lt;/td>
 &lt;/tr>

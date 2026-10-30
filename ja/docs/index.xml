@@ -1760,6 +1760,10 @@ title="Copy code"
 &lt;td>有効であればマウスの下のウィンドウをフォーカスする&lt;/td>
 &lt;/tr>
 &lt;tr>
+&lt;td>wm.xwayland.mode&lt;/td>
+&lt;td>sway での XWayland の動作: &lt;code>force&lt;/code>（既定）は sway と同時に起動し、GNOME のテーマ・フォント・カーソルを X11 アプリに提供します（gsd-xsettings）。&lt;code>enable&lt;/code> は X11 アプリが必要とするときだけ起動し、これらの設定は提供しません。&lt;code>disable&lt;/code> は XWayland を無効にします。次回ログイン時に反映されます&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>wm.program.launcher.app&lt;/td>
 &lt;td>アプリランチャーキーバインドを実行するi3コマンド&lt;/td>
 &lt;/tr>
