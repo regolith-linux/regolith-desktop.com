@@ -8,3 +8,8 @@ sudo tee /etc/apt/sources.list.d/regolith.list
 # Update apt
 sudo apt update
 echo Regolith Desktop can be installed by executing: sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
+
+# Raspberry Pi: on Ubuntu Server (arm64), lightdm shows a black screen with a blinking cursor
+# unless the gldriver-test package from Raspberry Pi is installed.  To fix it, run:
+#   wget https://archive.raspberrypi.org/debian/pool/main/g/gldriver-test/gldriver-test_0.15_all.deb
+#   sudo apt install ./gldriver-test_0.15_all.deb
