@@ -1745,18 +1745,12 @@ title="Copy code"
 &lt;p>See the &lt;a href="https://docs.rs/i3status-rs/latest/i3status_rs/blocks/battery/index.html" target="_blank" rel="noopener">i3status-rust battery block documentation&lt;/a> for further options.&lt;/p>
 &lt;h2>Further Reading&lt;span class="hx-absolute -hx-mt-20" id="further-reading">&lt;/span>
 &lt;a href="#further-reading" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>See the &lt;a href="https://regolith-desktop.com/docs/reference/configurations/" >reference page for configurations&lt;/a> for more details about config files in Regolith.&lt;/p></description></item><item><title>Verify behavior against upstream</title><link>https://regolith-desktop.com/docs/howtos/gnome-flashback-session/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/gnome-flashback-session/</guid><description>
-&lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-red-200 hx-bg-red-100 hx-text-red-900 dark:hx-border-red-200/30 dark:hx-bg-red-900/30 dark:hx-text-red-200">
-&lt;div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2">&lt;/div>
-&lt;div class="hx-w-full hx-min-w-0 hx-leading-7">
-&lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">This page was copied from the &lt;a href="https://regolith-linux.org" target="_blank" rel="noopener">Regolith 1.x website&lt;/a> and has not been updated for Regolith 2. It may contain out of date information.&lt;/div>
-&lt;/div>
-&lt;/div>
 &lt;p>Regolith is composed of several existing open-source projects plus some additional custom packages. Sometimes when a bug is found in Regolith, actually it&amp;rsquo;s a bug in an upstream project. Determining the source of bugs is a first step in getting them fixed.&lt;/p>
 &lt;h2>Check &lt;code>gnome-flashback&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="check-gnome-flashback">&lt;/span>
-&lt;a href="#check-gnome-flashback" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Most of Regolith&amp;rsquo;s GNOME support comes from the &lt;code>gnome-flashback&lt;/code> project. To run a &lt;code>gnome-flashback&lt;/code> session, install the session and log back in to your account after selecting that session from the login screen.&lt;/p>
+&lt;a href="#check-gnome-flashback" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Most of the GNOME support in Regolith&amp;rsquo;s X11 session (&lt;code>regolith-session-flashback&lt;/code>) comes from the &lt;code>gnome-flashback&lt;/code> project. To run a &lt;code>gnome-flashback&lt;/code> session, install the session and log back in to your account after selecting that session from the login screen.&lt;/p>
 &lt;ol>
-&lt;li>Install the &lt;code>gnome-session-flashback&lt;/code> session:&lt;/li>
-&lt;/ol>
+&lt;li>
+&lt;p>Install the &lt;code>gnome-session-flashback&lt;/code> session:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt install gnome-session-flashback&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
@@ -1768,9 +1762,29 @@ title="Copy code"
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;ol start="2">
-&lt;li>Restart your computer and then select the &lt;code>GNOME Flashback (Metacity)&lt;/code> session as shown here:&lt;/li>
+&lt;p>&lt;code>apt&lt;/code> also removes &lt;code>regolith-session-flashback-ext&lt;/code>, which conflicts with &lt;code>gnome-session-flashback&lt;/code>. On Ubuntu 26.04 the Regolith X11 session keeps working without it.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Log out. On the login screen, select your user, choose the &lt;code>GNOME Flashback (Metacity)&lt;/code> session (in GDM, from the gear button in the lower-right corner), and log in.&lt;/p>
+&lt;img class="regolith-img" src="https://regolith-desktop.com/docs/howtos/gnome-flashback-session/gdm-session-menu.png" alt="The GDM login screen with the session menu open from the gear button, and GNOME Flashback (Metacity) selected" loading="lazy" />
+&lt;/li>
+&lt;li>
+&lt;p>Verify your behavior against Regolith. If the problematic behavior also exists in &lt;code>gnome-flashback&lt;/code> then the bug is likely there. If the bug does not exist in the &lt;code>gnome-flashback&lt;/code> then it&amp;rsquo;s likely to be in Regolith.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>When you are done, log back into the &lt;code>Regolith / X11&lt;/code> session. To remove the GNOME Flashback session again, reinstall the package it replaced:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt install regolith-session-flashback-ext&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;/li>
 &lt;/ol>
-&lt;ol start="3">
-&lt;li>Verify your behavior against Regolith. If the problematic behavior also exists in &lt;code>gnome-flashback&lt;/code> then the bug is likely there. If the bug does not exist in the &lt;code>gnome-flashback&lt;/code> then it&amp;rsquo;s likely to be in Regolith.&lt;/li>
-&lt;/ol></description></item></channel></rss>
+&lt;h2>Wayland session&lt;span class="hx-absolute -hx-mt-20" id="wayland-session">&lt;/span>
+&lt;a href="#wayland-session" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>The Wayland session (&lt;code>regolith-session-sway&lt;/code>) does not use &lt;code>gnome-flashback&lt;/code>. It runs Regolith&amp;rsquo;s build of Sway (&lt;code>sway-regolith&lt;/code>, which replaces Ubuntu&amp;rsquo;s &lt;code>sway&lt;/code> package) together with GNOME services such as &lt;code>gnome-settings-daemon&lt;/code>. To check whether a problem comes from a GNOME application or service, compare with the GNOME session of your distribution, if it is installed. Problems with window management are more likely to be in Sway or in Regolith&amp;rsquo;s configuration.&lt;/p></description></item></channel></rss>
