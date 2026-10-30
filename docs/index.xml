@@ -8268,7 +8268,7 @@ title="Copy code"
 &lt;h2>Remove Unneeded Packages&lt;span class="hx-absolute -hx-mt-20" id="remove-unneeded-packages">&lt;/span>
 &lt;a href="#remove-unneeded-packages" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Now that we are using the &lt;code>lightdm&lt;/code> display manager, we can remove the unneeded packages:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt remove gdm3 gnome-shell evolution-data-server*&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt remove gdm3 gnome-shell &lt;span class="s1">&amp;#39;evolution-data-server*&amp;#39;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
 class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
 title="Copy code"
@@ -8279,6 +8279,18 @@ title="Copy code"
 &lt;/div>
 &lt;/div>
 &lt;p>Inspect the output of &lt;code>apt&lt;/code> to verify you approve of the package changes.&lt;/p>
+&lt;p>The Regolith sessions need &lt;code>gnome-session-common&lt;/code>, but on Ubuntu 26.04 no remaining package depends on it, so &lt;code>apt autoremove&lt;/code> would remove it and logging in would fail. Mark it as manually installed first:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt-mark manual gnome-session-common&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
 &lt;p>Now we can remove all of the dependencies of those packages:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt autoremove&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
@@ -8291,13 +8303,17 @@ title="Copy code"
 &lt;/button>
 &lt;/div>
 &lt;/div>
+&lt;p>If logging in returns you to the login screen after this step, switch to a text console with &lt;span class="text-nowrap">
+&lt;span class="badge badge-warning">ctrl&lt;/span>
+&lt;span class="badge badge-warning">alt&lt;/span>
+&lt;span class="badge badge-warning">f3&lt;/span>&lt;/span>, log in there and run &lt;code>sudo apt install gnome-session-common&lt;/code>.&lt;/p>
 &lt;h2>Reboot&lt;span class="hx-absolute -hx-mt-20" id="reboot">&lt;/span>
 &lt;a href="#reboot" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>At this point the unneeded dependencies have been removed from the system. Reboot to complete the procedure.&lt;/p>
 &lt;h2>Undo&lt;span class="hx-absolute -hx-mt-20" id="undo">&lt;/span>
 &lt;a href="#undo" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>If you decide that you&amp;rsquo;d like to restore the existing setup, run the following and select &lt;code>gdm3&lt;/code> as the display manager.&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt install gdm3 gnome-shell evolution-data-server ubuntu-session
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt remove regolith-lightdm-session &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt remove regolith-lightdm-config&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
 class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
 title="Copy code"
@@ -8306,7 +8322,8 @@ title="Copy code"
 &lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
 &lt;/button>
 &lt;/div>
-&lt;/div></description></item><item><title>Stage Config Files</title><link>https://regolith-desktop.com/docs/howtos/stage-configs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/stage-configs/</guid><description>
+&lt;/div>
+&lt;p>&lt;code>lightdm&lt;/code> itself stays installed. Once &lt;code>gdm3&lt;/code> is the default display manager, you can remove it with &lt;code>sudo apt remove lightdm&lt;/code>.&lt;/p></description></item><item><title>Stage Config Files</title><link>https://regolith-desktop.com/docs/howtos/stage-configs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/stage-configs/</guid><description>
 &lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
 &lt;div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2">&lt;/div>
 &lt;div class="hx-w-full hx-min-w-0 hx-leading-7">
