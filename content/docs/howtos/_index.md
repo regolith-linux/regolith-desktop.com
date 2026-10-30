@@ -1,6 +1,8 @@
 ---
 title: "How To"
 linkTitle: "How To"
+aliases:
+  - /docs/howtos/tdcli-blocklet/
 weight: 5
 description: >
   Some examples of how you can customize Regolith Linux
