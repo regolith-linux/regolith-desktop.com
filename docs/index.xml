@@ -6937,10 +6937,11 @@ title="Copy code"
 &lt;p>In sway, the same line is &lt;code>workspace $ws2 output HDMI-A-1 eDP-1&lt;/code>.&lt;/p>
 &lt;p>See the &lt;a href="https://i3wm.org/docs/userguide.html#workspace_screen" target="_blank" rel="noopener">i3 user guide&lt;/a> and &lt;code>man 5 sway&lt;/code> for details.&lt;/p></description></item><item><title>Change background</title><link>https://regolith-desktop.com/docs/howtos/change-background/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/change-background/</guid><description>
 &lt;h2>Wallpaper&lt;span class="hx-absolute -hx-mt-20" id="wallpaper">&lt;/span>
-&lt;a href="#wallpaper" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Most Regolith Looks provide a default desktop color or image. The wallpaper can be set by specifying the path to the wallpaper image via the Xresources key &lt;code>regolith.wallpaper.file&lt;/code> or in the Regolith Control Center which can be opened by running &lt;code>regolith-control-center&lt;/code> in the terminal.&lt;/p>
-&lt;p>Example, assuming the file &lt;code>/usr/share/backgrounds/hardy_wallpaper_uhd.png&lt;/code> is present:&lt;/p>
+&lt;a href="#wallpaper" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Most Regolith Looks provide a default desktop color or image. The wallpaper can be set by specifying the path to the wallpaper image via the Xresources key &lt;code>regolith.wallpaper.file&lt;/code>. The keys on this page work in both the X11 (i3) and the Wayland (sway) session (Debian 12 has the X11 session only), with the differences listed in &lt;a href="#wayland" >Wayland (sway)&lt;/a>.&lt;/p>
+&lt;p>You can also pick a wallpaper under &lt;strong>Background&lt;/strong> in the Appearance page of the Regolith Control Center, which can be opened by running &lt;code>regolith-control-center background&lt;/code> in the terminal. What it does depends on the release. On Ubuntu 24.04 and Debian 12 and 13, it writes &lt;code>regolith.wallpaper.file&lt;/code> and &lt;code>regolith.lockscreen.wallpaper.file&lt;/code> to &lt;code>~/.config/regolith3/Xresources&lt;/code> and refreshes, so the choice stays after &lt;code>regolith-look refresh&lt;/code>, also sets the lock screen, and applies in sway too; remove those lines to undo it. On Ubuntu 25.10 and 26.04, it changes only the X11 wallpaper, until the next &lt;code>regolith-look refresh&lt;/code> applies the Xresources values again. The Regolith Control Center on Ubuntu 22.04 has no Background panel.&lt;/p>
+&lt;p>Example, assuming the file &lt;code>/usr/share/backgrounds/warty-final-ubuntu.png&lt;/code> is present (it comes with the &lt;code>ubuntu-wallpapers&lt;/code> package; on Debian, use &lt;code>/usr/share/images/desktop-base/default&lt;/code> from the &lt;code>desktop-base&lt;/code> package):&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;regolith.wallpaper.file: /usr/share/backgrounds/hardy_wallpaper_uhd.png&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;regolith.wallpaper.file: /usr/share/backgrounds/warty-final-ubuntu.png&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">regolith-look refresh&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
 class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
@@ -6951,8 +6952,8 @@ title="Copy code"
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;p>In the above command the property mentioned is set to the &lt;code>/usr/share/backgrounds/hardy_wallpaper_uhd.png&lt;/code> change this path to any other that needs to be used.&lt;/p>
-&lt;p>To change the image treatment (zoom, scale, etc.) of the wallpaper image, set &lt;code>regolith.wallpaper.options&lt;/code>. Options are: &lt;code>none&lt;/code>, &lt;code>wallpaper&lt;/code>, &lt;code>centered&lt;/code>, &lt;code>scaled&lt;/code>, &lt;code>stretched&lt;/code>, &lt;code>zoom&lt;/code>, &lt;code>spanned&lt;/code>&lt;/p>
+&lt;p>In the above command the property mentioned is set to the &lt;code>/usr/share/backgrounds/warty-final-ubuntu.png&lt;/code> change this path to any other that needs to be used.&lt;/p>
+&lt;p>To change the image treatment (zoom, scale, etc.) of the wallpaper image in the X11 session, set &lt;code>regolith.wallpaper.options&lt;/code>. Options are: &lt;code>none&lt;/code>, &lt;code>wallpaper&lt;/code>, &lt;code>centered&lt;/code>, &lt;code>scaled&lt;/code>, &lt;code>stretched&lt;/code>, &lt;code>zoom&lt;/code>, &lt;code>spanned&lt;/code>. The default is &lt;code>wallpaper&lt;/code> (tiled).&lt;/p>
 &lt;p>Example:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;regolith.wallpaper.options: zoom&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources
@@ -6966,10 +6967,11 @@ title="Copy code"
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;p>To specify a color rather than an image use the Xresource key &lt;code>regolith.wallpaper.color.primary&lt;/code>:&lt;/p>
+&lt;p>To specify a color rather than an image use the Xresource key &lt;code>regolith.wallpaper.color.primary&lt;/code>. Use the &lt;code>#RRGGBB&lt;/code> form, which both sessions understand. Most looks also set a secondary color for a gradient, so clear it to get a solid color:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;regolith.wallpaper.file: &amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;regolith.wallpaper.color.primary: blue&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;regolith.wallpaper.color.primary: #0000FF&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;regolith.wallpaper.color.secondary: &amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">regolith-look refresh&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
 class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
@@ -6980,11 +6982,11 @@ title="Copy code"
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;p>To specify a secondary color and gradient:&lt;/p>
+&lt;p>To specify a secondary color and gradient (X11 session only; &lt;code>regolith.wallpaper.color.shading.type&lt;/code> is &lt;code>horizontal&lt;/code> or &lt;code>vertical&lt;/code>):&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;regolith.wallpaper.file: &amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;regolith.wallpaper.color.primary: blue&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;regolith.wallpaper.color.secondary: green&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;regolith.wallpaper.color.primary: #0000FF&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;regolith.wallpaper.color.secondary: #00FF00&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;regolith.wallpaper.color.shading.type: vertical&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">regolith-look refresh&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
@@ -6999,7 +7001,7 @@ title="Copy code"
 &lt;h3>Lockscreen Wallpaper&lt;span class="hx-absolute -hx-mt-20" id="lockscreen-wallpaper">&lt;/span>
 &lt;a href="#lockscreen-wallpaper" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>The lockscreen wallpaper can be managed in the same way as the desktop wallpaper. The keys are the same as desktop wallpaper, but with &lt;code>lockscreen&lt;/code> prefixed to &lt;code>wallpaper&lt;/code>, like so: &lt;code>regolith.lockscreen.wallpaper...&lt;/code>. For example, to specify a lockscreen image:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;regolith.lockscreen.wallpaper.file: /usr/share/backgrounds/hardy_wallpaper_uhd.png&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;regolith.lockscreen.wallpaper.file: /usr/share/backgrounds/warty-final-ubuntu.png&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">regolith-look refresh&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
 class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
@@ -7011,7 +7013,7 @@ title="Copy code"
 &lt;/div>
 &lt;/div>
 &lt;h3>Disable Wallpaper handling&lt;span class="hx-absolute -hx-mt-20" id="disable-wallpaper-handling">&lt;/span>
-&lt;a href="#disable-wallpaper-handling" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>If you wish to manage wallpaper externally to Regolith, simply specify empty values for wallpaper image and color:&lt;/p>
+&lt;a href="#disable-wallpaper-handling" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>If you wish to manage wallpaper externally to Regolith in the X11 session, simply specify empty values for wallpaper image and color:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;regolith.wallpaper.file: &amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;regolith.wallpaper.color.primary: &amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
@@ -7023,7 +7025,53 @@ title="Copy code"
 &lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
 &lt;/button>
 &lt;/div>
-&lt;/div></description></item><item><title>Change Bar Status indicators</title><link>https://regolith-desktop.com/docs/howtos/add-remove-blocklets/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/add-remove-blocklets/</guid><description>
+&lt;/div>
+&lt;p>In the Wayland session this leaves a black background instead; see below.&lt;/p>
+&lt;h2>Wayland (sway)&lt;span class="hx-absolute -hx-mt-20" id="wayland">&lt;/span>
+&lt;a href="#wayland" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Debian 12 has no Wayland session, so this section applies to the other releases. In sway the wallpaper is drawn by &lt;code>swaybg&lt;/code>, which Regolith starts from &lt;code>regolith.wallpaper.file&lt;/code> and &lt;code>regolith.wallpaper.color.primary&lt;/code> each time the session starts or &lt;code>regolith-look refresh&lt;/code> runs. The differences from X11 are:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>Image placement:&lt;/strong> &lt;code>regolith.wallpaper.options&lt;/code> is not used. Set &lt;code>regolith.wallpaper.mode&lt;/code> instead, to one of &lt;code>stretch&lt;/code>, &lt;code>fill&lt;/code>, &lt;code>fit&lt;/code>, &lt;code>center&lt;/code> or &lt;code>tile&lt;/code>. The default is &lt;code>fill&lt;/code>.&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;regolith.wallpaper.mode: fit&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">regolith-look refresh&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Colors:&lt;/strong> &lt;code>regolith.wallpaper.color.primary&lt;/code> must be in the &lt;code>#RRGGBB&lt;/code> form. sway rejects color names such as &lt;code>blue&lt;/code>, and no wallpaper is drawn, even when an image is set (sway shows its default background: black on newer sway, dark grey on Ubuntu 22.04 and 24.04). The secondary color and the shading type are not used, so the color is always solid.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Lock screen:&lt;/strong> the lock screen (&lt;code>gtklock&lt;/code>) shows &lt;code>regolith.lockscreen.wallpaper.file&lt;/code>. The lockscreen color keys are not used.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Settings:&lt;/strong> on Ubuntu 25.10 and 26.04, picking a wallpaper under &lt;strong>Background&lt;/strong> in the Appearance page of the Regolith Control Center does not change the sway wallpaper. Use the Xresources keys.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Managing the wallpaper yourself:&lt;/strong> empty values give a black background, because Regolith still sets one. Remove the package that sets it, then set the wallpaper in your own sway config partial:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt remove regolith-sway-background
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mkdir -p ~/.config/regolith3/sway/config.d
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;output * bg /usr/share/backgrounds/warty-final-ubuntu.png fill&amp;#34;&lt;/span> &amp;gt; ~/.config/regolith3/sway/config.d/90_wallpaper
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">swaymsg reload&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;/li>
+&lt;/ul></description></item><item><title>Change Bar Status indicators</title><link>https://regolith-desktop.com/docs/howtos/add-remove-blocklets/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/add-remove-blocklets/</guid><description>
 &lt;p>The X11 session (i3) and the Wayland session (sway) use different status bar programs:&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>X11:&lt;/strong> &lt;a href="https://regolith-desktop.com/docs/reference/i3xrocks/" >&lt;code>i3xrocks&lt;/code>&lt;/a>. Each status indicator is a separate &lt;code>i3xrocks-*&lt;/code> package.&lt;/li>
