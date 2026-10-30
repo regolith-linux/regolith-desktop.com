@@ -434,11 +434,26 @@ title="Copy code"
 &lt;/div>
 &lt;/div>
 &lt;p>This removes &lt;code>dunst&lt;/code>. Log out and back in.&lt;/p></description></item><item><title>Change the Bar Date and Time Format</title><link>https://regolith-desktop.com/docs/howtos/time-format/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/time-format/</guid><description>
-&lt;p>The time format (12 or 24 hour) can be specified in Settings:&lt;/p>
-&lt;p>The date format can be specified by selecting the appropriate region in Settings. A preview of the date format is provided, and logging back in is required for changes to take effect.&lt;/p>
-&lt;p>The date and time formats can also be explicitly set via &lt;code>Xresources&lt;/code>. To do so, override the &lt;code>i3xrocks.date.format2&lt;/code> &lt;code>Xresource&lt;/code> key. The format specification for date is simply the arguments that would be passed to the &lt;code>date&lt;/code> command on the command line. For example, to print the year in 4 digits, specify &lt;code>+%Y&lt;/code>.&lt;/p>
-&lt;p>For example the following line can be added to use the &lt;code>YYYY-MM-DD hh:mm&lt;/code> format:
-&lt;code>i3xrocks.date.format2: %Y-%m-%d %H:%M&lt;/code>&lt;/p>
+&lt;p>The X11 (i3) and Wayland (sway) sessions use different bars, which are configured differently.&lt;/p>
+&lt;h2>X11 Session (i3)&lt;span class="hx-absolute -hx-mt-20" id="x11-session-i3">&lt;/span>
+&lt;a href="#x11-session-i3" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>The time format (12 or 24 hour) can be specified in Settings, under &lt;strong>System &amp;gt; Date &amp;amp; Time &amp;gt; Time Format&lt;/strong>. The bar picks up the change within about ten seconds.&lt;/p>
+&lt;img class="regolith-img" src="https://regolith-desktop.com/docs/howtos/time-format/settings-time-format.png" alt="The Date &amp;amp; Time page of Settings, with the Time Format switch set to 24-hour" loading="lazy" />
+&lt;p>The order of day and month follows the country of your &lt;code>LC_TIME&lt;/code> locale: month first (&lt;code>MM/DD&lt;/code>) for the United States, Canada, China, Japan and a few other countries, and day first (&lt;code>DD/MM&lt;/code>) for all others.&lt;/p>
+&lt;p>The date and time formats can also be explicitly set via &lt;code>Xresources&lt;/code>. To do so, override the &lt;code>i3xrocks.date.format2&lt;/code> &lt;code>Xresource&lt;/code> key in &lt;code>~/.config/regolith3/Xresources&lt;/code>. The value is the format that would be passed to the &lt;code>date&lt;/code> command on the command line, without the leading &lt;code>+&lt;/code>. For example, the following line uses the &lt;code>YYYY-MM-DD hh:mm&lt;/code> format:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div class="filename not-prose" dir="auto">~/.config/regolith3/Xresources&lt;/div>&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">i3xrocks.date.format2&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">%Y-%m-%d %H:%M&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>Then run &lt;code>regolith-look refresh&lt;/code>. The bar shows the date and time like this:&lt;/p>
+&lt;img class="regolith-img" src="https://regolith-desktop.com/docs/howtos/time-format/bar-x11.png" alt="The date and time on the X11 bar: 2026-10-27 22:27" loading="lazy" />
+&lt;p>While this key is set, the bar no longer follows the Time Format setting.&lt;/p>
 &lt;p>The most useful formats that are supported are as follows:&lt;/p>
 &lt;ul>
 &lt;li>&lt;code>%Y&lt;/code> prints year as &lt;code>YYYY&lt;/code>&lt;/li>
@@ -448,8 +463,69 @@ title="Copy code"
 &lt;li>&lt;code>%H&lt;/code> prints hours in 24 hour format&lt;/li>
 &lt;li>&lt;code>%I&lt;/code> prints hours in 12 hour format&lt;/li>
 &lt;li>&lt;code>%M&lt;/code> prints minute as &lt;code>mm&lt;/code>&lt;/li>
+&lt;li>&lt;code>%p&lt;/code> prints &lt;code>AM&lt;/code> or &lt;code>PM&lt;/code>&lt;/li>
 &lt;/ul>
-&lt;p>For more details and placeholders, please look at &lt;code>date --help&lt;/code>.&lt;/p></description></item><item><title>Change the Default Terminal</title><link>https://regolith-desktop.com/docs/howtos/change-terminal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/change-terminal/</guid><description>
+&lt;p>For more details and placeholders, please look at &lt;code>date --help&lt;/code>.&lt;/p>
+&lt;h2>Wayland Session (sway)&lt;span class="hx-absolute -hx-mt-20" id="wayland-session-sway">&lt;/span>
+&lt;a href="#wayland-session-sway" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>The sway bar, &lt;code>i3status-rs&lt;/code>, doesn&amp;rsquo;t read &lt;code>i3xrocks.date.format2&lt;/code> or the Time Format setting. Its date and time formats are part of its configuration file. To change them, use your own copy of that file:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Copy the default configuration:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">mkdir -p ~/.config/regolith3/i3status-rust
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cp /etc/regolith/i3status-rust/config.toml ~/.config/regolith3/i3status-rust/config.toml&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;/li>
+&lt;li>
+&lt;p>In the copy, change the &lt;code>format&lt;/code> of the two &lt;code>time&lt;/code> blocks. By default, the date block uses &lt;code>%a-%d/%m/%y&lt;/code> and the time block uses &lt;code>%R&lt;/code> (24 hour &lt;code>hh:mm&lt;/code>). For example, for &lt;code>YYYY-MM-DD&lt;/code> and a 12 hour clock:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div class="filename not-prose" dir="auto">~/.config/regolith3/i3status-rust/config.toml&lt;/div>&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-toml" data-lang="toml">&lt;span class="line">&lt;span class="cl">&lt;span class="p">[[&lt;/span>&lt;span class="nx">block&lt;/span>&lt;span class="p">]]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">block&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;time&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">interval&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="mi">5&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">format&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;\uf073 $timestamp.datetime(f:&amp;#39;%Y-%m-%d&amp;#39;)&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">[[&lt;/span>&lt;span class="nx">block&lt;/span>&lt;span class="p">]]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">block&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;time&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">interval&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="mi">5&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">format&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;$icon $timestamp.datetime(f:&amp;#39;%I:%M %p&amp;#39;)&amp;#34;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>On Ubuntu 22.04 and Debian, the file has a single &lt;code>time&lt;/code> block with a plain format, &lt;code>format = &amp;quot;%d/%m %R&amp;quot;&lt;/code>; change that one instead.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Tell the bar to use your copy, and reload:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;wm.bar.status_config: ~/.config/regolith3/i3status-rust/config.toml&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">regolith-look refresh&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>With the example above, the bar shows the date and time like this:&lt;/p>
+&lt;img class="regolith-img" src="https://regolith-desktop.com/docs/howtos/time-format/bar-sway.png" alt="The date and time on the Wayland bar: 2026-10-27 and 10:24 PM" loading="lazy" />
+&lt;/li>
+&lt;/ol>
+&lt;p>The placeholders are the same as for &lt;code>date&lt;/code>, listed above. See the &lt;a href="https://docs.rs/i3status-rs/latest/i3status_rs/blocks/time/index.html" target="_blank" rel="noopener">&lt;code>time&lt;/code> block documentation&lt;/a> for the other options.&lt;/p></description></item><item><title>Change the Default Terminal</title><link>https://regolith-desktop.com/docs/howtos/change-terminal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/change-terminal/</guid><description>
 &lt;p>The default terminal that ships with Regolith R1.4 is &lt;code>gnome-terminal&lt;/code>, but any X terminal emulator can be used. To update Regolith to use your already installed terminal of your choice, use &lt;code>update-alternatives&lt;/code> to specify it as default:&lt;/p>
 &lt;ol>
 &lt;li>Run &lt;code>update-alternatives --config x-terminal-emulator&lt;/code> to see all available terminals installed on your system.&lt;/li>
