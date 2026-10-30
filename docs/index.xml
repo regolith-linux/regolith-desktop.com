@@ -2216,8 +2216,12 @@ title="Copy code"
 &lt;td>Command to launch from the shutdown keybinding&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>wm.program.lock&lt;/td>
-&lt;td>Command to launch from the lock screen keybinding&lt;/td>
+&lt;td>wm.program.lock_i3&lt;/td>
+&lt;td>Command the lock screen keybinding runs in the X11 (i3) session. The default locks with GNOME Flashback&amp;rsquo;s lock screen (&lt;code>org.gnome.ScreenSaver.Lock&lt;/code>). Replaced &lt;code>wm.program.lock&lt;/code> in Regolith 3.4&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>wm.program.lock_sway&lt;/td>
+&lt;td>Command that locks the Wayland (sway) session: the lock screen keybinding, and the locks on idle, on lid close and before suspend. The default runs &lt;code>gtklock&lt;/code> with &lt;code>regolith.lockscreen.wallpaper.file&lt;/code> as its background&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>wm.program.sleep&lt;/td>
@@ -2250,6 +2254,18 @@ title="Copy code"
 &lt;tr>
 &lt;td>wm.program.1&amp;hellip;wm.program.3&lt;/td>
 &lt;td>Optional programs to start with i3&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>wm.program.unclutter&lt;/td>
+&lt;td>X11 (i3) only: command i3 starts to hide the mouse pointer when it is not used. The default is &lt;code>/usr/bin/unclutter -b&lt;/code>; set it to &lt;code>:&lt;/code> to keep the pointer visible. Takes effect at the next login&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>wm.hide_cursor.timeout&lt;/td>
+&lt;td>Wayland (sway) only: milliseconds without movement before the pointer is hidden (default &lt;code>5000&lt;/code>, &lt;code>0&lt;/code> turns hiding off). regolith-wm-config 4.11.12 and earlier read only the misspelled &lt;code>wm.hide_cursor.timout&lt;/code>, which newer versions still accept&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>wm.hide_cursor.show_when_typing&lt;/td>
+&lt;td>Wayland (sway) only: &lt;code>enable&lt;/code> (default) hides the pointer while you type, &lt;code>disable&lt;/code> keeps it visible&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>i3xrocks.media-player.player-args&lt;/td>
