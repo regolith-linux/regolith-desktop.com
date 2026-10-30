@@ -587,8 +587,10 @@ title="Copy code"
 &lt;/div>
 &lt;h2>Further Reading&lt;span class="hx-absolute -hx-mt-20" id="further-reading">&lt;/span>
 &lt;a href="#further-reading" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>See the &lt;a href="https://regolith-desktop.com/docs/reference/configurations/" >reference page for configurations&lt;/a> for more details about config files in Regolith.&lt;/p></description></item><item><title>Change the lock screen program</title><link>https://regolith-desktop.com/docs/howtos/change-lockscreen/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/change-lockscreen/</guid><description>
-&lt;h2>Configure &lt;code>gnome-flashback&lt;/code> to Disable Built-in Lockscreen&lt;span class="hx-absolute -hx-mt-20" id="configure-gnome-flashback-to-disable-built-in-lockscreen">&lt;/span>
-&lt;a href="#configure-gnome-flashback-to-disable-built-in-lockscreen" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>By default &lt;code>gnome-flashback&lt;/code> handles the lock screen for Regolith. This can be adjusted by modifying it&amp;rsquo;s configuration via the &lt;code>gsettings&lt;/code> command line program:&lt;/p>
+&lt;p>The X11 session (i3) and the Wayland session (sway) lock the screen with different programs, so they are configured separately.&lt;/p>
+&lt;h2>X11 session&lt;span class="hx-absolute -hx-mt-20" id="x11-session">&lt;/span>
+&lt;a href="#x11-session" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Configure &lt;code>gnome-flashback&lt;/code> to Disable Built-in Lockscreen&lt;span class="hx-absolute -hx-mt-20" id="configure-gnome-flashback-to-disable-built-in-lockscreen">&lt;/span>
+&lt;a href="#configure-gnome-flashback-to-disable-built-in-lockscreen" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>By default &lt;code>gnome-flashback&lt;/code> handles the lock screen in the X11 session. This can be adjusted by modifying its configuration via the &lt;code>gsettings&lt;/code> command line program:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">gsettings &lt;span class="nb">set&lt;/span> org.gnome.gnome-flashback screensaver false&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
@@ -600,16 +602,17 @@ title="Copy code"
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;h2>Cause Your Lock screen program to Run from i3 Keybinding&lt;span class="hx-absolute -hx-mt-20" id="cause-your-lock-screen-program-to-run-from-i3-keybinding">&lt;/span>
-&lt;a href="#cause-your-lock-screen-program-to-run-from-i3-keybinding" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Specify the following override line in your &lt;code>~/.config/regolith3/Xresources&lt;/code> file (substituting &lt;code>your-script.sh&lt;/code> with the command you wish to use for the locking your screen):&lt;/p>
+&lt;p>&lt;code>gnome-flashback&lt;/code> also locks the screen when the session is idle and before the computer suspends. With its lock screen disabled, these locks no longer happen; set them up yourself if you need them (for example with &lt;code>xss-lock&lt;/code>).&lt;/p>
+&lt;h3>Cause Your Lock screen program to Run from i3 Keybinding&lt;span class="hx-absolute -hx-mt-20" id="cause-your-lock-screen-program-to-run-from-i3-keybinding">&lt;/span>
+&lt;a href="#cause-your-lock-screen-program-to-run-from-i3-keybinding" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Specify the following override line in your &lt;code>~/.config/regolith3/Xresources&lt;/code> file (substituting &lt;code>your-script.sh&lt;/code> with the command you wish to use for the locking your screen):&lt;/p>
 &lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-yellow-100 hx-bg-yellow-50 hx-text-yellow-900 dark:hx-border-yellow-200/30 dark:hx-bg-yellow-700/30 dark:hx-text-yellow-200">
 &lt;div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2">&lt;/div>
 &lt;div class="hx-w-full hx-min-w-0 hx-leading-7">
-&lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">Regolith version 3.0 onward replaces &amp;ldquo;i3-wm&amp;rdquo; with &amp;ldquo;wm&amp;rdquo; in Xresource keys. The content on this page has been updated for Regolith 3.0+. If you are using an earlier version, use &amp;ldquo;i3-wm&amp;rdquo; instead of &amp;ldquo;wm&amp;rdquo; in the key names below. For example &lt;code>wm.foo.bar&lt;/code> changes to &lt;code>i3-wm.foo.bar&lt;/code> for Regolith 1.x and 2.x.&lt;/div>
+&lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">Regolith 3.4 replaced the key &lt;code>wm.program.lock&lt;/code> with &lt;code>wm.program.lock_i3&lt;/code> for the X11 session and &lt;code>wm.program.lock_sway&lt;/code> for the Wayland session. On Regolith 3.0 to 3.3, use &lt;code>wm.program.lock&lt;/code>. Regolith 1.x and 2.x use &lt;code>i3-wm.program.lock&lt;/code>.&lt;/div>
 &lt;/div>
 &lt;/div>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-&lt;div class="filename not-prose" dir="auto">~/.config/regolith3/Xresources&lt;/div>&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">wm.program.lock&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">your-script.sh&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
+&lt;div class="filename not-prose" dir="auto">~/.config/regolith3/Xresources&lt;/div>&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">wm.program.lock_i3&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">your-script.sh&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
 &lt;button
 class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
 title="Copy code"
@@ -621,7 +624,8 @@ title="Copy code"
 &lt;/div>
 &lt;p>For example, assuming you have &lt;code>i3lock&lt;/code> installed:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;wm.program.lock: /usr/bin/i3lock&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;wm.program.lock_i3: /usr/bin/i3lock&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">regolith-look refresh&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
 class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
 title="Copy code"
@@ -630,7 +634,26 @@ title="Copy code"
 &lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
 &lt;/button>
 &lt;/div>
-&lt;/div></description></item><item><title>Change the Terminal Font Size</title><link>https://regolith-desktop.com/docs/howtos/terminal-font/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/terminal-font/</guid><description>
+&lt;/div>
+&lt;p>The lock screen keybinding, &lt;span class="text-nowrap">
+&lt;span class="badge badge-warning">super&lt;/span>
+&lt;span class="badge badge-warning">escape&lt;/span>&lt;/span>, then runs &lt;code>i3lock&lt;/code>.&lt;/p>
+&lt;h2>Wayland session&lt;span class="hx-absolute -hx-mt-20" id="wayland-session">&lt;/span>
+&lt;a href="#wayland-session" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>The Wayland session locks the screen with &lt;code>gtklock&lt;/code>. The Xresource &lt;code>wm.program.lock_sway&lt;/code> sets the lock command. It is used for the lock screen keybinding, after the session has been idle, before the computer suspends, and when the lid is closed. The command must return once the screen is locked, so start the locker in the background (for example &lt;code>swaylock -f&lt;/code> or &lt;code>gtklock -d&lt;/code>):&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt install swaylock
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;wm.program.lock_sway: swaylock -f -c 000000&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">regolith-look refresh&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>The &lt;code>gsettings&lt;/code> command above has no effect in the Wayland session.&lt;/p></description></item><item><title>Change the Terminal Font Size</title><link>https://regolith-desktop.com/docs/howtos/terminal-font/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/terminal-font/</guid><description>
 &lt;p>Regolith sets the font of its GNOME Terminal profile, named &amp;ldquo;Regolith&amp;rdquo;, from the &lt;code>gnome.terminal.font&lt;/code> &lt;code>Xresources&lt;/code> key. By default, this is the monospace font of the current look. The steps are the same in the X11 (i3) and Wayland (sway) sessions.&lt;/p>
 &lt;ol>
 &lt;li>
