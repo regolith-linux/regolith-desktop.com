@@ -1,16 +1,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Regolith Desktop – How To</title><link>https://regolith-desktop.com/docs/howtos/</link><description>Recent content in How To on Regolith Desktop</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://regolith-desktop.com/docs/howtos/index.xml" rel="self" type="application/rss+xml"/><item><title>Assign a workspace to a specific Output (Display)</title><link>https://regolith-desktop.com/docs/howtos/workspace-on-output/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/workspace-on-output/</guid><description>
-&lt;h2>i3&lt;span class="hx-absolute -hx-mt-20" id="i3">&lt;/span>
-&lt;a href="#i3" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-red-200 hx-bg-red-100 hx-text-red-900 dark:hx-border-red-200/30 dark:hx-bg-red-900/30 dark:hx-text-red-200">
-&lt;div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2">&lt;/div>
-&lt;div class="hx-w-full hx-min-w-0 hx-leading-7">
-&lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">This page was copied from the &lt;a href="https://regolith-linux.org" target="_blank" rel="noopener">Regolith 1.x website&lt;/a> and has not been updated for Regolith 2. It may contain out of date information.&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;p>In order to configure i3 to assign a workspace to a given monitor, first find the device name for the monitor you wish to use with &lt;code>xrandr&lt;/code>:&lt;/p>
+&lt;p>i3 and sway can open a workspace on a given output (monitor) every time. To set this up, add &lt;code>workspace ... output ...&lt;/code> lines to a config partial: a file in your user config directory that Regolith includes after its own configuration. The variables &lt;code>$ws1&lt;/code> to &lt;code>$ws19&lt;/code> hold the names of Regolith&amp;rsquo;s workspaces, which you can change as described in &lt;a href="https://regolith-desktop.com/docs/howtos/change-workspace-icons/" >Change Workspace Icons and Labels&lt;/a>.&lt;/p>
+&lt;h2>X11 Session (i3)&lt;span class="hx-absolute -hx-mt-20" id="x11-session-i3">&lt;/span>
+&lt;a href="#x11-session-i3" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ol>
+&lt;li>
+&lt;p>Find the name of the output with &lt;code>xrandr --listmonitors&lt;/code>:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> xrandr --listmonitors
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">Monitors: 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">Monitors: 2
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> 0: +*eDP-1 1920/309x1080/173+0+0 eDP-1
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> 1: +HDMI-1 1920/527x1080/296+1920+0 HDMI-1
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
 class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
@@ -21,9 +19,13 @@ title="Copy code"
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;p>In this case, the output name is &lt;code>eDP-1&lt;/code>. Next add a line like this into &lt;a href="https://regolith-desktop.com/docs/howtos/stage-configs/" >a staged copy of your i3 config file&lt;/a>:&lt;/p>
+&lt;p>The output names are in the last column, here &lt;code>eDP-1&lt;/code> and &lt;code>HDMI-1&lt;/code>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Create a partial, for example &lt;code>~/.config/regolith3/i3/config.d/70_workspace-outputs&lt;/code>, with a line for each workspace:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">workspace &amp;#34;$ws1&amp;#34; output DP1&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;div class="filename not-prose" dir="auto">~/.config/regolith3/i3/config.d/70_workspace-outputs&lt;/div>&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">workspace &amp;#34;$ws1&amp;#34; output eDP-1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">workspace &amp;#34;$ws2&amp;#34; output HDMI-1&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
 &lt;button
 class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
 title="Copy code"
@@ -33,12 +35,33 @@ title="Copy code"
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;p>Log back in for the changes to take effect.&lt;/p>
-&lt;h2>Sway&lt;span class="hx-absolute -hx-mt-20" id="sway">&lt;/span>
-&lt;a href="#sway" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>The concept is the same, but &lt;code>swaymsg&lt;/code> is used to display the available outputs.&lt;/p>
+&lt;p>Keep the double quotes around the variable: Regolith&amp;rsquo;s workspace names contain spaces.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Log out and back in, or reload i3 with &lt;span class="text-nowrap">
+&lt;span class="badge badge-warning">super&lt;/span>
+&lt;span class="badge badge-warning">shift&lt;/span>
+&lt;span class="badge badge-warning">c&lt;/span>&lt;/span>.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
+&lt;div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2">&lt;/div>
+&lt;div class="hx-w-full hx-min-w-0 hx-leading-7">
+&lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">With &lt;code>regolith-session&lt;/code> older than 1.2.2 (Regolith 3.4 and earlier), i3 reports a &lt;code>CONFIG&lt;/code> error for these lines right after login (&lt;a href="https://github.com/regolith-linux/regolith-desktop/issues/890" target="_blank" rel="noopener">regolith-desktop#890&lt;/a>). Refreshing Regolith with &lt;span class="text-nowrap">
+&lt;span class="badge badge-warning">super&lt;/span>
+&lt;span class="badge badge-warning">shift&lt;/span>
+&lt;span class="badge badge-warning">r&lt;/span>&lt;/span> or &lt;code>regolith-look refresh&lt;/code> after logging in fixes the workspace names and restarts i3, which then applies the lines.&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h2>Wayland Session (sway)&lt;span class="hx-absolute -hx-mt-20" id="wayland-session-sway">&lt;/span>
+&lt;a href="#wayland-session-sway" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ol>
+&lt;li>
+&lt;p>Find the name of the output with &lt;code>swaymsg -t get_outputs&lt;/code>:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> swaymsg -t get_outputs
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">Output HDMI-A-2 &amp;#39;ViewSonic Corporation VG2448 V5E192121969&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">Output eDP-1 &amp;#39;AU Optronics 0x573D Unknown&amp;#39; (focused)
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">[...]
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">Output HDMI-A-1 &amp;#39;ViewSonic Corporation VG2448 V5E192121969&amp;#39;
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">[...]
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
@@ -50,9 +73,12 @@ title="Copy code"
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;p>To assign workspace &lt;em>$ws1&lt;/em> to the HDMI-A-2 output put the following line into &lt;a href="https://regolith-desktop.com/docs/howtos/stage-configs/" >a staged copy of your sway config file&lt;/a>:&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Create a partial, for example &lt;code>~/.config/regolith3/sway/config.d/70_workspace-outputs&lt;/code>, with a line for each workspace:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
-&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">workspace $ws1 output HDMI-A-2&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;div class="filename not-prose" dir="auto">~/.config/regolith3/sway/config.d/70_workspace-outputs&lt;/div>&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">workspace $ws1 output eDP-1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">workspace $ws2 output HDMI-A-1&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
 &lt;button
 class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
 title="Copy code"
@@ -61,7 +87,32 @@ title="Copy code"
 &lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
 &lt;/button>
 &lt;/div>
-&lt;/div></description></item><item><title>Change background</title><link>https://regolith-desktop.com/docs/howtos/change-background/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/change-background/</guid><description>
+&lt;/div>
+&lt;p>Write the variable without quotes here. Regolith&amp;rsquo;s sway config already quotes &lt;code>$ws1&lt;/code> to &lt;code>$ws19&lt;/code>, and with extra quotes the line doesn&amp;rsquo;t match the workspace.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Log out and back in, or reload sway with &lt;span class="text-nowrap">
+&lt;span class="badge badge-warning">super&lt;/span>
+&lt;span class="badge badge-warning">shift&lt;/span>
+&lt;span class="badge badge-warning">c&lt;/span>&lt;/span>.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>Because the two sessions need different quoting, use the &lt;code>i3&lt;/code> and &lt;code>sway&lt;/code> partial directories for these lines, not &lt;code>~/.config/regolith3/common-wm/config.d/&lt;/code>.&lt;/p>
+&lt;h2>More Than One Output&lt;span class="hx-absolute -hx-mt-20" id="more-than-one-output">&lt;/span>
+&lt;a href="#more-than-one-output" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>A line can list several outputs. The workspace opens on the first of them that is available. With the following line, workspace 2 opens on the external monitor when it is connected, and on the laptop screen otherwise:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div class="filename not-prose" dir="auto">~/.config/regolith3/i3/config.d/70_workspace-outputs&lt;/div>&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">workspace &amp;#34;$ws2&amp;#34; output HDMI-1 eDP-1&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>In sway, the same line is &lt;code>workspace $ws2 output HDMI-A-1 eDP-1&lt;/code>.&lt;/p>
+&lt;p>See the &lt;a href="https://i3wm.org/docs/userguide.html#workspace_screen" target="_blank" rel="noopener">i3 user guide&lt;/a> and &lt;code>man 5 sway&lt;/code> for details.&lt;/p></description></item><item><title>Change background</title><link>https://regolith-desktop.com/docs/howtos/change-background/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/change-background/</guid><description>
 &lt;h2>Wallpaper&lt;span class="hx-absolute -hx-mt-20" id="wallpaper">&lt;/span>
 &lt;a href="#wallpaper" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Most Regolith Looks provide a default desktop color or image. The wallpaper can be set by specifying the path to the wallpaper image via the Xresources key &lt;code>regolith.wallpaper.file&lt;/code> or in the Regolith Control Center which can be opened by running &lt;code>regolith-control-center&lt;/code> in the terminal.&lt;/p>
 &lt;p>Example, assuming the file &lt;code>/usr/share/backgrounds/hardy_wallpaper_uhd.png&lt;/code> is present:&lt;/p>
