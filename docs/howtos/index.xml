@@ -248,11 +248,13 @@ title="Copy code"
 &lt;p>Then run &lt;code>regolith-look refresh&lt;/code>. The available blocks and their options are described in the &lt;a href="https://docs.rs/i3status-rs/latest/i3status_rs/blocks/index.html" target="_blank" rel="noopener">i3status-rust documentation&lt;/a>.&lt;/p>
 &lt;h2>Further Reading&lt;span class="hx-absolute -hx-mt-20" id="further-reading">&lt;/span>
 &lt;a href="#further-reading" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>The &lt;a href="https://regolith-desktop.com/docs/reference/configurations/" >reference page for configurations&lt;/a> has more details about the configuration files used with Regolith Linux.&lt;/p></description></item><item><title>Change Notification Systems</title><link>https://regolith-desktop.com/docs/howtos/replace-notification-system/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/replace-notification-system/</guid><description>
-&lt;p>Regolith ships with a notification system called &lt;a href="https://github.com/DaveDavenport/Rofication" target="_blank" rel="noopener">Rofication&lt;/a>. It is designed to work in the background and not use pop-ups as a way of alerting the user to a new notification. Rather, a small bar item displays the current number of unread notifications and a dialog can activated to interact with the content of the current notifications. This page describes a way to install an alternative notification system which works in a more traditional way.&lt;/p>
-&lt;p>We will use &lt;a href="https://dunst-project.org/" target="_blank" rel="noopener">dunst&lt;/a> as an example but similar steps can be used with pretty much any other notification component.&lt;/p>
+&lt;p>Regolith ships with a notification system called &lt;a href="https://github.com/regolith-linux/regolith-rofication" target="_blank" rel="noopener">Rofication&lt;/a>. It is designed to work in the background and not use pop-ups as a way of alerting the user to a new notification. Rather, a bar item displays the current number of unread notifications and a dialog, opened with &lt;span class="text-nowrap">
+&lt;span class="badge badge-warning">super&lt;/span>
+&lt;span class="badge badge-warning">n&lt;/span>&lt;/span>, lists the current notifications. This page describes a way to install an alternative notification system which works in a more traditional way.&lt;/p>
+&lt;p>We will use &lt;a href="https://dunst-project.org/" target="_blank" rel="noopener">dunst&lt;/a> as an example, because it works in both the X11 (i3) and the Wayland (sway) session. Similar steps can be used with other notification components; see &lt;a href="#other-notification-daemons" >Other Notification Daemons&lt;/a> below.&lt;/p>
 &lt;ol>
 &lt;li>
-&lt;p>Replace &lt;code>rofication&lt;/code> with &lt;code>dunst&lt;/code>:&lt;/p>
+&lt;p>Replace Rofication with &lt;code>dunst&lt;/code>:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt install dunst libnotify-bin&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
@@ -264,7 +266,9 @@ title="Copy code"
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;p>This should remove Rofication automatically as the package-manager sees the conflict and resolves it. If this is not removed automatically, you can do it manually. Also, if you want to remove the remaining configuration, the following works as well:&lt;/p>
+&lt;p>&lt;code>dunst&lt;/code> conflicts with Rofication, so &lt;code>apt&lt;/code> also removes &lt;code>regolith-rofication&lt;/code> and &lt;code>regolith-wm-rofication-ilia&lt;/code>, the package that starts Rofication and binds &lt;span class="text-nowrap">
+&lt;span class="badge badge-warning">super&lt;/span>
+&lt;span class="badge badge-warning">n&lt;/span>&lt;/span> to its dialog. If you want to remove the remaining configuration, the following works as well:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt purge regolith-rofication &lt;span class="c1"># remove any remaining config as well&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
@@ -283,7 +287,102 @@ title="Copy code"
 &lt;li>
 &lt;p>Test your notifications with &lt;code>notify-send test123&lt;/code>. You should see a pop-up notification from &lt;code>dunst&lt;/code>.&lt;/p>
 &lt;/li>
-&lt;/ol></description></item><item><title>Change the Bar Date and Time Format</title><link>https://regolith-desktop.com/docs/howtos/time-format/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/time-format/</guid><description>
+&lt;/ol>
+&lt;p>D-Bus starts &lt;code>dunst&lt;/code> when the first notification arrives. To configure it, see &lt;code>man dunst&lt;/code> and &lt;code>man 5 dunst&lt;/code>; your own settings go in &lt;code>~/.config/dunst/dunstrc&lt;/code>.&lt;/p>
+&lt;h2>Sway: Notification Count in the Bar&lt;span class="hx-absolute -hx-mt-20" id="sway-notification-count-in-the-bar">&lt;/span>
+&lt;a href="#sway-notification-count-in-the-bar" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>In the Wayland session, after Rofication is removed, the bar can show a red &lt;code>Failed to connect to socket&lt;/code> where the notification count was. Until your &lt;code>i3status-rs&lt;/code> package hides this block by itself, use your own copy of the bar configuration without it:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Copy the default configuration:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">mkdir -p ~/.config/regolith3/i3status-rust
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cp /etc/regolith/i3status-rust/config.toml ~/.config/regolith3/i3status-rust/config.toml&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;/li>
+&lt;li>
+&lt;p>In the copy, delete the &lt;code>[[block]]&lt;/code> entry with &lt;code>block = &amp;quot;rofication&amp;quot;&lt;/code> and the &lt;code>[[block.click]]&lt;/code> lines that follow it.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Tell the bar to use your copy, and reload:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;wm.bar.status_config: ~/.config/regolith3/i3status-rust/config.toml&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">regolith-look refresh&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;/li>
+&lt;/ol>
+&lt;h2>Other Notification Daemons&lt;span class="hx-absolute -hx-mt-20" id="other-notification-daemons">&lt;/span>
+&lt;a href="#other-notification-daemons" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Daemon&lt;/th>
+&lt;th>Package&lt;/th>
+&lt;th>X11 (i3)&lt;/th>
+&lt;th>Wayland (sway)&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a href="https://dunst-project.org/" target="_blank" rel="noopener">dunst&lt;/a>&lt;/td>
+&lt;td>&lt;code>dunst&lt;/code>&lt;/td>
+&lt;td>yes&lt;/td>
+&lt;td>yes&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="https://github.com/emersion/mako" target="_blank" rel="noopener">mako&lt;/a>&lt;/td>
+&lt;td>&lt;code>mako-notifier&lt;/code>&lt;/td>
+&lt;td>no&lt;/td>
+&lt;td>yes&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="https://github.com/ErikReider/SwayNotificationCenter" target="_blank" rel="noopener">SwayNotificationCenter&lt;/a>&lt;/td>
+&lt;td>&lt;code>sway-notification-center&lt;/code>&lt;/td>
+&lt;td>no&lt;/td>
+&lt;td>yes&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;code>mako&lt;/code> and SwayNotificationCenter don&amp;rsquo;t conflict with Rofication, so &lt;code>apt&lt;/code> leaves it installed, and Rofication keeps receiving the notifications. Remove it yourself:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt remove regolith-rofication regolith-wm-rofication-ilia&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>Both only run in the Wayland session. If one of them is your only notification daemon, the X11 session shows no notifications.&lt;/p>
+&lt;h2>Going Back to Rofication&lt;span class="hx-absolute -hx-mt-20" id="going-back-to-rofication">&lt;/span>
+&lt;a href="#going-back-to-rofication" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt install regolith-rofication regolith-wm-rofication-ilia&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>This removes &lt;code>dunst&lt;/code>. Log out and back in.&lt;/p></description></item><item><title>Change the Bar Date and Time Format</title><link>https://regolith-desktop.com/docs/howtos/time-format/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/time-format/</guid><description>
 &lt;p>The time format (12 or 24 hour) can be specified in Settings:&lt;/p>
 &lt;p>The date format can be specified by selecting the appropriate region in Settings. A preview of the date format is provided, and logging back in is required for changes to take effect.&lt;/p>
 &lt;p>The date and time formats can also be explicitly set via &lt;code>Xresources&lt;/code>. To do so, override the &lt;code>i3xrocks.date.format2&lt;/code> &lt;code>Xresource&lt;/code> key. The format specification for date is simply the arguments that would be passed to the &lt;code>date&lt;/code> command on the command line. For example, to print the year in 4 digits, specify &lt;code>+%Y&lt;/code>.&lt;/p>
