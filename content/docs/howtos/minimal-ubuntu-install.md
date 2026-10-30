@@ -17,6 +17,7 @@ Follow online instructions for installing a fresh copy of Ubuntu Server versions
 
 Once Ubuntu Server has been installed, log into a terminal session.  Use the following URLs to download the installation directions as a text file:
 
+Ubuntu 25.10 (Questing): [install-release-ubuntu-25.10-amd64.txt](/install-release-ubuntu-25.10-amd64.txt)  
 Ubuntu 25.04 (Plucky): [install-release-ubuntu-25.04-amd64.txt](/install-release-ubuntu-25.04-amd64.txt)  
 Ubuntu 24.10 (Oracular): [install-release-ubuntu-24.10-amd64.txt](/install-release-ubuntu-24.10-amd64.txt)  
 Ubuntu 24.04 LTS (Noble): [install-release-ubuntu-24.04-amd64.txt](/install-release-ubuntu-24.04-amd64.txt)  
@@ -37,6 +38,16 @@ cat install-release-ubuntu-22.04-amd64.txt
 ```
 
 Manually execute each step in the text file, or source the file if you're feeling adventurous.  Once complete, the Regolith Desktop package repositories are installed into the new system.
+
+#### Raspberry Pi
+
+On a Raspberry Pi running Ubuntu Server 25.10 (arm64), `lightdm` shows a black screen with a blinking cursor unless the `gldriver-test` package from Raspberry Pi is installed.  The Ubuntu 22.04 and later scripts list these steps in a comment at the bottom:
+
+```bash
+wget https://archive.raspberrypi.org/debian/pool/main/g/gldriver-test/gldriver-test_0.15_all.deb
+sudo dpkg -i gldriver-test_0.15_all.deb
+sudo apt install -f
+```
 
 ### Install the Regolith Ubuntu System
 
