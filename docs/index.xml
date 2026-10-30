@@ -7926,14 +7926,53 @@ title="Copy code"
 The next time you log in the bar should be hidden by default.&lt;/p></description></item><item><title>Install the Sway Compositor</title><link>https://regolith-desktop.com/docs/howtos/install-sway/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/install-sway/</guid><description>
 &lt;p>To install the wayland session, follow these steps:&lt;/p>
 &lt;ol>
-&lt;li>Install the &lt;code>regolith-session-sway&lt;/code> package and it&amp;rsquo;s dependencies.&lt;/li>
-&lt;li>Reboot&lt;/li>
-&lt;li>Select &amp;ldquo;Regolith on Wayland&amp;rdquo; session in the login panel&lt;/li>
+&lt;li>
+&lt;p>Install the &lt;code>regolith-session-sway&lt;/code> package and its dependencies, which include Regolith&amp;rsquo;s build of Sway (&lt;code>sway-regolith&lt;/code>):&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt install regolith-session-sway&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;/li>
+&lt;li>
+&lt;p>Log out, or reboot.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Select the &amp;ldquo;Regolith / Wayland&amp;rdquo; session in the login panel. In GDM, select your user and choose the session from the gear button in the lower-right corner.&lt;/p>
+&lt;img class="regolith-img" src="https://regolith-desktop.com/docs/howtos/install-sway/gdm-session-menu.png" alt="The GDM login screen with the session menu open from the gear button, and Regolith / Wayland selected" loading="lazy" />
+&lt;/li>
 &lt;/ol>
+&lt;p>The X11 session (&amp;ldquo;Regolith / X11&amp;rdquo;) stays installed, and you can choose either session at each login.&lt;/p>
+&lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
+&lt;div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2">&lt;/div>
+&lt;div class="hx-w-full hx-min-w-0 hx-leading-7">
+&lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">Debian 12 (Bookworm) has the X11 session only. The Wayland session needs Debian 13 (Trixie) or a supported Ubuntu release.&lt;/div>
+&lt;/div>
+&lt;/div>
 &lt;h2>Hardware Support&lt;span class="hx-absolute -hx-mt-20" id="hardware-support">&lt;/span>
-&lt;a href="#hardware-support" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Those using proprietary nvidia drivers for their graphics cards must set &lt;code>regolith.sway.unsupported_gpu: true&lt;/code> in their XResources. This is not an issue with the open source drivers nouveau. See more &lt;a href="https://github.com/swaywm/sway/issues/5392" target="_blank" rel="noopener">here&lt;/a>.&lt;/p>
+&lt;a href="#hardware-support" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Those using proprietary nvidia drivers for their graphics cards must set &lt;code>regolith.sway.unsupported_gpu: true&lt;/code> in &lt;code>~/.config/regolith3/Xresources&lt;/code>. This is not an issue with the open source drivers nouveau. See more &lt;a href="https://github.com/swaywm/sway/issues/5392" target="_blank" rel="noopener">here&lt;/a>.&lt;/p>
 &lt;h2>Bar Changes&lt;span class="hx-absolute -hx-mt-20" id="bar-changes">&lt;/span>
-&lt;a href="#bar-changes" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>The wayland session uses &lt;a href="https://github.com/greshake/i3status-rust" target="_blank" rel="noopener">&lt;code>i3status-rs&lt;/code>&lt;/a> rather than &lt;code>i3xrocks&lt;/code>. &lt;code>i3status-rs&lt;/code> provides a crisper and more resource-efficient approach to system monitoring. However at this time the &lt;code>i3xrocks&lt;/code> packages for status indicators are not integrated with &lt;code>i3status-rs&lt;/code>. To use a custom configuration with &lt;code>i3status-rs&lt;/code>, users will need to put their config file at the location of their choosing and they&amp;rsquo;ll need to set the &lt;code>wm.bar.status_config&lt;/code> to the absolute path of their config file in their XResources. See the &lt;a href="https://docs.rs/i3status-rs/latest/i3status_rs/blocks/index.html" target="_blank" rel="noopener">upstream project documentation&lt;/a> for further details.&lt;/p></description></item><item><title>Launch an app in a Floating Window</title><link>https://regolith-desktop.com/docs/howtos/floating-window/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/floating-window/</guid><description>
+&lt;a href="#bar-changes" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>The wayland session uses &lt;a href="https://github.com/greshake/i3status-rust" target="_blank" rel="noopener">&lt;code>i3status-rs&lt;/code>&lt;/a> rather than &lt;code>i3xrocks&lt;/code>. &lt;code>i3status-rs&lt;/code> provides a crisper and more resource-efficient approach to system monitoring. However at this time the &lt;code>i3xrocks&lt;/code> packages for status indicators are not integrated with &lt;code>i3status-rs&lt;/code>. To use a custom configuration with &lt;code>i3status-rs&lt;/code>, copy the default configuration to a location of your choosing and set &lt;code>wm.bar.status_config&lt;/code> to the path of your copy in &lt;code>~/.config/regolith3/Xresources&lt;/code>:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">mkdir -p ~/.config/regolith3/i3status-rust
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cp /etc/regolith/i3status-rust/config.toml ~/.config/regolith3/i3status-rust/config.toml
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;wm.bar.status_config: ~/.config/regolith3/i3status-rust/config.toml&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>Then edit the copy, and run &lt;code>regolith-look refresh&lt;/code> or log back in. See the &lt;a href="https://docs.rs/i3status-rs/latest/i3status_rs/blocks/index.html" target="_blank" rel="noopener">upstream project documentation&lt;/a> for further details.&lt;/p></description></item><item><title>Launch an app in a Floating Window</title><link>https://regolith-desktop.com/docs/howtos/floating-window/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/floating-window/</guid><description>
 &lt;p>Most X11 applications support a flag &lt;code>--class&lt;/code> to specify the &lt;code>class&lt;/code> under which the application runs. Regolith is configured such that apps with a class of &lt;code>floating_window&lt;/code> will launch with i3&amp;rsquo;s floating window mode.&lt;/p>
 &lt;h2>Examples&lt;span class="hx-absolute -hx-mt-20" id="examples">&lt;/span>
 &lt;a href="#examples" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Firefox&lt;span class="hx-absolute -hx-mt-20" id="firefox">&lt;/span>
