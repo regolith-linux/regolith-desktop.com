@@ -1355,7 +1355,7 @@ title="Copy code"
 &lt;/div>
 &lt;/div></description></item><item><title>3.1 Release Notes</title><link>https://regolith-desktop.com/docs/reference/releases/regolith-3.1-release-notes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/reference/releases/regolith-3.1-release-notes/</guid><description>
 &lt;h2>Regolith 3.1 Release Notes&lt;span class="hx-absolute -hx-mt-20" id="regolith-31-release-notes">&lt;/span>
-&lt;a href="#regolith-31-release-notes" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>&lt;a href="https://github.com/orgs/regolith-linux/projects/26" target="_blank" rel="noopener">Regolith 3.1&lt;/a> is a minor release focusing on Ubuntu 23.10 support and bug fixes.&lt;/p>
+&lt;a href="#regolith-31-release-notes" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>&lt;a href="#changelog-delta-from-regolith-30" >Regolith 3.1&lt;/a> is a minor release focusing on Ubuntu 23.10 support and bug fixes.&lt;/p>
 &lt;h2>Features&lt;span class="hx-absolute -hx-mt-20" id="features">&lt;/span>
 &lt;a href="#features" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ul>
 &lt;li>Ubuntu 23.10 (Mantic) support&lt;/li>
@@ -1527,7 +1527,7 @@ title="Copy code"
 &lt;/div>
 &lt;/div></description></item><item><title>3.0 Release Notes</title><link>https://regolith-desktop.com/docs/reference/releases/regolith-3.0-release-notes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/reference/releases/regolith-3.0-release-notes/</guid><description>
 &lt;h2>Regolith 3.0 Release Notes&lt;span class="hx-absolute -hx-mt-20" id="regolith-30-release-notes">&lt;/span>
-&lt;a href="#regolith-30-release-notes" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>&lt;a href="https://github.com/orgs/regolith-linux/projects/26" target="_blank" rel="noopener">Regolith 3.0&lt;/a> is a major release focusing on a new &lt;a href="https://github.com/orgs/regolith-linux/projects/8" target="_blank" rel="noopener">Wayland&lt;/a>-based session, Debian 12, and Ubuntu 23.04 support.&lt;/p>
+&lt;a href="#regolith-30-release-notes" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>&lt;a href="#changelog-delta-from-regolith-desktop-22-to-30" >Regolith 3.0&lt;/a> is a major release focusing on a new Wayland-based session, Debian 12, and Ubuntu 23.04 support.&lt;/p>
 &lt;h2>New Major Features&lt;span class="hx-absolute -hx-mt-20" id="new-major-features">&lt;/span>
 &lt;a href="#new-major-features" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ul>
 &lt;li>Ubuntu 23.04 (lunar) support&lt;/li>
@@ -1917,7 +1917,7 @@ title="Copy code"
 &lt;/button>
 &lt;/div>
 &lt;/div></description></item><item><title>2.2 Release Notes</title><link>https://regolith-desktop.com/docs/reference/releases/regolith-2.2-release-notes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/reference/releases/regolith-2.2-release-notes/</guid><description>
-&lt;p>&lt;a href="https://github.com/orgs/regolith-linux/projects/25" target="_blank" rel="noopener">Regolith 2.2&lt;/a> is a minor release focusing on bug fixes and Ubuntu 22.10 support.&lt;/p>
+&lt;p>&lt;a href="#changelog-delta-from-regolith-desktop-21-to-22" >Regolith 2.2&lt;/a> is a minor release focusing on bug fixes and Ubuntu 22.10 support.&lt;/p>
 &lt;h2>New Features&lt;span class="hx-absolute -hx-mt-20" id="new-features">&lt;/span>
 &lt;a href="#new-features" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ul>
 &lt;li>Ubuntu 22.10 (kinetic) support&lt;/li>
@@ -3292,7 +3292,7 @@ title="Copy code"
 &lt;/tbody>
 &lt;/table>
 &lt;h2>Fixes&lt;span class="hx-absolute -hx-mt-20" id="fixes">&lt;/span>
-&lt;a href="#fixes" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Have a look at &lt;a href="https://github.com/orgs/regolith-linux/projects/12" target="_blank" rel="noopener">the R1.6 project page&lt;/a> for a list of bug fixes.&lt;/p>
+&lt;a href="#fixes" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Have a look at the &lt;a href="#changelog-delta-from-regolith-153-to-regolith-16" >changelog delta&lt;/a> below for a list of bug fixes.&lt;/p>
 &lt;h2>Changelog Delta from Regolith 1.5.3 to Regolith 1.6&lt;span class="hx-absolute -hx-mt-20" id="changelog-delta-from-regolith-153-to-regolith-16">&lt;/span>
 &lt;a href="#changelog-delta-from-regolith-153-to-regolith-16" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;pre>&lt;code>dracula-gtk (1.1.0-1) bionic; urgency=medium
@@ -3620,7 +3620,7 @@ title="Copy code"
 &lt;/tbody>
 &lt;/table>
 &lt;h2>Fixes&lt;span class="hx-absolute -hx-mt-20" id="fixes">&lt;/span>
-&lt;a href="#fixes" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Have a look at &lt;a href="https://github.com/orgs/regolith-linux/projects/12" target="_blank" rel="noopener">the R1.5 project page&lt;/a> for a list of bug fixes.&lt;/p>
+&lt;a href="#fixes" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Have a look at the &lt;a href="#changelog-delta-from-regolith-141-to-regolith-15" >changelog delta&lt;/a> below for a list of bug fixes.&lt;/p>
 &lt;h2>Changelog Delta from Regolith 1.4.1 to Regolith 1.5&lt;span class="hx-absolute -hx-mt-20" id="changelog-delta-from-regolith-141-to-regolith-15">&lt;/span>
 &lt;a href="#changelog-delta-from-regolith-141-to-regolith-15" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;pre>&lt;code>########################################
@@ -4110,8 +4110,6 @@ title="Copy code"
 &lt;/div>
 &lt;/div>
 &lt;p>For R1.4 in particular @ploum has provided many of the ideas and validation. Gratitude goes out to Regolith contributors and users @cheginit, @nalderto, @baldrailers, @ivomarino, @Josh-Letts, @LawZava, @SkyyySi, @tomster, @gdeflaux, @appelgriebsch, @farsil, and @MrKovar for their time and attention. Also thanks to all that helped to test and filed issues for bugs and feature requests!&lt;/p>
-&lt;h2>Known Issues&lt;span class="hx-absolute -hx-mt-20" id="known-issues">&lt;/span>
-&lt;a href="#known-issues" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Issues and fixes are being tracked in &lt;a href="https://github.com/orgs/regolith-linux/projects/13" target="_blank" rel="noopener">this project&lt;/a>.&lt;/p>
 &lt;h2>Features&lt;span class="hx-absolute -hx-mt-20" id="features">&lt;/span>
 &lt;a href="#features" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;table>
 &lt;thead>
@@ -4179,8 +4177,6 @@ title="Copy code"
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h2>Fixes&lt;span class="hx-absolute -hx-mt-20" id="fixes">&lt;/span>
-&lt;a href="#fixes" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Have a look at the R1.4 project page for a &lt;a href="https://github.com/orgs/regolith-linux/projects/11" target="_blank" rel="noopener">list of bug fixes&lt;/a>.&lt;/p>
 &lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
