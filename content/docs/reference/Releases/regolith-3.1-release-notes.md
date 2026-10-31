@@ -8,7 +8,7 @@ description: >
 
 ## Regolith 3.1 Release Notes
 
-[Regolith 3.1](https://github.com/orgs/regolith-linux/projects/26) is a minor release focusing on Ubuntu 23.10 support and bug fixes.
+[Regolith 3.1](#changelog-delta-from-regolith-30) is a minor release focusing on Ubuntu 23.10 support and bug fixes.
 
 ## Features
 

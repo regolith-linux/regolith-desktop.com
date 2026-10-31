@@ -26,7 +26,7 @@ Regolith R1.5 is a feature release which includes several improvements and optim
 
 ## Fixes
 
-Have a look at [the R1.5 project page](https://github.com/orgs/regolith-linux/projects/12) for a list of bug fixes.
+Have a look at the [changelog delta](#changelog-delta-from-regolith-141-to-regolith-15) below for a list of bug fixes.
 
 ## Changelog Delta from Regolith 1.4.1 to Regolith 1.5
 

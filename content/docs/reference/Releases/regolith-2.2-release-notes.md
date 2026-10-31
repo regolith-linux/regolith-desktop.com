@@ -6,7 +6,7 @@ description: >
   Release notes for Regolith 2.2
 ---
 
-[Regolith 2.2](https://github.com/orgs/regolith-linux/projects/25) is a minor release focusing on bug fixes and Ubuntu 22.10 support.
+[Regolith 2.2](#changelog-delta-from-regolith-desktop-21-to-22) is a minor release focusing on bug fixes and Ubuntu 22.10 support.
 
 ## New Features
 
