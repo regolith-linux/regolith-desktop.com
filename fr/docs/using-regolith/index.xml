@@ -518,34 +518,24 @@ deux raccourcis clavier suivants:&lt;/p>
 &lt;tbody>
 &lt;tr>
 &lt;td>Liste des raccourcis clavier&lt;/td>
-&lt;td>&lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">shift&lt;/span>
-&lt;span class="badge badge-warning">?&lt;/span>&lt;/span>&lt;/td>
+&lt;td>&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">?&lt;/span>&lt;/span>&lt;/td>
 &lt;td>Voir et exécuter les raccourcis claviers disponibles&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Lanceur d&amp;rsquo;application&lt;/td>
-&lt;td>&lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">space&lt;/span>&lt;/span>&lt;/td>
+&lt;td>&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">space&lt;/span>&lt;/span>&lt;/td>
 &lt;td>Lancer une application de bureau&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;p>Utiliser l&amp;rsquo;un de ces raccourcis clavier va lancer un dialogue sur l&amp;rsquo;écran focalisé. Les deux dialogues ont globalement la même interface.&lt;/p>
 &lt;p>L&amp;rsquo;interface demande d&amp;rsquo;entrer un texte en haut puis elle liste des widgets disponibles.
-L&amp;rsquo;utilisation générale de ces dialogues est de sélectionner un élément de la liste affichée. Il est possible de filtrer cette liste en entrant un texte et on peut utiliser les touches flèches pour modifier l&amp;rsquo;élément sélectionné. En pressant la touche &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">enter&lt;/span>&lt;/span>, cela va activer l&amp;rsquo;élément sélectionné.
+L&amp;rsquo;utilisation générale de ces dialogues est de sélectionner un élément de la liste affichée. Il est possible de filtrer cette liste en entrant un texte et on peut utiliser les touches flèches pour modifier l&amp;rsquo;élément sélectionné. En pressant la touche &lt;span class="text-nowrap">&lt;span class="badge badge-warning">enter&lt;/span>&lt;/span>, cela va activer l&amp;rsquo;élément sélectionné.
 Pour les raccourcis clavier, cela signifie que le raccourci va être manuellement exécuté. Pour les applications, cela va lancer l&amp;rsquo;app.&lt;/p>
 &lt;h2>La touche Super&lt;span class="hx-absolute -hx-mt-20" id="la-touche-super">&lt;/span>
-&lt;a href="#la-touche-super" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>La plupart des raccourcis clavier que vous utiliserez avec Regolith commencent par la touche &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>&lt;/span>.
+&lt;a href="#la-touche-super" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>La plupart des raccourcis clavier que vous utiliserez avec Regolith commencent par la touche &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span>&lt;/span>.
 Cette touche porte généralement l&amp;rsquo;inscription &amp;ldquo;WIN&amp;rdquo; ou le logo de MS Windows.
-Sur un Mac, c&amp;rsquo;est la touche Command &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">⌘&lt;/span>&lt;/span>. Pour la suite, cette touche sera simplement nommée la touche &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>&lt;/span> mais gardez à l&amp;rsquo;esprit que vous pouvez modifier à quelle touche de votre clavier la touche &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>&lt;/span> correspond dans la configuration.&lt;/p>
+Sur un Mac, c&amp;rsquo;est la touche Command &lt;span class="text-nowrap">&lt;span class="badge badge-warning">⌘&lt;/span>&lt;/span>. Pour la suite, cette touche sera simplement nommée la touche &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span>&lt;/span> mais gardez à l&amp;rsquo;esprit que vous pouvez modifier à quelle touche de votre clavier la touche &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span>&lt;/span> correspond dans la configuration.&lt;/p>
 &lt;h2>Liste des raccourcis clavier&lt;span class="hx-absolute -hx-mt-20" id="liste-des-raccourcis-clavier">&lt;/span>
 &lt;a href="#liste-des-raccourcis-clavier" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>&lt;img src="https://regolith-desktop.com/images/v-tour/regolith-ilia-keybinding-window.png" alt="" loading="lazy" />&lt;/p>
 &lt;p>Le but de la liste des raccourcis clavier est de trouver et d&amp;rsquo;apprendre les raccourcis de Regolith de manière rapide et facile.
@@ -554,94 +544,55 @@ Vous pouvez également trouver sur ce site la liste de tous les raccourcis clavi
 &lt;a href="#lanceur-dapplications" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>&lt;img src="https://regolith-desktop.com/images/v-tour/regolith-ilia-apps-window.png" alt="" loading="lazy" />&lt;/p>
 &lt;p>Une tâche fondamentale de tout environnement de bureau est de permettre aux utilisateurs de lancer des applications.
 Avec Regolith, cela se fait à travers le lanceur d&amp;rsquo;applications. Comme pour les raccourcis clavier, le dialogue montre une liste des applications disponibles.
-Tapez du texte pour filtrer la liste, utilisez les touches flèches pour sélectionner un élément puis pressez &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">enter&lt;/span>&lt;/span> pour lancer l&amp;rsquo;application.&lt;/p>
+Tapez du texte pour filtrer la liste, utilisez les touches flèches pour sélectionner un élément puis pressez &lt;span class="text-nowrap">&lt;span class="badge badge-warning">enter&lt;/span>&lt;/span> pour lancer l&amp;rsquo;application.&lt;/p>
 &lt;h2>Prochaines étapes&lt;span class="hx-absolute -hx-mt-20" id="prochaines-étapes">&lt;/span>
 &lt;a href="#prochaines-%c3%a9tapes" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Jetez un oeil sur &lt;a href="../basics" >la page expliquant les bases&lt;/a> pour en apprendre plus sur l&amp;rsquo;interface de Regolith.&lt;/p></description></item><item><title>Les bases</title><link>https://regolith-desktop.com/fr/docs/using-regolith/basics/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/fr/docs/using-regolith/basics/</guid><description>
 &lt;p>Bien que nous couvrirons l&amp;rsquo;ensemble du fonctionnement de Regolith dans d&amp;rsquo;autres parties de la documentation, cette page couvre les cas d&amp;rsquo;utilisations basiques.&lt;/p>
 &lt;h2>Lancer une application&lt;span class="hx-absolute -hx-mt-20" id="lancer-une-application">&lt;/span>
 &lt;a href="#lancer-une-application" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Après la première connexion, l&amp;rsquo;écran contiendra une barre sur le bas et quelques raccourcis clavier dans un dialogue.
 Le but de ce dialogue est d&amp;rsquo;aider l&amp;rsquo;utilisateur à trouver et se souvenir les raccourcis clavier pour diverses actions sur l&amp;rsquo;environnement de bureau.
-Il peut être caché en pressant la touche &lt;code>esc&lt;/code> et être ré-affiché avec &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">shift&lt;/span>
-&lt;span class="badge badge-warning">?&lt;/span>&lt;/span>.
-Pour lancer une application, pressez &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">shift&lt;/span>
-&lt;span class="badge badge-warning">?&lt;/span>&lt;/span>. et un dialogue similaire affichera les applications installées sur le système.
+Il peut être caché en pressant la touche &lt;code>esc&lt;/code> et être ré-affiché avec &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">?&lt;/span>&lt;/span>.
+Pour lancer une application, pressez &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">?&lt;/span>&lt;/span>. et un dialogue similaire affichera les applications installées sur le système.
 Si vous commencez à taper le nom de l&amp;rsquo;application que vous souhaitez lancer, la liste sera filtrée. Vous pouvez aussi scroller dans la liste avec les touches de votre clavier.&lt;/p>
 &lt;p>&lt;img src="https://regolith-desktop.com/images/v-tour/regolith-ilia-apps.png" alt="" loading="lazy" />&lt;/p>
 &lt;h2>Naviguer vers une fenêtre&lt;span class="hx-absolute -hx-mt-20" id="naviguer-vers-une-fenêtre">&lt;/span>
-&lt;a href="#naviguer-vers-une-fen%c3%aatre" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Pour se focaliser sur une application en cours d&amp;rsquo;exécution, le raccourcis &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">ctrl&lt;/span>
-&lt;span class="badge badge-warning">space&lt;/span>&lt;/span> peut être utilisé pour afficher un dialogue avec toutes les fenêtres ouvertes. Sélectionnez simplement la fenêtre voulue et vous serez déplacés vers l&amp;rsquo;espace de travail contenant cette fenêtre.&lt;/p>
+&lt;a href="#naviguer-vers-une-fen%c3%aatre" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Pour se focaliser sur une application en cours d&amp;rsquo;exécution, le raccourcis &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">ctrl&lt;/span> &lt;span class="badge badge-warning">space&lt;/span>&lt;/span> peut être utilisé pour afficher un dialogue avec toutes les fenêtres ouvertes. Sélectionnez simplement la fenêtre voulue et vous serez déplacés vers l&amp;rsquo;espace de travail contenant cette fenêtre.&lt;/p>
 &lt;p>&lt;img src="https://regolith-desktop.com/images/v-tour/regolith-ilia-windows.png" alt="" loading="lazy" />&lt;/p>
 &lt;h2>Créer un nouvel espace de travail&lt;span class="hx-absolute -hx-mt-20" id="créer-un-nouvel-espace-de-travail">&lt;/span>
 &lt;a href="#cr%c3%a9er-un-nouvel-espace-de-travail" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Les espaces de travail (aussi appelés &amp;ldquo;bureaux virtuels&amp;rdquo; sur certains environnements de bureau) sont la première manière de gérer les fenêtres.
-Chaque espace de travail correspond à un écran avec un ensemble indépendant de fenêtre. Pour créer ou naviguer vers un espace de travail, spécifiez son index avec les touches &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">0-9&lt;/span>&lt;/span>.&lt;/p>
+Chaque espace de travail correspond à un écran avec un ensemble indépendant de fenêtre. Pour créer ou naviguer vers un espace de travail, spécifiez son index avec les touches &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">0-9&lt;/span>&lt;/span>.&lt;/p>
 &lt;h2>Trouver et lancer un fichier&lt;span class="hx-absolute -hx-mt-20" id="trouver-et-lancer-un-fichier">&lt;/span>
 &lt;a href="#trouver-et-lancer-un-fichier" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Rechercher un fichier spécifique sur votre système peut être fait de différentes manières.
-Regolith fourni un dialogue de recherche de fichier avec &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">alt&lt;/span>
-&lt;span class="badge badge-warning">space&lt;/span>&lt;/span> pour rapidement chercher et éventuellement afficher un fichier avec son application par défaut. Pressez &amp;rsquo;enter&amp;rsquo; sur un élément sélectionné lancera une tentative d&amp;rsquo;ouverte avec la commande &lt;code>xdg-open&lt;/code>.&lt;/p>
+Regolith fourni un dialogue de recherche de fichier avec &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">alt&lt;/span> &lt;span class="badge badge-warning">space&lt;/span>&lt;/span> pour rapidement chercher et éventuellement afficher un fichier avec son application par défaut. Pressez &amp;rsquo;enter&amp;rsquo; sur un élément sélectionné lancera une tentative d&amp;rsquo;ouverte avec la commande &lt;code>xdg-open&lt;/code>.&lt;/p>
 &lt;p>&lt;img src="https://regolith-desktop.com/images/v-tour/regolith-ilia-files.png" alt="" loading="lazy" />&lt;/p>
 &lt;h2>Terminal&lt;span class="hx-absolute -hx-mt-20" id="terminal">&lt;/span>
-&lt;a href="#terminal" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Le terminal est une application spéciale qui peut être lancé avec le raccourcis &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">enter&lt;/span>&lt;/span>.&lt;/p>
+&lt;a href="#terminal" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Le terminal est une application spéciale qui peut être lancé avec le raccourcis &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">enter&lt;/span>&lt;/span>.&lt;/p>
 &lt;h2>Navigateur Web&lt;span class="hx-absolute -hx-mt-20" id="navigateur-web">&lt;/span>
-&lt;a href="#navigateur-web" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Le navigateur préféré est aussi spécial et peut être lancé avec &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">shift&lt;/span>
-&lt;span class="badge badge-warning">enter&lt;/span>&lt;/span>.&lt;/p>
+&lt;a href="#navigateur-web" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Le navigateur préféré est aussi spécial et peut être lancé avec &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">enter&lt;/span>&lt;/span>.&lt;/p>
 &lt;h2>Quitter une application&lt;span class="hx-absolute -hx-mt-20" id="quitter-une-application">&lt;/span>
-&lt;a href="#quitter-une-application" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>&lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">shift&lt;/span>
-&lt;span class="badge badge-warning">q&lt;/span>&lt;/span> fermera l&amp;rsquo;application focalisée.
-Pour les applications qui ne réagissent plus, &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">alt&lt;/span>
-&lt;span class="badge badge-warning">q&lt;/span>&lt;/span> les forcera à quitter (kill) mais notez que des données non sauvées peuvent être perdues.&lt;/p>
+&lt;a href="#quitter-une-application" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">q&lt;/span>&lt;/span> fermera l&amp;rsquo;application focalisée.
+Pour les applications qui ne réagissent plus, &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">alt&lt;/span> &lt;span class="badge badge-warning">q&lt;/span>&lt;/span> les forcera à quitter (kill) mais notez que des données non sauvées peuvent être perdues.&lt;/p>
 &lt;h2>Naviguer entre les espaces de travail&lt;span class="hx-absolute -hx-mt-20" id="naviguer-entre-les-espaces-de-travail">&lt;/span>
 &lt;a href="#naviguer-entre-les-espaces-de-travail" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Le moyen principal de gérer comment les applications occupent l&amp;rsquo;écran est d&amp;rsquo;utiliser les espaces de travail.
 Un espace de travail est un groupe de 0 ou plus applications qui sont toutes présentes sur le même affichage virtuel.
 Les utilisateurs peuvent naviguer entre les espaces de travail pour gagner plus de place.
 Les fenêtes peuvent être déplacées entre les espaces de travail.
 Les espaces de travail peuvent être attachés à un écran physique ou être déplacés vers un autre écran au besoin.
-Pour naviguer entre les espaces, tenez la touche &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>&lt;/span> et appuyez sur la touche d&amp;rsquo;un numéro.
+Pour naviguer entre les espaces, tenez la touche &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span>&lt;/span> et appuyez sur la touche d&amp;rsquo;un numéro.
 Cela va déplacer la vue vers cet espace de travail. S&amp;rsquo;il y a des fenêtres sur cette espace, elles seront listées dans la barre en bas.
 Ainsi, en regardant la barre du bas, l&amp;rsquo;utilisateur peut savoir quelles sont les fenêtes actives sur l&amp;rsquo;espace de travail focalisé.&lt;/p>
-&lt;p>Il est également possible de se déplacer &amp;ldquo;d&amp;rsquo;avant en arrière&amp;rdquo; entre les espaces de travail en utilisant &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">tab&lt;/span>&lt;/span> and &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">shift&lt;/span>
-&lt;span class="badge badge-warning">tab&lt;/span>&lt;/span>.&lt;/p>
+&lt;p>Il est également possible de se déplacer &amp;ldquo;d&amp;rsquo;avant en arrière&amp;rdquo; entre les espaces de travail en utilisant &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">tab&lt;/span>&lt;/span> and &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">tab&lt;/span>&lt;/span>.&lt;/p>
 &lt;h2>Configuration du système&lt;span class="hx-absolute -hx-mt-20" id="configuration-du-système">&lt;/span>
 &lt;a href="#configuration-du-syst%c3%a8me" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>L&amp;rsquo;application Paramètres (aussi connu sous le nom &lt;code>regolith-control-center&lt;/code>) est l&amp;rsquo;interface principale pour les tâches de configuration courantes comme la configuration du WiFi et du Bluetooth, la configuration des apps associée et la configuration des utilisateurs.
-Cette app peut être lancée avec le raccourcis &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">c&lt;/span>&lt;/span> ou depuis le lanceur d&amp;rsquo;applications en utilisant le nom &lt;code>Regolith Settings&lt;/code>.&lt;/p>
+Cette app peut être lancée avec le raccourcis &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">c&lt;/span>&lt;/span> ou depuis le lanceur d&amp;rsquo;applications en utilisant le nom &lt;code>Regolith Settings&lt;/code>.&lt;/p>
 &lt;p>&lt;img src="https://regolith-desktop.com/images/v-tour/regolith-gnome-settings.png" alt="" loading="lazy" />&lt;/p>
 &lt;h2>Liste des raccourcis clavier&lt;span class="hx-absolute -hx-mt-20" id="liste-des-raccourcis-clavier">&lt;/span>
 &lt;a href="#liste-des-raccourcis-clavier" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Tous les raccourcis clavier utilisables sur Regolith Desktop peuvent être vus, triés et exécutiées par &lt;code>ilia&lt;/code>.
-Ce dialogue est lançable avec &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">shift&lt;/span>
-&lt;span class="badge badge-warning">?&lt;/span>&lt;/span>.&lt;/p>
+Ce dialogue est lançable avec &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">?&lt;/span>&lt;/span>.&lt;/p>
 &lt;p>&lt;img src="https://regolith-desktop.com/images/v-tour/regolith-ilia-keybindings.png" alt="" loading="lazy" />&lt;/p>
 &lt;h2>Gestion des notifications&lt;span class="hx-absolute -hx-mt-20" id="gestion-des-notifications">&lt;/span>
 &lt;a href="#gestion-des-notifications" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Le système de notification de Regolith est fait pour prévenir les pop-ups qui peuvent distraire l&amp;rsquo;utilisateur de son travail.
-Les notification peuvent être vues et gérées avec &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">n&lt;/span>&lt;/span>.
+Les notification peuvent être vues et gérées avec &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">n&lt;/span>&lt;/span>.
 Les raccourcis clavier pour supprimer une ou plusieurs notifications sont trouvables dans l&amp;rsquo;ongler &lt;code>aide&lt;/code> du dialogue.
 Pour les utilisateurs qui souhaitent plus de visibilité sur les notifications en cours, l&amp;rsquo;indicateur de status &lt;code>i3xrocks-rofication&lt;/code> peut être installé via le système de gestion de paquet. Cela affichera le nombre de notifications critiques et non-vues dans la barre.&lt;/p></description></item><item><title>Configuration</title><link>https://regolith-desktop.com/fr/docs/using-regolith/configuration/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/fr/docs/using-regolith/configuration/</guid><description>
 &lt;h2>Paquets recommandés pour les nouveaux utilisateurs&lt;span class="hx-absolute -hx-mt-20" id="paquets-recommandés-pour-les-nouveaux-utilisateurs">&lt;/span>
@@ -827,10 +778,7 @@ Les thèmes sont une manière simple de changer entièrement l&amp;rsquo;apparen
 Comme les indicateurs de statut dans la barre, les thèmes sont des paquets qui sont installés ou retirés comme n&amp;rsquo;importe quel autre paquet.
 Par convention, les paquets de thème utilise le format suivant: &lt;code>regolith-look-&amp;lt;name&amp;gt;&lt;/code>.
 &lt;code>apt&lt;/code> ou un gestionnaire de paquet graphique peut être utilisé pour chercher les thèmes disponibles.
-Pour sélectionner un thème installé, le raccourcis &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">alt&lt;/span>
-&lt;span class="badge badge-warning">l&lt;/span>&lt;/span> présente le dialogue suivant:&lt;/p>
+Pour sélectionner un thème installé, le raccourcis &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">alt&lt;/span> &lt;span class="badge badge-warning">l&lt;/span>&lt;/span> présente le dialogue suivant:&lt;/p>
 &lt;p>&lt;img src="https://regolith-desktop.com/images/v-tour/regolith-ilia-look-selector.png" alt="" loading="lazy" />&lt;/p>
 &lt;p>Alternativement, la commande de terminal &lt;code>regolith-look&lt;/code> peut être utilisé pour changer de thème et rafraîchir la session active en sélectionnant un thème.
 Voici un exemple qui sélectionne le thème &lt;code>gruvbox&lt;/code>.&lt;/p>
@@ -1029,12 +977,10 @@ Ainsi, la configuration non modifiée peut toujours recevoir des mises à jour e
 &lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">Regolith version 3.0 onward replaces &amp;ldquo;i3-wm&amp;rdquo; with &amp;ldquo;wm&amp;rdquo; in Xresource keys. The content on this page has been updated for Regolith 3.0+. If you are using an earlier version, use &amp;ldquo;i3-wm&amp;rdquo; instead of &amp;ldquo;wm&amp;rdquo; in the key names below. For example &lt;code>wm.foo.bar&lt;/code> changes to &lt;code>i3-wm.foo.bar&lt;/code> for Regolith 1.x and 2.x.&lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;p>La modification la plus courante est la touche &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>&lt;/span>.
+&lt;p>La modification la plus courante est la touche &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span>&lt;/span>.
 Regolith utilise &lt;code>Xresources&lt;/code> comme une source de vérité pour les paramètres, qui sont lu par divers composants de l&amp;rsquo;UI.
 La table des valeurs &lt;code>Xresources&lt;/code> accessibles à l&amp;rsquo;utilisateur est &lt;a href="https://regolith-desktop.com/fr/docs/reference/xresources/" >accessible ailleurs&lt;/a>.
-Pour changer la touche par défaut &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>&lt;/span> (touche &amp;ldquo;Win&amp;rdquo;) pour la touche &amp;ldquo;Alt&amp;rdquo;, ajoutez la configuration suivante au fichier &lt;code>~/.config/regolith3/Xresources&lt;/code>:&lt;/p>
+Pour changer la touche par défaut &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span>&lt;/span> (touche &amp;ldquo;Win&amp;rdquo;) pour la touche &amp;ldquo;Alt&amp;rdquo;, ajoutez la configuration suivante au fichier &lt;code>~/.config/regolith3/Xresources&lt;/code>:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div class="filename not-prose" dir="auto">~/.config/regolith3/Xresources&lt;/div>&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">wm.mod&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Mod1&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">wm.alt&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Mod4&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
@@ -1052,12 +998,8 @@ des paramètres de l&amp;rsquo;utilisateur.&lt;/p>
 &lt;p>&lt;img src="https://regolith-desktop.com/images/v-tour/regolith-gnome-keybindings.png" alt="" loading="lazy" />&lt;/p>
 &lt;h2>Gestion du système&lt;span class="hx-absolute -hx-mt-20" id="gestion-du-système">&lt;/span>
 &lt;a href="#gestion-du-syst%c3%a8me" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>L&amp;rsquo;app &lt;code>regolith-control-center&lt;/code> est un outil pour configurer les langues, la date, les affichages, le réseau et d&amp;rsquo;autres paramètres.
-Ouvrz le lanceur d&amp;rsquo;app avec &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">space&lt;/span>&lt;/span>, tapez &lt;code>paramètres&lt;/code> et tapez &amp;ldquo;Enter&amp;rdquo; pour lancer l&amp;rsquo;app.
-Vous pouvez aussi utiliser le raccourcis &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">c&lt;/span>&lt;/span> pour le lancer directement.
+Ouvrz le lanceur d&amp;rsquo;app avec &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">space&lt;/span>&lt;/span>, tapez &lt;code>paramètres&lt;/code> et tapez &amp;ldquo;Enter&amp;rdquo; pour lancer l&amp;rsquo;app.
+Vous pouvez aussi utiliser le raccourcis &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">c&lt;/span>&lt;/span> pour le lancer directement.
 Cette application peut être lancée depuis un terminal avec la commande &lt;code>regolith-control-center&lt;/code>.&lt;/p>
 &lt;p>&lt;img src="https://regolith-desktop.com/images/v-tour/regolith-settings-about.png" alt="" loading="lazy" />&lt;/p>
 &lt;h2>Plus d&amp;rsquo;infos&lt;span class="hx-absolute -hx-mt-20" id="plus-dinfos">&lt;/span>

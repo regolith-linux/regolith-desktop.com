@@ -514,111 +514,63 @@ title="Code kopieren"
 &lt;tbody>
 &lt;tr>
 &lt;td>Keybinding Viewer&lt;/td>
-&lt;td>&lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">shift&lt;/span>
-&lt;span class="badge badge-warning">?&lt;/span>&lt;/span>&lt;/td>
+&lt;td>&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">?&lt;/span>&lt;/span>&lt;/td>
 &lt;td>Verfügbare Keybindings anzeigen und ausführen&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>App Launcher&lt;/td>
-&lt;td>&lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">space&lt;/span>&lt;/span>&lt;/td>
+&lt;td>&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">space&lt;/span>&lt;/span>&lt;/td>
 &lt;td>Starten einer Desktop-Anwendung&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;p>Wenn Sie eine dieser Tastenkombinationen eingeben, wird ein Startdialog auf dem fokussierten Monitor angezeigt. Beide Dialoge verhalten sich gleich.&lt;/p>
-&lt;p>Der Dialog hat oben ein Texteingabe-Widget, gefolgt von einem Auswahl-Widget. Das allgemeine Nutzungsmuster für diese Dialoge ist die Auswahl eines Elements aus der angezeigten Liste. Beginnen Sie zu tippen, um die Auswahl zu filtern, und verwenden Sie die Pfeiltasten, um eine Auswahl zu treffen. Durch Drücken von &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">Enter&lt;/span>&lt;/span> wird das ausgewählte Element aktiviert. Bei Tastenkombinationen bedeutet dies, dass eine Tastenkombination manuell ausgeführt
+&lt;p>Der Dialog hat oben ein Texteingabe-Widget, gefolgt von einem Auswahl-Widget. Das allgemeine Nutzungsmuster für diese Dialoge ist die Auswahl eines Elements aus der angezeigten Liste. Beginnen Sie zu tippen, um die Auswahl zu filtern, und verwenden Sie die Pfeiltasten, um eine Auswahl zu treffen. Durch Drücken von &lt;span class="text-nowrap">&lt;span class="badge badge-warning">Enter&lt;/span>&lt;/span> wird das ausgewählte Element aktiviert. Bei Tastenkombinationen bedeutet dies, dass eine Tastenkombination manuell ausgeführt
 wird. Bei Anwendungen wird die ausgewählte Anwendung gestartet.&lt;/p>
 &lt;h2>Die Super-Taste&lt;span class="hx-absolute -hx-mt-20" id="die-super-taste">&lt;/span>
-&lt;a href="#die-super-taste" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Die meisten Tastenkombinationen, die Sie mit Regolith verwenden werden, beginnen mit der Taste &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>&lt;/span>. Auf dieser Taste steht in der Regel &amp;ldquo;WIN&amp;rdquo; oder es ist ein MS-Windows-Logo abgebildet. Auf einem Mac ist es die Befehlstaste &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">⌘&lt;/span>&lt;/span>-Taste. In Zukunft wird diese Taste einfach als &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>&lt;/span> bezeichnet, aber denken Sie daran, dass Sie die physische Taste &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>&lt;/span> in Ihrer Konfiguration ändern können, wenn Sie das möchten.&lt;/p>
+&lt;a href="#die-super-taste" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Die meisten Tastenkombinationen, die Sie mit Regolith verwenden werden, beginnen mit der Taste &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span>&lt;/span>. Auf dieser Taste steht in der Regel &amp;ldquo;WIN&amp;rdquo; oder es ist ein MS-Windows-Logo abgebildet. Auf einem Mac ist es die Befehlstaste &lt;span class="text-nowrap">&lt;span class="badge badge-warning">⌘&lt;/span>&lt;/span>-Taste. In Zukunft wird diese Taste einfach als &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span>&lt;/span> bezeichnet, aber denken Sie daran, dass Sie die physische Taste &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span>&lt;/span> in Ihrer Konfiguration ändern können, wenn Sie das möchten.&lt;/p>
 &lt;h2>Keybinding-Viewer&lt;span class="hx-absolute -hx-mt-20" id="keybinding-viewer">&lt;/span>
 &lt;a href="#keybinding-viewer" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>&lt;img src="https://regolith-desktop.com/images/v-tour/regolith-ilia-keybinding-window.png" alt="" loading="lazy" />&lt;/p>
 &lt;p>Der Zweck des Keybinding Viewers ist es, das Auffinden und Erlernen der Regolith-Keybindings schnell und einfach zu machen. Eine Referenz zu den Keybindings ist auf dieser Seite verfügbar, aber es ist schneller, einfach den Dialog aufzurufen und nach der gewünschten Aktion zu suchen. Einmal gefunden, kann die Tastenkombination entweder über die Tastatur oder durch Auswahl des Elements im Dialogfeld ausgeführt werden.&lt;/p>
 &lt;h2>Anwendungsstarter&lt;span class="hx-absolute -hx-mt-20" id="anwendungsstarter">&lt;/span>
 &lt;a href="#anwendungsstarter" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>&lt;img src="https://regolith-desktop.com/images/v-tour/regolith-ilia-apps-window.png" alt="" loading="lazy" />&lt;/p>
 &lt;p>Eine grundlegende Aufgabe jeder Desktop-Umgebung ist es, den Benutzern das Starten von Anwendungen zu ermöglichen. In Regolith wird dies über den Anwendungsstarter-Dialog realisiert. Wie bei den Tastenkombinationen zeigt der Dialog zunächst eine Liste aller verfügbaren Desktop-Anwendungen an. Beginnen Sie zu tippen, um die Auswahl zu filtern und
-verwenden Sie die Pfeiltasten, um eine bestimmte Auswahl zu treffen. Drücken Sie &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">Enter&lt;/span>&lt;/span>, um die ausgewählte Anwendung zu starten.&lt;/p>
+verwenden Sie die Pfeiltasten, um eine bestimmte Auswahl zu treffen. Drücken Sie &lt;span class="text-nowrap">&lt;span class="badge badge-warning">Enter&lt;/span>&lt;/span>, um die ausgewählte Anwendung zu starten.&lt;/p>
 &lt;h2>Nächste Schritte&lt;span class="hx-absolute -hx-mt-20" id="nächste-schritte">&lt;/span>
 &lt;a href="#n%c3%a4chste-schritte" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Werfen Sie einen Blick auf die Seite &lt;a href="../basics" >basics&lt;/a>, um mehr über die Regolith-Schnittstelle zu erfahren.&lt;/p></description></item><item><title>Grundlegende Verwendung</title><link>https://regolith-desktop.com/de/docs/using-regolith/basics/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/de/docs/using-regolith/basics/</guid><description>
 &lt;p>Während wir in anderen Bereichen der Dokumentation alles detaillierter behandeln werden, deckt diese Seite die grundlegende Verwendung von Regolith ab.&lt;/p>
 &lt;h2>Starten einer Anwendung&lt;span class="hx-absolute -hx-mt-20" id="starten-einer-anwendung">&lt;/span>
-&lt;a href="#starten-einer-anwendung" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Nach der ersten Anmeldung enthält der Bildschirm eine Leiste am unteren Rand und einige Tastaturkürzel in einem Dialog. Dieser Dialog soll dem Benutzer helfen, Tastenkombinationen für verschiedene Aktionen in der Desktop-Umgebung zu finden und zu speichern. Er kann mit der Taste &lt;code>esc&lt;/code> verlassen und mit &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">shift&lt;/span>
-&lt;span class="badge badge-warning">?&lt;/span>&lt;/span>. Um eine Anwendung zu
-starten, drücken Sie &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">space&lt;/span>&lt;/span> und ein ähnlicher Dialog wird mit den auf dem System installierten Anwendungen geladen. Wenn Sie beginnen, den Namen der Anwendung, die Sie starten möchten, einzugeben, wird die Liste auf die passenden Anwendungen eingeschränkt. Sie können auch mit den Pfeiltasten durch die Liste blättern.&lt;/p>
+&lt;a href="#starten-einer-anwendung" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Nach der ersten Anmeldung enthält der Bildschirm eine Leiste am unteren Rand und einige Tastaturkürzel in einem Dialog. Dieser Dialog soll dem Benutzer helfen, Tastenkombinationen für verschiedene Aktionen in der Desktop-Umgebung zu finden und zu speichern. Er kann mit der Taste &lt;code>esc&lt;/code> verlassen und mit &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">?&lt;/span>&lt;/span>. Um eine Anwendung zu
+starten, drücken Sie &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">space&lt;/span>&lt;/span> und ein ähnlicher Dialog wird mit den auf dem System installierten Anwendungen geladen. Wenn Sie beginnen, den Namen der Anwendung, die Sie starten möchten, einzugeben, wird die Liste auf die passenden Anwendungen eingeschränkt. Sie können auch mit den Pfeiltasten durch die Liste blättern.&lt;/p>
 &lt;p>&lt;img src="https://regolith-desktop.com/images/v-tour/regolith-ilia-apps.png" alt="" loading="lazy" />&lt;/p>
 &lt;h2>Zu einem Fenster navigieren&lt;span class="hx-absolute -hx-mt-20" id="zu-einem-fenster-navigieren">&lt;/span>
-&lt;a href="#zu-einem-fenster-navigieren" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Um eine laufende Anwendung zu fokussieren, kann die &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">ctrl&lt;/span>
-&lt;span class="badge badge-warning">space&lt;/span>&lt;/span> Tastenkombination verwendet werden, um einen Dialog mit allen laufenden Fenstern anzuzeigen. Wählen Sie einfach das gewünschte Fenster aus, und das System wechselt in den Arbeitsbereich des Fensters und aktiviert dessen Fokus.&lt;/p>
+&lt;a href="#zu-einem-fenster-navigieren" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Um eine laufende Anwendung zu fokussieren, kann die &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">ctrl&lt;/span> &lt;span class="badge badge-warning">space&lt;/span>&lt;/span> Tastenkombination verwendet werden, um einen Dialog mit allen laufenden Fenstern anzuzeigen. Wählen Sie einfach das gewünschte Fenster aus, und das System wechselt in den Arbeitsbereich des Fensters und aktiviert dessen Fokus.&lt;/p>
 &lt;p>&lt;img src="https://regolith-desktop.com/images/v-tour/regolith-ilia-windows.png" alt="" loading="lazy" />&lt;/p>
 &lt;h2>Einen neuen Arbeitsbereich erstellen&lt;span class="hx-absolute -hx-mt-20" id="einen-neuen-arbeitsbereich-erstellen">&lt;/span>
 &lt;a href="#einen-neuen-arbeitsbereich-erstellen" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Arbeitsbereiche (in manchen Desktop-Umgebungen auch als &amp;ldquo;virtuelle Desktops&amp;rdquo; bezeichnet) sind eine der wichtigsten Möglichkeiten, um Fenster zu verwalten. Jeder Arbeitsbereich bietet einen Bildschirm für einen unabhängigen Satz von Fenstern. Um einen Arbeitsbereich zu erstellen oder zu einem bestehenden Arbeitsbereich zu navigieren, geben Sie seinen
-Index mit den Tasten &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">0-9&lt;/span>&lt;/span> an.&lt;/p>
+Index mit den Tasten &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">0-9&lt;/span>&lt;/span> an.&lt;/p>
 &lt;h2>Suchen und Starten einer Datei&lt;span class="hx-absolute -hx-mt-20" id="suchen-und-starten-einer-datei">&lt;/span>
-&lt;a href="#suchen-und-starten-einer-datei" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Die Suche nach einer bestimmten Datei auf Ihrem lokalen Computer kann auf verschiedene Weise erfolgen. Regolith bietet einen Dateisuchdialog über &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">alt&lt;/span>
-&lt;span class="badge badge-warning">space&lt;/span>&lt;/span> zum schnellen Suchen und optionalen Laden einer Datei mit seiner Standardanwendung. Durch Drücken der Eingabetaste bei einer Auswahl wird die Datei mit dem Befehl &lt;code>xdg-open&lt;/code> aufgerufen.&lt;/p>
+&lt;a href="#suchen-und-starten-einer-datei" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Die Suche nach einer bestimmten Datei auf Ihrem lokalen Computer kann auf verschiedene Weise erfolgen. Regolith bietet einen Dateisuchdialog über &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">alt&lt;/span> &lt;span class="badge badge-warning">space&lt;/span>&lt;/span> zum schnellen Suchen und optionalen Laden einer Datei mit seiner Standardanwendung. Durch Drücken der Eingabetaste bei einer Auswahl wird die Datei mit dem Befehl &lt;code>xdg-open&lt;/code> aufgerufen.&lt;/p>
 &lt;p>&lt;img src="https://regolith-desktop.com/images/v-tour/regolith-ilia-files.png" alt="" loading="lazy" />&lt;/p>
 &lt;h2>Terminal&lt;span class="hx-absolute -hx-mt-20" id="terminal">&lt;/span>
-&lt;a href="#terminal" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Das Terminal ist eine spezielle Anwendung, die ihre eigene Tastenkombination hat, &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">enter&lt;/span>&lt;/span>.&lt;/p>
+&lt;a href="#terminal" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Das Terminal ist eine spezielle Anwendung, die ihre eigene Tastenkombination hat, &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">enter&lt;/span>&lt;/span>.&lt;/p>
 &lt;h2>Browser&lt;span class="hx-absolute -hx-mt-20" id="browser">&lt;/span>
-&lt;a href="#browser" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Der bevorzugte Browser ist ebenfalls eine spezielle Anwendung und kann mit &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">shift&lt;/span>
-&lt;span class="badge badge-warning">enter&lt;/span>&lt;/span> gestartet werden.&lt;/p>
+&lt;a href="#browser" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Der bevorzugte Browser ist ebenfalls eine spezielle Anwendung und kann mit &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">enter&lt;/span>&lt;/span> gestartet werden.&lt;/p>
 &lt;h2>Beenden einer Anwendung&lt;span class="hx-absolute -hx-mt-20" id="beenden-einer-anwendung">&lt;/span>
-&lt;a href="#beenden-einer-anwendung" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Mit &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">shift&lt;/span>
-&lt;span class="badge badge-warning">q&lt;/span>&lt;/span> wird die fokussierte Anwendung beendet. Bei fehlerhaften Anwendungen wird &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">alt&lt;/span>
-&lt;span class="badge badge-warning">q&lt;/span>&lt;/span> das Beenden der fokussierten Anwendung erzwingen, aber beachten Sie, dass ungespeicherte Daten
+&lt;a href="#beenden-einer-anwendung" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Mit &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">q&lt;/span>&lt;/span> wird die fokussierte Anwendung beendet. Bei fehlerhaften Anwendungen wird &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">alt&lt;/span> &lt;span class="badge badge-warning">q&lt;/span>&lt;/span> das Beenden der fokussierten Anwendung erzwingen, aber beachten Sie, dass ungespeicherte Daten
 verloren gehen können.&lt;/p>
 &lt;h2>Arbeitsbereiche wechseln&lt;span class="hx-absolute -hx-mt-20" id="arbeitsbereiche-wechseln">&lt;/span>
 &lt;a href="#arbeitsbereiche-wechseln" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Eine primäre Möglichkeit, die Belegung des Bildschirms durch Anwendungen zu verwalten, ist die Verwendung von Arbeitsbereichen (Workspaces). Ein Arbeitsbereich ist im Wesentlichen eine Gruppe von null oder mehr Anwendungen, die alle Fenster auf demselben virtuellen Bildschirm darstellen. Benutzer können zwischen Arbeitsbereichen wechseln, um mehr
-Platz für Anwendungen zu gewinnen. Fenster können zwischen Arbeitsbereichen verschoben werden. Arbeitsbereiche können an eine physische Anzeige gebunden sein oder nach Bedarf auf andere Anzeigen verschoben werden. Um den Arbeitsbereich zu wechseln, halten Sie die Taste &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>&lt;/span> gedrückt und drücken Sie eine der Zifferntasten. Dadurch wird zu diesem Arbeitsbereich navigiert. Wenn in einem bestimmten Arbeitsbereich ein Fenster vorhanden ist, wird es in der Leiste als aktiv angezeigt. So kann der Benutzer anhand der Leiste erkennen, in welchen Arbeitsbereichen sich aktive Anwendungen befinden.&lt;/p>
-&lt;p>Arbeitsbereiche können auch mit &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">tab&lt;/span>&lt;/span> und &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">shift&lt;/span>
-&lt;span class="badge badge-warning">tab&lt;/span>&lt;/span> vor- und zurückgeblättert werden.&lt;/p>
+Platz für Anwendungen zu gewinnen. Fenster können zwischen Arbeitsbereichen verschoben werden. Arbeitsbereiche können an eine physische Anzeige gebunden sein oder nach Bedarf auf andere Anzeigen verschoben werden. Um den Arbeitsbereich zu wechseln, halten Sie die Taste &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span>&lt;/span> gedrückt und drücken Sie eine der Zifferntasten. Dadurch wird zu diesem Arbeitsbereich navigiert. Wenn in einem bestimmten Arbeitsbereich ein Fenster vorhanden ist, wird es in der Leiste als aktiv angezeigt. So kann der Benutzer anhand der Leiste erkennen, in welchen Arbeitsbereichen sich aktive Anwendungen befinden.&lt;/p>
+&lt;p>Arbeitsbereiche können auch mit &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">tab&lt;/span>&lt;/span> und &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">tab&lt;/span>&lt;/span> vor- und zurückgeblättert werden.&lt;/p>
 &lt;h2>Das System konfigurieren&lt;span class="hx-absolute -hx-mt-20" id="das-system-konfigurieren">&lt;/span>
-&lt;a href="#das-system-konfigurieren" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Die Einstellungs-App (auch bekannt als &lt;code>regolith-control-center&lt;/code>) ist die primäre Schnittstelle für allgemeine Konfigurationsaufgaben, wie die Konfiguration von WiFi und Bluetooth, die Konfiguration von App-Zuordnungen und die Einrichtung von Benutzern. Die App kann über die &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">c&lt;/span>&lt;/span> Tastenkombination oder vom Launcher aus über die App &lt;code>Regolith Settings&lt;/code> gestartet werden.&lt;/p>
+&lt;a href="#das-system-konfigurieren" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Die Einstellungs-App (auch bekannt als &lt;code>regolith-control-center&lt;/code>) ist die primäre Schnittstelle für allgemeine Konfigurationsaufgaben, wie die Konfiguration von WiFi und Bluetooth, die Konfiguration von App-Zuordnungen und die Einrichtung von Benutzern. Die App kann über die &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">c&lt;/span>&lt;/span> Tastenkombination oder vom Launcher aus über die App &lt;code>Regolith Settings&lt;/code> gestartet werden.&lt;/p>
 &lt;p>&lt;img src="https://regolith-desktop.com/images/v-tour/regolith-gnome-settings.png" alt="" loading="lazy" />&lt;/p>
 &lt;h2>Tastenkombinationen anzeigen&lt;span class="hx-absolute -hx-mt-20" id="tastenkombinationen-anzeigen">&lt;/span>
-&lt;a href="#tastenkombinationen-anzeigen" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Alle vom Regolith-Desktop verwendeten Tastenkombinationen können mit &lt;code>ilia&lt;/code> eingesehen, sortiert und ausgeführt werden. Dieser Dialog wird mit &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">shift&lt;/span>
-&lt;span class="badge badge-warning">?&lt;/span>&lt;/span> aktiviert.&lt;/p>
+&lt;a href="#tastenkombinationen-anzeigen" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Alle vom Regolith-Desktop verwendeten Tastenkombinationen können mit &lt;code>ilia&lt;/code> eingesehen, sortiert und ausgeführt werden. Dieser Dialog wird mit &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">?&lt;/span>&lt;/span> aktiviert.&lt;/p>
 &lt;p>&lt;img src="https://regolith-desktop.com/images/v-tour/regolith-ilia-keybindings.png" alt="" loading="lazy" />&lt;/p>
 &lt;h2>Verwalten von Benachrichtigungen&lt;span class="hx-absolute -hx-mt-20" id="verwalten-von-benachrichtigungen">&lt;/span>
-&lt;a href="#verwalten-von-benachrichtigungen" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Das Desktop-Benachrichtigungssystem von Regolith wurde entwickelt, um Pop-ups zu verhindern, die den Benutzer von seiner Arbeit ablenken könnten. Benachrichtigungen können über &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">n&lt;/span>&lt;/span> eingesehen und verwaltet werden. Spezielle Tastenkombinationen, wie z.B. das Löschen einer oder mehrerer Benachrichtigungen, finden Sie auf der Registerkarte &amp;ldquo;Hilfe&amp;rdquo; des Dialogs. Für Benutzer, die eine bessere Sichtbarkeit der aktuellen Benachrichtigungen wünschen, kann der Statusindikator &lt;code>i3xrocks-rofication&lt;/code> über den Systempaketmanager installiert werden. Damit wird die Anzahl der kritischen und normalen ungelesenen Benachrichtigungen in der Leiste angezeigt.&lt;/p></description></item><item><title>Konfiguration</title><link>https://regolith-desktop.com/de/docs/using-regolith/configuration/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/de/docs/using-regolith/configuration/</guid><description>
+&lt;a href="#verwalten-von-benachrichtigungen" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Das Desktop-Benachrichtigungssystem von Regolith wurde entwickelt, um Pop-ups zu verhindern, die den Benutzer von seiner Arbeit ablenken könnten. Benachrichtigungen können über &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">n&lt;/span>&lt;/span> eingesehen und verwaltet werden. Spezielle Tastenkombinationen, wie z.B. das Löschen einer oder mehrerer Benachrichtigungen, finden Sie auf der Registerkarte &amp;ldquo;Hilfe&amp;rdquo; des Dialogs. Für Benutzer, die eine bessere Sichtbarkeit der aktuellen Benachrichtigungen wünschen, kann der Statusindikator &lt;code>i3xrocks-rofication&lt;/code> über den Systempaketmanager installiert werden. Damit wird die Anzahl der kritischen und normalen ungelesenen Benachrichtigungen in der Leiste angezeigt.&lt;/p></description></item><item><title>Konfiguration</title><link>https://regolith-desktop.com/de/docs/using-regolith/configuration/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/de/docs/using-regolith/configuration/</guid><description>
 &lt;h2>Empfohlene Pakete für neue Benutzer&lt;span class="hx-absolute -hx-mt-20" id="empfohlene-pakete-für-neue-benutzer">&lt;/span>
 &lt;a href="#empfohlene-pakete-f%c3%bcr-neue-benutzer" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Looks&lt;span class="hx-absolute -hx-mt-20" id="looks">&lt;/span>
 &lt;a href="#looks" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Installieren Sie alle offiziellen Regolith-Looks:&lt;/p>
@@ -776,10 +728,7 @@ als &amp;ldquo;Looks&amp;rdquo; bezeichnet. Looks bieten eine einfache Möglichk
 Statusleistenindikatoren werden auch die Looks in Paketen zusammengefasst und wie jedes andere Softwarepaket installiert
 und entfernt. Look-Pakete haben das folgende Namensformat: &lt;code>regolith-look-&amp;lt;name&amp;gt;&lt;/code>. Um nach verfügbaren Looks zu suchen,
 kann &lt;code>apt&lt;/code> oder ein GUI-Paketmanager verwendet werden. Zur Auswahl eines installierten Looks wird mit der
-Tastenkombination &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">alt&lt;/span>
-&lt;span class="badge badge-warning">l&lt;/span>&lt;/span> ein Dialog angezeigt:&lt;/p>
+Tastenkombination &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">alt&lt;/span> &lt;span class="badge badge-warning">l&lt;/span>&lt;/span> ein Dialog angezeigt:&lt;/p>
 &lt;p>&lt;img src="https://regolith-desktop.com/images/v-tour/regolith-ilia-look-selector.png" alt="" loading="lazy" />&lt;/p>
 &lt;p>Alternativ kann der Terminalbefehl &lt;code>regolith-look&lt;/code> verwendet werden, um das Aussehen zu ändern und die aktive Sitzung
 mit dem ausgewählten Aussehen zu aktualisieren. Hier ist ein Beispiel, das zum &lt;code>gruvbox&lt;/code>-Look wechselt:&lt;/p>
@@ -997,12 +946,10 @@ benutzerspezifische Konfiguration zu beeinflussen.&lt;/p>
 &lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">Regolith version 3.0 onward replaces &amp;ldquo;i3-wm&amp;rdquo; with &amp;ldquo;wm&amp;rdquo; in Xresource keys. The content on this page has been updated for Regolith 3.0+. If you are using an earlier version, use &amp;ldquo;i3-wm&amp;rdquo; instead of &amp;ldquo;wm&amp;rdquo; in the key names below. For example &lt;code>wm.foo.bar&lt;/code> changes to &lt;code>i3-wm.foo.bar&lt;/code> for Regolith 1.x and 2.x.&lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;p>Die häufigste Änderung der Tastaturbelegung ist die Taste &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>&lt;/span>. Regolith verwendet &lt;code>Xresources&lt;/code> als
+&lt;p>Die häufigste Änderung der Tastaturbelegung ist die Taste &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span>&lt;/span>. Regolith verwendet &lt;code>Xresources&lt;/code> als
 kanonische Quelle für Einstellungen, die von verschiedenen UI-Komponenten gelesen werden. Die Tabelle der &lt;code>Xresources&lt;/code>
 -Parameter, für die Benutzerkonfiguration &lt;a href="https://regolith-desktop.com/de/docs/reference/xresources/" >ist an anderer Stelle verfügbar&lt;/a>. Um die
-Tastaturbelegung &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>&lt;/span> von der Taste &amp;ldquo;windows&amp;rdquo; auf &amp;ldquo;alt&amp;rdquo; zu ändern, fügen Sie die folgende Zeilen in die
+Tastaturbelegung &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span>&lt;/span> von der Taste &amp;ldquo;windows&amp;rdquo; auf &amp;ldquo;alt&amp;rdquo; zu ändern, fügen Sie die folgende Zeilen in die
 Datei &lt;code>~/.config/regolith3/Xresources&lt;/code> ein:&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div class="filename not-prose" dir="auto">~/.config/regolith3/Xresources&lt;/div>&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">wm.mod&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Mod1&lt;/span>&lt;span class="w">
@@ -1022,12 +969,8 @@ GNOME-Tastaturbelegungen können in der Regolith-Einstellungs-App verwaltet werd
 &lt;p>&lt;img src="https://regolith-desktop.com/images/v-tour/regolith-gnome-keybindings.png" alt="" loading="lazy" />&lt;/p>
 &lt;h2>Systemverwaltung&lt;span class="hx-absolute -hx-mt-20" id="systemverwaltung">&lt;/span>
 &lt;a href="#systemverwaltung" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Die App &lt;code>regolith-control-center&lt;/code> ist das Werkzeug zum Konfigurieren von Gebietsschema, Datum, Anzeigen, Netzwerk und
-verschiedenen anderen Einstellungen. Starten Sie sie über den App-Launcher mit &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">space&lt;/span>&lt;/span>, geben
-Sie &lt;code>settings&lt;/code> ein und drücken Sie Enter, um die App zu starten. Die direkte Tastaturbelegung ist &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">c&lt;/span>&lt;/span>. Die Anwendung kann auch von einem Terminal mit dem Befehl &lt;code>regolith-control-center&lt;/code> gestartet werden.&lt;/p>
+verschiedenen anderen Einstellungen. Starten Sie sie über den App-Launcher mit &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">space&lt;/span>&lt;/span>, geben
+Sie &lt;code>settings&lt;/code> ein und drücken Sie Enter, um die App zu starten. Die direkte Tastaturbelegung ist &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">c&lt;/span>&lt;/span>. Die Anwendung kann auch von einem Terminal mit dem Befehl &lt;code>regolith-control-center&lt;/code> gestartet werden.&lt;/p>
 &lt;p>&lt;img src="https://regolith-desktop.com/images/v-tour/regolith-settings-about.png" alt="" loading="lazy" />&lt;/p>
 &lt;h2>Weitere Lektüre&lt;span class="hx-absolute -hx-mt-20" id="weitere-lektüre">&lt;/span>
 &lt;a href="#weitere-lekt%c3%bcre" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Wenn Sie tiefer einsteigen wollen, finden Sie die verfügbaren &lt;a href="https://regolith-desktop.com/de/docs/howtos/" >Howtos&lt;/a> oder lesen Sie

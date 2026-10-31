@@ -622,37 +622,26 @@ title="Copy code"
 &lt;tbody>
 &lt;tr>
 &lt;td>キーバインドビューワー&lt;/td>
-&lt;td>&lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">shift&lt;/span>
-&lt;span class="badge badge-warning">?&lt;/span>&lt;/span>&lt;/td>
+&lt;td>&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">?&lt;/span>&lt;/span>&lt;/td>
 &lt;td>利用可能なキーバインドの表示・実行&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>アプリランチャー&lt;/td>
-&lt;td>&lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">space&lt;/span>&lt;/span>&lt;/td>
+&lt;td>&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">space&lt;/span>&lt;/span>&lt;/td>
 &lt;td>デスクトップアプリケーションの起動&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;p>上記のキーバインドのどちらかを入力すると、フォーカスされたモニターにランチャーダイアログがポップアップで表示されます。ダイアログはどちらも共通のインターフェースを持っています。&lt;/p>
-&lt;p>&lt;a href="https://github.com/regolith-linux/ilia" target="_blank" rel="noopener">&lt;code>ilia&lt;/code>&lt;/a>と呼ばれるプログラムによるインターフェースの上部にはテキストを入力するウィジェット、下部にリスト選択のウィジェットがあります。これらのダイアログに共通する使用パターンは、表示されたリストからアイテムを選択することです。テキストを入力して選択項目をフィルタリングし、矢印キーを使用して選択します。&lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">enter&lt;/span>&lt;/span>を押すと、選択されたアイテムが実行されます。キーバインドの場合、選択したキーバインドが手動で実行されることになります。アプリの場合、選択されたアプリケーションが起動します。&lt;/p>
+&lt;p>&lt;a href="https://github.com/regolith-linux/ilia" target="_blank" rel="noopener">&lt;code>ilia&lt;/code>&lt;/a>と呼ばれるプログラムによるインターフェースの上部にはテキストを入力するウィジェット、下部にリスト選択のウィジェットがあります。これらのダイアログに共通する使用パターンは、表示されたリストからアイテムを選択することです。テキストを入力して選択項目をフィルタリングし、矢印キーを使用して選択します。&lt;span class="text-nowrap">&lt;span class="badge badge-warning">enter&lt;/span>&lt;/span>を押すと、選択されたアイテムが実行されます。キーバインドの場合、選択したキーバインドが手動で実行されることになります。アプリの場合、選択されたアプリケーションが起動します。&lt;/p>
 &lt;h2>Superキー&lt;span class="hx-absolute -hx-mt-20" id="superキー">&lt;/span>
-&lt;a href="#super%e3%82%ad%e3%83%bc" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Regolithにおいて多くのキーバインドで使われるのが&lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>&lt;/span>キーです。このキーは&amp;quot;WIN&amp;quot;と書かれていたりMS Windowsのロゴが書かれていることがあります。MacではCommand &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">⌘&lt;/span>&lt;/span>キーを示します。今後このキーは&lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>&lt;/span>と呼ばれますが、あなたの必要に応じて物理ボタンの&lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>&lt;/span>マップ変更できることに注意してください。&lt;/p>
+&lt;a href="#super%e3%82%ad%e3%83%bc" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Regolithにおいて多くのキーバインドで使われるのが&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span>&lt;/span>キーです。このキーは&amp;quot;WIN&amp;quot;と書かれていたりMS Windowsのロゴが書かれていることがあります。MacではCommand &lt;span class="text-nowrap">&lt;span class="badge badge-warning">⌘&lt;/span>&lt;/span>キーを示します。今後このキーは&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span>&lt;/span>と呼ばれますが、あなたの必要に応じて物理ボタンの&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span>&lt;/span>マップ変更できることに注意してください。&lt;/p>
 &lt;h2>キーバインドビューワー&lt;span class="hx-absolute -hx-mt-20" id="キーバインドビューワー">&lt;/span>
 &lt;a href="#%e3%82%ad%e3%83%bc%e3%83%90%e3%82%a4%e3%83%b3%e3%83%89%e3%83%93%e3%83%a5%e3%83%bc%e3%83%af%e3%83%bc" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>&lt;img src="https://regolith-desktop.com/images/v-tour/regolith-ilia-keybinding-window.png" alt="" loading="lazy" />&lt;/p>
 &lt;p>キーバインドビューワーの目的は、Regolithのキーバインドを素早く、簡単に見つけて学ぶことです。キーバインドのリファレンスはこのサイト上でも利用可能ですが、ビューワーのほうが素早くダイアログを表示してアクションを検索して探し出すことができます。見つけたら、キーボードを使用するか、ダイアログでアイテムを選択して、キーバインドを実行することができます。&lt;/p>
 &lt;h2>アプリケーションランチャー&lt;span class="hx-absolute -hx-mt-20" id="アプリケーションランチャー">&lt;/span>
 &lt;a href="#%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%83%a9%e3%83%b3%e3%83%81%e3%83%a3%e3%83%bc" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>&lt;img src="https://regolith-desktop.com/images/v-tour/regolith-ilia-apps-window.png" alt="" loading="lazy" />&lt;/p>
-&lt;p>デスクトップ環境の基本的なタスクは、ユーザーがアプリケーションを起動できるようにすることです。Regolithでは、アプリランチャーによっておこなわれます。キーバインドと同様、ダイアログは初めに、利用可能なデスクトップアプリケーションをすべて表示します。テキストを入力して選択項目をフィルタリングし、矢印キーを使用して特定のアイテムを選択します。&lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">enter&lt;/span>&lt;/span>を押すことで選択されたアプリケーションが起動します。&lt;/p>
+&lt;p>デスクトップ環境の基本的なタスクは、ユーザーがアプリケーションを起動できるようにすることです。Regolithでは、アプリランチャーによっておこなわれます。キーバインドと同様、ダイアログは初めに、利用可能なデスクトップアプリケーションをすべて表示します。テキストを入力して選択項目をフィルタリングし、矢印キーを使用して特定のアイテムを選択します。&lt;span class="text-nowrap">&lt;span class="badge badge-warning">enter&lt;/span>&lt;/span>を押すことで選択されたアプリケーションが起動します。&lt;/p>
 &lt;h2>次のステップ&lt;span class="hx-absolute -hx-mt-20" id="次のステップ">&lt;/span>
 &lt;a href="#%e6%ac%a1%e3%81%ae%e3%82%b9%e3%83%86%e3%83%83%e3%83%97" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>&lt;a href="../basics" >基本的な使い方&lt;/a>のページでは、Regolithのインターフェースについて詳しく知ることができます。&lt;/p></description></item><item><title>設定ファイル</title><link>https://regolith-desktop.com/ja/docs/reference/configurations/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/ja/docs/reference/configurations/</guid><description>
 &lt;h2>設定ファイルのクイックリファレンス&lt;span class="hx-absolute -hx-mt-20" id="設定ファイルのクイックリファレンス">&lt;/span>
@@ -718,70 +707,33 @@ title="Copy code"
 &lt;/div>
 &lt;/div></description></item><item><title>基本的な使い方</title><link>https://regolith-desktop.com/ja/docs/using-regolith/basics/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/ja/docs/using-regolith/basics/</guid><description>
 &lt;h2>アプリケーションを開く&lt;span class="hx-absolute -hx-mt-20" id="アプリケーションを開く">&lt;/span>
-&lt;a href="#%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%82%92%e9%96%8b%e3%81%8f" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>初回ログイン後、画面下部にバーが、ダイアログにいくつかのキーボードショートカットが表示されます。この&lt;a href="https://github.com/regolith-linux/ilia" target="_blank" rel="noopener">&lt;code>ilia&lt;/code>&lt;/a>と呼ばれるダイアログは、このデスクトップ環境におけるさまざまなアクションのキーバインドを見つけるアシスタントを提供します。&lt;code>esc&lt;/code>キーで閉じても、&lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">shift&lt;/span>
-&lt;span class="badge badge-warning">?&lt;/span>&lt;/span>で再度表示することができます。アプリケーションを起動するには、&lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">space&lt;/span>&lt;/span>を押すことで、同様のダイアログが、システムにインストールされたアプリケーションとともに読み込まれます。起動したいアプリケーションの名前を入力し始めると、リストが入力したものと一致するものにフィルタリングされます。矢印キーでリストをスクロールすることもできます。&lt;/p>
+&lt;a href="#%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%82%92%e9%96%8b%e3%81%8f" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>初回ログイン後、画面下部にバーが、ダイアログにいくつかのキーボードショートカットが表示されます。この&lt;a href="https://github.com/regolith-linux/ilia" target="_blank" rel="noopener">&lt;code>ilia&lt;/code>&lt;/a>と呼ばれるダイアログは、このデスクトップ環境におけるさまざまなアクションのキーバインドを見つけるアシスタントを提供します。&lt;code>esc&lt;/code>キーで閉じても、&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">?&lt;/span>&lt;/span>で再度表示することができます。アプリケーションを起動するには、&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">space&lt;/span>&lt;/span>を押すことで、同様のダイアログが、システムにインストールされたアプリケーションとともに読み込まれます。起動したいアプリケーションの名前を入力し始めると、リストが入力したものと一致するものにフィルタリングされます。矢印キーでリストをスクロールすることもできます。&lt;/p>
 &lt;p>&lt;img src="https://regolith-desktop.com/images/v-tour/regolith-ilia-apps.png" alt="" loading="lazy" />&lt;/p>
 &lt;h2>ウィンドウを操作する&lt;span class="hx-absolute -hx-mt-20" id="ウィンドウを操作する">&lt;/span>
-&lt;a href="#%e3%82%a6%e3%82%a3%e3%83%b3%e3%83%89%e3%82%a6%e3%82%92%e6%93%8d%e4%bd%9c%e3%81%99%e3%82%8b" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>実行中のアプリケーションにフォーカスするには、&lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">ctrl&lt;/span>
-&lt;span class="badge badge-warning">space&lt;/span>&lt;/span>キーバインドですべての実行中のウィンドウのダイアログを表示することができます。利用したいウィンドウを選択することで、簡単にそのウィンドウが含まれるワークスペースに移動してフォーカスを設定されます。&lt;/p>
+&lt;a href="#%e3%82%a6%e3%82%a3%e3%83%b3%e3%83%89%e3%82%a6%e3%82%92%e6%93%8d%e4%bd%9c%e3%81%99%e3%82%8b" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>実行中のアプリケーションにフォーカスするには、&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">ctrl&lt;/span> &lt;span class="badge badge-warning">space&lt;/span>&lt;/span>キーバインドですべての実行中のウィンドウのダイアログを表示することができます。利用したいウィンドウを選択することで、簡単にそのウィンドウが含まれるワークスペースに移動してフォーカスを設定されます。&lt;/p>
 &lt;p>&lt;img src="https://regolith-desktop.com/images/v-tour/regolith-ilia-windows.png" alt="" loading="lazy" />&lt;/p>
 &lt;h2>新しいワークスペースを作成する&lt;span class="hx-absolute -hx-mt-20" id="新しいワークスペースを作成する">&lt;/span>
-&lt;a href="#%e6%96%b0%e3%81%97%e3%81%84%e3%83%af%e3%83%bc%e3%82%af%e3%82%b9%e3%83%9a%e3%83%bc%e3%82%b9%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>ワークスペース（いくつかのデスクトップ環境では&amp;quot;仮想デスクトップ&amp;quot;として知られています）ウィンドウを管理するための主要な方法です。各ワークスペースは、独立したウィンドウセットの画面を提供しています。ワークスペースを作成したり操作するには、&lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">0-9&lt;/span>&lt;/span>でインデックスを指定します。&lt;/p>
+&lt;a href="#%e6%96%b0%e3%81%97%e3%81%84%e3%83%af%e3%83%bc%e3%82%af%e3%82%b9%e3%83%9a%e3%83%bc%e3%82%b9%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>ワークスペース（いくつかのデスクトップ環境では&amp;quot;仮想デスクトップ&amp;quot;として知られています）ウィンドウを管理するための主要な方法です。各ワークスペースは、独立したウィンドウセットの画面を提供しています。ワークスペースを作成したり操作するには、&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">0-9&lt;/span>&lt;/span>でインデックスを指定します。&lt;/p>
 &lt;h2>ファイルを検索して起動する&lt;span class="hx-absolute -hx-mt-20" id="ファイルを検索して起動する">&lt;/span>
-&lt;a href="#%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92%e6%a4%9c%e7%b4%a2%e3%81%97%e3%81%a6%e8%b5%b7%e5%8b%95%e3%81%99%e3%82%8b" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>特定のファイルをローカルのコンピューター上で検索には、さまざまな方法があります。Regolithでは、&lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">alt&lt;/span>
-&lt;span class="badge badge-warning">space&lt;/span>&lt;/span>で、素早く検索して、ファイルを既定のアプリケーションで読み込むファイル検索ダイアログを提供しています。 選択したものをEnterで入力すると、&lt;code>xdg-open&lt;/code>コマンドでファイルが呼び出されます。&lt;/p>
+&lt;a href="#%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%82%92%e6%a4%9c%e7%b4%a2%e3%81%97%e3%81%a6%e8%b5%b7%e5%8b%95%e3%81%99%e3%82%8b" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>特定のファイルをローカルのコンピューター上で検索には、さまざまな方法があります。Regolithでは、&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">alt&lt;/span> &lt;span class="badge badge-warning">space&lt;/span>&lt;/span>で、素早く検索して、ファイルを既定のアプリケーションで読み込むファイル検索ダイアログを提供しています。 選択したものをEnterで入力すると、&lt;code>xdg-open&lt;/code>コマンドでファイルが呼び出されます。&lt;/p>
 &lt;p>&lt;img src="https://regolith-desktop.com/images/v-tour/regolith-ilia-files.png" alt="" loading="lazy" />&lt;/p>
 &lt;h2>ターミナル&lt;span class="hx-absolute -hx-mt-20" id="ターミナル">&lt;/span>
-&lt;a href="#%e3%82%bf%e3%83%bc%e3%83%9f%e3%83%8a%e3%83%ab" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>ターミナルは専用のキーバインド・&lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">enter&lt;/span>&lt;/span>を持つ特別なアプリケーションです。&lt;/p>
+&lt;a href="#%e3%82%bf%e3%83%bc%e3%83%9f%e3%83%8a%e3%83%ab" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>ターミナルは専用のキーバインド・&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">enter&lt;/span>&lt;/span>を持つ特別なアプリケーションです。&lt;/p>
 &lt;h2>ブラウザ&lt;span class="hx-absolute -hx-mt-20" id="ブラウザ">&lt;/span>
-&lt;a href="#%e3%83%96%e3%83%a9%e3%82%a6%e3%82%b6" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>既定のブラウザもまた特別であり、&lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">shift&lt;/span>
-&lt;span class="badge badge-warning">enter&lt;/span>&lt;/span>で起動することができます。&lt;/p>
+&lt;a href="#%e3%83%96%e3%83%a9%e3%82%a6%e3%82%b6" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>既定のブラウザもまた特別であり、&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">enter&lt;/span>&lt;/span>で起動することができます。&lt;/p>
 &lt;h2>アプリケーションを閉じる&lt;span class="hx-absolute -hx-mt-20" id="アプリケーションを閉じる">&lt;/span>
-&lt;a href="#%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%82%92%e9%96%89%e3%81%98%e3%82%8b" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>&lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">shift&lt;/span>
-&lt;span class="badge badge-warning">q&lt;/span>&lt;/span>で、フォーカスしているアプリケーションを閉じます。誤作動しているアプリの場合、&lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">alt&lt;/span>
-&lt;span class="badge badge-warning">q&lt;/span>&lt;/span>でフォーカスしているアプリケーションを強制終了(kill)することができますが、保存していないデータは失われる可能性に注意してください。&lt;/p>
+&lt;a href="#%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%82%92%e9%96%89%e3%81%98%e3%82%8b" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">q&lt;/span>&lt;/span>で、フォーカスしているアプリケーションを閉じます。誤作動しているアプリの場合、&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">alt&lt;/span> &lt;span class="badge badge-warning">q&lt;/span>&lt;/span>でフォーカスしているアプリケーションを強制終了(kill)することができますが、保存していないデータは失われる可能性に注意してください。&lt;/p>
 &lt;h2>ワークスペースを切り替える&lt;span class="hx-absolute -hx-mt-20" id="ワークスペースを切り替える">&lt;/span>
-&lt;a href="#%e3%83%af%e3%83%bc%e3%82%af%e3%82%b9%e3%83%9a%e3%83%bc%e3%82%b9%e3%82%92%e5%88%87%e3%82%8a%e6%9b%bf%e3%81%88%e3%82%8b" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>アプリケーションが画面をどのように占有するかを管理する主な方法は、ワークスペースを使用することです。ワークスペースは、すべてのウィンドウが同じ仮想ディスプレイ上に存在する、0個以上のアプリケーションのグループです。ユーザーはワークスペースを切り替えて、アプリケーションが占有するための、多くのスペースを確保することができます。ウィンドウはワークスペース間を移動することができます。ワークスペースは、物理的なディスプレイに結びつけることや、必要に応じて他のディスプレイに移動することもできます。ワークスペースを切り替えるには、&lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>&lt;/span>キーを押しながら数字キーを押します。これで指定したワークスペースに移動します。特定のワークスペースにウィンドウが存在する場合は、バーにアクティブであることが表示されます。このバーを参照することで、ユーザーはアクティブなウィンドウがどのワークスペースに存在しているのかを確認することができます。&lt;/p>
-&lt;p>ワークスペースは&lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">tab&lt;/span>&lt;/span>や&lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">shift&lt;/span>
-&lt;span class="badge badge-warning">tab&lt;/span>&lt;/span>でも、前方や後方のウィンドウを切り替えることができます。&lt;/p>
+&lt;a href="#%e3%83%af%e3%83%bc%e3%82%af%e3%82%b9%e3%83%9a%e3%83%bc%e3%82%b9%e3%82%92%e5%88%87%e3%82%8a%e6%9b%bf%e3%81%88%e3%82%8b" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>アプリケーションが画面をどのように占有するかを管理する主な方法は、ワークスペースを使用することです。ワークスペースは、すべてのウィンドウが同じ仮想ディスプレイ上に存在する、0個以上のアプリケーションのグループです。ユーザーはワークスペースを切り替えて、アプリケーションが占有するための、多くのスペースを確保することができます。ウィンドウはワークスペース間を移動することができます。ワークスペースは、物理的なディスプレイに結びつけることや、必要に応じて他のディスプレイに移動することもできます。ワークスペースを切り替えるには、&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span>&lt;/span>キーを押しながら数字キーを押します。これで指定したワークスペースに移動します。特定のワークスペースにウィンドウが存在する場合は、バーにアクティブであることが表示されます。このバーを参照することで、ユーザーはアクティブなウィンドウがどのワークスペースに存在しているのかを確認することができます。&lt;/p>
+&lt;p>ワークスペースは&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">tab&lt;/span>&lt;/span>や&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">tab&lt;/span>&lt;/span>でも、前方や後方のウィンドウを切り替えることができます。&lt;/p>
 &lt;h2>システムを構成する&lt;span class="hx-absolute -hx-mt-20" id="システムを構成する">&lt;/span>
-&lt;a href="#%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%82%92%e6%a7%8b%e6%88%90%e3%81%99%e3%82%8b" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>システムアプリ（&lt;code>regolith-control-center&lt;/code>として知られています）は、Wi−Fi・Bluetoothの設定、アプリ関連の設定、ユーザーのセットアップといった、共通の設定タスクの主要なインターフェースです。このアプリは&lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">c&lt;/span>&lt;/span>キーバインドか、ランチャーの&lt;code>Regolith Settings&lt;/code>アプリから起動できます。&lt;/p>
+&lt;a href="#%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%82%92%e6%a7%8b%e6%88%90%e3%81%99%e3%82%8b" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>システムアプリ（&lt;code>regolith-control-center&lt;/code>として知られています）は、Wi−Fi・Bluetoothの設定、アプリ関連の設定、ユーザーのセットアップといった、共通の設定タスクの主要なインターフェースです。このアプリは&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">c&lt;/span>&lt;/span>キーバインドか、ランチャーの&lt;code>Regolith Settings&lt;/code>アプリから起動できます。&lt;/p>
 &lt;p>&lt;img src="https://regolith-desktop.com/images/v-tour/regolith-gnome-settings.png" alt="" loading="lazy" />&lt;/p>
 &lt;h2>キーバインドを表示する&lt;span class="hx-absolute -hx-mt-20" id="キーバインドを表示する">&lt;/span>
-&lt;a href="#%e3%82%ad%e3%83%bc%e3%83%90%e3%82%a4%e3%83%b3%e3%83%89%e3%82%92%e8%a1%a8%e7%a4%ba%e3%81%99%e3%82%8b" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Regolithデスクトップで使用されるすべてのキーバインドを&lt;a href="https://github.com/regolith-linux/ilia" target="_blank" rel="noopener">&lt;code>ilia&lt;/code>&lt;/a>によって表示、ソート、実行することができます。このダイアログは&lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">shift&lt;/span>
-&lt;span class="badge badge-warning">?&lt;/span>&lt;/span>で起動することができます。&lt;/p>
+&lt;a href="#%e3%82%ad%e3%83%bc%e3%83%90%e3%82%a4%e3%83%b3%e3%83%89%e3%82%92%e8%a1%a8%e7%a4%ba%e3%81%99%e3%82%8b" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Regolithデスクトップで使用されるすべてのキーバインドを&lt;a href="https://github.com/regolith-linux/ilia" target="_blank" rel="noopener">&lt;code>ilia&lt;/code>&lt;/a>によって表示、ソート、実行することができます。このダイアログは&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">?&lt;/span>&lt;/span>で起動することができます。&lt;/p>
 &lt;p>&lt;img src="https://regolith-desktop.com/images/v-tour/regolith-ilia-keybindings.png" alt="" loading="lazy" />&lt;/p>
 &lt;h2>通知を管理する&lt;span class="hx-absolute -hx-mt-20" id="通知を管理する">&lt;/span>
-&lt;a href="#%e9%80%9a%e7%9f%a5%e3%82%92%e7%ae%a1%e7%90%86%e3%81%99%e3%82%8b" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Regolithデスクトップ通知システムは、ユーザーの作業を妨げる可能性のあるポップアップを防ぐように設計されています。通知は&lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">n&lt;/span>&lt;/span>で&lt;a href="https://github.com/regolith-linux/ilia" target="_blank" rel="noopener">&lt;code>ilia&lt;/code>&lt;/a>から表示・管理することができます。削除や通知のグループ化など、特定のキーバインドについては&lt;code>help&lt;/code>タブのダイアログから見つけることができます。ユーザーが現在の通知状態の表示を変更する場合、ステータスインジケーターの&lt;code>i3xrocks-rofication&lt;/code>がシステムのパッケージマネージャーによってインストールされることがあります。これにより、重要な通知と通常の通知の未読件数がバーに表示されます。&lt;/p></description></item><item><title>設定</title><link>https://regolith-desktop.com/ja/docs/using-regolith/configuration/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/ja/docs/using-regolith/configuration/</guid><description>
+&lt;a href="#%e9%80%9a%e7%9f%a5%e3%82%92%e7%ae%a1%e7%90%86%e3%81%99%e3%82%8b" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Regolithデスクトップ通知システムは、ユーザーの作業を妨げる可能性のあるポップアップを防ぐように設計されています。通知は&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">n&lt;/span>&lt;/span>で&lt;a href="https://github.com/regolith-linux/ilia" target="_blank" rel="noopener">&lt;code>ilia&lt;/code>&lt;/a>から表示・管理することができます。削除や通知のグループ化など、特定のキーバインドについては&lt;code>help&lt;/code>タブのダイアログから見つけることができます。ユーザーが現在の通知状態の表示を変更する場合、ステータスインジケーターの&lt;code>i3xrocks-rofication&lt;/code>がシステムのパッケージマネージャーによってインストールされることがあります。これにより、重要な通知と通常の通知の未読件数がバーに表示されます。&lt;/p></description></item><item><title>設定</title><link>https://regolith-desktop.com/ja/docs/using-regolith/configuration/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/ja/docs/using-regolith/configuration/</guid><description>
 &lt;h2>新規ユーザーに推奨されるパッケージ&lt;span class="hx-absolute -hx-mt-20" id="recommended-packages-for-new-users">&lt;/span>
 &lt;a href="#recommended-packages-for-new-users" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>外観&lt;span class="hx-absolute -hx-mt-20" id="外観">&lt;/span>
 &lt;a href="#%e5%a4%96%e8%a6%b3" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Regolith公式の外観をすべてインストールする:&lt;/p>
@@ -1074,10 +1026,7 @@ title="Copy code"
 &lt;/tbody>
 &lt;/table>
 &lt;h2>外観&lt;span class="hx-absolute -hx-mt-20" id="外観-1">&lt;/span>
-&lt;a href="#%e5%a4%96%e8%a6%b3-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>色、壁紙、ウィンドウとバーのレイアウトや他の視覚的要素はRegolithにバンドルされ、&amp;ldquo;外観(look)&amp;ldquo;と呼ばれています。外観は、デスクトップの全体の外観を変更する簡単な方法を提供します。ステータスバーのインジケーターのような外観はパッケージ化され、他のソフトウェアのようにインストールしたりアンインストールしたりすることができます。外観パッケージは命名フォーマットに従い&lt;code>regolith-look-&amp;lt;name&amp;gt;&lt;/code>となっています。&lt;code>apt&lt;/code>やGUIパッケージマネージャーから利用可能な外観を検索することができます。&lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">alt&lt;/span>
-&lt;span class="badge badge-warning">l&lt;/span>&lt;/span>キーバインドで、ダイアログからインストールされた外観を選択します。&lt;/p>
+&lt;a href="#%e5%a4%96%e8%a6%b3-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>色、壁紙、ウィンドウとバーのレイアウトや他の視覚的要素はRegolithにバンドルされ、&amp;ldquo;外観(look)&amp;ldquo;と呼ばれています。外観は、デスクトップの全体の外観を変更する簡単な方法を提供します。ステータスバーのインジケーターのような外観はパッケージ化され、他のソフトウェアのようにインストールしたりアンインストールしたりすることができます。外観パッケージは命名フォーマットに従い&lt;code>regolith-look-&amp;lt;name&amp;gt;&lt;/code>となっています。&lt;code>apt&lt;/code>やGUIパッケージマネージャーから利用可能な外観を検索することができます。&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">alt&lt;/span> &lt;span class="badge badge-warning">l&lt;/span>&lt;/span>キーバインドで、ダイアログからインストールされた外観を選択します。&lt;/p>
 &lt;p>&lt;img src="https://regolith-desktop.com/images/v-tour/regolith-ilia-look-selector.png" alt="" loading="lazy" />&lt;/p>
 &lt;p>また、ターミナルのコマンド・&lt;code>regolith-look&lt;/code>で外観を変更したり、選択した外観でアクティブなセッションを再読み込みすることができます。ここでは例として、&lt;code>gruvbox&lt;/code>の外観に切り替えます。&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
@@ -1305,9 +1254,7 @@ title="Copy code"
 &lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">Regolithバージョン3.0ではXresourceキーが&amp;quot;i3-wm&amp;quot;から&amp;quot;wm&amp;quot;に置き換えられます。このページの内容はRegolith 3.0以降のものに更新されています。それ以前のバージョンを使用する場合は、キーの名前を&amp;quot;wm&amp;quot;から&amp;quot;i3-wm&amp;quot;として使用してください。例として、Regolith 1.xと2.xでは&lt;code>wm.foo.bar&lt;/code>は&lt;code>i3-wm.foo.bar&lt;/code>に変更されます。&lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;p>もっとも重要なキーバインドの変更は&lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>&lt;/span>キーです。Regolithは、さまざまなUIコンポーネントで読み取られる設定の真の正規ソースとして&lt;code>Xresources&lt;/code>を利用できます。ユーザー設定で利用可能な&lt;code>Xresources&lt;/code>キーのリストは、&lt;a href="https://regolith-desktop.com/ja/docs/reference/xresources/" >ここから参照することができます&lt;/a>。既定の&lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>&lt;/span>バインドを&amp;quot;windows&amp;quot;キーから&amp;quot;alt&amp;quot;に変更するには&lt;code>~/.config/regolith3/Xresources&lt;/code>に以下の行を追加します。&lt;/p>
+&lt;p>もっとも重要なキーバインドの変更は&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span>&lt;/span>キーです。Regolithは、さまざまなUIコンポーネントで読み取られる設定の真の正規ソースとして&lt;code>Xresources&lt;/code>を利用できます。ユーザー設定で利用可能な&lt;code>Xresources&lt;/code>キーのリストは、&lt;a href="https://regolith-desktop.com/ja/docs/reference/xresources/" >ここから参照することができます&lt;/a>。既定の&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span>&lt;/span>バインドを&amp;quot;windows&amp;quot;キーから&amp;quot;alt&amp;quot;に変更するには&lt;code>~/.config/regolith3/Xresources&lt;/code>に以下の行を追加します。&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div class="filename not-prose" dir="auto">~/.config/regolith3/Xresources&lt;/div>&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">wm.mod&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Mod1&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">wm.alt&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Mod4&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
@@ -1323,11 +1270,7 @@ title="Copy code"
 &lt;p>&lt;strong>注意&lt;/strong>：GNOMEには独自のキーバインドも存在します。Regolithセッションが最初に初期化されると、 競合するGNOMEキーバインドがユーザー設定から削除されます。GNOMEのキーバインドは、Regolithの設定アプリから管理することができます。&lt;/p>
 &lt;p>&lt;img src="https://regolith-desktop.com/images/v-tour/regolith-gnome-keybindings.png" alt="" loading="lazy" />&lt;/p>
 &lt;h2>システム管理&lt;span class="hx-absolute -hx-mt-20" id="システム管理">&lt;/span>
-&lt;a href="#%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e7%ae%a1%e7%90%86" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>&lt;code>regolith-control-center&lt;/code>アプリは、言語、日付、ディスプレイ、ネットワークや他のさまざまな種類の設定ツールです。 &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">space&lt;/span>&lt;/span>でアプリランチャーを開いて&lt;code>settings&lt;/code>と入力し、起動したいアプリをヒットさせることで起動します。&lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">c&lt;/span>&lt;/span>は直接実行できるキーバインドです。&lt;code>regolith-control-center&lt;/code>とターミナルに入力することでもアプリケーションを起動することができます。&lt;/p>
+&lt;a href="#%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e7%ae%a1%e7%90%86" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>&lt;code>regolith-control-center&lt;/code>アプリは、言語、日付、ディスプレイ、ネットワークや他のさまざまな種類の設定ツールです。 &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">space&lt;/span>&lt;/span>でアプリランチャーを開いて&lt;code>settings&lt;/code>と入力し、起動したいアプリをヒットさせることで起動します。&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">c&lt;/span>&lt;/span>は直接実行できるキーバインドです。&lt;code>regolith-control-center&lt;/code>とターミナルに入力することでもアプリケーションを起動することができます。&lt;/p>
 &lt;p>&lt;img src="https://regolith-desktop.com/images/v-tour/regolith-settings-about.png" alt="" loading="lazy" />&lt;/p>
 &lt;h2>さらに深く読み込む&lt;span class="hx-absolute -hx-mt-20" id="さらに深く読み込む">&lt;/span>
 &lt;a href="#%e3%81%95%e3%82%89%e3%81%ab%e6%b7%b1%e3%81%8f%e8%aa%ad%e3%81%bf%e8%be%bc%e3%82%80" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>もっと深く知りたい人は、&lt;a href="https://regolith-desktop.com/ja/docs/howtos/" >このハウツー&lt;/a>を利用したり、&lt;a href="https://regolith-desktop.com/ja/docs/reference/xresources/" >Xresourcesリファレンス&lt;/a>を読みましょう。 &lt;a href="https://i3wm.org/docs/userguide.html" target="_blank" rel="noopener">ユーザーガイド（英語）&lt;/a>を読んでi3のパワーユーザーになりましょう。&lt;/p>

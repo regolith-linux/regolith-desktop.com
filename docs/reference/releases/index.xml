@@ -3575,19 +3575,11 @@ title="Copy code"
 &lt;tbody>
 &lt;tr>
 &lt;td>Next Free Workspace&lt;/td>
-&lt;td>A typical part of managing workspaces in an i3-based desktop is moving to unused workspaces and then loading some applications. Before this feature, a user has to determine which unused workspace they prefer. This is done by scanning the list of existing used workspaces to determine an unused one. Now, the system can do this automatically. The &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">`&lt;/span>&lt;/span> keybinding will move to the next free workspace. &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">alt&lt;/span>
-&lt;span class="badge badge-warning">`&lt;/span>&lt;/span> will move the focused window into the next free workspace.&lt;/td>
+&lt;td>A typical part of managing workspaces in an i3-based desktop is moving to unused workspaces and then loading some applications. Before this feature, a user has to determine which unused workspace they prefer. This is done by scanning the list of existing used workspaces to determine an unused one. Now, the system can do this automatically. The &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">`&lt;/span>&lt;/span> keybinding will move to the next free workspace. &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">alt&lt;/span> &lt;span class="badge badge-warning">`&lt;/span>&lt;/span> will move the focused window into the next free workspace.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>View and Change Looks via Rofi&lt;/td>
-&lt;td>Looks can be changed now via a Rofi dialog rather than having to configure the &lt;code>Xresources&lt;/code> override via the command-line. To do this, use the keybinding &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">alt&lt;/span>
-&lt;span class="badge badge-warning">l&lt;/span>&lt;/span> and then select a look from the dialog.&lt;/td>
+&lt;td>Looks can be changed now via a Rofi dialog rather than having to configure the &lt;code>Xresources&lt;/code> override via the command-line. To do this, use the keybinding &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">alt&lt;/span> &lt;span class="badge badge-warning">l&lt;/span>&lt;/span> and then select a look from the dialog.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>GSettings Overrides&lt;/td>
@@ -4179,10 +4171,7 @@ title="Copy code"
 &lt;/tr>
 &lt;tr>
 &lt;td>i3 reload becomes Regolith reload&lt;/td>
-&lt;td>Refreshing the UI (look, colors, fonts, etc.) after making changes is now as easy as &lt;span class="text-nowrap">
-&lt;span class="badge badge-warning">super&lt;/span>
-&lt;span class="badge badge-warning">shift&lt;/span>
-&lt;span class="badge badge-warning">r&lt;/span>&lt;/span>.&lt;/td>
+&lt;td>Refreshing the UI (look, colors, fonts, etc.) after making changes is now as easy as &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">r&lt;/span>&lt;/span>.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Polish, polish, polish&lt;/td>
