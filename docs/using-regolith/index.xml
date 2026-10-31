@@ -386,7 +386,7 @@ title="Copy code"
 &lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
 &lt;div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2">&lt;/div>
 &lt;div class="hx-w-full hx-min-w-0 hx-leading-7">
-&lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">The &lt;code>regolith-compositor-picom-glx&lt;/code> compositor should work on most computers. If you experience driver or visual issues, &lt;a href="docs/howtos/customize-compositor" >try another compositor&lt;/a>.&lt;/div>
+&lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">The &lt;code>regolith-compositor-picom-glx&lt;/code> compositor should work on most computers. If you experience driver or visual issues, &lt;a href="https://regolith-desktop.com/docs/howtos/customize-compositor/" target="_blank" rel="noopener">try another compositor&lt;/a>.&lt;/div>
 &lt;/div>
 &lt;/div>
 &lt;/div>
@@ -462,7 +462,7 @@ title="Copy code"
 &lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
 &lt;div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2">&lt;/div>
 &lt;div class="hx-w-full hx-min-w-0 hx-leading-7">
-&lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">The &lt;code>regolith-compositor-picom-glx&lt;/code> compositor should work on most computers. If you experience driver or visual issues, &lt;a href="docs/howtos/customize-compositor" >try another compositor&lt;/a>.&lt;/div>
+&lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">The &lt;code>regolith-compositor-picom-glx&lt;/code> compositor should work on most computers. If you experience driver or visual issues, &lt;a href="https://regolith-desktop.com/docs/howtos/customize-compositor/" target="_blank" rel="noopener">try another compositor&lt;/a>.&lt;/div>
 &lt;/div>
 &lt;/div>
 &lt;/div>
