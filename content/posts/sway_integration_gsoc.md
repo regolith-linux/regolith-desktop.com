@@ -98,7 +98,7 @@ Similar to outut management, input management in wayland is also dependent on th
 
 ## What's next?
 
-You can track work related sway integration in [this](https://github.com/orgs/regolith-linux/projects/8) GitHub projects page. All contributions are more than welcome. I have really enjoyed working on this project and I plan to continue even after I'm done with the final evaluation for Google Summer of Code.
+All contributions are more than welcome. I have really enjoyed working on this project and I plan to continue even after I'm done with the final evaluation for Google Summer of Code.
 
 ## What doesn't work
 
