@@ -176,7 +176,7 @@ The `regolith-desktop` package installs a reasonable minimal configuration that 
 {{< /callout >}}
 
 {{< callout type="info" >}}
-The `regolith-compositor-picom-glx` compositor should work on most computers. If you experience driver or visual issues, [try another compositor](docs/howtos/customize-compositor).
+The `regolith-compositor-picom-glx` compositor should work on most computers. If you experience driver or visual issues, [try another compositor]({{< ref "docs/howtos/customize-compositor" >}}).
 {{< /callout >}}
 {{< /tab >}}
 {{< /tabs >}}
