@@ -1,9 +1,12 @@
 {{- $delimiter := (.Get 1 | default ",") -}}
 {{- $keys := split (.Get 0) $delimiter -}}
-
+{{- /* No whitespace before the first or after the last key, so that the
+  keys can follow "(" or precede ")" and sit next to CJK text without a gap.
+  One space separates consecutive keys. */ -}}
 <span class="text-nowrap">
-  {{- range $keys }}
-    <span class="badge badge-warning">{{ . }}</span>
+  {{- range $i, $key := $keys -}}
+    {{- if $i }} {{ end -}}
+    <span class="badge badge-warning">{{ $key }}</span>
   {{- end -}}
 </span>
 {{- /* Strip trailing newline. */ -}}
