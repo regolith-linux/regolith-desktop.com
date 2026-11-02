@@ -54,4 +54,4 @@ The Regolith 2 desktop environment will require the removal of the existing Rego
 
 ## Learn More
 
-[See here for details](http://regolith-desktop.com/#get-regolith-20) on how to install the current pre-release version of Regolith 2, and [here for information on how you can provide feedback or contribute](http://regolith-desktop.com/#get-regolith-20).
+[See here for details](/docs/using-regolith/install/) on how to install the current pre-release version of Regolith 2, and [here for information on how you can provide feedback or contribute](/community/).

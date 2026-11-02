@@ -269,4 +269,4 @@ Note that `experimental`, `unstable`, and `testing` suites only have `main` comp
 
 ## Upgrading from 2.x to 3.x
 
-If you're upgrading from an earlier major version of Regolith, you may be interested in reading [the release notes](/docs/reference/Releases/regolith-3.2-release-notes) and if coming from 2.x, the [migration guide](/docs/reference/Releases/regolith-3.0-release-notes/#migration-guide).
+If you're upgrading from an earlier major version of Regolith, you may be interested in reading [the release notes](/docs/reference/releases/regolith-3.2-release-notes/) and if coming from 2.x, the [migration guide](/docs/reference/releases/regolith-3.0-release-notes/#migration-guide).

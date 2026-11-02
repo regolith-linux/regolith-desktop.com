@@ -10,7 +10,7 @@ title: Status Updates October 2024
 
 ## Ubuntu 24.10 (Oracular Oriole) Support
 
-Canonical completed their 20th Ubuntu release with Oracular this month.  A beta of Regolith 3.2 is available for testing, see [this discussion thread](https://github.com/orgs/regolith-linux/discussions/1073) for details.  As this is not a new Regolith release, but rather the addition of a new Ubuntu version on Regolith 3.2, the [3.2 release notes](/docs/reference/Releases/regolith-3.2-release-notes/) continue to be the latest.
+Canonical completed their 20th Ubuntu release with Oracular this month.  A beta of Regolith 3.2 is available for testing, see [this discussion thread](https://github.com/orgs/regolith-linux/discussions/1073) for details.  As this is not a new Regolith release, but rather the addition of a new Ubuntu version on Regolith 3.2, the [3.2 release notes](/docs/reference/releases/regolith-3.2-release-notes/) continue to be the latest.
 
 ## Ubuntu Summit 2024
 

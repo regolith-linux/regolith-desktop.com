@@ -19,7 +19,7 @@ Release notes and other version-specific content can be found here.
   {{< card link="regolith-2.2-release-notes/" title="2.2 Release Notes" >}}
   {{< card link="regolith-2.1-release-notes/" title="2.1 Release Notes" >}}
   {{< card link="regolith-2.0-release-notes/" title="2.0 Release Notes" >}}
-  {{< card link="regolith-1.6-release-notes/" title="1.6 Release Notes" >}}
+  {{< card link="regolith-1.6.0-release-notes/" title="1.6 Release Notes" >}}
   {{< card link="regolith-1.5.3-release-notes/" title="1.5.3 Release Notes" >}}
   {{< card link="regolith-1.5.2-release-notes/" title="1.5.2 Release Notes" >}}
   {{< card link="regolith-1.5.1-release-notes/" title="1.5.1 Release Notes" >}}
