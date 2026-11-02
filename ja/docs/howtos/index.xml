@@ -327,6 +327,11 @@ title="Copy code"
 &lt;p>次に、変更を有効にするため、i3を再読み込みします。i3が別のプロセスとして起動するものなど、一部の設定では、セッションに再ログインする必要があります。&lt;/p>
 &lt;h2>さらに深く読み込む&lt;span class="hx-absolute -hx-mt-20" id="さらに深く読み込む">&lt;/span>
 &lt;a href="#%e3%81%95%e3%82%89%e3%81%ab%e6%b7%b1%e3%81%8f%e8%aa%ad%e3%81%bf%e8%be%bc%e3%82%80" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Regolithの設定ファイルについて詳細については&lt;a href="https://regolith-desktop.com/ja/docs/reference/configurations/" >設定のリファレンスページ&lt;/a>を参照してください。&lt;/p></description></item><item><title>バーステータスインジケーターの変更</title><link>https://regolith-desktop.com/ja/docs/howtos/add-remove-blocklets/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/ja/docs/howtos/add-remove-blocklets/</guid><description>
+&lt;p>X11セッション（i3）とWaylandセッション（sway）では、異なるステータスバープログラムを使用します。&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>X11：&lt;/strong> &lt;a href="https://regolith-desktop.com/docs/reference/i3xrocks/" >&lt;code>i3xrocks&lt;/code>&lt;/a>。各ステータスインジケーターは個別の&lt;code>i3xrocks-*&lt;/code>パッケージです。&lt;/li>
+&lt;li>&lt;strong>Wayland：&lt;/strong> &lt;a href="https://github.com/greshake/i3status-rust" target="_blank" rel="noopener">&lt;code>i3status-rs&lt;/code>&lt;/a>。1つのファイルで設定します。&lt;code>i3xrocks-*&lt;/code>パッケージはWaylandでは効果がありません。下記の&lt;a href="#wayland" >Wayland (sway)&lt;/a>を参照してください。&lt;/li>
+&lt;/ul>
 &lt;h2>ステータスインジケーターの追加と削除&lt;span class="hx-absolute -hx-mt-20" id="ステータスインジケーターの追加と削除">&lt;/span>
 &lt;a href="#%e3%82%b9%e3%83%86%e3%83%bc%e3%82%bf%e3%82%b9%e3%82%a4%e3%83%b3%e3%82%b8%e3%82%b1%e3%83%bc%e3%82%bf%e3%83%bc%e3%81%ae%e8%bf%bd%e5%8a%a0%e3%81%a8%e5%89%8a%e9%99%a4" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>ステータスインジケーターの検索&lt;span class="hx-absolute -hx-mt-20" id="ステータスインジケーターの検索">&lt;/span>
 &lt;a href="#%e3%82%b9%e3%83%86%e3%83%bc%e3%82%bf%e3%82%b9%e3%82%a4%e3%83%b3%e3%82%b8%e3%82%b1%e3%83%bc%e3%82%bf%e3%83%bc%e3%81%ae%e6%a4%9c%e7%b4%a2" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
@@ -353,21 +358,23 @@ title="Copy code"
 &lt;/button>
 &lt;/div>
 &lt;/div>
+&lt;p>インジケーターを削除するには、そのパッケージを削除し（例：&lt;code>sudo apt remove i3xrocks-memory&lt;/code>）、&lt;code>regolith-look refresh&lt;/code>を実行します。&lt;/p>
 &lt;h2>i3バーのカスタマイズ&lt;span class="hx-absolute -hx-mt-20" id="customize-bar">&lt;/span>
 &lt;a href="#customize-bar" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>バーにある各インジケーターはファイルで管理されます。バーのステータスインジケーターの位置に対応しています。例として、ファイル名が&lt;code>10_&lt;/code>で始まるものは、 &lt;code>20_&lt;/code>で始まる設定ファイルのインジケーターより前に配置されることを意味します。各ファイルの中には、&lt;code>i3xrocks&lt;/code>がスクリプトを実行するために使用する情報があり、最終的にバーに表示されるデータを返します。いくつかのステータスインジケーターは設定パラメーターが存在し、ユーザーの好みに合わせることができます。例えば、バッテリーの状態を頻繁に変更するのがよい場合、調べる間隔を更新することができます。バーをカスタマイズするために最初にするべきことは、表示したいインジケーターを&lt;code>/usr/share/i3xrocks/conf.d/&lt;/code>から&lt;code>~/.config/regolith3/i3xrocks/conf.d&lt;/code>にコピーすることです。 &lt;code>~/.config/regolith3/i3xrocks/conf.d&lt;/code>内の各ファイルは好きなように変更できます。バーのステータスインジケーターを変更するには、ファイルの名前を好きな並び順に変更するだけです。&lt;/p>
 &lt;p>変更を加えたあとは、セッションを再読み込みすることで、新しい設定ファイルに基づいてバーが更新されるはずです。&lt;/p>
-&lt;p>例えば、バーにおけるバッテリーとトラフィックのブロックの変更と通知を非表示にしたいとき、以下の操作を行います。&lt;/p>
+&lt;p>例えば、CPUインジケーターをネットワークトラフィックインジケーターの前に表示し、メモリーインジケーターを非表示にしたいとき、以下の操作を行います（&lt;code>/usr/share/i3xrocks/conf.d/&lt;/code>にあるファイルは、インストールしたインジケーターパッケージによって異なります）。&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> ls /usr/share/i3xrocks/conf.d/
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">01_setup
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">30_net-traffic
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">80_battery
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">80_rofication
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">40_cpu-usage
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">50_memory
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">90_time
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="gp">$&lt;/span> mkdir -p ~/.config/regolith3/i3xrocks/conf.d
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> cp /usr/share/i3xrocks/conf.d/01_setup ~/.config/regolith3/i3xrocks/conf.d/01_setup
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> cp /usr/share/i3xrocks/conf.d/80_battery ~/.config/regolith3/i3xrocks/conf.d/30_battery
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> cp /usr/share/i3xrocks/conf.d/30_net-traffic ~/.config/regolith3/i3xrocks/conf.d/80_net-traffic
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> cp /usr/share/i3xrocks/conf.d/40_cpu-usage ~/.config/regolith3/i3xrocks/conf.d/20_cpu-usage
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> cp /usr/share/i3xrocks/conf.d/30_net-traffic ~/.config/regolith3/i3xrocks/conf.d/30_net-traffic
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> cp /usr/share/i3xrocks/conf.d/90_time ~/.config/regolith3/i3xrocks/conf.d/90_time
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> regolith-look refresh
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
@@ -383,10 +390,39 @@ title="Copy code"
 &lt;ul>
 &lt;li>Regolithが作成したディレクトリに存在する現在の&lt;code>i3xrocks&lt;/code>モジュールが一覧表示されます&lt;/li>
 &lt;li>ユーザー設定が存在するディレクトリに&lt;code>~/.config/regolith3/i3xrocks/conf.d&lt;/code>が作成されます&lt;/li>
-&lt;li>3つのファイルが、アプリケーションが作成したディレクトリからユーザーが作成したディレクトリにコピーされます。これにより、この記事の冒頭で説明したようにユーザーが&lt;code>n_&lt;/code>の番号を変更すると、順番が変更されます。&lt;/li>
+&lt;li>4つのファイルが、アプリケーションが作成したディレクトリからユーザーが作成したディレクトリにコピーされます。&lt;code>01_setup&lt;/code>にはすべてのインジケーターに共通する設定が含まれているので、残しておきます。&lt;code>40_cpu-usage&lt;/code>を&lt;code>20_cpu-usage&lt;/code>に名前変更すると、CPUインジケーターがネットワークトラフィックインジケーターの前に移動します。メモリーインジケーターはコピーされないため、表示されません&lt;/li>
 &lt;li>&lt;code>regolith-look refresh&lt;/code>コマンドで&lt;strong>バーステータスインジケーター&lt;/strong>の再読み込みが行われます&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>注意&lt;/strong>：ユーザーディレクトリの&lt;code>~/.config/regolith3/i3xrocks/conf.d&lt;/code>に複数のブロック設定が存在する場合、既定である&lt;code>/usr/share/i3xrocks/conf.d/&lt;/code>は無視されます。&lt;/p>
+&lt;p>&lt;strong>注意&lt;/strong>：&lt;code>~/.config/regolith3/i3xrocks/conf.d&lt;/code>ディレクトリが存在する場合、ディレクトリが空であっても、既定である&lt;code>/usr/share/i3xrocks/conf.d/&lt;/code>は無視されます。残したいインジケーターはすべてコピーしてください。既定に戻すには、このディレクトリを削除します。後からインストールしたインジケーターパッケージは、そのファイルもコピーするまでバーに追加されません。&lt;/p>
+&lt;h2>Wayland (sway)&lt;span class="hx-absolute -hx-mt-20" id="wayland">&lt;/span>
+&lt;a href="#wayland" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>swayのバーは&lt;code>/etc/regolith/i3status-rust/config.toml&lt;/code>を使って&lt;code>i3status-rs&lt;/code>を実行します。インジケーターを変更するには、このファイルをコピーしてコピーを編集し、Xresourceの&lt;code>wm.bar.status_config&lt;/code>でそのコピーを指定します。&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">mkdir -p ~/.config/regolith3/i3status-rust
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cp /etc/regolith/i3status-rust/config.toml ~/.config/regolith3/i3status-rust/config.toml
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;wm.bar.status_config: ~/.config/regolith3/i3status-rust/config.toml&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>ファイル内の各&lt;code>[[block]]&lt;/code>セクションが1つのインジケーターで、ファイル内の順番で表示されます。セクションを削除するとインジケーターが非表示になり、セクションを移動すると順番が変わります。ブロックを追加することもできます。例えばCPUインジケーターを追加するには：&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div class="filename not-prose" dir="auto">~/.config/regolith3/i3status-rust/config.toml&lt;/div>&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-toml" data-lang="toml">&lt;span class="line">&lt;span class="cl">&lt;span class="p">[[&lt;/span>&lt;span class="nx">block&lt;/span>&lt;span class="p">]]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">block&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;cpu&amp;#34;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>その後、&lt;code>regolith-look refresh&lt;/code>を実行します。利用できるブロックとそのオプションについては、&lt;a href="https://docs.rs/i3status-rs/latest/i3status_rs/blocks/index.html" target="_blank" rel="noopener">i3status-rustのドキュメント&lt;/a>を参照してください。&lt;/p>
 &lt;h2>さらに深く読み込む&lt;span class="hx-absolute -hx-mt-20" id="さらに深く読み込む">&lt;/span>
 &lt;a href="#%e3%81%95%e3%82%89%e3%81%ab%e6%b7%b1%e3%81%8f%e8%aa%ad%e3%81%bf%e8%be%bc%e3%82%80" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>&lt;a href="https://regolith-desktop.com/ja/docs/reference/configurations/" >設定のリファレンスページ&lt;/a>には、Regolith Linuxを使うときの設定ファイルについての詳細な項目があります。&lt;/p></description></item><item><title>コンポジターのカスタマイズ</title><link>https://regolith-desktop.com/ja/docs/howtos/customize-compositor/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/ja/docs/howtos/customize-compositor/</guid><description>
 &lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">

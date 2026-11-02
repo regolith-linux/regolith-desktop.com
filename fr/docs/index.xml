@@ -2126,6 +2126,11 @@ title="Copy code"
 &lt;a href="#comptonpicom" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Pour fournir votre propre configuration pour Compton/Picom, copiez la config par défaut
 et créez la votre dans &lt;code>~/.config/regolith3/picom/config&lt;/code>.
 À la prochain session, la nouvelle config sera chargé à la place de celle par défaut (&lt;code>/etc/regolith/picom/config&lt;/code>).&lt;/p></description></item><item><title>Modifier les indicateurs dans la barre</title><link>https://regolith-desktop.com/fr/docs/howtos/add-remove-blocklets/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/fr/docs/howtos/add-remove-blocklets/</guid><description>
+&lt;p>La session X11 (i3) et la session Wayland (sway) utilisent des programmes différents pour la barre d&amp;rsquo;état :&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>X11 :&lt;/strong> &lt;a href="https://regolith-desktop.com/docs/reference/i3xrocks/" >&lt;code>i3xrocks&lt;/code>&lt;/a>. Chaque indicateur de statut est un paquet &lt;code>i3xrocks-*&lt;/code> distinct.&lt;/li>
+&lt;li>&lt;strong>Wayland :&lt;/strong> &lt;a href="https://github.com/greshake/i3status-rust" target="_blank" rel="noopener">&lt;code>i3status-rs&lt;/code>&lt;/a>, configuré par un seul fichier. Les paquets &lt;code>i3xrocks-*&lt;/code> n&amp;rsquo;y ont aucun effet ; voir &lt;a href="#wayland" >Wayland (sway)&lt;/a> plus bas.&lt;/li>
+&lt;/ul>
 &lt;h2>Ajouter ou retirer des indicateurs de statut&lt;span class="hx-absolute -hx-mt-20" id="ajouter-ou-retirer-des-indicateurs-de-statut">&lt;/span>
 &lt;a href="#ajouter-ou-retirer-des-indicateurs-de-statut" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Voir les indicateurs de statut disponibles&lt;span class="hx-absolute -hx-mt-20" id="voir-les-indicateurs-de-statut-disponibles">&lt;/span>
 &lt;a href="#voir-les-indicateurs-de-statut-disponibles" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
@@ -2152,6 +2157,7 @@ title="Copy code"
 &lt;/button>
 &lt;/div>
 &lt;/div>
+&lt;p>Pour retirer un indicateur, désinstallez son paquet (par exemple &lt;code>sudo apt remove i3xrocks-memory&lt;/code>) et lancez &lt;code>regolith-look refresh&lt;/code>.&lt;/p>
 &lt;h2>Personnaliser la barre i3&lt;span class="hx-absolute -hx-mt-20" id="customize-bar">&lt;/span>
 &lt;a href="#customize-bar" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Chaque indicateur de statut dans la barre est géré par un fichier.
 Le nom du fichier correspond à la position de l&amp;rsquo;indicateur dans la barre. Par exemple, un fichier avec le nom commençant par &lt;code>10_&lt;/code> signifie que l&amp;rsquo;indicateur de statut correspondant sera placer avant un indicateur qui a un fichier de configuration commençant par &lt;code>20_&lt;/code>.&lt;/p>
@@ -2162,19 +2168,19 @@ Par exemple, si vous préférez que le statut de la batterie change plus vouent,
 Chaque fichier dans &lt;code>~/.config/regolith3/i3xrocks/conf.d&lt;/code>. peut être modifier selon vos besoins.
 Pour changer l&amp;rsquo;ordre des indicateurs, changez simplement le nom des fichiers.&lt;/p>
 &lt;p>Une fois que vous avez fait des changements, il est nécessaire de rafraîchir la session pour que la barre se mette à jour en fonction de la nouvelle configuration.
-Par exemple, pour changer l&amp;rsquo;ordre des blocs de la batterie et du trafic réseau et cacher les notifications, suivez ces étapes:&lt;/p>
+Par exemple, pour afficher l&amp;rsquo;indicateur du processeur avant celui du trafic réseau et ne pas afficher l&amp;rsquo;indicateur de mémoire, suivez ces étapes (les fichiers présents dans &lt;code>/usr/share/i3xrocks/conf.d/&lt;/code> dépendent des paquets d&amp;rsquo;indicateurs installés) :&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> ls /usr/share/i3xrocks/conf.d/
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">01_setup
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">30_net-traffic
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">80_battery
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">80_rofication
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">40_cpu-usage
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">50_memory
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">90_time
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">&lt;/span>&lt;span class="gp">$&lt;/span> mkdir -p ~/.config/regolith3/i3xrocks/conf.d
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> &lt;span class="nb">cd&lt;/span> /usr/share/i3xrocks/conf.d/
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> cp 01_setup ~/.config/regolith3/i3xrocks/conf.d/01_setup
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> cp 80_battery ~/.config/regolith3/i3xrocks/conf.d/30_battery
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> cp 30_net-traffic ~/.config/regolith3/i3xrocks/conf.d/80_net-traffic
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> cp /usr/share/i3xrocks/conf.d/01_setup ~/.config/regolith3/i3xrocks/conf.d/01_setup
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> cp /usr/share/i3xrocks/conf.d/40_cpu-usage ~/.config/regolith3/i3xrocks/conf.d/20_cpu-usage
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> cp /usr/share/i3xrocks/conf.d/30_net-traffic ~/.config/regolith3/i3xrocks/conf.d/30_net-traffic
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> cp /usr/share/i3xrocks/conf.d/90_time ~/.config/regolith3/i3xrocks/conf.d/90_time
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> regolith-look refresh
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
@@ -2186,7 +2192,43 @@ title="Copy code"
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;p>&lt;strong>Note&lt;/strong>: Si un bloc existe dans le dossier utilisateur &lt;code>~/.config/regolith3/i3xrocks/conf.d&lt;/code>, la configuration par défaut dans &lt;code>/usr/share/i3xrocks/conf.d/&lt;/code> sera ignorée.&lt;/p>
+&lt;p>Ces étapes effectuent les actions suivantes :&lt;/p>
+&lt;ul>
+&lt;li>Les modules &lt;code>i3xrocks&lt;/code> présents dans le dossier créé par Regolith sont listés&lt;/li>
+&lt;li>Le dossier de configuration utilisateur &lt;code>~/.config/regolith3/i3xrocks/conf.d&lt;/code> est créé&lt;/li>
+&lt;li>Quatre fichiers sont copiés du dossier de l&amp;rsquo;application vers le dossier utilisateur. &lt;code>01_setup&lt;/code> contient les réglages communs à tous les indicateurs, il faut donc le garder. Renommer &lt;code>40_cpu-usage&lt;/code> en &lt;code>20_cpu-usage&lt;/code> place l&amp;rsquo;indicateur du processeur devant celui du trafic réseau, et l&amp;rsquo;indicateur de mémoire n&amp;rsquo;est pas copié, il n&amp;rsquo;est donc pas affiché&lt;/li>
+&lt;li>La commande &lt;code>regolith-look refresh&lt;/code> rafraîchit les &lt;strong>indicateurs de statut de la barre&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Note&lt;/strong> : Si le dossier &lt;code>~/.config/regolith3/i3xrocks/conf.d&lt;/code> existe, la configuration par défaut dans &lt;code>/usr/share/i3xrocks/conf.d/&lt;/code> est ignorée, même si le dossier est vide. Copiez tous les indicateurs que vous voulez garder, et supprimez le dossier pour revenir à la configuration par défaut. Les paquets d&amp;rsquo;indicateurs installés par la suite n&amp;rsquo;apparaissent dans la barre qu&amp;rsquo;une fois leur fichier copié lui aussi.&lt;/p>
+&lt;h2>Wayland (sway)&lt;span class="hx-absolute -hx-mt-20" id="wayland">&lt;/span>
+&lt;a href="#wayland" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>La barre de sway lance &lt;code>i3status-rs&lt;/code> avec &lt;code>/etc/regolith/i3status-rust/config.toml&lt;/code>. Pour changer les indicateurs, copiez ce fichier, modifiez la copie et indiquez son chemin dans l&amp;rsquo;Xresource &lt;code>wm.bar.status_config&lt;/code> :&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">mkdir -p ~/.config/regolith3/i3status-rust
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cp /etc/regolith/i3status-rust/config.toml ~/.config/regolith3/i3status-rust/config.toml
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;wm.bar.status_config: ~/.config/regolith3/i3status-rust/config.toml&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.config/regolith3/Xresources&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>Chaque section &lt;code>[[block]]&lt;/code> du fichier est un indicateur, affiché dans l&amp;rsquo;ordre du fichier. Supprimez une section pour masquer un indicateur, déplacez-la pour changer l&amp;rsquo;ordre, ou ajoutez un bloc, par exemple l&amp;rsquo;indicateur du processeur :&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div class="filename not-prose" dir="auto">~/.config/regolith3/i3status-rust/config.toml&lt;/div>&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-toml" data-lang="toml">&lt;span class="line">&lt;span class="cl">&lt;span class="p">[[&lt;/span>&lt;span class="nx">block&lt;/span>&lt;span class="p">]]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">block&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;cpu&amp;#34;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-8">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>Lancez ensuite &lt;code>regolith-look refresh&lt;/code>. Les blocs disponibles et leurs options sont décrits dans la &lt;a href="https://docs.rs/i3status-rs/latest/i3status_rs/blocks/index.html" target="_blank" rel="noopener">documentation d&amp;rsquo;i3status-rust&lt;/a>.&lt;/p>
 &lt;h2>Informations complémentaires&lt;span class="hx-absolute -hx-mt-20" id="informations-complémentaires">&lt;/span>
 &lt;a href="#informations-compl%c3%a9mentaires" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>La &lt;a href="https://regolith-desktop.com/fr/docs/reference/configurations/" >page de référence des configuration&lt;/a> donne plus de détails à propres des fichiers de configuration utilisés par Regolith Linux.&lt;/p></description></item><item><title>Modifier les Xresources</title><link>https://regolith-desktop.com/fr/docs/howtos/override-xres/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/fr/docs/howtos/override-xres/</guid><description>
 &lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-yellow-100 hx-bg-yellow-50 hx-text-yellow-900 dark:hx-border-yellow-200/30 dark:hx-bg-yellow-700/30 dark:hx-text-yellow-200">
