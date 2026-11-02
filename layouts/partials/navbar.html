@@ -36,7 +36,12 @@
         {{- $external := strings.HasPrefix $link "http" -}}
         {{- with .PageRef -}}
           {{- if hasPrefix . "/" -}}
-            {{- $link = relLangURL (strings.TrimPrefix "/" .) -}}
+            {{- /* Link the default-language page when this language has none (e.g. /posts/) */ -}}
+            {{- if site.GetPage . -}}
+              {{- $link = relLangURL (strings.TrimPrefix "/" .) -}}
+            {{- else -}}
+              {{- $link = relURL (strings.TrimPrefix "/" .) -}}
+            {{- end -}}
           {{- end -}}
         {{- end -}}
 
