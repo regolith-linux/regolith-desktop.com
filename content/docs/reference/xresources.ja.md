@@ -78,6 +78,7 @@ Regolithバージョン3.0ではXresourceキーが"i3-wm"から"wm"に置き換�
 | i3xrocks.action.volume.right                       | インジケーター上で右クリックをしたときのコマンド（既定：音量のミュート）                            |
 | i3xrocks.action.volume.scrollup                    | 音量インジケーターで上方向にスクロールしたときのコマンド（既定：音量を上げる）       |
 | i3xrocks.action.volume.scrolldn                    | 音量インジケーターで下方向にスクロールしたときのコマンド（既定：音量を下げる）     |
+| i3xrocks.critical.color                            | Critical color for bar module                                                                                       |
 | i3xrocks.error.color                               | エラーモードにおけるバーモジュールの色                                                                                  |
 | i3xrocks.label.battery0                            | バーアイコンの絵文字                                                                                                      |
 | i3xrocks.label.battery100                          | バーアイコンの絵文字                                                                                                      |
@@ -143,6 +144,8 @@ Regolithバージョン3.0ではXresourceキーが"i3-wm"から"wm"に置き換�
 | wm.program.unclutter        | X11 (i3) only: command i3 starts to hide the mouse pointer when it is not used. The default is `/usr/bin/unclutter -b`; set it to `:` to keep the pointer visible. Takes effect at the next login |
 | wm.hide_cursor.timeout      | Wayland (sway) only: milliseconds without movement before the pointer is hidden (default `5000`, `0` turns hiding off). regolith-wm-config 4.11.12 and earlier read only the misspelled `wm.hide_cursor.timout`, which newer versions still accept |
 | wm.hide_cursor.show_when_typing | Wayland (sway) only: `enable` (default) hides the pointer while you type, `disable` keeps it visible                                                                                 |
+| wm.binding.ws_back_and_forth | Key that, pressed with Super+Alt (`wm.mod` and `wm.alt`), goes back to the previously focused workspace (`workspace back_and_forth`), in both sessions. The default is `Tab`, so Super+Alt+Tab. In sway, moving a window to another workspace doesn't update the workspace it goes back to (i3 does). Added after regolith-wm-config 4.11.12 |
+| wm.bar.binding.wheel_up, wm.bar.binding.wheel_down, wm.bar.binding.wheel_left, wm.bar.binding.wheel_right | The bar binding for each mouse wheel direction (`button4`, `button5`, `button6`, `button7`), in i3bar and swaybar. The defaults (`--release button4 nop` and so on) leave the bar's own behaviour alone: scrolling over the workspace buttons switches workspaces. Set them to `button4 nop` ... `button7 nop` to stop that, or bind another command. Scrolling over a status block still goes to that block. Added after regolith-wm-config 4.11.12 |
 | i3xrocks.media-player.player-args | `media-player`i3xrocksブロックにおけるオプションの引数。これらの引数は`playerctl`に直接与えられます。例えば、`-p spotify`という値を設定すると、バーがSpotifyを表示・操作するだけになります。 |
 | i3xrocks.action.mic.left | マイクステータスインジケーターで左クリック時に実行するオプションのコマンド |
 | i3xrocks.action.mic.middle | マイクステータスインジケーターで中クリック時に実行するオプションのコマンド |
@@ -164,3 +167,6 @@ Regolithバージョン3.0ではXresourceキーが"i3-wm"から"wm"に置き換�
 | i3xrocks.action.media-player.right | メディアプレーヤーインジケーターを右クリック時に実行するオーバーライドコマンド |
 | i3xrocks.action.time | 日時ステータスインジケーターで実行するオーバーライドコマンド |
 | i3xrocks.action.battery | バッテリーステータスインジケーターで実行するオーバーライドコマンド |
+| i3xrocks.cpu-usage.warning_threshold, i3xrocks.cpu-usage.critical_threshold | X11 (i3xrocks) only: CPU usage in percent from which the `cpu-usage` block shows its value in `i3xrocks.warning` or `i3xrocks.critical.color` (defaults `50` and `80`). The block's `-w`/`-c` switches and its `warning_threshold`/`critical_threshold` properties take precedence. Added after regolith-i3xrocks-config 5.5.3 |
+| i3xrocks.memory.warning_threshold, i3xrocks.memory.critical_threshold | X11 (i3xrocks) only: used memory in percent (swap for the `swap` instance) from which the `memory` block shows its value in `i3xrocks.warning` or `i3xrocks.critical.color` (defaults `80` and `95`). The block's `warning_threshold`/`critical_threshold` properties take precedence. Added after regolith-i3xrocks-config 5.5.3 |
+| i3xrocks.disk-capacity.warning_threshold, i3xrocks.disk-capacity.critical_threshold | X11 (i3xrocks) only: how full the disk is, in percent, from which the `disk-capacity` block shows its value in `i3xrocks.warning` or `i3xrocks.critical.color` (defaults `80` and `90`). The block's `warning_threshold`/`critical_threshold` properties take precedence. Added after regolith-i3xrocks-config 5.5.3 |
