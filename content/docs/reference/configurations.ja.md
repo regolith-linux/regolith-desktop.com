@@ -19,7 +19,7 @@ description: >
 `~/.config/regolith3/i3/config`にi3の設定ファイルを追加すると、Xresourcesやlookを含むすべてのRegolithの設定がオーバーライドされます。
 {{< /callout >}}
 
-## 履歴
+## 履歴 {#history}
 
 ### 部分設定
 

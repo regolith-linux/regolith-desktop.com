@@ -19,7 +19,7 @@ description: >
 Ajouter une config i3 dans `~/.config/regolith3/i3/config` va écraser toutes les configurations Regolith, y compris pour les Xresources et les thèmes.
 {{< /callout >}}
 
-## Historique
+## Historique {#history}
 
 ### Configurations partielles
 
