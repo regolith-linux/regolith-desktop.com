@@ -7,54 +7,54 @@ description: >
 prev: /docs/reference
 ---
 
-| Action                                                                             | Key Binding                    |
-| ---------------------------------------------------------------------------------- | ------------------------------ |
-| [ Launch - Application ](#LaunchApplication)                                       | `⊞ Win` Space                  |
-| [ Launch - Browser ](#LaunchBrowser)                                               | `⊞ Win` `Shift` Enter          |
-| [ Launch - Command ](#LaunchCommand)                                               | `⊞ Win` `Shift` Space          |
-| [ Launch - File Browser ](#LaunchFileBrowser)                                      | `⊞ Win` `Shift` n              |
-| [ Launch - File Search ](#LaunchFileSearch)                                        | `⊞ Win` `Alt` Space            |
-| [ Launch - Notification Viewer ](#LaunchNotificationViewer)                        | `⊞ Win` n                      |
-| [ Launch - Terminal ](#LaunchTerminal)                                             | `⊞ Win` Enter                  |
-| [ Launch - This Dialog ](#LaunchThisDialog)                                        | `⊞ Win` `Shift` ?              |
-| [ Modify - Bluetooth Settings ](#ModifyBluetoothSettings)                          | `⊞ Win` b                      |
-| [ Modify - Carry Window to Workspace 1 - 10](#ModifyCarryWindowtoWorkspace1-10)    | `⊞ Win` `Alt` 0..9             |
-| [ Modify - Carry Window to Workspace 11 - 19 ](#ModifyCarryWindowtoWorkspace11-19) | `⊞ Win` `Alt` `Ctrl` 1..9      |
-| [ Modify - Containing Workspace ](#ModifyContainingWorkspace)                      | `⊞ Win` `Ctrl` `Shift` ↑ ↓ ← → |
-| [ Modify - Display Settings ](#ModifyDisplaySettings)                              | `⊞ Win` d                      |
-| [ Modify - Load Window Layout ](#ModifyLoadWindowLayout)                           | `⊞ Win` .                      |
-| [ Modify - Move Window to Workspace 1 - 10 ](#ModifyMoveWindowtoWorkspace1-10)     | `⊞ Win` `Shift` 0..9           |
-| [ Modify - Move Window to Workspace 11 - 19](#ModifyMoveWindowtoWorkspace11-19)    | `⊞ Win` `Ctrl` `Shift` 1..9    |
-| [ Modify - Move to Scratchpad ](#ModifyMovetoScratchpad)                           | `⊞ Win` `Ctrl` m               |
-| [ Modify - Next Window Orientation ](#ModifyNextWindowOrientation)                 | `⊞ Win` Backspace              |
-| [ Modify - Save Window Layout ](#ModifySaveWindowLayout)                           | `⊞ Win` ,                      |
-| [ Modify - Settings ](#ModifySettings)                                             | `⊞ Win` c                      |
-| [ Modify - Tile/Float Focus Toggle ](#ModifyTile/FloatFocusToggle)                 | `⊞ Win` `Shift` t              |
-| [ Modify - Toggle Bar ](#ModifyToggleBar)                                          | `⊞ Win` i                      |
-| [ Modify - Wifi Settings ](#ModifyWifiSettings)                                    | `⊞ Win` w                      |
-| [ Modify - Window Floating Toggle ](#ModifyWindowFloatingToggle)                   | `⊞ Win` `Shift` f              |
-| [ Modify - Window Fullscreen Toggle ](#ModifyWindowFullscreenToggle)               | `⊞ Win` f                      |
-| [ Modify - Window Layout Mode ](#ModifyWindowLayoutMode)                           | `⊞ Win` t                      |
-| [ Modify - Window Position ](#ModifyWindowPosition)                                | `⊞ Win` `Shift` k j h l        |
-| [ Modify - Window Position ](#ModifyWindowPosition)                                | `⊞ Win` `Shift` ↑ ↓ ← →        |
-| [ Navigate - Next Workspace ](#NavigateNextWorkspace)                              | `⊞ Win` Tab                    |
-| [ Navigate - Next Workspace ](#NavigateNextWorkspace)                              | `⊞ Win` `Alt` →                |
-| [ Navigate - Previous Workspace ](#NavigatePreviousWorkspace)                      | `⊞ Win` `Alt` ←                |
-| [ Navigate - Previous Workspace ](#NavigatePreviousWorkspace)                      | `⊞ Win` `Shift` Tab            |
-| [ Navigate - Relative Window ](#NavigateRelativeWindow)                            | `⊞ Win` k j h l                |
-| [ Navigate - Relative Window ](#NavigateRelativeWindow)                            | `⊞ Win` ↑ ↓ ← →                |
-| [ Navigate - Scratchpad ](#NavigateScratchpad)                                     | `⊞ Win` `Ctrl` a               |
-| [ Navigate - Window by Name ](#NavigateWindowbyName)                               | `⊞ Win` `Ctrl` Space           |
-| [ Navigate - Workspace 11 - 19 ](#NavigateWorkspace11-19)                          | `⊞ Win` `Ctrl` 1..9            |
-| [ Navigate - Workspaces 1-10 ](#NavigateWorkspaces1-10)                            | `⊞ Win` 0..9                   |
-| [ Resize - Enter Resize Mode ](#ResizeEnterResizeMode)                             | `⊞ Win` r                      |
-| [ Session - Exit App ](#SessionExitApp)                                            | `⊞ Win` `Shift` q              |
-| [ Session - Lock Screen ](#SessionLockScreen)                                      | `⊞ Win` Escape                 |
-| [ Session - Logout ](#SessionLogout)                                               | `⊞ Win` `Shift` e              |
-| [ Session - Power Down ](#SessionPowerDown)                                        | `⊞ Win` `Shift` p              |
-| [ Session - Reboot ](#SessionReboot)                                               | `⊞ Win` `Shift` b              |
-| [ Session - Refresh Session ](#SessionRefreshSession)                              | `⊞ Win` `Shift` r              |
-| [ Session - Reload i3 Config ](#SessionReloadi3Config)                             | `⊞ Win` `Shift` c              |
-| [ Session - Restart i3 ](#SessionRestarti3)                                        | `⊞ Win` `Ctrl` r               |
-| [ Session - Sleep ](#SessionSleep)                                                 | `⊞ Win` `Shift` s              |
-| [ Session - Terminate App ](#SessionTerminateApp)                                  | `⊞ Win` `Alt` q                |
+| Action                                     | Key Binding                    |
+| ------------------------------------------ | ------------------------------ |
+| Launch - Application                       | `⊞ Win` Space                  |
+| Launch - Browser                           | `⊞ Win` `Shift` Enter          |
+| Launch - Command                           | `⊞ Win` `Shift` Space          |
+| Launch - File Browser                      | `⊞ Win` `Shift` n              |
+| Launch - File Search                       | `⊞ Win` `Alt` Space            |
+| Launch - Notification Viewer               | `⊞ Win` n                      |
+| Launch - Terminal                          | `⊞ Win` Enter                  |
+| Launch - This Dialog                       | `⊞ Win` `Shift` ?              |
+| Modify - Bluetooth Settings                | `⊞ Win` b                      |
+| Modify - Carry Window to Workspace 1 - 10  | `⊞ Win` `Alt` 0..9             |
+| Modify - Carry Window to Workspace 11 - 19 | `⊞ Win` `Alt` `Ctrl` 1..9      |
+| Modify - Containing Workspace              | `⊞ Win` `Ctrl` `Shift` ↑ ↓ ← → |
+| Modify - Display Settings                  | `⊞ Win` d                      |
+| Modify - Load Window Layout                | `⊞ Win` .                      |
+| Modify - Move Window to Workspace 1 - 10   | `⊞ Win` `Shift` 0..9           |
+| Modify - Move Window to Workspace 11 - 19  | `⊞ Win` `Ctrl` `Shift` 1..9    |
+| Modify - Move to Scratchpad                | `⊞ Win` `Ctrl` m               |
+| Modify - Next Window Orientation           | `⊞ Win` Backspace              |
+| Modify - Save Window Layout                | `⊞ Win` ,                      |
+| Modify - Settings                          | `⊞ Win` c                      |
+| Modify - Tile/Float Focus Toggle           | `⊞ Win` `Shift` t              |
+| Modify - Toggle Bar                        | `⊞ Win` i                      |
+| Modify - Wifi Settings                     | `⊞ Win` w                      |
+| Modify - Window Floating Toggle            | `⊞ Win` `Shift` f              |
+| Modify - Window Fullscreen Toggle          | `⊞ Win` f                      |
+| Modify - Window Layout Mode                | `⊞ Win` t                      |
+| Modify - Window Position                   | `⊞ Win` `Shift` k j h l        |
+| Modify - Window Position                   | `⊞ Win` `Shift` ↑ ↓ ← →        |
+| Navigate - Next Workspace                  | `⊞ Win` Tab                    |
+| Navigate - Next Workspace                  | `⊞ Win` `Alt` →                |
+| Navigate - Previous Workspace              | `⊞ Win` `Alt` ←                |
+| Navigate - Previous Workspace              | `⊞ Win` `Shift` Tab            |
+| Navigate - Relative Window                 | `⊞ Win` k j h l                |
+| Navigate - Relative Window                 | `⊞ Win` ↑ ↓ ← →                |
+| Navigate - Scratchpad                      | `⊞ Win` `Ctrl` a               |
+| Navigate - Window by Name                  | `⊞ Win` `Ctrl` Space           |
+| Navigate - Workspace 11 - 19               | `⊞ Win` `Ctrl` 1..9            |
+| Navigate - Workspaces 1-10                 | `⊞ Win` 0..9                   |
+| Resize - Enter Resize Mode                 | `⊞ Win` r                      |
+| Session - Exit App                         | `⊞ Win` `Shift` q              |
+| Session - Lock Screen                      | `⊞ Win` Escape                 |
+| Session - Logout                           | `⊞ Win` `Shift` e              |
+| Session - Power Down                       | `⊞ Win` `Shift` p              |
+| Session - Reboot                           | `⊞ Win` `Shift` b              |
+| Session - Refresh Session                  | `⊞ Win` `Shift` r              |
+| Session - Reload i3 Config                 | `⊞ Win` `Shift` c              |
+| Session - Restart i3                       | `⊞ Win` `Ctrl` r               |
+| Session - Sleep                            | `⊞ Win` `Shift` s              |
+| Session - Terminate App                    | `⊞ Win` `Alt` q                |

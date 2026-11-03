@@ -236,4 +236,4 @@ Note that `experimental`, `unstable`, and `testing` suites only have `main` comp
 
 ## Upgrading from 2.x to 3.x
 
-以前のバージョンのRegolithからアップグレードする場合は[リリースノート](/docs/reference/Releases/regolith-3.2-release-notes) を、特に2.xからの場合は[移行ガイド](/docs/reference/Releases/regolith-3.0-release-notes/#migration-guide)を参照してください。
+以前のバージョンのRegolithからアップグレードする場合は[リリースノート](/docs/reference/releases/regolith-3.2-release-notes/) を、特に2.xからの場合は[移行ガイド](/docs/reference/releases/regolith-3.0-release-notes/#migration-guide)を参照してください。
