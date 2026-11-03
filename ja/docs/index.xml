@@ -687,8 +687,8 @@ title="Copy code"
 &lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">&lt;code>~/.config/regolith3/i3/config&lt;/code>にi3の設定ファイルを追加すると、Xresourcesやlookを含むすべてのRegolithの設定がオーバーライドされます。&lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;h2>履歴&lt;span class="hx-absolute -hx-mt-20" id="履歴">&lt;/span>
-&lt;a href="#%e5%b1%a5%e6%ad%b4" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>部分設定&lt;span class="hx-absolute -hx-mt-20" id="部分設定">&lt;/span>
+&lt;h2>履歴&lt;span class="hx-absolute -hx-mt-20" id="history">&lt;/span>
+&lt;a href="#history" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>部分設定&lt;span class="hx-absolute -hx-mt-20" id="部分設定">&lt;/span>
 &lt;a href="#%e9%83%a8%e5%88%86%e8%a8%ad%e5%ae%9a" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Regolith 2.0では、&lt;code>i3&lt;/code>が&lt;a href="https://i3wm.org/downloads/RELEASE-NOTES-4.20.txt" target="_blank" rel="noopener">4.20&lt;/a>になったことで部分設定のサポートが追加されます。これは&lt;a href="https://i3wm.org/docs/userguide.html#include" target="_blank" rel="noopener">includes&lt;/a>によって行われます。このincludesのサポートにより、Regolith 2.0がパッケージマネージャーを使用して、既定の部分設定を追加もしくは削除することができます。パッケージのインストールや削除により、 i3設定を特定の設定にカスタマイズしながら、設定を変更する必要のない部分については、上流の変更を追跡できます。&lt;/p>
 &lt;p>&lt;code>/etc/regolith/i3/config&lt;/code>にあるrootのRegolith設定ファイルは、部分設定を次のように読み込みます：&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">

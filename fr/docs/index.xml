@@ -924,8 +924,8 @@ title="Copy code"
 &lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">Ajouter une config i3 dans &lt;code>~/.config/regolith3/i3/config&lt;/code> va écraser toutes les configurations Regolith, y compris pour les Xresources et les thèmes.&lt;/div>
 &lt;/div>
 &lt;/div>
-&lt;h2>Historique&lt;span class="hx-absolute -hx-mt-20" id="historique">&lt;/span>
-&lt;a href="#historique" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Configurations partielles&lt;span class="hx-absolute -hx-mt-20" id="configurations-partielles">&lt;/span>
+&lt;h2>Historique&lt;span class="hx-absolute -hx-mt-20" id="history">&lt;/span>
+&lt;a href="#history" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Configurations partielles&lt;span class="hx-absolute -hx-mt-20" id="configurations-partielles">&lt;/span>
 &lt;a href="#configurations-partielles" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Regolith 2.0 ajoute la gestion de configurations partielles suite à l&amp;rsquo;ajout de la fonctionnalité dans i3 récemment (&lt;a href="https://i3wm.org/downloads/RELEASE-NOTES-4.20.txt" target="_blank" rel="noopener">i3 4.20&lt;/a>). Cela est réalisé en utilisant les &lt;a href="https://i3wm.org/docs/userguide.html#include" target="_blank" rel="noopener">inclusions&lt;/a>.
 La gestion des inclusions permet à Regolith 2.0 d&amp;rsquo;utiliser le gestionnaire de paquet pour ajouter ou supprimer des configurations partielles par défaut.
 En installant ou en supprimant des paquers, la configuration de i3 peut être personnalisée selon les préférences tout en suivant les mises à jour de configuration.&lt;/p>
