@@ -171,7 +171,7 @@ supported on which OS distributions.&lt;/p>
 &lt;/tbody>
 &lt;/table></description></item><item><title>Install</title><link>https://regolith-desktop.com/fr/docs/using-regolith/install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/fr/docs/using-regolith/install/</guid><description>
 &lt;h2>Upgrading to 3.x&lt;span class="hx-absolute -hx-mt-20" id="upgrading-to-3x">&lt;/span>
-&lt;a href="#upgrading-to-3x" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>If you&amp;rsquo;re upgrading from an earlier version of Regolith, you may be interested in reading &lt;a href="https://regolith-desktop.com/docs/reference/Releases/regolith-3.3-release-notes" >the release notes&lt;/a> and if coming from 2.x, the &lt;a href="https://regolith-desktop.com/docs/reference/Releases/regolith-3.0-release-notes/#migration-guide" >migration guide&lt;/a>.&lt;/p>
+&lt;a href="#upgrading-to-3x" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>If you&amp;rsquo;re upgrading from an earlier version of Regolith, you may be interested in reading &lt;a href="https://regolith-desktop.com/docs/reference/releases/regolith-3.3-release-notes/" >the release notes&lt;/a> and if coming from 2.x, the &lt;a href="https://regolith-desktop.com/docs/reference/releases/regolith-3.0-release-notes/#migration-guide" >migration guide&lt;/a>.&lt;/p>
 &lt;h2>Supported Operating Systems&lt;span class="hx-absolute -hx-mt-20" id="supported-operating-systems">&lt;/span>
 &lt;a href="#supported-operating-systems" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Ubuntu&lt;span class="hx-absolute -hx-mt-20" id="ubuntu">&lt;/span>
 &lt;a href="#ubuntu" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-scrollbar hx-overflow-x-auto hx-overflow-y-hidden hx-overscroll-x-contain">
@@ -674,7 +674,7 @@ title="Copy code"
 &lt;p>From Regolith 3.3 onward, all releases will be published in the common archive repository separated by a high level distro (e.g. &lt;code>debian&lt;/code>, &lt;code>ubuntu&lt;/code>) folder and corresponding codename subfolders. The structure is split furthermore into different suites and components. As such, users wishing to have their package manager always install the latest version, they should use &lt;code>main&lt;/code> component of &lt;code>stable&lt;/code> suite. Otherwise a fixed version component (for example &lt;code>v3.3&lt;/code>, &lt;code>v3.2&lt;/code>, etc) can be used alongside &lt;code>stable&lt;/code> component.&lt;/p>
 &lt;p>Note that &lt;code>experimental&lt;/code>, &lt;code>unstable&lt;/code>, and &lt;code>testing&lt;/code> suites only have &lt;code>main&lt;/code> component.&lt;/p>
 &lt;h2>Upgrading from 2.x to 3.x&lt;span class="hx-absolute -hx-mt-20" id="upgrading-from-2x-to-3x">&lt;/span>
-&lt;a href="#upgrading-from-2x-to-3x" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>If you&amp;rsquo;re upgrading from an earlier major version of Regolith, you may be interested in reading &lt;a href="https://regolith-desktop.com/docs/reference/Releases/regolith-3.2-release-notes" >the release notes&lt;/a> and if coming from 2.x, the &lt;a href="https://regolith-desktop.com/docs/reference/Releases/regolith-3.0-release-notes/#migration-guide" >migration guide&lt;/a>.&lt;/p></description></item><item><title>Raccourcis clavier</title><link>https://regolith-desktop.com/fr/docs/reference/keybindings/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/fr/docs/reference/keybindings/</guid><description>
+&lt;a href="#upgrading-from-2x-to-3x" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>If you&amp;rsquo;re upgrading from an earlier major version of Regolith, you may be interested in reading &lt;a href="https://regolith-desktop.com/docs/reference/releases/regolith-3.2-release-notes/" >the release notes&lt;/a> and if coming from 2.x, the &lt;a href="https://regolith-desktop.com/docs/reference/releases/regolith-3.0-release-notes/#migration-guide" >migration guide&lt;/a>.&lt;/p></description></item><item><title>Raccourcis clavier</title><link>https://regolith-desktop.com/fr/docs/reference/keybindings/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/fr/docs/reference/keybindings/</guid><description>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -684,199 +684,199 @@ title="Copy code"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;a href="#LauncherApplication" > Lanceur - Application &lt;/a>&lt;/td>
+&lt;td>Lanceur - Application&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> Space&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#LauncherBrowser" > Lanceur - Navigateur Web &lt;/a>&lt;/td>
+&lt;td>Lanceur - Navigateur Web&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> Enter&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#LauncherCommand" > Lanceur - Terminal &lt;/a>&lt;/td>
+&lt;td>Lanceur - Terminal&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> Space&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#LauncherFileBrowser" > Lanceur - Fichiers &lt;/a>&lt;/td>
+&lt;td>Lanceur - Fichiers&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> n&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#LauncherFileSearch" > Lanceur - Recherche de fichier &lt;/a>&lt;/td>
+&lt;td>Lanceur - Recherche de fichier&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Alt&lt;/code> Space&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#LauncherNotificationViewer" > Lanceur - Panneau des notifications &lt;/a>&lt;/td>
+&lt;td>Lanceur - Panneau des notifications&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> n&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#LauncherTerminal" > Lanceur - Terminal &lt;/a>&lt;/td>
+&lt;td>Lanceur - Terminal&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> Enter&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#LauncherThisDialog" > Lanceur - Ce dialogue &lt;/a>&lt;/td>
+&lt;td>Lanceur - Ce dialogue&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> ?&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyBluetoothSettings" > Modification - Paramètres Bluetooth &lt;/a>&lt;/td>
+&lt;td>Modification - Paramètres Bluetooth&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> b&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyCarryWindowtoWorkspace1-10" > Modification - Déplacer la fenêtre vers l&amp;rsquo;espace de travail en gardant le focus 1 - 10&lt;/a>&lt;/td>
+&lt;td>Modification - Déplacer la fenêtre vers l&amp;rsquo;espace de travail en gardant le focus 1 - 10&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Alt&lt;/code> 0..9&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyCarryWindowtoWorkspace11-19" > Modification - Déplacer la fenêtre vers l&amp;rsquo;espace de travail en gardant le focus 11 - 19 &lt;/a>&lt;/td>
+&lt;td>Modification - Déplacer la fenêtre vers l&amp;rsquo;espace de travail en gardant le focus 11 - 19&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Alt&lt;/code> &lt;code>Ctrl&lt;/code> 1..9&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyContainingWorkspace" > Modification - Espace de travail contenant &lt;/a>&lt;/td>
+&lt;td>Modification - Espace de travail contenant&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Ctrl&lt;/code> &lt;code>Shift&lt;/code> ↑ ↓ ← →&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyDisplaySettings" > Modification - Paramètres d&amp;rsquo;affichage &lt;/a>&lt;/td>
+&lt;td>Modification - Paramètres d&amp;rsquo;affichage&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> d&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyLoadWindowLayout" > Modification - Charge la disposition fenêtre &lt;/a>&lt;/td>
+&lt;td>Modification - Charge la disposition fenêtre&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> .&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyMoveWindowtoWorkspace1-10" > Modification - Déplacer la fenêtre vers l&amp;rsquo;espace de travail 1 - 10 &lt;/a>&lt;/td>
+&lt;td>Modification - Déplacer la fenêtre vers l&amp;rsquo;espace de travail 1 - 10&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> 0..9&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyMoveWindowtoWorkspace11-19" > Modification - Déplacer la fenêtre vers l&amp;rsquo;espace de travail 11 - 19&lt;/a>&lt;/td>
+&lt;td>Modification - Déplacer la fenêtre vers l&amp;rsquo;espace de travail 11 - 19&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Ctrl&lt;/code> &lt;code>Shift&lt;/code> 1..9&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyMovetoScratchpad" > Modification - Se déplacer vers le bloc-note &lt;/a>&lt;/td>
+&lt;td>Modification - Se déplacer vers le bloc-note&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Ctrl&lt;/code> m&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyNextWindowOrientation" > Modification - Orientation de fenêtre suivante &lt;/a>&lt;/td>
+&lt;td>Modification - Orientation de fenêtre suivante&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> Backspace&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifySaveWindowLayout" > Modification - Sauvegarde la disposition des fenêtres &lt;/a>&lt;/td>
+&lt;td>Modification - Sauvegarde la disposition des fenêtres&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> ,&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifySettings" > Modification - Paramètres &lt;/a>&lt;/td>
+&lt;td>Modification - Paramètres&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> c&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyTile/FloatFocusToggle" > Modification - Active/Désactive le mode flottant&lt;/a>&lt;/td>
+&lt;td>Modification - Active/Désactive le mode flottant&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> t&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyToggleBar" > Modification - Affiche/Désaffiche la barre &lt;/a>&lt;/td>
+&lt;td>Modification - Affiche/Désaffiche la barre&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> i&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyWifiSettings" > Modification - Paramètres WiFi &lt;/a>&lt;/td>
+&lt;td>Modification - Paramètres WiFi&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> w&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyWindowFloatingToggle" > Modification - Active le mode flottant pour la fenêtre&lt;/a>&lt;/td>
+&lt;td>Modification - Active le mode flottant pour la fenêtre&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> f&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyWindowFullscreenToggle" > Modification - Active le mode plein écran pour la fenêtre &lt;/a>&lt;/td>
+&lt;td>Modification - Active le mode plein écran pour la fenêtre&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> f&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyWindowLayoutMode" > Modification - Modifie la disposition des fenêtres &lt;/a>&lt;/td>
+&lt;td>Modification - Modifie la disposition des fenêtres&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> t&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyWindowPosition" > Modification - Modifie la position des fenêtres &lt;/a>&lt;/td>
+&lt;td>Modification - Modifie la position des fenêtres&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> k j h l&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyWindowPosition" > Modification - Modifie la position des fenêtres &lt;/a>&lt;/td>
+&lt;td>Modification - Modifie la position des fenêtres&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> ↑ ↓ ← →&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#NavigateNextWorkspace" > Navigation - Espace de travail suivant &lt;/a>&lt;/td>
+&lt;td>Navigation - Espace de travail suivant&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> Tab&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#NavigateNextWorkspace" > Navigation - Espace de travail suivant &lt;/a>&lt;/td>
+&lt;td>Navigation - Espace de travail suivant&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Alt&lt;/code> →&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#NavigatePreviousWorkspace" > Navigation - Espace de travai précédent &lt;/a>&lt;/td>
+&lt;td>Navigation - Espace de travai précédent&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Alt&lt;/code> ←&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#NavigatePreviousWorkspace" > Navigation - Espace de travail précédent &lt;/a>&lt;/td>
+&lt;td>Navigation - Espace de travail précédent&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> Tab&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#NavigateRelativeWindow" > Navigation - Change la fenêtre focalisée &lt;/a>&lt;/td>
+&lt;td>Navigation - Change la fenêtre focalisée&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> k j h l&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#NavigateRelativeWindow" > Navigation - Change la fenêtre focalisée &lt;/a>&lt;/td>
+&lt;td>Navigation - Change la fenêtre focalisée&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> ↑ ↓ ← →&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#NavigateScratchpad" > Navigation - Scratchpad &lt;/a>&lt;/td>
+&lt;td>Navigation - Scratchpad&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Ctrl&lt;/code> a&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#NavigateWindowbyName" > Navigation - Lister les fenêtres par nom &lt;/a>&lt;/td>
+&lt;td>Navigation - Lister les fenêtres par nom&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Ctrl&lt;/code> Space&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#NavigateWorkspace11-19" > Navigation - Espaces de travail 11 - 19 &lt;/a>&lt;/td>
+&lt;td>Navigation - Espaces de travail 11 - 19&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Ctrl&lt;/code> 1..9&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#NavigateWorkspaces1-10" > Navigation - Espaces de travail 1-10 &lt;/a>&lt;/td>
+&lt;td>Navigation - Espaces de travail 1-10&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> 0..9&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ResizeEnterResizeMode" > Redimmensionnement - Activer/Désactiver le mode redimensionnement&lt;/a>&lt;/td>
+&lt;td>Redimmensionnement - Activer/Désactiver le mode redimensionnement&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> r&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#SessionExitApp" > Session - Quitter l&amp;rsquo;application &lt;/a>&lt;/td>
+&lt;td>Session - Quitter l&amp;rsquo;application&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> q&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#SessionLockScreen" > Session - Verouiller l&amp;rsquo;écran &lt;/a>&lt;/td>
+&lt;td>Session - Verouiller l&amp;rsquo;écran&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> Escape&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#SessionLogout" > Session - Fermer la session &lt;/a>&lt;/td>
+&lt;td>Session - Fermer la session&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> e&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#SessionPowerDown" > Session - Éteindre &lt;/a>&lt;/td>
+&lt;td>Session - Éteindre&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> p&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#SessionReboot" > Session - Redémarrer &lt;/a>&lt;/td>
+&lt;td>Session - Redémarrer&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> b&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#SessionRefreshSession" > Session - Rafraîchir la session &lt;/a>&lt;/td>
+&lt;td>Session - Rafraîchir la session&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> r&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#SessionReloadi3Config" > Session - Recharger la configuration i3 &lt;/a>&lt;/td>
+&lt;td>Session - Recharger la configuration i3&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> c&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#SessionRestarti3" > Session - Redémarrer i3 &lt;/a>&lt;/td>
+&lt;td>Session - Redémarrer i3&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Ctrl&lt;/code> r&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#SessionSleep" > Session - Veille &lt;/a>&lt;/td>
+&lt;td>Session - Veille&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> s&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#SessionTerminateApp" > Session - Fermer l&amp;rsquo;app &lt;/a>&lt;/td>
+&lt;td>Session - Fermer l&amp;rsquo;app&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Alt&lt;/code> q&lt;/td>
 &lt;/tr>
 &lt;/tbody>

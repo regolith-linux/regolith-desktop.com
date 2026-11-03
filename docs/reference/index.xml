@@ -8,199 +8,199 @@
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;a href="#LaunchApplication" > Launch - Application &lt;/a>&lt;/td>
+&lt;td>Launch - Application&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> Space&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#LaunchBrowser" > Launch - Browser &lt;/a>&lt;/td>
+&lt;td>Launch - Browser&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> Enter&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#LaunchCommand" > Launch - Command &lt;/a>&lt;/td>
+&lt;td>Launch - Command&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> Space&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#LaunchFileBrowser" > Launch - File Browser &lt;/a>&lt;/td>
+&lt;td>Launch - File Browser&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> n&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#LaunchFileSearch" > Launch - File Search &lt;/a>&lt;/td>
+&lt;td>Launch - File Search&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Alt&lt;/code> Space&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#LaunchNotificationViewer" > Launch - Notification Viewer &lt;/a>&lt;/td>
+&lt;td>Launch - Notification Viewer&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> n&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#LaunchTerminal" > Launch - Terminal &lt;/a>&lt;/td>
+&lt;td>Launch - Terminal&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> Enter&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#LaunchThisDialog" > Launch - This Dialog &lt;/a>&lt;/td>
+&lt;td>Launch - This Dialog&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> ?&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyBluetoothSettings" > Modify - Bluetooth Settings &lt;/a>&lt;/td>
+&lt;td>Modify - Bluetooth Settings&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> b&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyCarryWindowtoWorkspace1-10" > Modify - Carry Window to Workspace 1 - 10&lt;/a>&lt;/td>
+&lt;td>Modify - Carry Window to Workspace 1 - 10&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Alt&lt;/code> 0..9&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyCarryWindowtoWorkspace11-19" > Modify - Carry Window to Workspace 11 - 19 &lt;/a>&lt;/td>
+&lt;td>Modify - Carry Window to Workspace 11 - 19&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Alt&lt;/code> &lt;code>Ctrl&lt;/code> 1..9&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyContainingWorkspace" > Modify - Containing Workspace &lt;/a>&lt;/td>
+&lt;td>Modify - Containing Workspace&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Ctrl&lt;/code> &lt;code>Shift&lt;/code> ↑ ↓ ← →&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyDisplaySettings" > Modify - Display Settings &lt;/a>&lt;/td>
+&lt;td>Modify - Display Settings&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> d&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyLoadWindowLayout" > Modify - Load Window Layout &lt;/a>&lt;/td>
+&lt;td>Modify - Load Window Layout&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> .&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyMoveWindowtoWorkspace1-10" > Modify - Move Window to Workspace 1 - 10 &lt;/a>&lt;/td>
+&lt;td>Modify - Move Window to Workspace 1 - 10&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> 0..9&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyMoveWindowtoWorkspace11-19" > Modify - Move Window to Workspace 11 - 19&lt;/a>&lt;/td>
+&lt;td>Modify - Move Window to Workspace 11 - 19&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Ctrl&lt;/code> &lt;code>Shift&lt;/code> 1..9&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyMovetoScratchpad" > Modify - Move to Scratchpad &lt;/a>&lt;/td>
+&lt;td>Modify - Move to Scratchpad&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Ctrl&lt;/code> m&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyNextWindowOrientation" > Modify - Next Window Orientation &lt;/a>&lt;/td>
+&lt;td>Modify - Next Window Orientation&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> Backspace&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifySaveWindowLayout" > Modify - Save Window Layout &lt;/a>&lt;/td>
+&lt;td>Modify - Save Window Layout&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> ,&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifySettings" > Modify - Settings &lt;/a>&lt;/td>
+&lt;td>Modify - Settings&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> c&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyTile/FloatFocusToggle" > Modify - Tile/Float Focus Toggle &lt;/a>&lt;/td>
+&lt;td>Modify - Tile/Float Focus Toggle&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> t&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyToggleBar" > Modify - Toggle Bar &lt;/a>&lt;/td>
+&lt;td>Modify - Toggle Bar&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> i&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyWifiSettings" > Modify - Wifi Settings &lt;/a>&lt;/td>
+&lt;td>Modify - Wifi Settings&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> w&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyWindowFloatingToggle" > Modify - Window Floating Toggle &lt;/a>&lt;/td>
+&lt;td>Modify - Window Floating Toggle&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> f&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyWindowFullscreenToggle" > Modify - Window Fullscreen Toggle &lt;/a>&lt;/td>
+&lt;td>Modify - Window Fullscreen Toggle&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> f&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyWindowLayoutMode" > Modify - Window Layout Mode &lt;/a>&lt;/td>
+&lt;td>Modify - Window Layout Mode&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> t&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyWindowPosition" > Modify - Window Position &lt;/a>&lt;/td>
+&lt;td>Modify - Window Position&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> k j h l&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ModifyWindowPosition" > Modify - Window Position &lt;/a>&lt;/td>
+&lt;td>Modify - Window Position&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> ↑ ↓ ← →&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#NavigateNextWorkspace" > Navigate - Next Workspace &lt;/a>&lt;/td>
+&lt;td>Navigate - Next Workspace&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> Tab&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#NavigateNextWorkspace" > Navigate - Next Workspace &lt;/a>&lt;/td>
+&lt;td>Navigate - Next Workspace&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Alt&lt;/code> →&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#NavigatePreviousWorkspace" > Navigate - Previous Workspace &lt;/a>&lt;/td>
+&lt;td>Navigate - Previous Workspace&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Alt&lt;/code> ←&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#NavigatePreviousWorkspace" > Navigate - Previous Workspace &lt;/a>&lt;/td>
+&lt;td>Navigate - Previous Workspace&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> Tab&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#NavigateRelativeWindow" > Navigate - Relative Window &lt;/a>&lt;/td>
+&lt;td>Navigate - Relative Window&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> k j h l&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#NavigateRelativeWindow" > Navigate - Relative Window &lt;/a>&lt;/td>
+&lt;td>Navigate - Relative Window&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> ↑ ↓ ← →&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#NavigateScratchpad" > Navigate - Scratchpad &lt;/a>&lt;/td>
+&lt;td>Navigate - Scratchpad&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Ctrl&lt;/code> a&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#NavigateWindowbyName" > Navigate - Window by Name &lt;/a>&lt;/td>
+&lt;td>Navigate - Window by Name&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Ctrl&lt;/code> Space&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#NavigateWorkspace11-19" > Navigate - Workspace 11 - 19 &lt;/a>&lt;/td>
+&lt;td>Navigate - Workspace 11 - 19&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Ctrl&lt;/code> 1..9&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#NavigateWorkspaces1-10" > Navigate - Workspaces 1-10 &lt;/a>&lt;/td>
+&lt;td>Navigate - Workspaces 1-10&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> 0..9&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#ResizeEnterResizeMode" > Resize - Enter Resize Mode &lt;/a>&lt;/td>
+&lt;td>Resize - Enter Resize Mode&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> r&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#SessionExitApp" > Session - Exit App &lt;/a>&lt;/td>
+&lt;td>Session - Exit App&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> q&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#SessionLockScreen" > Session - Lock Screen &lt;/a>&lt;/td>
+&lt;td>Session - Lock Screen&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> Escape&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#SessionLogout" > Session - Logout &lt;/a>&lt;/td>
+&lt;td>Session - Logout&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> e&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#SessionPowerDown" > Session - Power Down &lt;/a>&lt;/td>
+&lt;td>Session - Power Down&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> p&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#SessionReboot" > Session - Reboot &lt;/a>&lt;/td>
+&lt;td>Session - Reboot&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> b&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#SessionRefreshSession" > Session - Refresh Session &lt;/a>&lt;/td>
+&lt;td>Session - Refresh Session&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> r&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#SessionReloadi3Config" > Session - Reload i3 Config &lt;/a>&lt;/td>
+&lt;td>Session - Reload i3 Config&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> c&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#SessionRestarti3" > Session - Restart i3 &lt;/a>&lt;/td>
+&lt;td>Session - Restart i3&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Ctrl&lt;/code> r&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#SessionSleep" > Session - Sleep &lt;/a>&lt;/td>
+&lt;td>Session - Sleep&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Shift&lt;/code> s&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;a href="#SessionTerminateApp" > Session - Terminate App &lt;/a>&lt;/td>
+&lt;td>Session - Terminate App&lt;/td>
 &lt;td>&lt;code>⊞ Win&lt;/code> &lt;code>Alt&lt;/code> q&lt;/td>
 &lt;/tr>
 &lt;/tbody>
@@ -1022,7 +1022,7 @@ class="hextra-card hx-group hx-flex hx-flex-col hx-justify-start hx-overflow-hid
 class="hextra-card hx-group hx-flex hx-flex-col hx-justify-start hx-overflow-hidden hx-rounded-lg hx-border hx-border-gray-200 hx-text-current hx-no-underline dark:hx-shadow-none hover:hx-shadow-gray-100 dark:hover:hx-shadow-none hx-shadow-gray-100 active:hx-shadow-sm active:hx-shadow-gray-200 hx-transition-all hx-duration-200 hover:hx-border-gray-300 hx-bg-transparent hx-shadow-sm dark:hx-border-neutral-800 hover:hx-bg-slate-50 hover:hx-shadow-md dark:hover:hx-border-neutral-700 dark:hover:hx-bg-neutral-900"href="regolith-2.0-release-notes/"
 >&lt;span class="hextra-card-icon hx-flex hx-font-semibold hx-items-start hx-gap-2 hx-p-4 hx-text-gray-700 hover:hx-text-gray-900 dark:hx-text-neutral-200 dark:hover:hx-text-neutral-50">2.0 Release Notes&lt;/span>&lt;/a>
 &lt;a
-class="hextra-card hx-group hx-flex hx-flex-col hx-justify-start hx-overflow-hidden hx-rounded-lg hx-border hx-border-gray-200 hx-text-current hx-no-underline dark:hx-shadow-none hover:hx-shadow-gray-100 dark:hover:hx-shadow-none hx-shadow-gray-100 active:hx-shadow-sm active:hx-shadow-gray-200 hx-transition-all hx-duration-200 hover:hx-border-gray-300 hx-bg-transparent hx-shadow-sm dark:hx-border-neutral-800 hover:hx-bg-slate-50 hover:hx-shadow-md dark:hover:hx-border-neutral-700 dark:hover:hx-bg-neutral-900"href="regolith-1.6-release-notes/"
+class="hextra-card hx-group hx-flex hx-flex-col hx-justify-start hx-overflow-hidden hx-rounded-lg hx-border hx-border-gray-200 hx-text-current hx-no-underline dark:hx-shadow-none hover:hx-shadow-gray-100 dark:hover:hx-shadow-none hx-shadow-gray-100 active:hx-shadow-sm active:hx-shadow-gray-200 hx-transition-all hx-duration-200 hover:hx-border-gray-300 hx-bg-transparent hx-shadow-sm dark:hx-border-neutral-800 hover:hx-bg-slate-50 hover:hx-shadow-md dark:hover:hx-border-neutral-700 dark:hover:hx-bg-neutral-900"href="regolith-1.6.0-release-notes/"
 >&lt;span class="hextra-card-icon hx-flex hx-font-semibold hx-items-start hx-gap-2 hx-p-4 hx-text-gray-700 hover:hx-text-gray-900 dark:hx-text-neutral-200 dark:hover:hx-text-neutral-50">1.6 Release Notes&lt;/span>&lt;/a>
 &lt;a
 class="hextra-card hx-group hx-flex hx-flex-col hx-justify-start hx-overflow-hidden hx-rounded-lg hx-border hx-border-gray-200 hx-text-current hx-no-underline dark:hx-shadow-none hover:hx-shadow-gray-100 dark:hover:hx-shadow-none hx-shadow-gray-100 active:hx-shadow-sm active:hx-shadow-gray-200 hx-transition-all hx-duration-200 hover:hx-border-gray-300 hx-bg-transparent hx-shadow-sm dark:hx-border-neutral-800 hover:hx-bg-slate-50 hover:hx-shadow-md dark:hover:hx-border-neutral-700 dark:hover:hx-bg-neutral-900"href="regolith-1.5.3-release-notes/"
