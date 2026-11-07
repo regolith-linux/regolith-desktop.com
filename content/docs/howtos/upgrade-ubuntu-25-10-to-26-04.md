@@ -10,7 +10,7 @@ This page takes an Ubuntu 25.10 (Questing) system with Regolith 3.4, installed a
 The Ubuntu upgrader disables the Regolith package repository and removes a few Regolith packages, so some extra steps are needed before and after it runs. Do them in the order below.
 
 {{< callout type="warning" >}}
-Regolith has no stable release for Ubuntu 26.04 yet: `https://archive.regolith-desktop.com/ubuntu/stable` has no `resolute` suite. Until Regolith 3.5 is released, this page uses the **`testing`** suite, which is built from the same release tags that the stable release will use. [Move to the stable suite](#move-to-the-stable-release-later) once the install page lists it for Ubuntu 26.04.
+Regolith has no stable release for Ubuntu 26.04 yet: `https://archive.regolith-desktop.com/ubuntu/stable` has no `resolute` suite. Until Regolith 3.5 is released, this page uses the **`testing`** suite. It already carries the Regolith 3.5 packages, built from the same release tags that the stable release will use. [Move to the stable suite](#move-to-the-stable-release-later) once the install page lists it for Ubuntu 26.04.
 {{< /callout >}}
 
 ## Overview
@@ -21,7 +21,7 @@ Regolith has no stable release for Ubuntu 26.04 yet: `https://archive.regolith-d
 1. On the same console, point Regolith at `testing resolute` and upgrade the Regolith packages.
 1. Reboot, log in to both Regolith sessions, and clean up.
 
-The download is about 2.3 GB and the upgrade itself takes about an hour on a fast machine. On a laptop, plan 1.5 to 3 hours, and keep it on AC power.
+The download is about 2.3 GB, and the upgrade itself takes 45 minutes to an hour on a fast machine with a fast connection. On a laptop, plan 1.5 to 3 hours, and keep it on AC power.
 
 ## Before you start
 
@@ -130,7 +130,7 @@ Answer the upgrader's questions as follows. The package counts depend on your sy
 |---|---|---|
 | Release notes … `Continue [yN]` | **y** | |
 | **Foreign Packages Installed:** `regolith-powerd … Installed from: Regolith` … "Do you want to continue the upgrade anyways?" | **y** | Ubuntu 26.04 has an older package with the same name. Regolith's version is kept. |
-| "Do you want to start the upgrade? … packages are going to be removed …" `Continue [yN] Details [d]` | **y** | The removals include `regolith-control-center`, `regolith-i3-control-center-regolith`, `regolith-sway-control-center-regolith` and `xdg-desktop-portal-regolith`. Step 5 deals with them. |
+| "Do you want to start the upgrade? … packages are going to be removed …" `Continue [yN] Details [d]` | **y** | The removals include `regolith-control-center`, `regolith-i3-control-center-regolith` and `regolith-sway-control-center-regolith`, and `xdg-desktop-portal-regolith` if you have it. Step 5 deals with them. |
 | *(sometimes)* "Lock screen disabled … To continue please press [ENTER]" | **Enter** | Appears if a graphical session was open earlier in this boot. |
 | "Configuring kdump-tools: Should kdump-tools be enabled by default?" | **Enter** | Ubuntu's crash-dump service. Either answer works. |
 | "Remove obsolete packages? … packages are going to be removed." `Continue [yN]` | **N** | Keep everything until both sessions work; step 8 cleans up. |
@@ -165,7 +165,7 @@ sudo apt install regolith-desktop regolith-session-flashback regolith-look-lasca
 On ARM-based systems, replace `amd64` with `arm64` in the `Architectures:` line.
 {{< /callout >}}
 
-**Settings app.** If any of the following packages is not listed with `ii`, or `dpkg-query` reports that it finds no such package, the Settings app (opened with {{< keys "super,c" >}}) is missing:
+**Settings app.** `full-upgrade` normally brings the Settings app back. If any of the following packages is not listed with `ii`, or `dpkg-query` reports that it finds no such package, the Settings app (opened with {{< keys "super,c" >}}) is missing:
 
 ```bash
 dpkg-query -W -f='${db:Status-Abbrev} ${Package}\n' regolith-control-center regolith-i3-control-center-regolith regolith-sway-control-center-regolith
@@ -177,7 +177,7 @@ In that case, install it:
 sudo apt install regolith-control-center regolith-i3-control-center-regolith regolith-sway-control-center-regolith
 ```
 
-**Portal backend.** The upgrader removes `xdg-desktop-portal-regolith`. Don't install it again: this backend is deprecated and being retired, and nothing on Ubuntu 26.04 uses it. File choosers, screenshots and screen sharing are provided by the GTK, GNOME and wlroots portals, which the session packages configure through `xdg-desktop-portal-regolith-x11-config` and `xdg-desktop-portal-regolith-wayland-config`. These configuration packages are kept by the upgrade.
+**Portal backend.** If you had `xdg-desktop-portal-regolith` (older versions of the install page installed it), the upgrader removes it. Don't install it again: this backend is deprecated and being retired, and nothing on Ubuntu 26.04 uses it. File choosers, screenshots and screen sharing are provided by the GTK, GNOME and wlroots portals, which the session packages configure through `xdg-desktop-portal-regolith-x11-config` and `xdg-desktop-portal-regolith-wayland-config`. These configuration packages are kept by the upgrade.
 
 ### 6. Check that nothing you had is missing
 
@@ -186,7 +186,7 @@ comm -23 <(awk '{print $1}' ~/upgrade-backup/regolith-packages-before.txt | sort
 ```
 
 This lists the Regolith-related packages you had before the upgrade that are no longer installed. If it prints any, install them with `sudo apt install <names>`, with two exceptions:
-- `xdg-desktop-portal-regolith` is expected in the list. Leave it out (see **Portal backend** in step 5).
+- If you had `xdg-desktop-portal-regolith`, it is expected in the list. Leave it out (see **Portal backend** in step 5).
 - Packages that only existed for 25.10 and have a successor: for example `libwlroots-0.18` is replaced by `libwlroots-0.19`.
 
 ### 7. Reboot
@@ -196,12 +196,6 @@ sudo reboot
 ```
 
 The login screen should appear as usual. Log in once to **Regolith on X11** and once to **Regolith on Wayland** (if you use it), using the gear icon on the password screen, and go through the [checks](#check-the-result).
-
-**Ubuntu's "What's new" window.** If a "Welcome" / "What's new in Ubuntu 26.04" window opens when you log in to Regolith, click through it to **Finish** once. It is Ubuntu's upgrade wizard and keeps coming back at every login until you finish it. You can also dismiss it for good from a terminal:
-
-```bash
-mkdir -p ~/.config/gnome-initial-setup && touch ~/.config/gnome-initial-setup/upgrade-26.04-done
-```
 
 ### 8. Clean up
 
@@ -232,7 +226,8 @@ In both sessions:
 | Bar | Look at the bottom of the screen | X11: i3bar with i3xrocks. Wayland: swaybar with i3status-rs. |
 | Lock screen | {{< keys "super,escape" >}}, then type your password | The screen locks and unlocks. |
 | Settings | {{< keys "super,c" >}} | The Settings app opens, including Displays, Network, Sound and Power. |
-| Volume and brightness keys | Press them | The level changes. |
+| Volume and brightness keys | Press them | The level changes, and an on-screen indicator shows it. |
+| Look | {{< keys "super,alt,l" >}}, pick another look, Enter | The look changes. |
 | Suspend | `systemctl suspend`, then wake the machine | It resumes to the lock screen, and the password unlocks it. |
 
 On a laptop, also check Wi-Fi (`nmcli device`), the backlight (`ls /sys/class/backlight/`), external monitors and closing the lid.
@@ -248,7 +243,7 @@ cat /etc/apt/sources.list.d/regolith.sources
 ```
 
 What to expect on the `testing` suite:
-- `cat /etc/regolith/version` still says `REGOLITH_VERSION=3.4`. That is expected until Regolith 3.5 is released.
+- `cat /etc/regolith/version` says `REGOLITH_VERSION=3.5`, and `apt policy regolith-desktop` shows the installed version coming from `https://archive.regolith-desktop.com/ubuntu/testing`.
 - Some packages that both Ubuntu and Regolith ship, such as `trawld`, `gtklock`, `i3-wm` and `swayidle`, can come from Ubuntu rather than from the Regolith repository when Ubuntu 26.04 has the newer version (check with `apt policy <package>`). This is expected; don't pin the Regolith versions.
 
 ## Troubleshooting
@@ -258,9 +253,7 @@ What to expect on the `testing` suite:
 | <a id="black-screen-instead-of-the-login-screen"></a>**Black screen instead of the login screen** on the first 26.04 boot | The `sway-audio-idle-inhibit` link from step 3 is still there, and the reboot happened before step 5. | Press {{< keys "ctrl,alt,f3" >}}, log in, remove the link with the `sudo rm` command of [step 3](#3-remove-the-stale-sway-audio-idle-inhibit-link-if-it-exists), and run `sudo systemctl restart gdm3`. Then do step 5. |
 | `apt` finds no Regolith packages, and `regolith.list.disabled` is in `/etc/apt/sources.list.d/` | The upgrader disables every third-party repository. | Step 5. |
 | {{< keys "super,c" >}} does nothing | The upgrader removed the Settings app. | The Settings app part of step 5. |
-| X11 fonts and windows look smaller: your `Xft.dpi` setting is ignored | The X11 session on the `testing` suite starts GNOME's settings daemon, which sets the DPI to 96. | If this happens, set GNOME's text scaling to your DPI divided by 96, for example `gsettings set org.gnome.desktop.interface text-scaling-factor 1.15` for 110 DPI. |
 | The look changed after an update | No look was pinned. | `regolith-look set <your look>` (step 2). |
-| The volume changes in the Wayland session, but no volume bubble appears | A bug in the `regolith-avizo` package on the `testing` suite; 25.10 with Regolith 3.4 has it too. | Cosmetic: the bar shows the level. It goes away with a newer `regolith-avizo` release. |
 | `do-release-upgrade` says "Please install all available updates for your release before upgrading." | 25.10 updates are pending. | `sudo apt update && sudo apt full-upgrade`, then try again. |
 | `apt upgrade` says "The following packages have been kept back" for Regolith packages | Plain `upgrade` doesn't remove or replace packages. | Use `sudo apt full-upgrade`. |
 | Applications from PPAs are missing or old | The upgrader disabled all PPAs. | Re-enable them once they publish for `resolute` (step 8). |
@@ -324,9 +317,9 @@ sudo apt update && sudo apt full-upgrade
 
 The last `full-upgrade` is needed: while the pin is active, apt also downgrades Ubuntu packages that Regolith also ships (such as `trawld` and `gtklock`), and this puts Ubuntu's newer versions back.
 
-Afterwards, `cat /etc/regolith/version` should say `REGOLITH_VERSION=3.5`.
+Afterwards, `apt policy regolith-desktop` should show the installed version coming from `https://archive.regolith-desktop.com/ubuntu/stable`.
 
 ### Why `testing` and not `unstable`
 
-- `unstable` is rebuilt from the development branches, and rebuilds can be published under unchanged version numbers. An installed system never receives those later rebuilds, because apt sees no new version, so what you get depends on the day you installed.
+- `unstable` is rebuilt from the development branches after every change, with snapshot version numbers (`…regolith+git<date>…`). These sort above the released versions, so you would get untested changes, and leaving `unstable` later means downgrading.
 - Moving from `testing` to the stable release is a change of source. Moving from `unstable` needs the downgrade procedure above.
