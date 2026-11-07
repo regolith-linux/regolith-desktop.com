@@ -351,4 +351,4 @@ If you're upgrading from an earlier major version of Regolith, you may be intere
 
 ## Upgrading Ubuntu to a new release
 
-The Ubuntu release upgrader (`do-release-upgrade`) disables the Regolith package repository and removes some Regolith packages. To upgrade Ubuntu 25.10 to 26.04 LTS with Regolith installed, follow [Upgrade from Ubuntu 25.10 to 26.04](/docs/howtos/upgrade-ubuntu-25-10-to-26-04/).
+The Ubuntu release upgrader (`do-release-upgrade`) disables the Regolith package repository and removes some Regolith packages. To upgrade Ubuntu 25.10 or 25.04 to 26.04 LTS with Regolith installed, follow [Upgrade to Ubuntu 26.04](/docs/howtos/upgrade-ubuntu-to-26-04/).
