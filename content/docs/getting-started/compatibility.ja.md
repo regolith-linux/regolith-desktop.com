@@ -31,5 +31,7 @@ supported on which OS distributions.
 | Distro Name / Regolith Version  |  v2.2  |  v3.0  |  v3.1  |  v3.2  |  v3.3  |  v3.4  |
 |:--------------------------------|:------:|:------:|:------:|:------:|:------:|:------:|
 | Bullseye (11) | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | - | - | - |
-| Bookworm (12) | - | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} |
+| Bookworm (12) ¹ | - | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} |
 | Trixie (13) | - | - | - | - | - | {{< icon name="check" attributes="height=21" >}} |
+
+¹ Debian 12 (Bookworm) では X11 セッション (`regolith-session-flashback`) のみが利用できます。Wayland セッション (`regolith-session-sway`) は利用できません。
