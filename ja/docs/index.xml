@@ -145,7 +145,7 @@ supported on which OS distributions.&lt;/p>
 &lt;td style="text-align: center">-&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Bookworm (12)&lt;/td>
+&lt;td style="text-align: left">Bookworm (12) ¹&lt;/td>
 &lt;td style="text-align: center">-&lt;/td>
 &lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
 &lt;/td>
@@ -169,7 +169,8 @@ supported on which OS distributions.&lt;/p>
 &lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>インストール</title><link>https://regolith-desktop.com/ja/docs/using-regolith/install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/ja/docs/using-regolith/install/</guid><description>
+&lt;/table>
+&lt;p>¹ Debian 12 (Bookworm) では X11 セッション (&lt;code>regolith-session-flashback&lt;/code>) のみが利用できます。Wayland セッション (&lt;code>regolith-session-sway&lt;/code>) は利用できません。&lt;/p></description></item><item><title>インストール</title><link>https://regolith-desktop.com/ja/docs/using-regolith/install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/ja/docs/using-regolith/install/</guid><description>
 &lt;h2>サポートするOS&lt;span class="hx-absolute -hx-mt-20" id="サポートするos">&lt;/span>
 &lt;a href="#%e3%82%b5%e3%83%9d%e3%83%bc%e3%83%88%e3%81%99%e3%82%8bos" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>以下は、Regolithデスクトップのインストールを取り扱っている特定のLinuxベースのOSごとに分割されています。&lt;/p>
 &lt;h3>Ubuntu&lt;span class="hx-absolute -hx-mt-20" id="ubuntu">&lt;/span>

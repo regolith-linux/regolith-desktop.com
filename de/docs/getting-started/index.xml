@@ -145,7 +145,7 @@ supported on which OS distributions.&lt;/p>
 &lt;td style="text-align: center">-&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Bookworm (12)&lt;/td>
+&lt;td style="text-align: left">Bookworm (12) ¹&lt;/td>
 &lt;td style="text-align: center">-&lt;/td>
 &lt;td style="text-align: center">&lt;span class="hx-inline-block hx-align-text-bottom icon">&lt;svg height=21 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">&lt;path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>&lt;/svg>&lt;/span>
 &lt;/td>
@@ -169,4 +169,5 @@ supported on which OS distributions.&lt;/p>
 &lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item></channel></rss>
+&lt;/table>
+&lt;p>¹ Debian 12 (Bookworm) hat nur die X11-Sitzung (&lt;code>regolith-session-flashback&lt;/code>). Die Wayland-Sitzung (&lt;code>regolith-session-sway&lt;/code>) ist dort nicht verfügbar.&lt;/p></description></item></channel></rss>

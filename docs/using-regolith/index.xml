@@ -395,6 +395,12 @@ class="hextra-tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-b
 id="tabs-panel-2"
 role="tabpanel">&lt;p>Regolith can be installed as system packages. This makes updating and removing easier and more consistent. The following steps (also available as a &lt;a href="https://regolith-desktop.com/install-release-debian-12-amd64.txt" >downloadable script&lt;/a>) describe how
 to configure your system to read packages from the Regolith package repository and install the desktop package.&lt;/p>
+&lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-yellow-100 hx-bg-yellow-50 hx-text-yellow-900 dark:hx-border-yellow-200/30 dark:hx-bg-yellow-700/30 dark:hx-text-yellow-200">
+&lt;div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2">&lt;/div>
+&lt;div class="hx-w-full hx-min-w-0 hx-leading-7">
+&lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">On Debian 12 (Bookworm), Regolith provides only the X11 session (&lt;code>regolith-session-flashback&lt;/code>). The Wayland session (&lt;code>regolith-session-sway&lt;/code>) needs Debian 13 (Trixie) or a supported Ubuntu release.&lt;/div>
+&lt;/div>
+&lt;/div>
 &lt;ol>
 &lt;li>
 &lt;p>Register the Regolith public key to your local &lt;code>apt&lt;/code>:&lt;/p>
@@ -482,8 +488,8 @@ title="Copy code"
 &lt;/div>
 &lt;/div>
 &lt;ul>
-&lt;li>For the session, you may chose one or both of: &lt;code>regolith-session-flashback&lt;/code> (X11), &lt;code>regolith-session-sway&lt;/code> (Wayland)&lt;/li>
-&lt;li>For the look, you may chose &lt;em>one&lt;/em> from any available look package:&lt;/li>
+&lt;li>For the session, you may choose one or both of: &lt;code>regolith-session-flashback&lt;/code> (X11), &lt;code>regolith-session-sway&lt;/code> (Wayland). Debian 12 (Bookworm) has the X11 session only.&lt;/li>
+&lt;li>For the look, you may choose &lt;em>one&lt;/em> from any available look package:&lt;/li>
 &lt;/ul>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">regolith-look-ayu-dark
@@ -508,7 +514,7 @@ title="Copy code"
 &lt;/button>
 &lt;/div>
 &lt;/div>
-&lt;p>An an example and alternative to the recommendation above, here is the &lt;code>apt&lt;/code> line to install the Sway session with the Nord Look:&lt;/p>
+&lt;p>As an example and alternative to the recommendation above, here is the &lt;code>apt&lt;/code> line to install the Sway session with the Nord Look (not available on Debian 12 Bookworm):&lt;/p>
 &lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 &lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt install regolith-desktop regolith-session-sway regolith-look-nord&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
 &lt;button
