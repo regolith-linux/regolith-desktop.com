@@ -268,8 +268,8 @@ sudo apt install regolith-desktop regolith-session-flashback regolith-look-lasca
 #                ^-- base package ^-- session                ^ -- look 
 ```
 
-* For the session, you may chose one or both of: `regolith-session-flashback` (X11), `regolith-session-sway` (Wayland). Debian 12 (Bookworm) has the X11 session only.
-* For the look, you may chose *one* from any available look package:
+* For the session, you may choose one or both of: `regolith-session-flashback` (X11), `regolith-session-sway` (Wayland). Debian 12 (Bookworm) has the X11 session only.
+* For the look, you may choose *one* from any available look package:
 
 ```text
 regolith-look-ayu-dark
@@ -287,7 +287,7 @@ regolith-look-nord
 regolith-look-solarized-dark
 ```
 
-An an example and alternative to the recommendation above, here is the `apt` line to install the Sway session with the Nord Look (not available on Debian 12 Bookworm):
+As an example and alternative to the recommendation above, here is the `apt` line to install the Sway session with the Nord Look (not available on Debian 12 Bookworm):
 
 ```bash
 sudo apt install regolith-desktop regolith-session-sway regolith-look-nord
