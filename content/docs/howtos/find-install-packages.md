@@ -47,7 +47,7 @@ To install the battery status indicator, run:
 sudo apt install i3xrocks-battery
 ```
 
-New status indicators appear on the bar after `regolith-look refresh` or the next login, unless you have [staged your own i3xrocks configuration]({{< ref "add-remove-blocklets#customize-bar" >}}). In that case, copy the indicator's file from `/usr/share/i3xrocks/conf.d/` as well.
+New status indicators appear on the bar after `regolith-look refresh` or the next login. In Regolith 3.5 and earlier, if you have [staged your own i3xrocks configuration]({{< ref "add-remove-blocklets#customize-bar-3-5" >}}), copy the indicator's file from `/usr/share/i3xrocks/conf.d/` as well. From Regolith 3.6, the bar reads [your files and the package files together]({{< ref "add-remove-blocklets#customize-bar" >}}), so new indicators appear in any case.
 
 ## Find and Install Packages via GUI app
 
