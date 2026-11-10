@@ -352,3 +352,7 @@ Note that `experimental`, `unstable`, and `testing` suites only have `main` comp
 ## Upgrading from 2.x to 3.x
 
 If you're upgrading from an earlier major version of Regolith, you may be interested in reading [the release notes](/docs/reference/releases/regolith-3.2-release-notes/) and if coming from 2.x, the [migration guide](/docs/reference/releases/regolith-3.0-release-notes/#migration-guide).
+
+## Upgrading Ubuntu to a new release
+
+The Ubuntu release upgrader (`do-release-upgrade`) disables the Regolith package repository and removes some Regolith packages. To upgrade Ubuntu 25.10 or 25.04 to 26.04 LTS with Regolith installed, follow [Upgrade to Ubuntu 26.04](/docs/howtos/upgrade-ubuntu-to-26-04/).
