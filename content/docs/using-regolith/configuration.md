@@ -188,7 +188,7 @@ sudo apt install regolith-look-*
 | regolith-i3-next-workspace   | Workspace utility                                       | `/usr/share/regolith/i3/config.d/40_next-workspace`      |
 | regolith-i3-resize           | Resize keybindings                                      | `/usr/share/regolith/i3/config.d/50_resize-mode`         |
 | regolith-i3-session          | Session keybindings                                     | `/usr/share/regolith/i3/config.d/55_session_keybindings` |
-| regolith-i3-unclutter        | Hide mouse cursor when unused                           | `/usr/share/regolith/i3/config.d/86_unclutter`           |
+| regolith-i3-unclutter        | Hide mouse cursor while typing and when unused          | `/usr/share/regolith/i3/config.d/86_unclutter`           |
 | regolith-i3-user-programs    | Optionally launch user programs specified in Xresources | `/usr/share/regolith/i3/config.d/90_user-programs`       |
 | regolith-i3-workspace-config | Workspace keybindings                                   | `/usr/share/regolith/i3/config.d/40_workspace-config`    |
 
@@ -221,7 +221,7 @@ The following contains a list of all i3 configuration packages available in Rego
 | regolith-i3-session          | Session keybindings                                                   | `/usr/share/regolith/i3/config.d/55_session_keybindings` |
 | regolith-i3-snapshot         | i3 workspace persistence                                              | `/usr/share/regolith/i3/config.d/75_i3-snapshot`         |
 | regolith-wm-swap-focus       | Toggle back to last focused window                                    | `/usr/share/regolith/i3/config.d/40_i3-swap-focus`       |
-| regolith-i3-unclutter        | Hides mouse when not in use                                           | `/usr/share/regolith/i3/config.d/86_unclutter`           |
+| regolith-i3-unclutter        | Hides mouse while typing and when not in use                          | `/usr/share/regolith/i3/config.d/86_unclutter`           |
 | regolith-wm-user-programs    | Optionally launch user programs specified in Xresources               | `/usr/share/regolith/i3/config.d/90_user-programs`       |
 | regolith-wm-workspace-config | Workspace keybindings                                                 | `/usr/share/regolith/i3/config.d/40_workspace-config`    |
 

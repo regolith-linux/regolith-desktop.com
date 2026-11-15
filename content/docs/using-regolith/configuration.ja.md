@@ -188,7 +188,7 @@ sudo apt install regolith-look-*
 | regolith-i3-next-workspace   | ワークスペースのユーティリティー | `/usr/share/regolith/i3/config.d/40_next-workspace` |
 | regolith-i3-resize           | リサイズのキーバインド | `/usr/share/regolith/i3/config.d/50_resize-mode` |
 | regolith-i3-session          | セッションのキーバインド | `/usr/share/regolith/i3/config.d/55_session_keybindings` |
-| regolith-i3-unclutter        | マウスカーソルを使用していないときに非表示化 | `/usr/share/regolith/i3/config.d/86_unclutter` |
+| regolith-i3-unclutter        | 入力中と使用していないときにマウスカーソルを非表示化 | `/usr/share/regolith/i3/config.d/86_unclutter` |
 | regolith-i3-user-programs    | オプションでXresourcesで指定されたユーザープログラムの起動 | `/usr/share/regolith/i3/config.d/90_user-programs` |
 | regolith-i3-workspace-config | ワークスペースのキーバインド | `/usr/share/regolith/i3/config.d/40_workspace-config` |
 
@@ -222,7 +222,7 @@ sudo apt install regolith-look-*
 | regolith-i3-session          | セッションのキーバインド | `/usr/share/regolith/i3/config.d/55_session_keybindings` |
 | regolith-i3-snapshot         | i3ワークスペースの固定 | `/usr/share/regolith/i3/config.d/75_i3-snapshot` |
 | regolith-i3-swap-focus       | 最後にフォーカスしたウィンドウへの切り替え | `/usr/share/regolith/i3/config.d/40_i3-swap-focus` |
-| regolith-i3-unclutter        | マウスを使用していないときに非表示化 | `/usr/share/regolith/i3/config.d/86_unclutter` |
+| regolith-i3-unclutter        | 入力中と使用していないときにマウスを非表示化 | `/usr/share/regolith/i3/config.d/86_unclutter` |
 | regolith-i3-user-programs    | オプションでXresourcesで指定されたユーザープログラムの起動 | `/usr/share/regolith/i3/config.d/90_user-programs` |
 | regolith-i3-workspace-config | ワークスペースのキーバインド | `/usr/share/regolith/i3/config.d/40_workspace-config` |
 

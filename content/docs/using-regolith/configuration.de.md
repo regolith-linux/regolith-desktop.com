@@ -158,7 +158,7 @@ installiert wird, werden diese Konfigurationselemente standardmäßig auch als S
 | regolith-i3-next-workspace   | Arbeitsbereich-Dienstprogramm |
 | regolith-i3-resize           | Tastaturbelegung Größenänderung |
 | regolith-i3-session          | Tastaturbelegung Session |
-| regolith-i3-unclutter        | Mauszeiger ausblenden, wenn er nicht benutzt wird |
+| regolith-i3-unclutter        | Mauszeiger beim Tippen und bei Nichtbenutzung ausblenden |
 | regolith-i3-user-programs    | Optionales Starten von Benutzerprogrammen, die in Xresources angegeben sind |
 | regolith-i3-workspace-config | Tastaturbelegung des Arbeitsbereichs |
 
@@ -204,7 +204,7 @@ Im Folgenden finden Sie eine Liste aller i3-Konfigurationspakete, die in Regolit
 | regolith-i3-rofication-ilia  | Integration der Benachrichtigungsanzeige                                  |
 | regolith-i3-session          | Tastaturbelegung der Session                                              |
 | regolith-i3-snapshot         | i3-Arbeitsbereichspersistenz                                              |
-| regolith-i3-unclutter        | Ausblenden der Maus bei Nichtgebrauch                                     |
+| regolith-i3-unclutter        | Ausblenden der Maus beim Tippen und bei Nichtgebrauch                     |
 | regolith-i3-user-programs    | Optionaler Start von Benutzerprogrammen, die in Xresources angegeben sind |
 | regolith-i3-workspace-config | Arbeitsbereich-Tastaturbelegung                                           |
 
