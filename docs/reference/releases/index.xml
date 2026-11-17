@@ -8,6 +8,20 @@
 &lt;/ul>
 &lt;h2>Known Issues&lt;span class="hx-absolute -hx-mt-20" id="known-issues">&lt;/span>
 &lt;a href="#known-issues" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>No known issues at the time of the release.&lt;/p>
+&lt;h2>Bug Fix Releases&lt;span class="hx-absolute -hx-mt-20" id="bug-fix-releases">&lt;/span>
+&lt;a href="#bug-fix-releases" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>3.4.2&lt;span class="hx-absolute -hx-mt-20" id="342">&lt;/span>
+&lt;a href="#342" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Regolith 3.4.2 fixes upgrading Regolith 3.4 systems to Ubuntu 26.04 and Debian 13, and installing &lt;code>regolith-rofi-config&lt;/code> on Ubuntu 24.04 and Debian 13. The update ships in the existing 3.4 repository, so no change to your apt sources is needed. Run &lt;code>sudo apt update &amp;amp;&amp;amp; sudo apt upgrade&lt;/code> to get it, and do so before upgrading the OS.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>ilia 0.18.1&lt;/strong> for Ubuntu 24.04 (Noble) and Debian 12 (Bookworm). ilia now works with either &lt;code>libtinysparql-3.0-0&lt;/code> or &lt;code>libtracker-sparql-3.0-0&lt;/code>.
+&lt;ul>
+&lt;li>Upgrading from Ubuntu 24.04 to 26.04: &lt;code>do-release-upgrade&lt;/code> no longer stops with &amp;ldquo;Could not calculate the upgrade&amp;rdquo;.&lt;/li>
+&lt;li>Upgrading from Debian 12 to 13 with the Regolith repository disabled: the upgrade no longer removes &lt;code>regolith-desktop&lt;/code>, &lt;code>regolith-session-flashback&lt;/code>, &lt;code>gnome-flashback&lt;/code> and &lt;code>nautilus&lt;/code>.&lt;/li>
+&lt;li>Debian 13 (Trixie), Ubuntu 22.04 (Jammy) and Ubuntu 25.10 (Questing) keep ilia 0.18.0. To stay on ilia 0.18.0 on Noble or Bookworm, run &lt;code>sudo apt-mark hold ilia&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>regolith-rofi-config 1.4.3&lt;/strong> for all 3.4 systems. Version 1.4.2 depends on &lt;code>mlocate&lt;/code>, which Ubuntu 24.04 and Debian 13 no longer ship, so it could not be installed or upgraded there. Version 1.4.3 depends on &lt;code>plocate&lt;/code> or &lt;code>mlocate&lt;/code>, and the file finder now passes the search query to &lt;code>locate&lt;/code> as a single pattern.&lt;/li>
+&lt;/ul>
+&lt;p>See the &lt;a href="https://github.com/regolith-linux/voulage/releases/tag/v3.4.2" target="_blank" rel="noopener">GitHub 3.4.2 release&lt;/a> for details.&lt;/p>
 &lt;h2>Installation Instructions&lt;span class="hx-absolute -hx-mt-20" id="installation-instructions">&lt;/span>
 &lt;a href="#installation-instructions" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Refer to the &lt;a href="https://regolith-desktop.com/docs/using-regolith/install/" >installation instructions&lt;/a> to install or upgrade from a previous version.&lt;/p>
 &lt;p>After the Regolith upgrade is complete, verify that Regolith 3.4 is installed by:&lt;/p>
