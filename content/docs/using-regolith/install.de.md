@@ -11,7 +11,7 @@ prev: /docs/using-regolith
 
 ### Ubuntu
 
-{{< tabs items="Ubuntu 25.04,Ubuntu 24.04,Ubuntu 22.04" >}}
+{{< tabs items="Ubuntu 25.10 (Questing),Ubuntu 25.04 (Plucky),Ubuntu 24.04 (Noble),Ubuntu 22.04 (Jammy)" >}}
 {{< tab >}}
 Regolith can be installed as system packages.  This makes updating and removing easier and more consistent.  The following steps describe how
 to configure your system to read packages from the Regolith package repository and install the desktop package.
@@ -27,7 +27,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/ubuntu/stable plucky v3.3" | \
+   https://archive.regolith-desktop.com/ubuntu/stable questing v3.4" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -62,7 +62,42 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/ubuntu/stable noble v3.3" | \
+   https://archive.regolith-desktop.com/ubuntu/stable plucky v3.4" | \
+   sudo tee /etc/apt/sources.list.d/regolith.list
+   ```
+
+1. Update `apt` and install Regolith
+
+   ```bash
+   sudo apt update
+   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
+   ```
+
+1. System Restart
+
+The login manager will need to be restarted for the new desktop session to be recognized. The easiest way of restarting it is to reboot your system.
+
+{{< callout type="info" >}}
+Replace `amd64` with `arm64` in the two places in the above line to install on ARM-based systems.
+{{< /callout >}}
+{{< /tab >}}
+
+{{< tab >}}
+Regolith can be installed as system packages.  This makes updating and removing easier and more consistent.  The following steps describe how
+to configure your system to read packages from the Regolith package repository and install the desktop package.
+
+1. Register the Regolith public key to your local `apt`:
+
+   ```bash
+   wget -qO - https://archive.regolith-desktop.com/regolith.key | \
+   gpg --dearmor | sudo tee /usr/share/keyrings/regolith-archive-keyring.gpg > /dev/null
+   ```
+
+1. Add the repository URL to your local `apt`:
+
+   ```bash
+   echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
+   https://archive.regolith-desktop.com/ubuntu/stable noble v3.4" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -97,7 +132,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/ubuntu/stable jammy v3.3" | \
+   https://archive.regolith-desktop.com/ubuntu/stable jammy v3.4" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -120,7 +155,7 @@ Replace `amd64` with `arm64` in the two places in the above line to install on A
 
 ### Debian
 
-{{< tabs items="Debian Testing,Debian Bookworm" >}}
+{{< tabs items="Debian Testing,Debian Trixie,Debian Bookworm" >}}
 {{< tab >}}
 For Debian users that use the "Testing" release, Regolith can be installed, however there is no "release" version due to the nature of Debian Testing.  In order to install Regolith into a Debian Testing instance, the `apt` line contains `testing` instead of a `release` string.  For example:
 
@@ -134,7 +169,7 @@ Otherwise the installation steps are the same as an official Debian release.  No
 {{< /tab >}}
 
 {{< tab >}}
-Regolith can be installed as system packages.  This makes updating and removing easier and more consistent.  The following steps (also available as a [downloadable script](/install-release-debian-12-amd64.txt)) describe how
+Regolith can be installed as system packages.  This makes updating and removing easier and more consistent.  The following steps (also available as a [downloadable script](/install-release-debian-13-amd64.txt)) describe how
 to configure your system to read packages from the Regolith package repository and install the desktop package.
 
 1. Register the Regolith public key to your local `apt`:
@@ -148,7 +183,54 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/debian/stable bookworm v3.3" | \
+   https://archive.regolith-desktop.com/debian/stable trixie v3.4" | \
+   sudo tee /etc/apt/sources.list.d/regolith.list
+   ```
+
+1. Update `apt` and install Regolith
+
+   ```bash
+   sudo apt update
+   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
+   ```
+
+1. System Restart
+
+The login manager will need to be restarted for the new desktop session to be recognized. The easiest way of restarting it is to reboot your system.
+
+{{< callout type="info" >}}
+Replace `amd64` with `arm64` in the two places in the above line to install on ARM-based systems.
+{{< /callout >}}
+
+{{< callout type="info" >}}
+The `regolith-desktop` package installs a reasonable minimal configuration that should work on most hardware. To add additional package for a richer and more functional environment read [Recommended Packages for New Users](/docs/using-regolith/configuration/#recommended-packages-for-new-users).
+{{< /callout >}}
+
+{{< callout type="info" >}}
+The `regolith-compositor-picom-glx` compositor should work on most computers. If you experience driver or visual issues, [try another compositor](/docs/howtos/customize-compositor/).
+{{< /callout >}}
+{{< /tab >}}
+
+{{< tab >}}
+Regolith can be installed as system packages.  This makes updating and removing easier and more consistent.  The following steps (also available as a [downloadable script](/install-release-debian-12-amd64.txt)) describe how
+to configure your system to read packages from the Regolith package repository and install the desktop package.
+
+{{< callout type="warning" >}}
+On Debian 12 (Bookworm), Regolith provides only the X11 session (`regolith-session-flashback`). The Wayland session (`regolith-session-sway`) needs Debian 13 (Trixie) or a supported Ubuntu release.
+{{< /callout >}}
+
+1. Register the Regolith public key to your local `apt`:
+
+   ```bash
+   wget -qO - https://archive.regolith-desktop.com/regolith.key | \
+   gpg --dearmor | sudo tee /usr/share/keyrings/regolith-archive-keyring.gpg > /dev/null
+   ```
+
+1. Add the repository URL to your local `apt`:
+
+   ```bash
+   echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
+   https://archive.regolith-desktop.com/debian/stable bookworm v3.4" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -186,8 +268,8 @@ sudo apt install regolith-desktop regolith-session-flashback regolith-look-lasca
 #                ^-- base package ^-- session                ^ -- look 
 ```
 
-* For the session, you may chose one or both of: `regolith-session-flashback` (X11), `regolith-session-sway` (Wayland)
-* For the look, you may chose *one* from any available look package:
+* For the session, you may choose one or both of: `regolith-session-flashback` (X11), `regolith-session-sway` (Wayland). Debian 12 (Bookworm) has the X11 session only.
+* For the look, you may choose *one* from any available look package:
 
 ```text
 regolith-look-ayu-dark
@@ -205,7 +287,7 @@ regolith-look-nord
 regolith-look-solarized-dark
 ```
 
-An an example and alternative to the recommendation above, here is the `apt` line to install the Sway session with the Nord Look:
+As an example and alternative to the recommendation above, here is the `apt` line to install the Sway session with the Nord Look (not available on Debian 12 Bookworm):
 
 ```bash
 sudo apt install regolith-desktop regolith-session-sway regolith-look-nord
@@ -240,7 +322,7 @@ deb [arch=amd64] https://archive.regolith-desktop.com/ubuntu/unstable noble main
 ### Repo Suites and Components
 
 | Regolith Stage | Repo Suite | Repo Component | Description |
-|:---------------|------------|:--------------:|:-------------|
+|:---------------|------------|:--------------:|:------------|
 | Experimental | `experimental` | `main` | Stage for testing experiments |
 | Unstable | `unstable` | `main` | Stage for early development testing |
 | Testing | `testing` | `main` | Stage for late development testing |
@@ -249,7 +331,7 @@ deb [arch=amd64] https://archive.regolith-desktop.com/ubuntu/unstable noble main
 
 ### Distro Version/Codename
 
-These labels are determined by their respective upstream communities.  Examples are `noble`, `bookworm`, `focal`.
+These labels are determined by their respective upstream communities.  Examples are `plucky`, `noble`, `bookworm`.
 
 ### Examples
 
@@ -261,7 +343,7 @@ These labels are determined by their respective upstream communities.  Examples 
 
 ## Release Change Policy
 
-From Regolith 3.0 to 3.2 (inclusive), all releases will use unique names in the package repo URL.  This means that users will be in full control of when they wish to upgrade to a new release.  Users wishing to have their package manager always install the latest version, a special stage called `release-current` is provided.
+From Regolith 3.0 to 3.3 (inclusive), all releases will use unique names in the package repo URL.  This means that users will be in full control of when they wish to upgrade to a new release.  Users wishing to have their package manager always install the latest version, a special stage called `release-current` is provided.
 
 From Regolith 3.3 onward, all releases will be published in the common archive repository separated by a high level distro (e.g. `debian`, `ubuntu`) folder and corresponding codename subfolders. The structure is split furthermore into different suites and components. As such, users wishing to have their package manager always install the latest version, they should use `main` component of `stable` suite. Otherwise a fixed version component (for example `v3.3`, `v3.2`, etc) can be used alongside `stable` component.
 
