@@ -20,6 +20,20 @@ Regolith 3.4 is a minor release focusing on Ubuntu 25.10 and Debian 13 support.
 
 No known issues at the time of the release.
 
+## Bug Fix Releases
+
+### 3.4.2
+
+Regolith 3.4.2 fixes upgrading Regolith 3.4 systems to Ubuntu 26.04 and Debian 13, and installing `regolith-rofi-config` on Ubuntu 24.04 and Debian 13. The update ships in the existing 3.4 repository, so no change to your apt sources is needed. Run `sudo apt update && sudo apt upgrade` to get it, and do so before upgrading the OS.
+
+* **ilia 0.18.1** for Ubuntu 24.04 (Noble) and Debian 12 (Bookworm). ilia now works with either `libtinysparql-3.0-0` or `libtracker-sparql-3.0-0`.
+  * Upgrading from Ubuntu 24.04 to 26.04: `do-release-upgrade` no longer stops with "Could not calculate the upgrade".
+  * Upgrading from Debian 12 to 13 with the Regolith repository disabled: the upgrade no longer removes `regolith-desktop`, `regolith-session-flashback`, `gnome-flashback` and `nautilus`.
+  * Debian 13 (Trixie), Ubuntu 22.04 (Jammy) and Ubuntu 25.10 (Questing) keep ilia 0.18.0. To stay on ilia 0.18.0 on Noble or Bookworm, run `sudo apt-mark hold ilia`.
+* **regolith-rofi-config 1.4.3** for all 3.4 systems. Version 1.4.2 depends on `mlocate`, which Ubuntu 24.04 and Debian 13 no longer ship, so it could not be installed or upgraded there. Version 1.4.3 depends on `plocate` or `mlocate`, and the file finder now passes the search query to `locate` as a single pattern.
+
+See the [GitHub 3.4.2 release](https://github.com/regolith-linux/voulage/releases/tag/v3.4.2) for details.
+
 ## Installation Instructions
 
 Refer to the [installation instructions](/docs/using-regolith/install/) to install or upgrade from a previous version.
