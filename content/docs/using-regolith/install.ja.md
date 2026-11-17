@@ -13,7 +13,7 @@ prev: /docs/using-regolith
 
 ### Ubuntu
 
-{{< tabs items="Ubuntu 25.04,Ubuntu 24.04,Ubuntu 22.04" >}}
+{{< tabs items="Ubuntu 25.10 (Questing),Ubuntu 25.04 (Plucky),Ubuntu 24.04 (Noble),Ubuntu 22.04 (Jammy)" >}}
 {{< tab >}}
 Regolithはシステムパッケージとしてインストールすることができます。これは簡単に更新や削除ができ、一貫することができます。
 下記のステップでは、Regolithのパッケージリポジトリからパッケージを読み込み可能にして、デスクトップパッケージをインストールできるようにシステムを設定する方法について記しています。
@@ -29,7 +29,77 @@ Regolithはシステムパッケージとしてインストールすることが
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/ubuntu/stable noble v3.3" | \
+   https://archive.regolith-desktop.com/ubuntu/stable questing v3.4" | \
+   sudo tee /etc/apt/sources.list.d/regolith.list
+   ```
+
+1. `apt`を更新してRegolithをインストールする。
+
+   ```bash
+   sudo apt update
+   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
+   ```
+
+1. システムを再起動する。
+
+ログインマネージャーは新しいデスクトップセッションを識別するため、再起動が必要になります。システムの再起動はログインマネージャーを再起動するための簡単な方法です。
+
+{{< callout type="info" >}}
+ARMベースのシステムにインストールするときは、上記の内容から2箇所の`amd64`を`arm64`に置き換えてください。
+{{< /callout >}}
+{{< /tab >}}
+
+{{< tab >}}
+Regolithはシステムパッケージとしてインストールすることができます。これは簡単に更新や削除ができ、一貫することができます。
+下記のステップでは、Regolithのパッケージリポジトリからパッケージを読み込み可能にして、デスクトップパッケージをインストールできるようにシステムを設定する方法について記しています。
+
+1. ローカルの`apt`にRegolithの公開鍵を登録する。
+
+   ```bash
+   wget -qO - https://archive.regolith-desktop.com/regolith.key | \
+   gpg --dearmor | sudo tee /usr/share/keyrings/regolith-archive-keyring.gpg > /dev/null
+   ```
+
+1. ローカルの`apt`にリポジトリのURLを追加する。
+
+   ```bash
+   echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
+   https://archive.regolith-desktop.com/ubuntu/stable plucky v3.4" | \
+   sudo tee /etc/apt/sources.list.d/regolith.list
+   ```
+
+1. `apt`を更新してRegolithをインストールする。
+
+   ```bash
+   sudo apt update
+   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
+   ```
+
+1. システムを再起動する。
+
+ログインマネージャーは新しいデスクトップセッションを識別するため、再起動が必要になります。システムの再起動はログインマネージャーを再起動するための簡単な方法です。
+
+{{< callout type="info" >}}
+ARMベースのシステムにインストールするときは、上記の内容から2箇所の`amd64`を`arm64`に置き換えてください。
+{{< /callout >}}
+{{< /tab >}}
+
+{{< tab >}}
+Regolithはシステムパッケージとしてインストールすることができます。これは簡単に更新や削除ができ、一貫することができます。
+下記のステップでは、Regolithのパッケージリポジトリからパッケージを読み込み可能にして、デスクトップパッケージをインストールできるようにシステムを設定する方法について記しています。
+
+1. ローカルの`apt`にRegolithの公開鍵を登録する。
+
+   ```bash
+   wget -qO - https://archive.regolith-desktop.com/regolith.key | \
+   gpg --dearmor | sudo tee /usr/share/keyrings/regolith-archive-keyring.gpg > /dev/null
+   ```
+
+1. ローカルの`apt`にリポジトリのURLを追加する。
+
+   ```bash
+   echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
+   https://archive.regolith-desktop.com/ubuntu/stable noble v3.4" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -64,7 +134,7 @@ Regolithはシステムパッケージとしてインストールすることが
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/ubuntu/stable jammy v3.3" | \
+   https://archive.regolith-desktop.com/ubuntu/stable jammy v3.4" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -87,7 +157,7 @@ ARMベースのシステムにインストールするときは、上記の内�
 
 ### Debian
 
-{{< tabs items="Debian Testing,Debian Bookworm" >}}
+{{< tabs items="Debian Testing,Debian Trixie,Debian Bookworm" >}}
 {{< tab >}}
 "Testing"リリースのDebianユーザーであれば、Regolithをインストールすることができますが、Debian Testingの性質上"release"バージョンは存在しません。Debian TestingインスタンスにRegolithをインストールするには、`apt`コマンドのワンライナーの`release`の代わりに`testing`を含める必要があります。例：
 
@@ -102,7 +172,7 @@ ARMベースのシステムにインストールするときは、上記の内�
 
 {{< tab >}}
 Regolithはシステムパッケージとしてインストールすることができます。これは簡単に更新や削除ができ、一貫することができます。
-下記のステップでは、Regolithのパッケージリポジトリからパッケージを読み込み可能にして、デスクトップパッケージをインストールできるようにシステムを設定する方法について記しています([こちらでダウンロード可能なスクリプト](/install-release-debian-12-amd64.txt)が利用できます)。
+下記のステップでは、Regolithのパッケージリポジトリからパッケージを読み込み可能にして、デスクトップパッケージをインストールできるようにシステムを設定する方法について記しています([こちらでダウンロード可能なスクリプト](/install-release-debian-13-amd64.txt)が利用できます)。
 
 1. ローカルの`apt`にRegolithの公開鍵を登録する。
 
@@ -115,7 +185,54 @@ Regolithはシステムパッケージとしてインストールすることが
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/debian/stable bookworm v3.3" | \
+   https://archive.regolith-desktop.com/debian/stable trixie v3.4" | \
+   sudo tee /etc/apt/sources.list.d/regolith.list
+   ```
+
+1. `apt`を更新してRegolithをインストールする。
+
+   ```bash
+   sudo apt update
+   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
+   ```
+
+1. システムを再起動する。
+
+ログインマネージャーは新しいデスクトップセッションを識別するため、再起動が必要になります。システムの再起動はログインマネージャーを再起動するための簡単な方法です。
+
+{{< callout type="info" >}}
+ARMベースのシステムにインストールするときは、上記の内容から2箇所の`amd64`を`arm64`に置き換えてください。
+{{< /callout >}}
+
+{{< callout type="info" >}}
+`regolith-desktop`パッケージは、多くのハードウェアで動作する必要最小限の設定でインストールします。追加で高級なパッケージやもっと便利な環境を追加するには、[新規ユーザーに推奨されるパッケージ]({{< ref "docs/using-regolith/configuration.md#recommended-packages-for-new-users" >}})を参照してください。
+{{< /callout >}}
+
+{{< callout type="info" >}}
+`regolith-compositor-picom-glx`コンポジターは多くのコンピューターで動作します。もしドライバや視覚的な問題に遭遇した場合は、[他のコンポジターをお試しください]({{< ref "docs/howtos/customize-compositor" >}})。
+{{< /callout >}}
+{{< /tab >}}
+
+{{< tab >}}
+Regolithはシステムパッケージとしてインストールすることができます。これは簡単に更新や削除ができ、一貫することができます。
+下記のステップでは、Regolithのパッケージリポジトリからパッケージを読み込み可能にして、デスクトップパッケージをインストールできるようにシステムを設定する方法について記しています([こちらでダウンロード可能なスクリプト](/install-release-debian-12-amd64.txt)が利用できます)。
+
+{{< callout type="warning" >}}
+Debian 12 (Bookworm)では、RegolithはX11セッション(`regolith-session-flashback`)のみを提供しています。Waylandセッション(`regolith-session-sway`)を使用するには、Debian 13 (Trixie)またはサポートされているUbuntuリリースが必要です。
+{{< /callout >}}
+
+1. ローカルの`apt`にRegolithの公開鍵を登録する。
+
+   ```bash
+   wget -qO - https://archive.regolith-desktop.com/regolith.key | \
+   gpg --dearmor | sudo tee /usr/share/keyrings/regolith-archive-keyring.gpg > /dev/null
+   ```
+
+1. ローカルの`apt`にリポジトリのURLを追加する。
+
+   ```bash
+   echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
+   https://archive.regolith-desktop.com/debian/stable bookworm v3.4" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -153,7 +270,7 @@ sudo apt install regolith-desktop regolith-session-flashback regolith-look-lasca
 #                ^-- ﾍﾞｰｽ ﾊﾟｯｹｰｼﾞ   ^-- ｾｯｼｮﾝ                   ^ -- 外観 
 ```
 
-* セッションについて、次の内の一方か両方を選ぶことができます：`regolith-session-flashback` (X11), `regolith-session-sway` (Wayland)
+* セッションについて、次の内の一方か両方を選ぶことができます：`regolith-session-flashback` (X11), `regolith-session-sway` (Wayland)。Debian 12 (Bookworm)ではX11セッションのみ利用できます。
 * 外観について、次の外観パッケージから*1つ*を選ぶことができます。
 
 ```text
@@ -172,7 +289,7 @@ regolith-look-nord
 regolith-look-solarized-dark
 ```
 
-上記の推奨事項の例と代替案として、ここでは、Swayセッションに外観"Nord"を適用してインストールする`apt`コマンドを紹介します。
+上記の推奨事項の例と代替案として、ここでは、Swayセッションに外観"Nord"を適用してインストールする`apt`コマンドを紹介します(Debian 12 Bookwormでは利用できません)。
 
 ```bash
 sudo apt install regolith-desktop regolith-session-sway regolith-look-nord
@@ -216,7 +333,7 @@ deb [arch=amd64] https://archive.regolith-desktop.com/ubuntu/unstable noble main
 
 ### ディストロバージョン/コードネーム
 
-これらのラベルは各上流コミュニティによって決定されます。例：`noble`, `bookworm`, `focal`
+これらのラベルは各上流コミュニティによって決定されます。例：`plucky`, `noble`, `bookworm`
 
 ### 例
 
@@ -228,7 +345,7 @@ deb [arch=amd64] https://archive.regolith-desktop.com/ubuntu/unstable noble main
 
 ## リリースの変更ポリシー
 
- From Regolith 3.0 to 3.2 (inclusive) Regolith 3.2以降では、すべてのリリースにおいて、パッケージリポジトリのURLに一意の名前が使用されます。これは、ユーザーが、新しいリリースにアップグレードするタイミングを完全に制御できることを意味します。パッケージマネージャーに常に最新版をインストールしてほしいユーザーには、`release-current` という特別な段階が提供されています。
+Regolith 3.0から3.3まで(3.3を含む)のすべてのリリースにおいて、パッケージリポジトリのURLに一意の名前が使用されます。これは、ユーザーが、新しいリリースにアップグレードするタイミングを完全に制御できることを意味します。パッケージマネージャーに常に最新版をインストールしてほしいユーザーには、`release-current` という特別な段階が提供されています。
 
 From Regolith 3.3 onward, all releases will be published in the common archive repository separated by a high level distro (e.g. `debian`, `ubuntu`) folder and corresponding codename subfolders. The structure is split furthermore into different suites and components. As such, users wishing to have their package manager always install the latest version, they should use `main` component of `stable` suite. Otherwise a fixed version component (for example `v3.3`, `v3.2`, etc) can be used alongside `stable` component.
 
