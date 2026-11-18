@@ -5,9 +5,10 @@ description: >
     How to make changes to the way i3 looks and behaves.
 ---
 
-The root configuration is `/etc/regolith/i3/config`. It loads the default configuration partials, first those shared with the Wayland session in `/usr/share/regolith/common/config.d`, then the i3-only ones in `/usr/share/regolith/i3/config.d`, each directory in alphabetical order. Then user configurations in `~/.config/regolith3/common-wm/config.d` (shared with the Wayland session) and `~/.config/regolith3/i3/config.d` are loaded, also in alphabetical order. Regolith's default configuration is built to be customized by setting `Xresources` variables, adding user configuration, and adding or removing default configurations via `apt`. For this reason, there are several approaches to customization of i3 in Regolith that can be used separately or in combination to achieve your configuration cleanly:
+The root configuration is `/etc/regolith/i3/config`. It loads the default configuration partials, first those shared with the Wayland session in `/usr/share/regolith/common/config.d`, then the i3-only ones in `/usr/share/regolith/i3/config.d`, each directory in alphabetical order. Then user configurations in `~/.config/regolith3/common-wm/config.d` (shared with the Wayland session) and `~/.config/regolith3/i3/config.d` are loaded, also in alphabetical order. A user partial with the same file name as a default partial takes its place, and an empty one turns it off. Regolith's default configuration is built to be customized by setting `Xresources` variables, adding user configuration, and adding or removing default configurations via `apt`. For this reason, there are several approaches to customization of i3 in Regolith that can be used separately or in combination to achieve your configuration cleanly:
 
 -   Use `Xresources` to override variables, e.g. keybindings, strings, program names, colors, etc.
+-   Replace or turn off a default configuration file with a user file of the same name
 -   Add or remove Regolith default configuration files with `apt`
 -   Add your own user configuration files
 -   Replace Regolith's configuration wholesale
@@ -48,9 +49,32 @@ wm.workspace.01.name: 1:FOO
 
 For more, please [read a more in-depth discussion on `Xresources`]({{< ref "docs/howtos/override-xres.md" >}})
 
+## How to turn off a default partial
+
+To turn off a default partial, create an empty file with the same name in
+your user partial directory, or a link from that name to `/dev/null`:
+
+```bash
+mkdir -p ~/.config/regolith3/common-wm/config.d
+touch ~/.config/regolith3/common-wm/config.d/40_workspace-config
+```
+
+The name must match exactly, including case. A file in
+`~/.config/regolith3/common-wm/config.d` applies to both sessions; use
+`~/.config/regolith3/i3/config.d` to turn the partial off in i3 only. The
+change applies at the next reload or restart of i3. Delete the file to get the
+default partial back.
+
+{{< callout type="info" >}}
+User partials take the place of default partials in regolith-wm-config releases
+after 4.13.0. With an older version, a user file of the same name loads in
+addition to the default one: remove the default partial's package instead, as
+described next.
+{{< /callout >}}
+
 ## How to uninstall a default partial
 
-If you want to wholly replace or remove settings provided by a default partial, you can use `apt` to remove the package which provides that partial.
+If you want to remove a default partial for every user of the computer, you can use `apt` to remove the package which provides that partial.
 
 To identify the name of the package that provides the partial you want to remove:
 
@@ -102,21 +126,25 @@ Make your desired changes:
 vim ~/.config/regolith3/i3/config.d/40_workspace-config
 ```
 
-Clean up the package containing the defaults:
+Finally, reload i3 with {{< keys "super,shift,c" >}} or **restart i3**.
 
-```bash
-sudo apt remove regolith-wm-workspace-config
-```
-
-Finally, **restart i3 or log out and back in**.
+Your copy keeps the default partial's file name, so it loads in its place: in
+the same position, and instead of it. Updates to the default partial no longer
+reach you while your copy is there; compare the two after an upgrade if you
+want to pick up changes.
 
 {{< callout type="info" >}}
 `40_workspace-config` comes from `/usr/share/regolith/common/config.d`, so the
-Wayland session loads it too, and removing its package removes it from both
-sessions. To keep your copy in both sessions, put it in
-`~/.config/regolith3/common-wm/config.d/` instead of
-`~/.config/regolith3/i3/config.d/`.
+Wayland session loads it too. A copy in `~/.config/regolith3/i3/config.d/`
+replaces it in i3 only. To replace it in both sessions, put your copy in
+`~/.config/regolith3/common-wm/config.d/` instead. If both directories have a
+copy, each session uses the one in its own directory.
 {{< /callout >}}
+
+Editor backups and package-manager leftovers in the user directories, such as
+`40_workspace-config~`, `.40_workspace-config.swp` or
+`40_workspace-config.dpkg-old`, are not loaded, and neither are files whose
+name starts with a dot.
 
 ## Change Regolith's defaults outside of Xresources options
 
@@ -135,6 +163,6 @@ The Wayland session works the same way, with these paths:
 
 - Root configuration: `/etc/regolith/sway/config`, replaced by `~/.config/regolith3/sway/config` if that file exists.
 - Default partials: `/usr/share/regolith/common/config.d` (shared with i3) and `/usr/share/regolith/sway/config.d`.
-- User partials: `~/.config/regolith3/common-wm/config.d` (shared with i3) and `~/.config/regolith3/sway/config.d`.
+- User partials: `~/.config/regolith3/common-wm/config.d` (shared with i3) and `~/.config/regolith3/sway/config.d`. As in i3, a user partial replaces the default partial of the same name, and an empty file or a link to `/dev/null` turns it off.
 
 Most `Xresources` keys apply to both sessions. After a change, run `regolith-look refresh` or `swaymsg reload`.
