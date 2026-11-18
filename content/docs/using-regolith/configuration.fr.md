@@ -172,7 +172,7 @@ Par défaut, wuant le paquet `regolith-desktop` est installé, ces éléments de
 | regolith-i3-next-workspace   | Utilitaires pour les espaces de travail                        |
 | regolith-i3-resize           | Raccourcis clavier pour le redimensionnement                   |
 | regolith-i3-session          | Raccourcis clavier pour la session                             |
-| regolith-i3-unclutter        | Cache le curseur de la souris lorsque inutilisé                |
+| regolith-i3-unclutter        | Cache le curseur de la souris pendant la saisie et lorsqu'il est inutilisé |
 | regolith-i3-user-programs    | Lancer éventuellemetn des programmes spécifiés dans Xresources |
 | regolith-i3-workspace-config | Raccourcis clavier pour les espaces de travail                 |
 
@@ -208,7 +208,7 @@ La liste suivante contient tous les paquets de configuration pour i3 disponibles
 | regolith-i3-rofication-ilia  | Intégration du panneau des notifications                               |
 | regolith-i3-session          | Raccourcis clavier pour la session                                     |
 | regolith-i3-snapshot         | Persistance des espaces de travail i3                                  |
-| regolith-i3-unclutter        | Cache le curseur de la souris lorsque inutilisé                        |
+| regolith-i3-unclutter        | Cache le curseur de la souris pendant la saisie et lorsqu'il est inutilisé |
 | regolith-i3-user-programs    | Lancer éventuellemetn des programmes spécifiés dans Xresources         |
 | regolith-i3-workspace-config | Raccourcis clavier pour les espaces de travail                         |
 
