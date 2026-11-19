@@ -25,14 +25,22 @@ There is no supported way back from 3.5 to 3.4 other than reinstalling. If that 
 
 ### Upgrade from Regolith 3.4
 
-1. Change `v3.4` to `v3.5` in the Regolith `apt` line:
+1. Edit the Regolith `apt` line, in `/etc/apt/sources.list.d/regolith.list` if you followed the installation instructions, so that it ends with `v3.5` instead of `v3.4`. For example, on Ubuntu 24.04 (Noble) on `amd64` it should say:
 
-   ```bash
-   sudo sed -i 's| v3\.4$| v3.5|' /etc/apt/sources.list.d/regolith.list
-   cat /etc/apt/sources.list.d/regolith.list
+   ```text
+   deb [arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] https://archive.regolith-desktop.com/ubuntu/stable noble v3.5
    ```
 
-   The line should now end with your codename and `v3.5`, for example `noble v3.5`. If you added the Regolith line to another file, edit it there.
+   On other releases, the line differs only in the architecture (`amd64` or `arm64`) and in its end:
+
+   | Release | End of the `apt` line |
+   |:--------|:----------------------|
+   | Ubuntu 26.04 (Resolute) | `https://archive.regolith-desktop.com/ubuntu/stable resolute v3.5` |
+   | Ubuntu 25.10 (Questing) | `https://archive.regolith-desktop.com/ubuntu/stable questing v3.5` |
+   | Ubuntu 24.04 (Noble) | `https://archive.regolith-desktop.com/ubuntu/stable noble v3.5` |
+   | Ubuntu 22.04 (Jammy) | `https://archive.regolith-desktop.com/ubuntu/stable jammy v3.5` |
+   | Debian 13 (Trixie) | `https://archive.regolith-desktop.com/debian/stable trixie v3.5` |
+   | Debian 12 (Bookworm) | `https://archive.regolith-desktop.com/debian/stable bookworm v3.5` |
 
 1. Update `apt` and upgrade:
 
@@ -43,7 +51,7 @@ There is no supported way back from 3.5 to 3.4 other than reinstalling. If that 
 
 1. Log out and back in, or restart your system.
 
-Regolith 3.4 has no packages for Ubuntu 26.04. If you upgraded to 26.04 with Regolith 3.4 installed, `do-release-upgrade` disabled the Regolith line: write a new one with step 2 of [Install Regolith 3.5 Beta 1](#install-regolith-35-beta-1), then run the commands of step 2 above.
+Regolith 3.4 has no packages for Ubuntu 26.04. If you upgraded to 26.04 with Regolith 3.4 installed, `do-release-upgrade` disabled the Regolith line: make it the Ubuntu 26.04 (Resolute) line above, without a leading `#`, then run the commands of step 2.
 
 ### Install Regolith 3.5 Beta 1
 
