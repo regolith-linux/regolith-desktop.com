@@ -15,7 +15,7 @@ Regolith 3.5 is in beta. These notes describe Regolith 3.5 beta 1 ([`v3.5.0-beta
 
 Regolith 3.5 is a minor release focusing on Ubuntu 26.04 support, broad quality improvements, and closing gaps between the i3 and Sway sessions.
 
-A special thanks in particular to long-time Regolith contributor [cfsmp3|https://github.com/cfsmp3] who has taken initiative to provide most of the fixes and features in the 3.5 release!
+A special thanks in particular to long-time Regolith contributor [cfsmp3](https://github.com/cfsmp3) who has taken initiative to provide most of the fixes and features in the 3.5 release!
 
 ## Test Regolith 3.5 Beta 1
 
