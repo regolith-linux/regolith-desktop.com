@@ -37,8 +37,21 @@ Regolithはシステムパッケージとしてインストールすることが
 
    ```bash
    sudo apt update
+   ```
+
+   **X11セッション(i3):**
+
+   ```bash
    sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
+
+   **Waylandセッション(sway):**
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
+   ```
+
+   両方のセッションパッケージをインストールすると、ログイン時にどちらかを選べます。
 
 1. システムを再起動する。
 
@@ -72,8 +85,21 @@ Regolithはシステムパッケージとしてインストールすることが
 
    ```bash
    sudo apt update
+   ```
+
+   **X11セッション(i3):**
+
+   ```bash
    sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
+
+   **Waylandセッション(sway):**
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
+   ```
+
+   両方のセッションパッケージをインストールすると、ログイン時にどちらかを選べます。
 
 1. システムを再起動する。
 
@@ -107,8 +133,21 @@ Regolithはシステムパッケージとしてインストールすることが
 
    ```bash
    sudo apt update
+   ```
+
+   **X11セッション(i3):**
+
+   ```bash
    sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
+
+   **Waylandセッション(sway):**
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
+   ```
+
+   両方のセッションパッケージをインストールすると、ログイン時にどちらかを選べます。
 
 1. システムを再起動する。
 
@@ -142,8 +181,21 @@ Regolithはシステムパッケージとしてインストールすることが
 
    ```bash
    sudo apt update
+   ```
+
+   **X11セッション(i3):**
+
+   ```bash
    sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
+
+   **Waylandセッション(sway):**
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
+   ```
+
+   両方のセッションパッケージをインストールすると、ログイン時にどちらかを選べます。
 
 1. システムを再起動する。
 
@@ -193,8 +245,21 @@ Regolithはシステムパッケージとしてインストールすることが
 
    ```bash
    sudo apt update
+   ```
+
+   **X11セッション(i3):**
+
+   ```bash
    sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
+
+   **Waylandセッション(sway):**
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
+   ```
+
+   両方のセッションパッケージをインストールすると、ログイン時にどちらかを選べます。
 
 1. システムを再起動する。
 

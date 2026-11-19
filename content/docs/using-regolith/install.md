@@ -35,8 +35,21 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    sudo apt update
+   ```
+
+   **X11 session (i3):**
+
+   ```bash
    sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
+
+   **Wayland session (sway):**
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
+   ```
+
+   To choose either session at login, install both session packages.
 
 1. System Restart
 
@@ -70,8 +83,21 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    sudo apt update
+   ```
+
+   **X11 session (i3):**
+
+   ```bash
    sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
+
+   **Wayland session (sway):**
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
+   ```
+
+   To choose either session at login, install both session packages.
 
 1. System Restart
 
@@ -105,8 +131,21 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    sudo apt update
+   ```
+
+   **X11 session (i3):**
+
+   ```bash
    sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
+
+   **Wayland session (sway):**
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
+   ```
+
+   To choose either session at login, install both session packages.
 
 1. System Restart
 
@@ -140,8 +179,21 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    sudo apt update
+   ```
+
+   **X11 session (i3):**
+
+   ```bash
    sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
+
+   **Wayland session (sway):**
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
+   ```
+
+   To choose either session at login, install both session packages.
 
 1. System Restart
 
@@ -191,8 +243,21 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    sudo apt update
+   ```
+
+   **X11 session (i3):**
+
+   ```bash
    sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
+
+   **Wayland session (sway):**
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
+   ```
+
+   To choose either session at login, install both session packages.
 
 1. System Restart
 
