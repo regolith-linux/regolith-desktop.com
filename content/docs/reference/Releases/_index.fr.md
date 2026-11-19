@@ -5,12 +5,13 @@ weight: 9
 description: >
   This section contains documentation relating to specific versions of Regolith
 prev: /docs/reference/build-system
-next: /docs/reference/releases/regolith-3.4-release-notes
+next: /docs/reference/releases/regolith-3.5-release-notes
 ---
 
 Release notes and other version-specific content can be found here.
 
 {{< cards >}}
+  {{< card link="/docs/reference/releases/regolith-3.5-release-notes/" title="3.5 Release Notes" >}}
   {{< card link="/docs/reference/releases/regolith-3.4-release-notes/" title="3.4 Release Notes" >}}
   {{< card link="/docs/reference/releases/regolith-3.3-release-notes/" title="3.3 Release Notes" >}}
   {{< card link="/docs/reference/releases/regolith-3.2-release-notes/" title="3.2 Release Notes" >}}
