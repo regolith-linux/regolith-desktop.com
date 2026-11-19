@@ -11,7 +11,7 @@ prev: /docs/using-regolith
 
 ### Ubuntu
 
-{{< tabs items="Ubuntu 25.10 (Questing),Ubuntu 25.04 (Plucky),Ubuntu 24.04 (Noble),Ubuntu 22.04 (Jammy)" >}}
+{{< tabs items="Ubuntu 26.04 (Resolute),Ubuntu 25.10 (Questing),Ubuntu 24.04 (Noble),Ubuntu 22.04 (Jammy)" >}}
 {{< tab >}}
 Regolith can be installed as system packages.  This makes updating and removing easier and more consistent.  The following steps describe how
 to configure your system to read packages from the Regolith package repository and install the desktop package.
@@ -27,7 +27,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/ubuntu/stable questing v3.4" | \
+   https://archive.regolith-desktop.com/ubuntu/stable resolute v3.5" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -62,7 +62,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/ubuntu/stable plucky v3.4" | \
+   https://archive.regolith-desktop.com/ubuntu/stable questing v3.5" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -97,7 +97,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/ubuntu/stable noble v3.4" | \
+   https://archive.regolith-desktop.com/ubuntu/stable noble v3.5" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -132,7 +132,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/ubuntu/stable jammy v3.4" | \
+   https://archive.regolith-desktop.com/ubuntu/stable jammy v3.5" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -183,7 +183,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/debian/stable trixie v3.4" | \
+   https://archive.regolith-desktop.com/debian/stable trixie v3.5" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -230,7 +230,7 @@ On Debian 12 (Bookworm), Regolith provides only the X11 session (`regolith-sessi
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/debian/stable bookworm v3.4" | \
+   https://archive.regolith-desktop.com/debian/stable bookworm v3.5" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 

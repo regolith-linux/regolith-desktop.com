@@ -13,7 +13,7 @@ prev: /docs/using-regolith
 
 ### Ubuntu
 
-{{< tabs items="Ubuntu 25.10 (Questing),Ubuntu 25.04 (Plucky),Ubuntu 24.04 (Noble),Ubuntu 22.04 (Jammy)" >}}
+{{< tabs items="Ubuntu 26.04 (Resolute),Ubuntu 25.10 (Questing),Ubuntu 24.04 (Noble),Ubuntu 22.04 (Jammy)" >}}
 {{< tab >}}
 Regolithはシステムパッケージとしてインストールすることができます。これは簡単に更新や削除ができ、一貫することができます。
 下記のステップでは、Regolithのパッケージリポジトリからパッケージを読み込み可能にして、デスクトップパッケージをインストールできるようにシステムを設定する方法について記しています。
@@ -29,7 +29,7 @@ Regolithはシステムパッケージとしてインストールすることが
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/ubuntu/stable questing v3.4" | \
+   https://archive.regolith-desktop.com/ubuntu/stable resolute v3.5" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -64,7 +64,7 @@ Regolithはシステムパッケージとしてインストールすることが
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/ubuntu/stable plucky v3.4" | \
+   https://archive.regolith-desktop.com/ubuntu/stable questing v3.5" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -99,7 +99,7 @@ Regolithはシステムパッケージとしてインストールすることが
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/ubuntu/stable noble v3.4" | \
+   https://archive.regolith-desktop.com/ubuntu/stable noble v3.5" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -134,7 +134,7 @@ Regolithはシステムパッケージとしてインストールすることが
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/ubuntu/stable jammy v3.4" | \
+   https://archive.regolith-desktop.com/ubuntu/stable jammy v3.5" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -185,7 +185,7 @@ Regolithはシステムパッケージとしてインストールすることが
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/debian/stable trixie v3.4" | \
+   https://archive.regolith-desktop.com/debian/stable trixie v3.5" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -232,7 +232,7 @@ Debian 12 (Bookworm)では、RegolithはX11セッション(`regolith-session-fla
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/debian/stable bookworm v3.4" | \
+   https://archive.regolith-desktop.com/debian/stable bookworm v3.5" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
