@@ -13,7 +13,9 @@ prev: /docs/reference/releases
 Regolith 3.5 is in beta. These notes describe Regolith 3.5 beta 1 ([`v3.5.0-beta1`](https://github.com/regolith-linux/voulage/releases/tag/v3.5.0-beta1)), and will be updated for the final release. Until then, the [installation instructions](/docs/using-regolith/install/) install Regolith 3.4. To install or upgrade to the beta, see [Test Regolith 3.5 Beta 1](#test-regolith-35-beta-1).
 {{< /callout >}}
 
-Regolith 3.5 is a minor release focusing on Ubuntu 26.04 support, Nerd Fonts 3, and bringing the Wayland session up to par with the X11 session.
+Regolith 3.5 is a minor release focusing on Ubuntu 26.04 support, broad quality improvements, and closing gaps between the i3 and Sway sessions.
+
+A special thanks in particular to long-time Regolith contributor [cfsmp3|https://github.com/cfsmp3] who has taken initiative to provide most of the fixes and features in the 3.5 release!
 
 ## Test Regolith 3.5 Beta 1
 
