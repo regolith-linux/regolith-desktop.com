@@ -4,7 +4,6 @@ linkTitle: "3.4 Release Notes"
 weight: 83
 description: >
   Release notes for Regolith 3.4
-prev: /docs/reference/releases
 ---
 
 ## Regolith 3.4 Release Notes
