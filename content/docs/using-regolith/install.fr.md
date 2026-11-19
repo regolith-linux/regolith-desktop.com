@@ -11,11 +11,9 @@ prev: /docs/using-regolith
 
 If you're upgrading from an earlier version of Regolith, you may be interested in reading [the release notes](/docs/reference/releases/regolith-3.4-release-notes/) and if coming from 2.x, the [migration guide](/docs/reference/releases/regolith-3.0-release-notes/#migration-guide).
 
-## Supported Operating Systems
+## Ubuntu
 
-### Ubuntu
-
-{{< tabs items="Ubuntu 25.10 (Questing),Ubuntu 25.04 (Plucky),Ubuntu 24.04 (Noble),Ubuntu 22.04 (Jammy)" >}}
+{{< tabs items="26.04 / Resolute,25.10 / Questing,24.04 / Noble,22.04 / Jammy" >}}
 {{< tab >}}
 Regolith can be installed as system packages.  This makes updating and removing easier and more consistent.  The following steps describe how
 to configure your system to read packages from the Regolith package repository and install the desktop package.
@@ -31,7 +29,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/ubuntu/stable questing v3.4" | \
+   https://archive.regolith-desktop.com/ubuntu/stable resolute v3.5" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -39,8 +37,21 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    sudo apt update
+   ```
+
+   **Wayland session (sway):**
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
+   ```
+
+   **X11 session (i3):**
+
+   ```bash
    sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
+
+   To choose either session at login, install both session packages.
 
 1. System Restart
 
@@ -66,7 +77,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/ubuntu/stable plucky v3.4" | \
+   https://archive.regolith-desktop.com/ubuntu/stable questing v3.5" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -74,8 +85,21 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    sudo apt update
+   ```
+
+   **Wayland session (sway):**
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
+   ```
+
+   **X11 session (i3):**
+
+   ```bash
    sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
+
+   To choose either session at login, install both session packages.
 
 1. System Restart
 
@@ -101,7 +125,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/ubuntu/stable noble v3.4" | \
+   https://archive.regolith-desktop.com/ubuntu/stable noble v3.5" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -109,8 +133,21 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    sudo apt update
+   ```
+
+   **Wayland session (sway):**
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
+   ```
+
+   **X11 session (i3):**
+
+   ```bash
    sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
+
+   To choose either session at login, install both session packages.
 
 1. System Restart
 
@@ -136,7 +173,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/ubuntu/stable jammy v3.4" | \
+   https://archive.regolith-desktop.com/ubuntu/stable jammy v3.5" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -144,8 +181,21 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    sudo apt update
+   ```
+
+   **Wayland session (sway):**
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
+   ```
+
+   **X11 session (i3):**
+
+   ```bash
    sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
+
+   To choose either session at login, install both session packages.
 
 1. System Restart
 
@@ -157,9 +207,9 @@ Replace `amd64` with `arm64` in the two places in the above line to install on A
 {{< /tab >}}
 {{< /tabs >}}
 
-### Debian
+## Debian
 
-{{< tabs items="Debian Testing,Debian Trixie,Debian Bookworm" >}}
+{{< tabs items="Testing,13 / Trixie,12 / Bookworm" >}}
 {{< tab >}}
 For Debian users that use the "Testing" release, Regolith can be installed, however there is no "release" version due to the nature of Debian Testing.  In order to install Regolith into a Debian Testing instance, the `apt` line contains `testing` instead of a `release` string.  For example:
 
@@ -187,7 +237,7 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/debian/stable trixie v3.4" | \
+   https://archive.regolith-desktop.com/debian/stable trixie v3.5" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -195,8 +245,21 @@ to configure your system to read packages from the Regolith package repository a
 
    ```bash
    sudo apt update
+   ```
+
+   **Wayland session (sway):**
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
+   ```
+
+   **X11 session (i3):**
+
+   ```bash
    sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
+
+   To choose either session at login, install both session packages.
 
 1. System Restart
 
@@ -234,7 +297,7 @@ On Debian 12 (Bookworm), Regolith provides only the X11 session (`regolith-sessi
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/debian/stable bookworm v3.4" | \
+   https://archive.regolith-desktop.com/debian/stable bookworm v3.5" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
