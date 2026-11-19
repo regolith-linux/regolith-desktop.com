@@ -1,13 +1,17 @@
 ---
-title: "3.5 Release Notes"
-linkTitle: "3.5 Release Notes"
+title: "3.5 Release Notes (Beta 1)"
+linkTitle: "3.5 Release Notes (Beta 1)"
 weight: 82
 description: >
-  Release notes for Regolith 3.5
+  Release notes for Regolith 3.5 beta 1
 prev: /docs/reference/releases
 ---
 
-## Regolith 3.5 Release Notes
+## Regolith 3.5 Beta 1 Release Notes
+
+{{< callout type="warning" >}}
+Regolith 3.5 is in beta. These notes describe Regolith 3.5 beta 1 ([`v3.5.0-beta1`](https://github.com/regolith-linux/voulage/releases/tag/v3.5.0-beta1)), and will be updated for the final release. Until then, the [installation instructions](/docs/using-regolith/install/) install Regolith 3.4.
+{{< /callout >}}
 
 Regolith 3.5 is a minor release focusing on Ubuntu 26.04 support, Nerd Fonts 3, and bringing the Wayland session up to par with the X11 session.
 
@@ -55,7 +59,7 @@ These packages are no longer part of Regolith. Installed copies are not removed 
 
 ## Installation Instructions
 
-Refer to the [installation instructions](/docs/using-regolith/install/) to install or upgrade from a previous version.
+Refer to the [installation instructions](/docs/using-regolith/install/) to install or upgrade from a previous version. During the beta, those instructions install Regolith 3.4: to install Regolith 3.5 beta 1 instead, use `v3.5` in place of `v3.4` in the `apt` line. On Ubuntu 26.04, which has no tab there yet, follow the Ubuntu 25.10 steps with `resolute` in place of `questing`.
 
 To upgrade from Regolith 3.4, change `v3.4` to `v3.5` in the Regolith line of your `apt` sources, then run `sudo apt update && sudo apt full-upgrade`.
 
