@@ -10,10 +10,84 @@ prev: /docs/reference/releases
 ## Regolith 3.5 Beta 1 Release Notes
 
 {{< callout type="warning" >}}
-Regolith 3.5 is in beta. These notes describe Regolith 3.5 beta 1 ([`v3.5.0-beta1`](https://github.com/regolith-linux/voulage/releases/tag/v3.5.0-beta1)), and will be updated for the final release. Until then, the [installation instructions](/docs/using-regolith/install/) install Regolith 3.4.
+Regolith 3.5 is in beta. These notes describe Regolith 3.5 beta 1 ([`v3.5.0-beta1`](https://github.com/regolith-linux/voulage/releases/tag/v3.5.0-beta1)), and will be updated for the final release. Until then, the [installation instructions](/docs/using-regolith/install/) install Regolith 3.4. To install or upgrade to the beta, see [Test Regolith 3.5 Beta 1](#test-regolith-35-beta-1).
 {{< /callout >}}
 
 Regolith 3.5 is a minor release focusing on Ubuntu 26.04 support, Nerd Fonts 3, and bringing the Wayland session up to par with the X11 session.
+
+## Test Regolith 3.5 Beta 1
+
+Regolith 3.5 beta 1 is published in the `v3.5` component of the `stable` suite, for Ubuntu 22.04 (Jammy), 24.04 (Noble), 25.10 (Questing) and 26.04 (Resolute), and Debian 12 (Bookworm) and 13 (Trixie), on `amd64` and `arm64`.
+
+{{< callout type="info" >}}
+There is no supported way back from 3.5 to 3.4 other than reinstalling. If that matters to you, test the beta in a virtual machine or on a spare system.
+{{< /callout >}}
+
+### Upgrade from Regolith 3.4
+
+1. Change `v3.4` to `v3.5` in the Regolith `apt` line:
+
+   ```bash
+   sudo sed -i 's| v3\.4$| v3.5|' /etc/apt/sources.list.d/regolith.list
+   cat /etc/apt/sources.list.d/regolith.list
+   ```
+
+   The line should now end with your codename and `v3.5`, for example `noble v3.5`. If you added the Regolith line to another file, edit it there.
+
+1. Update `apt` and upgrade:
+
+   ```bash
+   sudo apt update
+   sudo apt full-upgrade
+   ```
+
+1. Log out and back in, or restart your system.
+
+Regolith 3.4 has no packages for Ubuntu 26.04. If you upgraded to 26.04 with Regolith 3.4 installed, `do-release-upgrade` disabled the Regolith line: write a new one with step 2 of [Install Regolith 3.5 Beta 1](#install-regolith-35-beta-1), then run the commands of step 2 above.
+
+### Install Regolith 3.5 Beta 1
+
+1. Register the Regolith public key to your local `apt`:
+
+   ```bash
+   wget -qO - https://archive.regolith-desktop.com/regolith.key | \
+   gpg --dearmor | sudo tee /usr/share/keyrings/regolith-archive-keyring.gpg > /dev/null
+   ```
+
+1. Add the `v3.5` repository line for your distribution, codename and architecture to your local `apt`:
+
+   ```bash
+   echo deb "[arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
+   https://archive.regolith-desktop.com/$(. /etc/os-release && echo "$ID")/stable \
+   $(. /etc/os-release && echo "$VERSION_CODENAME") v3.5" | \
+   sudo tee /etc/apt/sources.list.d/regolith.list
+   ```
+
+   The command prints the line it wrote, for example `deb [arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] https://archive.regolith-desktop.com/ubuntu/stable resolute v3.5`. Check that it names `ubuntu` or `debian` and one of the codenames above.
+
+1. Update `apt` and install Regolith with the X11 session (i3), the Wayland session (sway), or both:
+
+   ```bash
+   sudo apt update
+   ```
+
+   **X11 session (i3):**
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
+   ```
+
+   **Wayland session (sway)**, not available on Debian 12:
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
+   ```
+
+1. Restart your system, then pick the Regolith session on the login screen.
+
+### Report Issues
+
+Report problems with the beta as [issues on `regolith-desktop`](https://github.com/regolith-linux/regolith-desktop/issues), and include your distribution, codename, architecture and session.
 
 ## Features
 
@@ -59,9 +133,7 @@ These packages are no longer part of Regolith. Installed copies are not removed 
 
 ## Installation Instructions
 
-Refer to the [installation instructions](/docs/using-regolith/install/) to install or upgrade from a previous version. During the beta, those instructions install Regolith 3.4: to install Regolith 3.5 beta 1 instead, use `v3.5` in place of `v3.4` in the `apt` line. On Ubuntu 26.04, which has no tab there yet, follow the Ubuntu 25.10 steps with `resolute` in place of `questing`.
-
-To upgrade from Regolith 3.4, change `v3.4` to `v3.5` in the Regolith line of your `apt` sources, then run `sudo apt update && sudo apt full-upgrade`.
+Refer to the [installation instructions](/docs/using-regolith/install/) to install or upgrade from a previous version. During the beta, those instructions install Regolith 3.4: see [Test Regolith 3.5 Beta 1](#test-regolith-35-beta-1) to install or upgrade to the beta.
 
 After the Regolith upgrade is complete, verify that Regolith 3.5 is installed by:
 
