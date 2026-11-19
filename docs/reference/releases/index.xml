@@ -1,4 +1,1227 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Regolith Desktop – Releases</title><link>https://regolith-desktop.com/docs/reference/releases/</link><description>Recent content in Releases on Regolith Desktop</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://regolith-desktop.com/docs/reference/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>3.4 Release Notes</title><link>https://regolith-desktop.com/docs/reference/releases/regolith-3.4-release-notes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/reference/releases/regolith-3.4-release-notes/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Regolith Desktop – Releases</title><link>https://regolith-desktop.com/docs/reference/releases/</link><description>Recent content in Releases on Regolith Desktop</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://regolith-desktop.com/docs/reference/releases/index.xml" rel="self" type="application/rss+xml"/><item><title>3.5 Release Notes (Beta 1)</title><link>https://regolith-desktop.com/docs/reference/releases/regolith-3.5-release-notes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/reference/releases/regolith-3.5-release-notes/</guid><description>
+&lt;h2>Regolith 3.5 Beta 1 Release Notes&lt;span class="hx-absolute -hx-mt-20" id="regolith-35-beta-1-release-notes">&lt;/span>
+&lt;a href="#regolith-35-beta-1-release-notes" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-yellow-100 hx-bg-yellow-50 hx-text-yellow-900 dark:hx-border-yellow-200/30 dark:hx-bg-yellow-700/30 dark:hx-text-yellow-200">
+&lt;div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2">&lt;/div>
+&lt;div class="hx-w-full hx-min-w-0 hx-leading-7">
+&lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">Regolith 3.5 is in beta. These notes describe Regolith 3.5 beta 1 (&lt;a href="https://github.com/regolith-linux/voulage/releases/tag/v3.5.0-beta1" target="_blank" rel="noopener">&lt;code>v3.5.0-beta1&lt;/code>&lt;/a>), and will be updated for the final release. Until then, the &lt;a href="https://regolith-desktop.com/docs/using-regolith/install/" >installation instructions&lt;/a> install Regolith 3.4. To install or upgrade to the beta, see &lt;a href="#test-regolith-35-beta-1" >Test Regolith 3.5 Beta 1&lt;/a>.&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;p>Regolith 3.5 is a minor release focusing on Ubuntu 26.04 support, broad quality improvements, and closing gaps between the i3 and Sway sessions.&lt;/p>
+&lt;p>A special thanks in particular to long-time Regolith contributor &lt;a href="https://github.com/cfsmp3" target="_blank" rel="noopener">cfsmp3&lt;/a> who has taken initiative to provide most of the fixes and features in the 3.5 release!&lt;/p>
+&lt;h2>Test Regolith 3.5 Beta 1&lt;span class="hx-absolute -hx-mt-20" id="test-regolith-35-beta-1">&lt;/span>
+&lt;a href="#test-regolith-35-beta-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Regolith 3.5 beta 1 is published in the &lt;code>v3.5&lt;/code> component of the &lt;code>stable&lt;/code> suite, for Ubuntu 22.04 (Jammy), 24.04 (Noble), 25.10 (Questing) and 26.04 (Resolute), and Debian 12 (Bookworm) and 13 (Trixie), on &lt;code>amd64&lt;/code> and &lt;code>arm64&lt;/code>.&lt;/p>
+&lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
+&lt;div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2">&lt;/div>
+&lt;div class="hx-w-full hx-min-w-0 hx-leading-7">
+&lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">There is no supported way back from 3.5 to 3.4 other than reinstalling. If that matters to you, test the beta in a virtual machine or on a spare system.&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h3>Upgrade from Regolith 3.4&lt;span class="hx-absolute -hx-mt-20" id="upgrade-from-regolith-34">&lt;/span>
+&lt;a href="#upgrade-from-regolith-34" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;ol>
+&lt;li>
+&lt;p>Edit the Regolith &lt;code>apt&lt;/code> line, in &lt;code>/etc/apt/sources.list.d/regolith.list&lt;/code> if you followed the installation instructions, so that it ends with &lt;code>v3.5&lt;/code> instead of &lt;code>v3.4&lt;/code>. For example, on Ubuntu 24.04 (Noble) on &lt;code>amd64&lt;/code> it should say:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">deb [arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] https://archive.regolith-desktop.com/ubuntu/stable noble v3.5&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>On other releases, the line differs only in the architecture (&lt;code>amd64&lt;/code> or &lt;code>arm64&lt;/code>) and in its end:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align: left">Release&lt;/th>
+&lt;th style="text-align: left">End of the &lt;code>apt&lt;/code> line&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align: left">Ubuntu 26.04 (Resolute)&lt;/td>
+&lt;td style="text-align: left">&lt;code>https://archive.regolith-desktop.com/ubuntu/stable resolute v3.5&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">Ubuntu 25.10 (Questing)&lt;/td>
+&lt;td style="text-align: left">&lt;code>https://archive.regolith-desktop.com/ubuntu/stable questing v3.5&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">Ubuntu 24.04 (Noble)&lt;/td>
+&lt;td style="text-align: left">&lt;code>https://archive.regolith-desktop.com/ubuntu/stable noble v3.5&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">Ubuntu 22.04 (Jammy)&lt;/td>
+&lt;td style="text-align: left">&lt;code>https://archive.regolith-desktop.com/ubuntu/stable jammy v3.5&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">Debian 13 (Trixie)&lt;/td>
+&lt;td style="text-align: left">&lt;code>https://archive.regolith-desktop.com/debian/stable trixie v3.5&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">Debian 12 (Bookworm)&lt;/td>
+&lt;td style="text-align: left">&lt;code>https://archive.regolith-desktop.com/debian/stable bookworm v3.5&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;/li>
+&lt;li>
+&lt;p>Update &lt;code>apt&lt;/code> and upgrade:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt update
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt full-upgrade&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;/li>
+&lt;li>
+&lt;p>Log out and back in, or restart your system.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>Regolith 3.4 has no packages for Ubuntu 26.04. If you upgraded to 26.04 with Regolith 3.4 installed, &lt;code>do-release-upgrade&lt;/code> disabled the Regolith line: make it the Ubuntu 26.04 (Resolute) line above, without a leading &lt;code>#&lt;/code>, then run the commands of step 2.&lt;/p>
+&lt;h3>Install Regolith 3.5 Beta 1&lt;span class="hx-absolute -hx-mt-20" id="install-regolith-35-beta-1">&lt;/span>
+&lt;a href="#install-regolith-35-beta-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;ol>
+&lt;li>
+&lt;p>Register the Regolith public key to your local &lt;code>apt&lt;/code>:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">wget -qO - https://archive.regolith-desktop.com/regolith.key &lt;span class="p">|&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span>gpg --dearmor &lt;span class="p">|&lt;/span> sudo tee /usr/share/keyrings/regolith-archive-keyring.gpg &amp;gt; /dev/null&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;/li>
+&lt;li>
+&lt;p>Add the &lt;code>v3.5&lt;/code> repository line for your distribution, codename and architecture to your local &lt;code>apt&lt;/code>:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> deb &lt;span class="s2">&amp;#34;[arch=&lt;/span>&lt;span class="k">$(&lt;/span>dpkg --print-architecture&lt;span class="k">)&lt;/span>&lt;span class="s2"> signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">https://archive.regolith-desktop.com/&lt;/span>&lt;span class="k">$(&lt;/span>. /etc/os-release &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$ID&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">)&lt;/span>&lt;span class="s2">/stable \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">&lt;/span>&lt;span class="k">$(&lt;/span>. /etc/os-release &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$VERSION_CODENAME&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">)&lt;/span>&lt;span class="s2"> v3.5&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span>sudo tee /etc/apt/sources.list.d/regolith.list&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>The command prints the line it wrote, for example &lt;code>deb [arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] https://archive.regolith-desktop.com/ubuntu/stable resolute v3.5&lt;/code>. Check that it names &lt;code>ubuntu&lt;/code> or &lt;code>debian&lt;/code> and one of the codenames above.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Update &lt;code>apt&lt;/code> and install Regolith with the X11 session (i3), the Wayland session (sway), or both:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt update&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>&lt;strong>X11 session (i3):&lt;/strong>&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>&lt;strong>Wayland session (sway)&lt;/strong>, not available on Debian 12:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;/li>
+&lt;li>
+&lt;p>Restart your system, then pick the Regolith session on the login screen.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h3>Report Issues&lt;span class="hx-absolute -hx-mt-20" id="report-issues">&lt;/span>
+&lt;a href="#report-issues" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Report problems with the beta as &lt;a href="https://github.com/regolith-linux/regolith-desktop/issues" target="_blank" rel="noopener">issues on &lt;code>regolith-desktop&lt;/code>&lt;/a>, and include your distribution, codename, architecture and session.&lt;/p>
+&lt;h2>Features&lt;span class="hx-absolute -hx-mt-20" id="features">&lt;/span>
+&lt;a href="#features" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ul>
+&lt;li>Ubuntu 26.04 (Resolute) support&lt;/li>
+&lt;li>Nerd Fonts 3.5.1, with every look moved to Nerd Fonts 3&lt;/li>
+&lt;li>Features of the X11 session now in the Wayland session:
+&lt;ul>
+&lt;li>the volume and brightness indicator on every key press, and the brightness keys on the lock screen&lt;/li>
+&lt;li>the Print screenshot keys&lt;/li>
+&lt;li>Screen Blank and screen lock following Settings, and apps that can lock the screen&lt;/li>
+&lt;li>automount of removable media, the low battery warning and the switch to the power saver profile&lt;/li>
+&lt;li>the &amp;ldquo;Keep these display settings?&amp;rdquo; prompt and the monitor number labels of Settings &amp;gt; Displays&lt;/li>
+&lt;li>the compose key and other keyboard options, key repeat, keyboard shortcuts and the cursor theme, taken from Settings&lt;/li>
+&lt;li>IBus and the input source in use, Night Light, and a prompt before logging out, restarting or powering off&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Features of the Wayland session now in the X11 session: the Super+Print screenshot keys, touchpad swipe gestures and the same bar blocks&lt;/li>
+&lt;li>New keys in both sessions: back to the previous workspace, focus or launch, stay awake, touchpad on and off, and Night Light&lt;/li>
+&lt;li>A folder of pictures, or a GNOME slideshow, can be used as the wallpaper&lt;/li>
+&lt;li>Every look sets the GTK color scheme, so apps follow the look&amp;rsquo;s light or dark style&lt;/li>
+&lt;li>The &lt;code>ilia&lt;/code> launcher matches every word of the query in any order, ignores accents, ranks name matches first, and its keybindings page shows the keys the window manager actually binds&lt;/li>
+&lt;li>The bar opens Settings from the battery, date and time blocks, shows the keyboard layout in the Wayland session, and colors the CPU, memory and disk values when usage is high&lt;/li>
+&lt;/ul>
+&lt;h2>Platform Changes&lt;span class="hx-absolute -hx-mt-20" id="platform-changes">&lt;/span>
+&lt;a href="#platform-changes" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ul>
+&lt;li>Ubuntu 25.04 (Plucky) is no longer supported, as it has reached end of life.&lt;/li>
+&lt;li>Debian 12 (Bookworm) has the X11 session only. &lt;code>regolith-session-sway&lt;/code> is no longer built for it, as the packages it depends on are not available there.&lt;/li>
+&lt;/ul>
+&lt;h2>Removed Packages&lt;span class="hx-absolute -hx-mt-20" id="removed-packages">&lt;/span>
+&lt;a href="#removed-packages" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>These packages are no longer part of Regolith. Installed copies are not removed by the upgrade.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>fonts-jetbrains-mono&lt;/code>, &lt;code>fonts-materialdesignicons-webfont&lt;/code> and &lt;code>python3-i3ipc&lt;/code>: Ubuntu and Debian ship them, and their packages are used instead.&lt;/li>
+&lt;li>&lt;code>gtklock&lt;/code> on Ubuntu 25.10 and Debian 13: the distribution ships a newer version. Ubuntu 22.04 and 24.04 keep Regolith&amp;rsquo;s package.&lt;/li>
+&lt;li>&lt;code>regolith-unclutter-xfixes&lt;/code>: &lt;code>regolith-i3-unclutter&lt;/code> now uses the distribution&amp;rsquo;s &lt;code>unclutter-xfixes&lt;/code>.&lt;/li>
+&lt;li>&lt;code>remontoire&lt;/code>: &lt;code>ilia&lt;/code> has been Regolith&amp;rsquo;s keybinding viewer since 2.0.&lt;/li>
+&lt;li>&lt;code>armesto&lt;/code>: unused.&lt;/li>
+&lt;li>&lt;code>ubiquity-slideshow-regolith&lt;/code>: Regolith no longer ships an Ubuntu installer.&lt;/li>
+&lt;li>&lt;code>regolith-system-ubuntu&lt;/code> and &lt;code>regolith-distro-ubuntu&lt;/code> on Debian: they are Ubuntu-only packages that could not be installed on Debian.&lt;/li>
+&lt;/ul>
+&lt;h2>Known Issues&lt;span class="hx-absolute -hx-mt-20" id="known-issues">&lt;/span>
+&lt;a href="#known-issues" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ul>
+&lt;li>Nerd Fonts 3 removed the old Material Design icons (&lt;code>nf-mdi-*&lt;/code>, U+F500 to U+FD46). Custom workspace names or bar labels that use them show as boxes after the upgrade. Use the matching &lt;code>nf-md-*&lt;/code> icon (U+F0001 and up) from the &lt;a href="https://www.nerdfonts.com/cheat-sheet" target="_blank" rel="noopener">Nerd Fonts cheat sheet&lt;/a> instead.&lt;/li>
+&lt;li>Regolith now packages 9 Nerd Font families: BitstreamVeraSansMono, Cousine, DejaVuSansMono, Hack, Meslo, Mononoki, RobotoMono, SourceCodePro and Symbols. Other &lt;code>fonts-nerd-font-*&lt;/code> packages installed from Regolith 3.4 stay installed at version 2.1.0, but receive no further updates.&lt;/li>
+&lt;li>When upgrading Ubuntu using &lt;code>do-release-upgrade&lt;/code>, the Regolith package repo has to be re-added to your system as the Ubuntu upgrade script disables it. Ensure the Regolith package repository has been added back to your &lt;code>apt&lt;/code> configuration, with the new codename, after the Ubuntu upgrade script completes.&lt;/li>
+&lt;/ul>
+&lt;h2>Installation Instructions&lt;span class="hx-absolute -hx-mt-20" id="installation-instructions">&lt;/span>
+&lt;a href="#installation-instructions" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Refer to the &lt;a href="https://regolith-desktop.com/docs/using-regolith/install/" >installation instructions&lt;/a> to install or upgrade from a previous version. During the beta, those instructions install Regolith 3.4: see &lt;a href="#test-regolith-35-beta-1" >Test Regolith 3.5 Beta 1&lt;/a> to install or upgrade to the beta.&lt;/p>
+&lt;p>After the Regolith upgrade is complete, verify that Regolith 3.5 is installed by:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> cat /etc/regolith/version
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">REGOLITH_VERSION=3.5
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h2>Changes since Regolith 3.4&lt;span class="hx-absolute -hx-mt-20" id="changes-since-regolith-34">&lt;/span>
+&lt;a href="#changes-since-regolith-34" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/childe/releases/v0.1.5" target="_blank" rel="noopener">&lt;code>childe&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-childehttpsgithubcomregolith-linuxchildereleasesv015">&lt;/span>
+&lt;a href="#changes-in-childehttpsgithubcomregolith-linuxchildereleasesv015" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">573cc99 fix: ignore unnumbered and duplicate workspaces when finding the next free one&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/dracula-gtk/releases/v4.0.0&amp;#43;git20260824" target="_blank" rel="noopener">&lt;code>dracula-gtk&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-dracula-gtkhttpsgithubcomregolith-linuxdracula-gtkreleasesv400git20260824">&lt;/span>
+&lt;a href="#changes-in-dracula-gtkhttpsgithubcomregolith-linuxdracula-gtkreleasesv400git20260824" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">0cd4ebe feat: update to upstream 4.0.0+git20260824&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/fonts-nerd-fonts/releases/v3.5.1-2" target="_blank" rel="noopener">&lt;code>fonts-nerd-fonts&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-fonts-nerd-fontshttpsgithubcomregolith-linuxfonts-nerd-fontsreleasesv351-2">&lt;/span>
+&lt;a href="#changes-in-fonts-nerd-fontshttpsgithubcomregolith-linuxfonts-nerd-fontsreleasesv351-2" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">efea37f feat: update the fonts to Nerd Fonts 3.5.1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2459f97 feat: package Nerd Fonts 3.5.1&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/gtklock/releases/v2.2.3" target="_blank" rel="noopener">&lt;code>gtklock&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-gtklockhttpsgithubcomregolith-linuxgtklockreleasesv223">&lt;/span>
+&lt;a href="#changes-in-gtklockhttpsgithubcomregolith-linuxgtklockreleasesv223" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">b91b502 fix(auth): cap PAM messages and send each in one write&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/i3-next-workspace/releases/v1.0.8" target="_blank" rel="noopener">&lt;code>i3-next-workspace&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-i3-next-workspacehttpsgithubcomregolith-linuxi3-next-workspacereleasesv108">&lt;/span>
+&lt;a href="#changes-in-i3-next-workspacehttpsgithubcomregolith-linuxi3-next-workspacereleasesv108" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">1a4de1d fix: quote workspace names in the i3 command and fail when i3 rejects it
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c4219f1 fix: work without workspace-name resources and past workspace 49
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">0bff36c fix: accept workspace names that contain a colon&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/i3-snapshot/releases/v1.1.1" target="_blank" rel="noopener">&lt;code>i3-snapshot&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-i3-snapshothttpsgithubcomregolith-linuxi3-snapshotreleasesv111">&lt;/span>
+&lt;a href="#changes-in-i3-snapshothttpsgithubcomregolith-linuxi3-snapshotreleasesv111" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">41f7b5b fix: record floating windows and restore windows whose workspace is gone
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">bcc6d15 fix: resolve cmake 4 versioning issue introduced in resolute&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/i3-swap-focus/releases/v0.4.6" target="_blank" rel="noopener">&lt;code>i3-swap-focus&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-i3-swap-focushttpsgithubcomregolith-linuxi3-swap-focusreleasesv046">&lt;/span>
+&lt;a href="#changes-in-i3-swap-focushttpsgithubcomregolith-linuxi3-swap-focusreleasesv046" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">b0b4c62 fix: remove the PID file when the daemon is stopped by a signal&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/i3status-rs_debian/releases/v0.32.1-3" target="_blank" rel="noopener">&lt;code>i3status-rs&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-i3status-rshttpsgithubcomregolith-linuxi3status-rs_debianreleasesv0321-3">&lt;/span>
+&lt;a href="#changes-in-i3status-rshttpsgithubcomregolith-linuxi3status-rs_debianreleasesv0321-3" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">5e5beb6 fix: address clippy findings of current Rust
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">4c04bf2 style: format bluetooth.rs with rustfmt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">802c69f fix: address clippy findings of current Rust
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">06b2a87 style: format bluetooth.rs with rustfmt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3a99153 fix(keyboard_layout): skip sway events for virtual keyboards
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">980fc05 feat: open Settings from the battery, date and time blocks
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">bca844f feat: show the keyboard layout in the sway bar
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">95ba7b9 fix: hide the rofication block when Rofication is not installed&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/i3xrocks/releases/v1.3.7" target="_blank" rel="noopener">&lt;code>i3xrocks&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-i3xrockshttpsgithubcomregolith-linuxi3xrocksreleasesv137">&lt;/span>
+&lt;a href="#changes-in-i3xrockshttpsgithubcomregolith-linuxi3xrocksreleasesv137" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">435655b fix: do not crash on an undefined xresource without a default&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/ilia/releases/v0.20.1" target="_blank" rel="noopener">&lt;code>ilia&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-iliahttpsgithubcomregolith-linuxiliareleasesv0201">&lt;/span>
+&lt;a href="#changes-in-iliahttpsgithubcomregolith-linuxiliareleasesv0201" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">4e22222 fix(launch): name the scope of a command line after its program
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">e96a4dd fix(a11y): don&amp;#39;t crash when an AT-SPI client leaves during a key press
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">eca4426 feat(help): make help a page that scrolls, in single and all-pages mode
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">6d60ca4 docs: drop the README section on window manager keys
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">b6ad6df fix(apps): show an app grid as the icon of the Applications page
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">a960161 fix(filter): build with the GLib bindings of older Vala releases
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c6b2e25 fix(keys): let window manager and desktop keys work while ilia is open
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3d18054 feat(filter): rank name matches first, ignore accents, optional fuzzy matching
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1723b18 fix(filter): show no page icon in the entry after a tab switch
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ee43f9a feat(keybindings): show the keys the window manager actually binds
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">a5064e3 fix(apps): launch desktop entries as the Desktop Entry spec says
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">dffa6bc fix(wayland): stay open when the seat&amp;#39;s last keyboard goes away
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">0585dbe fix(windows): log no critical for native Wayland windows
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">4f7b01c Apps page: look themed icons up by their plain name
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">da2aaaa Apps page: address review of the early-startup changes
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">b600991 Apps page: read desktop files during GTK startup, decode icons off the main thread
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">236f5af fix(keybindings): send the command the window manager holds for the binding
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">affbb11 fix(keybindings): read the config files in order, each on its own lines
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">56562ce fix(keybindings): run the clicked row&amp;#39;s binding on X11
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c6f236c fix(keybindings): run the chosen binding over IPC, quotes intact
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ba562cf fix: paste without blocking on the clipboard owner
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">bab28e4 fix(filter): highlight the first match for new text after arrow keys
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c30a10e fix(commands): list each command once, and only commands
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">532cc78 fix(files): find files by their content
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">aee52af fix(notifications): highlight the new last row after deleting the last one
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">0aeac3a fix(keys): count entry positions in characters for word motion and copy
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">9d0b346 fix(keys): close on the right Super key too
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3b7e546 fix(apps): search keywords without a comment, and the generic name
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3083289 fix(apps): show no black square for apps without an icon
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">7481ac8 fix(windows): keep the icon column when a window has no icon
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c2289e5 fix(windows): list dialog windows on i3, as on sway
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">e30408e fix(filter): apply the entry text to the switched page
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">4d819de fix(x11): close before a suspend so the screen locker can lock
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">7bf89fe fix(tracker): search files without blocking the UI
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">f0bc483 fix(keys): keypad Enter acts on the highlighted row, like Return
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">0789ebe fix(wayland): detect Wayland from the GDK display
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">725df67 fix(ipc): read the sway socket from SWAYSOCK
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c4c534f fix(wayland): Alt+minus shrinks the window right away
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">67aa7ff fix(notifications): do not hang on a daemon that never answers
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">8e1ea20 fix(notifications): Delete removes the highlighted notification
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">222a0ed fix(keys): move with Ctrl+n/p from the highlighted row
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">9e1f71d fix(keys): switch keyboard layout while the launcher is open
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">aca531c fix(textlist): fill the view in bounded steps, stop when the window closes
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">d64843a fix(textlist): stay responsive on large lists
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3b5f02a fix(notifications): list the newest notification first
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">8d03dc5 fix(files): load tinysparql or tracker-sparql at run time
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">bdea8ec fix(apps): run Terminal=true apps in a terminal again
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">28e0359 feat(keys): Home and End select the first and last row
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">22fc722 feat(filter): match every word of the query, in any order
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">e35bb60 fix(keys): let Enter accept typed text that matches no item
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1911f87 fix(ipc): read the whole i3/sway IPC reply
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">f4887df fix(apps): load icons on the main thread to stop model race&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/lago/releases/v0.2.0-3" target="_blank" rel="noopener">&lt;code>lago&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-lagohttpsgithubcomregolith-linuxlagoreleasesv020-3">&lt;/span>
+&lt;a href="#changes-in-lagohttpsgithubcomregolith-linuxlagoreleasesv020-3" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">a467d64 fix(debian): drop the -dev runtime dependency and clean up packaging&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/libtrawldb/releases/v0.1.1-1" target="_blank" rel="noopener">&lt;code>libtrawldb&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-libtrawldbhttpsgithubcomregolith-linuxlibtrawldbreleasesv011-1">&lt;/span>
+&lt;a href="#changes-in-libtrawldbhttpsgithubcomregolith-linuxlibtrawldbreleasesv011-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">85d9b13 fix: remove proxy_new() from client_api.h
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">6cf504e fix: don&amp;#39;t crash in conf_client_init() when err is NULL&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/nordic/releases/v2.2.0&amp;#43;git20260723-1" target="_blank" rel="noopener">&lt;code>nordic&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-nordichttpsgithubcomregolith-linuxnordicreleasesv220git20260723-1">&lt;/span>
+&lt;a href="#changes-in-nordichttpsgithubcomregolith-linuxnordicreleasesv220git20260723-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">fe8ba67 feat: update to upstream 2.2.0+git20260723&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/avizo/releases/v0.1.8" target="_blank" rel="noopener">&lt;code>regolith-avizo&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-avizohttpsgithubcomregolith-linuxavizoreleasesv018">&lt;/span>
+&lt;a href="#changes-in-regolith-avizohttpsgithubcomregolith-linuxavizoreleasesv018" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">2b857f6 fix(service): let the latest Show() decide when the notification hides
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cc184ca fix(debian): don&amp;#39;t fail the configure when light is missing
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cf6bd4f fix(client): exit with the status of the command line
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">501a238 fix(volumectl): accept -M and -h after the command
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">7216bbb fix(packaging): build regolith-avizo as Architecture: any
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">bac30e9 fix: report version 1.3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">bc121dc feat: add a focused-output setting to show the OSD on the focused output only
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">884406e fix: show the image that each call asks for
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">0c382ad fix(service): start on demand over D-Bus, exit if already running, quiet log
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1ad2ee1 fix: draw the border correctly when border-radius is smaller than border-width
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">4631afb feat: add a show command to volumectl and lightctl
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">de5ffaf fix(volumectl): stop at 100% unless -b is given, and make -b a plain flag
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c7314f5 fix: hide the OSD after 1.5 seconds, as the X11 session does
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">22b33ff fix: draw the OSD images sharply on scaled outputs
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">4624e59 fix(volumectl): show the OSD when the device is not muted
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2a105c7 fix broken link
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">95ca837 fix options of lightctl
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">090f8a5 fix options of lightctl
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ffa2aad Add error message for when avizo-service is not running
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">b296d98 Fix move calls
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">77e5b01 Add x_offset, heyjuvi#70
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">d0c9f5f Fix typo, aquired -&amp;gt; acquired
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">b59181e Fix #48 bashism in lightctl
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">b459e41 update scripts for monitor option
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">5ff32ea add monitor option
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">28955b7 Fix indentation for setting namespace
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">78198b1 Set namespace to avizo for gtk-layer-shell
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">4b9f951 Format volumectl
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">01a5b5a Format lightctl
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">b3db209 Format avizo_service.vala
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">d489f84 Format avizo_client.vala
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3484523 added dark variants to listed resources
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1c11616 added -d flag to the help menu
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">6f1087b fix volumectl
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">51cd8ab add -d flag for dark theme
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">4ea9ec3 added dark theme icons&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-compositor-compton-glx/releases/v1.2.4" target="_blank" rel="noopener">&lt;code>regolith-compositor-compton-glx&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-compositor-compton-glxhttpsgithubcomregolith-linuxregolith-compositor-compton-glxreleasesv124">&lt;/span>
+&lt;a href="#changes-in-regolith-compositor-compton-glxhttpsgithubcomregolith-linuxregolith-compositor-compton-glxreleasesv124" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">3dcbe0b fix: quote the user compton config path and exec compton
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">fa4d915 fix: point the init comment at the current compositor docs
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">8b87500 fix: replace the regex shadow exclusion that makes compton exit at start&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-compositor-none/releases/v1.0.5-1" target="_blank" rel="noopener">&lt;code>regolith-compositor-none&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-compositor-nonehttpsgithubcomregolith-linuxregolith-compositor-nonereleasesv105-1">&lt;/span>
+&lt;a href="#changes-in-regolith-compositor-nonehttpsgithubcomregolith-linuxregolith-compositor-nonereleasesv105-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">bc70506 fix: point the init comment at the current compositor docs&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-compositor-picom-glx/releases/v1.4.1-1" target="_blank" rel="noopener">&lt;code>regolith-compositor-picom-glx&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-compositor-picom-glxhttpsgithubcomregolith-linuxregolith-compositor-picom-glxreleasesv141-1">&lt;/span>
+&lt;a href="#changes-in-regolith-compositor-picom-glxhttpsgithubcomregolith-linuxregolith-compositor-picom-glxreleasesv141-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">862ebde fix: point the init comment at the current compositor docs
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">962a8fc fix: replace only this user&amp;#39;s picom in init
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3b23e7e fix: use the xrender backend on software renderers
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cc1bce6 fix: start picom again after it crashes
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ff9f7f8 test: install EGL for the picom-config autopkgtest
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">703562e fix: keep the config free of deprecated options on picom 12 and 13&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-compositor-xcompmgr/releases/v1.4.1-1" target="_blank" rel="noopener">&lt;code>regolith-compositor-xcompmgr&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-compositor-xcompmgrhttpsgithubcomregolith-linuxregolith-compositor-xcompmgrreleasesv141-1">&lt;/span>
+&lt;a href="#changes-in-regolith-compositor-xcompmgrhttpsgithubcomregolith-linuxregolith-compositor-xcompmgrreleasesv141-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">4a440f5 fix: point the init comment at the current compositor docs&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-control-center/releases/v1.46.0-6-gnome-46" target="_blank" rel="noopener">&lt;code>regolith-control-center&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-control-centerhttpsgithubcomregolith-linuxregolith-control-centerreleasesv1460-6-gnome-46">&lt;/span>
+&lt;a href="#changes-in-regolith-control-centerhttpsgithubcomregolith-linuxregolith-control-centerreleasesv1460-6-gnome-46" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">3c959f99c fix: ship panel desktop files and load them with a regolith- prefix
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">e64fb6cca region: store the formats in accountsservice too, for Ubuntu&amp;#39;s session
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">55742395c background: show the chosen wallpaper in sway without reloading it
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">e66501083 keyboard: also read keybindings from gnome-control-center/keybindings&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-default-settings/releases/v2.0.7" target="_blank" rel="noopener">&lt;code>regolith-default-settings&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-default-settingshttpsgithubcomregolith-linuxregolith-default-settingsreleasesv207">&lt;/span>
+&lt;a href="#changes-in-regolith-default-settingshttpsgithubcomregolith-linuxregolith-default-settingsreleasesv207" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">4057189 fix(debian): conflict with session-shortcuts
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">87992c3 fix: stop offering the logout, reboot and shutdown entries as terminals
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">aa60b0e fix: give the sway session the same GNOME defaults as X11
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">39d8cfe fix: ship the schema override from the source tree, not from debian/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2e4edc8 test: check the session action entries in both Regolith sessions
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">7709cba fix: add logout, reboot and shutdown entries for the sway session
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">081668b fix: only show session actions on X11 due to incompat w/ wayland.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-displayd/releases/v0.6.0" target="_blank" rel="noopener">&lt;code>regolith-displayd&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-displaydhttpsgithubcomregolith-linuxregolith-displaydreleasesv060">&lt;/span>
+&lt;a href="#changes-in-regolith-displaydhttpsgithubcomregolith-linuxregolith-displaydreleasesv060" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">745e18f fix: find the home directory without $HOME instead of panicking
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">6390f64 fix: refuse layouts with extreme positions instead of overflowing
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ba22476 test: check the kanshi include on every kanshi version and its directory
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">d1698bc fix: write the kanshi include in the syntax of the installed kanshi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">5ff22b4 test: check the kanshi configuration for home directories with spaces and quotes
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c28fd23 fix: quote paths in regolith-displayd-init and the kanshi include
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">331545e test: don&amp;#39;t run the fake kanshi scripts while another child holds them open
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">43fbecd ci: check formatting, clippy and tests on every pull request
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">93264f9 fix(tests): don&amp;#39;t exit silently when kanshi has already exited in display-config-headless
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">447527d refactor: use wayland-client for the Night Light gamma tables
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">bca50d7 feat: apply Night Light in the Wayland session
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">b2033ca feat: show monitor number labels for Settings &amp;gt; Displays in sway
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1154862 fix: address clippy warnings
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">d50c60c style: apply cargo fmt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">fa28955 fix: match known modes by monitor identity, not full equality
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">581c53f fix: compare and hash monitors by the same fields
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">6a49c54 fix(tests): make the exiting fake kanshi a script, not a copy of sleep
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">7b6192d test: don&amp;#39;t let display-config-headless exit silently
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">b0db523 feat: ask to keep display changes, and revert them after 20 seconds
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ed5439f fix: report and remember the primary display
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">30e5482 fix: don&amp;#39;t save temporary display changes
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">021c5e6 fix: keep the advertised display properties across Apply
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">fb5ecf8 fix: refuse display configurations that Mutter refuses
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">601495f fix: offer the scales Mutter offers for each mode
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1e86115 fix: keep connector-named kanshi profiles to the monitors they were saved for
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cec4d80 fix: refuse display configurations made for other monitors
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">5d05992 fix: tell identical monitors apart in kanshi profiles
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2e4a54c fix: name monitors like Mutter and stop reporting pixels as millimetres
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">a23d3e7 test: wait for the fake kanshi to be running before reloading
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">634af4b test: add an autopkgtest for the displayd and kanshi user units
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c70dd92 fix: keep regolith-displayd running when kanshi restarts
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">8a965dc style: format the kanshi reload code and simplify a map_or
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">77d2d0e fix: restart kanshi when it cannot reload
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">080a639 test: add a headless sway autopkgtest for the DisplayConfig API
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">a6f9148 fix: apply kanshi profiles reliably
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">b285552 fix: report the current mode for outputs with no mode list
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">edad3ac fix: display config doesn&amp;#39;t apply with disabled outputs&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-distro-ubuntu/releases/v2.0.1-1" target="_blank" rel="noopener">&lt;code>regolith-distro-ubuntu&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-distro-ubuntuhttpsgithubcomregolith-linuxregolith-distro-ubuntureleasesv201-1">&lt;/span>
+&lt;a href="#changes-in-regolith-distro-ubuntuhttpsgithubcomregolith-linuxregolith-distro-ubuntureleasesv201-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">d5de4fe fix(debian): make regolith-distro-ubuntu a transitional package&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-ftue/releases/v2.2.4" target="_blank" rel="noopener">&lt;code>regolith-ftue&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-ftuehttpsgithubcomregolith-linuxregolith-ftuereleasesv224">&lt;/span>
+&lt;a href="#changes-in-regolith-ftuehttpsgithubcomregolith-linuxregolith-ftuereleasesv224" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">958f6dd fix: don&amp;#39;t print an error when XDG_SESSION_TYPE is unset
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">bf610a2 fix: depend on libglib2.0-bin for gsettings
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">01ac652 fix: quote terminal profile strings as GVariant and retry failed setups
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">fdae125 fix: read the terminal profile setting from trawl in the sway session
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">6703051 fix: show the first-login keybinding help with the active look&amp;#39;s stylesheet&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-i3xrocks-config/releases/v6.0.1" target="_blank" rel="noopener">&lt;code>regolith-i3xrocks-config&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-i3xrocks-confighttpsgithubcomregolith-linuxregolith-i3xrocks-configreleasesv601">&lt;/span>
+&lt;a href="#changes-in-regolith-i3xrocks-confighttpsgithubcomregolith-linuxregolith-i3xrocks-configreleasesv601" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">a54c8de fix: keep media and window titles with line breaks on one bar line (#185)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">9422729 fix(debian): make i3xrocks-cpu-usage depend on perl (#184)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">102ed03 fix(updates): make i3xrocks-updates installable and working on Debian (#182)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">7ec733f fix(debian): recommend tailscale instead of depending on it (#181)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">d6a2089 fix(updates): use the Nerd Fonts 3 code point for the default label (#176)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3cbd253 fix(temp): fall back to other CPU sensors instead of dividing by zero (#178)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">e2975b2 fix(weather): show the error message for wttr.in error replies (#177)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">46db41f Fix microphone blocklet on PipeWire systems (#167)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">e788883 fix(volume): stop at 100% when scrolling up (#175)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">972f30f fix(debian): recommend gkbd-capplet for the keyboard layout blocklet (#174)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">0138a6c fix: show bluetooth device names and Wi-Fi SSIDs as they are (#173)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">43244c6 fix(key-indicator): hide the off indicators again (#172)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">dc4660d fix: open System Monitor again from the CPU and memory blocklets (#171)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">145f5f9 fix(time): show AM or PM with the 12-hour clock (#170)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">80fc406 fix(memory): show MemAvailable as free memory (#169)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cf0d9b6 feat: colour the CPU, memory and disk values when usage is high (#168)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">8c7c3ed fix(debian): make i3xrocks-info depend on ilia, not remontoire (#166)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2e80d3e battery: accept kernel battery names as the instance (#165)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">138c933 nm-vpn: do not report bridge-attached tun/tap devices as a VPN (#164)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">b12c99b key-indicator: describe what the blocklet shows (#163)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">4242391 weather: collapse the padding whitespace from wttr.in (#162)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">6da3250 Fix volume blocklet on PipeWire systems (#161)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1d9aadc fix: align ilia launch commands with wm config (#160)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-inputd/releases/v0.6.1" target="_blank" rel="noopener">&lt;code>regolith-inputd&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-inputdhttpsgithubcomregolith-linuxregolith-inputdreleasesv061">&lt;/span>
+&lt;a href="#changes-in-regolith-inputdhttpsgithubcomregolith-linuxregolith-inputdreleasesv061" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">1b9c732 fix: start the IBus panel again for an output created again under its name
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">048726b fix: make IBus opt-in and restart its Wayland panel on new outputs
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">57fc0e7 fix(debian): replace the dh_make placeholders in Section and Homepage
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">93dd516 feat: follow GNOME&amp;#39;s input-source switching rules in sway
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">023378d feat: run IBus in the sway session and follow the input source in use
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">25223b1 feat: mirror the Sound and Media and System shortcuts from Settings to sway
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">8f97468 fix: put the start limit in the [Unit] section
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">7a77e8e fix: apply input source variants with their layouts, skip unusable sources
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">4e44ae4 fix: keep running with input devices that have no vendor or product id
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">5e87644 fix: send sway&amp;#39;s name for the touchpad&amp;#39;s disabled-on-external-mouse
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">a4b3b23 fix: apply mouse handedness to touchpads that follow the mouse
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3a8fb5e docs: list the media-keys shortcuts that are not mirrored yet
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">d622cd4 fix: apply keyboard repeat at startup, honour repeat off and the acceleration profile
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">4bc519e fix: skip built-in shortcuts the media-keys schema does not have
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">d162d30 feat: mirror GNOME keyboard shortcuts to sway
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">0aac33f feat: mirror GNOME&amp;#39;s cursor theme and size to sway
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">141a19a feat: mirror GNOME&amp;#39;s XKB options (compose key and others) to sway
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">de2514a fix: apply the touchpad click method at startup and when it changes
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">f2cedb3 fix: keep running when no input source is set in GNOME
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cbb4afc test: run cargo test at package build and add an integration harness
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">4c654ef WIP: link gsettings click-method to sway click_method. Address https://github.com/regolith-linux/regolith-desktop/issues/1076&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-lightdm-config/releases/v1.4.0" target="_blank" rel="noopener">&lt;code>regolith-lightdm-config&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-lightdm-confighttpsgithubcomregolith-linuxregolith-lightdm-configreleasesv140">&lt;/span>
+&lt;a href="#changes-in-regolith-lightdm-confighttpsgithubcomregolith-linuxregolith-lightdm-configreleasesv140" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">e40bfc5 fix: name the greeter font by its Nerd Fonts 3 family
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">817bd44 fix: keep slick-greeter as the greeter when lightdm-gtk-greeter is installed&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-look-default/releases/v0.9.0" target="_blank" rel="noopener">&lt;code>regolith-look-default&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-look-defaulthttpsgithubcomregolith-linuxregolith-look-defaultreleasesv090">&lt;/span>
+&lt;a href="#changes-in-regolith-look-defaulthttpsgithubcomregolith-linuxregolith-look-defaultreleasesv090" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">24cab0c feat: move the default look to Nerd Fonts 3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">8abb21b fix(loader): name the lockscreen wallpaper path in its diagnostic
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">8dea0e4 fix(loader): percent-encode wallpaper paths in file URIs
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">60d612f fix(loader): set picture-uri-dark along with picture-uri
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">59982de test: check every look sets a valid gtk.color_scheme at build time
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">551c2c4 feat(default): set gtk.color_scheme to prefer-dark
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">454355d Ensure GNOME supports color-scheme
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">f309320 Add support for org.gnome.desktop.interface color-scheme&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-look-extra/releases/v0.11.0" target="_blank" rel="noopener">&lt;code>regolith-look-extra&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-look-extrahttpsgithubcomregolith-linuxregolith-look-extrareleasesv0110">&lt;/span>
+&lt;a href="#changes-in-regolith-look-extrahttpsgithubcomregolith-linuxregolith-look-extrareleasesv0110" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">ae804ab feat: move every look to Nerd Fonts 3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">e6c4561 fix(gruvbox): keep the sway lock screen clock readable
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">5671836 fix(i3-default): depend on the DejaVuSansMono Nerd Font the look uses
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">8559dc9 fix(dracula): depend on the Dracula icon theme instead of Moka
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">4cf2ac3 test: check the looks&amp;#39; picom configs at build time
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">451c3ef fix: keep the looks&amp;#39; picom configs free of deprecated options
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">958ea4d fix(nevil): use a proportional UI font
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">0545f27 test: check every look sets a valid gtk.color_scheme at build time
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">51a999b feat: set gtk.color_scheme in every look&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-powerd/releases/v0.10.0" target="_blank" rel="noopener">&lt;code>regolith-powerd&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-powerdhttpsgithubcomregolith-linuxregolith-powerdreleasesv0100">&lt;/span>
+&lt;a href="#changes-in-regolith-powerdhttpsgithubcomregolith-linuxregolith-powerdreleasesv0100" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">a2ddd8a fix: lock with regolith-sway-gtklock, as the lock key does
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">41de410 feat: pass the Displays panel&amp;#39;s monitor labels on to regolith-displayd
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">93acedb fix: depend on bc, which the idle dim uses
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">869093d fix: put the start limit in the [Unit] section
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2803cdc fix: don&amp;#39;t poll the session inhibitors every second with Screen Blank set to Never
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">224c60d fix: dim and turn off the screen at GNOME&amp;#39;s times
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">0bdb079 build(debian): depend on the media-handling schema, recommend gvfs and gcr
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c512243 feat: mount removable media automatically in the sway session
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">6733b9d feat: confirm logout, restart and power off requests in the sway session
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">fda38bc feat: switch to the power-saver profile when the battery is low
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c5a3ccb fix: turn the screen off soon after it is locked
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">0076459 fix: let explicit suspend through while an app inhibits suspend
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ebefedb fix: apply the new power source&amp;#39;s idle action after plugging in or unplugging
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">4740916 fix: don&amp;#39;t hang when two power settings change at once
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">340951e fix: lock the session when the lock-screen wallpaper path has spaces or ~
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">b400865 fix: honour the lockdown setting disable-lock-screen in sway
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">0c354ec fix: keep the power button bound after a sway reload
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">9f719c3 fix: make the &amp;#34;blank&amp;#34; sleep-inactive type turn the outputs off
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1827347 refactor: read the screen-lock settings through gen_settings
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">7b4a960 fix: honour the GNOME idle, dim and screen-lock settings in sway
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">4bc5f11 feat: warn when the battery is low
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3f9ee2b fix: keep the screen from staying dimmed or off after a reload or a lock
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">f817791 feat: provide org.gnome.ScreenSaver in the sway session
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">872649e fix(session): release locks on SessionManager loss and reconnect on system-bus closure
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">277ed1a refactor(logind): model inhibitor slots as Lock and rename session helpers
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c4bf299 feat(session): share session settings and cap poll interval
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">5647283 refactor: tidy duplicated strings, imports and warnings
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c886068 fix: treat an unknown power source as AC, not battery
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">d3b9619 feat(session): mirror GNOME session inhibition onto logind locks
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">90c4b12 refactor(logind): acquire the startup inhibitor asynchronously&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-rofication/releases/v1.6.0" target="_blank" rel="noopener">&lt;code>regolith-rofication&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-roficationhttpsgithubcomregolith-linuxregolith-roficationreleasesv160">&lt;/span>
+&lt;a href="#changes-in-regolith-roficationhttpsgithubcomregolith-linuxregolith-roficationreleasesv160" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">b34636e fix: take everything after the first colon as a socket request&amp;#39;s argument (#36)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">5f65ef8 fix: keep notifications whose urgency hint is out of range or not a number (#35)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2e0908e fix: save the queue when the daemon&amp;#39;s socket was removed (#33)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ee2a469 fix: don&amp;#39;t reuse notification IDs after a restart (#32)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c982323 fix: advertise persistence and keep transient notifications out of the saved queue (#31)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">9522216 fix: declare the Notify hints as a{sv} (#30)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">d167556 fix: emit NotificationClosed when a notification is closed or dismissed (#29)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">9bb7b8f feat: make the rofication-gui key bindings configurable (#27)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">6080695 feat: make the single-notification app list configurable (#26)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">54d9e8f fix: save the notification queue when the daemon is stopped by a signal (#28)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">bcb0c11 fix: do not crash rofication-gui when xrescat is missing (#25)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-session/releases/v1.3.1-1" target="_blank" rel="noopener">&lt;code>regolith-session&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-sessionhttpsgithubcomregolith-linuxregolith-sessionreleasesv131-1">&lt;/span>
+&lt;a href="#changes-in-regolith-sessionhttpsgithubcomregolith-linuxregolith-sessionreleasesv131-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">50082f1 fix: end the X11 session at logout on gnome-session 48 and 49 (#109)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3cd7085 fix: make regolith-diagnostic report the installed sessions from a console (#106)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">4e3fa9a fix(tests): check upgrade relations without changing the installed packages (#105)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">a48cb84 feat(debian): show the same bar blocks in the X11 session as in sway (#87)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">36be167 Chore/release 1 2 5 (#104)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">8aec779 fix: rebuild the resources from scratch on regolith-look set and refresh (#98)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ab562b7 fix: keep xdg-terminal-exec from picking foot in the X11 session (#102)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">94c35d4 fix: make regolith-diagnostic report sway in the Wayland session (#100)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">d0fe095 fix: end the Wayland session when sway exits, and apply the look once there (#99)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c0e389e fix: keep i3 restartable when the session runs gnome-session --builtin (#95)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2159f67 fix: run the post-logout script when the session ends (#96)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">12de6c4 fix: make regolith-look refresh merge the X resources in the login order (#93)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">7b9585a fix: keep an earlier session&amp;#39;s SWAYSOCK and I3SOCK out of the next one (#91)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">a16f836 fix(debian): depend on gnome-session-common, which ships the session targets (#89)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">50b8f31 fix(debian): drop the unused clipman dependency (#79)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">d677727 fix: give the Wayland session its desktop names
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">f9c6902 fix: keep non-ASCII text in Xresources values (#85)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">90ea509 fix: tell Java applications that sway does not reparent windows (#83)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">6704b6c fix(debian): let plain apt upgrade move the sway session forward (#84)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">fdc3c5a fix: keep dead keys working in X11 applications in the Wayland session (#82)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">5b1a945 fix: keep the PATH from ~/.profile when gnome-session runs the session itself (#80)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">da0b6d2 fix: take the system keyboard layout on a first Wayland login (#78)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">33edfbb fix: recommend regolith-default-settings from the sway session (#73)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">7331350 fix: report a missing look instead of an unbound variable error (#75)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">06849f5 fix: honour Xft.dpi, apply the look once, keep the default look across look updates (#72)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">9efa20e fix: do not open GNOME Initial Setup in the Regolith sessions (#70)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">4b565a6 fix: hide the distro picom autostart entry in the Regolith sessions (#71)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">bd7b183 fix: keep the X11 lock screen&amp;#39;s context menu closed from the keyboard (#69)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">f602885 fix: clean up workspace names at X11 login as regolith-look refresh does (#68)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">267780a fix: start the GNOME Flashback polkit agent from autostart where it has no unit (#66)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">462b87a X11 session on Ubuntu 26.04+: start the polkit agent and idle monitor, handle session failures (#64)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">b742843 fix: add missing i3-wm dependency (#61)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-system-ubuntu/releases/v1.1.0-1" target="_blank" rel="noopener">&lt;code>regolith-system-ubuntu&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-system-ubuntuhttpsgithubcomregolith-linuxregolith-system-ubuntureleasesv110-1">&lt;/span>
+&lt;a href="#changes-in-regolith-system-ubuntuhttpsgithubcomregolith-linuxregolith-system-ubuntureleasesv110-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">9f1b782 Rename the OutputClass identifier to &amp;#34;vc4&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">6708962 Only ship the Raspberry Pi Xorg config in the arm64 package
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ab3e2ea feat: make lightdm work on Raspberry Pi out of the box
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">bf5045b fix(debian): recommend plymouth-theme-regolith-logo, the theme&amp;#39;s real name&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-wm-config/releases/v4.13.1" target="_blank" rel="noopener">&lt;code>regolith-wm-config&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-wm-confighttpsgithubcomregolith-linuxregolith-wm-configreleasesv4131">&lt;/span>
+&lt;a href="#changes-in-regolith-wm-confighttpsgithubcomregolith-linuxregolith-wm-configreleasesv4131" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">75fb0a4 fix(debian): stop regolith-session-sway from pulling in i3-wm and xdotool
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">75035a3 chore(debian): remove the orphaned regolith-sway-touchpad-guestures files
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">fb6826f fix(sway): accept colours with alpha (#RRGGBBAA) in looks
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">d752585 fix(clamshell): compare the display count as a number
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">a1fd1f3 fix(debian): stop building the sway packages for Debian 12
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">6ff06d3 fix(sway): keep the volume keys working with an avizo without volumectl -n
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">86a9a0c fix(sway): name the audio device in the volume OSD, as X11 does
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">27a749c fix(sway): show the look&amp;#39;s lock-screen colours and image placement
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">373237d fix(sway): end the style watcher when sway exits
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ba20813 Revert &amp;#34;feat: add focus-or-launch, pop-out and transparency keys to both sessions&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ac91d3f fix(debian): break regolith-powerd older than 0.9.0 in regolith-sway-session
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">f78febd fix(sway): ask before logout, reboot and power off through the end-session dialog
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c0c39c7 test(i3): skip workspace-memory where the dummy X driver has no outputs
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">5f116a7 test(i3): add an autopkgtest for regolith-i3-workspace-memory
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">6eb45a2 feat(i3): move workspaces back to a monitor when it returns
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">9c5323a refactor: rename regolith-i3-wallpaper to regolith-i3-wallpaper-folder
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">bdf587e feat: show a folder of pictures as the wallpaper, and play GNOME slideshows in sway
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">fbfc2ae feat: add focus-or-launch, pop-out and transparency keys to both sessions
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">d25ede8 docs(debian): shorten the regolith-wm-quick-toggles description
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">e11d84f feat: add keys for stay awake, the touchpad and Night Light in both sessions
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">47d8155 fix(sway): handle the Eject, Battery and airplane mode keys
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">506e730 feat(sway): let a look style the gtklock lock screen
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">d4c5d11 fix(sway): show the other picture of a wallpaper pair on a style switch
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">dd5e6e6 fix(sway): handle the Rewind, Forward, Repeat, Shuffle and Media keys
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3880091 fix(sway): read the look selector icon from trawl in the sway session
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">898b509 fix(clamshell): run the lid close action when there is no eDP panel
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">5c30ccd fix(debian): use the distribution&amp;#39;s unclutter-xfixes for the i3 session
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ae5d3e2 feat(i3): add touchpad swipe gestures like the sway session&amp;#39;s
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2823090 fix(sway): also open the calculator when it is installed as a snap
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c2ff4d4 feat(i3): add sway&amp;#39;s three Super+Print screenshot keys to the X11 session
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">6914c0f fix(sway): handle the launcher and lock keys as the X11 session does
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">6a2056b fix(sway): add the fine volume step and the media key variants of X11
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3e4f294 fix(sway): don&amp;#39;t show the config error bar for Alt+Print when wm.mod is Mod1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">d0512d8 fix: apply the configured border styles to tiled and floating windows
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3927eea fix(sway): load the config when a look lacks child-border colours or ilia.stylesheet
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">8eb5a5c fix(sway): make Super+= and Super+Shift+= widen the gaps as in i3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1cec334 fix(sway): apply wm.bar.trayoutput to the bar tray
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">22ce167 fix(sway): lock the session when the lock-screen wallpaper path has spaces or ~
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">28a474f fix(i3): stop the old compositor when another compositor package replaces it
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">0d920e9 fix: open the Look Selector with the look&amp;#39;s ilia stylesheet
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ba1b4fb fix: make Up and Down resize the same way as k and j
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">10551d0 fix(sway): draw SVG wallpapers instead of taking them for GNOME XML files
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">bf69394 fix(sway): float native Wayland windows with the app_id floating_window
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">20297b2 fix(sway): draw the wallpaper colours and gradients as the X11 session does
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3e3add9 fix(sway): read wm.hide_cursor.timeout, keeping the old timout spelling
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c622c56 feat: let Xresources change what the mouse wheel does over the bar
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">0325c01 feat: add a key to switch back to the previous workspace
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">092156f fix(sway): reload kanshi on sway reloads instead of restarting it
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">481c262 feat(sway): let users opt out of the XWayland settings service
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">0e2ff1f feat(sway): use the X11 session&amp;#39;s screenshot keys
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">27248b9 fix(clamshell): take the lid close action from systemd-logind, as X11 does
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">77cdd52 fix(sway): serve the GNOME theme, fonts and cursor to XWayland apps
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">49c2477 fix(sway): keep the brightness keys working on the lock screen
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">65ba3d7 fix(debian): bring back regolith-sway-audio-idle-inhibit as a transitional package
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3eac9be fix(debian): install the i3 next-free-workspace bindings again
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">34d82d8 fix(sway): make Terminate App work for native Wayland windows
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">b17224c docs(i3): list the screenshot keys in the keybinding viewer
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">5ecc2a8 fix(sway): keep the user&amp;#39;s input method choice across reloads
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">6454b0f docs(i3): list the layout-switch keys in the keybinding viewer
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ff7a300 fix(debian): make picom-glx the X11 compositor default for every solver
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">8ccd127 fix(debian): restore the settings integration after a release upgrade
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1f24705 fix(sway): give the previous-layout binding its own resources
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">a6bc75c fix(sway): allow switching keyboard layout on the lock screen
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">d8b60b1 fix: stop hard-coding Mod1 so the wm.mod/wm.alt swap works
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">bd4854d fix(clamshell): treat an unknown power source as AC, not battery
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">e7d2748 fix(clamshell): lock the session before suspending on lid close
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">5379e75 fix: publish compositor env to gnome-session before READY&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/SwayAudioIdleInhibit/releases/v2.0.5" target="_blank" rel="noopener">&lt;code>sway-audio-idle-inhibit&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-sway-audio-idle-inhibithttpsgithubcomregolith-linuxswayaudioidleinhibitreleasesv205">&lt;/span>
+&lt;a href="#changes-in-sway-audio-idle-inhibithttpsgithubcomregolith-linuxswayaudioidleinhibitreleasesv205" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">1f583e4 fix: leave room for the end of the ignored source outputs list
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">6498b26 fix: re-enable the service when the stale link was removed by hand
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">9ac52f4 fix: don&amp;#39;t abort when the first inhibit comes after the bus auth timeout
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">aca5908 fix: run only in the Regolith Wayland session
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c327047 fix: remove stale systemd link from upgrade from 25.10 to 26.06
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">b36a335 fix: fix target to remove cycle present in ubuntu 26.04 gdm3. Fixes gdm3 breaking when regolith is installed&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/trawl/releases/v0.3.1" target="_blank" rel="noopener">&lt;code>trawl&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-trawlhttpsgithubcomregolith-linuxtrawlreleasesv031">&lt;/span>
+&lt;a href="#changes-in-trawlhttpsgithubcomregolith-linuxtrawlreleasesv031" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">c888f91 fix(tests): give each trawldb integration test its own bus and trawld
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">a379169 fix(debian): version 0.3.0 so Regolith&amp;#39;s trawl outranks the distribution builds
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">fed74fd fix(debian): make trawld depend on cpp
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">b01ae48 Revert experimental pkgforge/CI changes from 2026-05-10..11
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">01aea09 fix: remove and replace unstable api usage to support jammy and noble
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">a45d2ef fix(trawldb): edit values into the file with --edit, like xrdb -edit
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">67f7a73 fix(trawldb): exit 1 when a command fails
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">0187f93 fix(trawld): keep restarting trawld after occasional crashes
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">f2a08c1 fix(trawldb): make resources() read the Resources property
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">b45285c fix(trawldb): drop quit() from the D-Bus proxy
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c3845bc fix(trawldb): clear resources before --load/--merge with --remove
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3464b96 fix(trawld): exit 0 for --help and --version
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">b6c170b fix: don&amp;#39;t delete the resource file when -I/-D arguments contain spaces
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">39b50d5 bump: revision to 5 for re-upload
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">7b5ed01 bump revision to 4
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ce51077 remove install_doc config
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">9cbd346 bump revision to 3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">87b094d bump revision to 2 for re-upload
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">4adbba2 fix: configure git user for install-doc step
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">830f346 specify container image for pkgforge-runner
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">8a09040 feat: add action
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">b8b019d exp: new package build test
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">b46b38e Revert &amp;#34;Add pkgforge configuration for multi-distro packaging&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">61eafba Add pkgforge configuration for multi-distro packaging
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">eb3906b fix: rebased changelog
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">da78cae fix: fix target to remove cycle present in ubuntu 26.04 gdm3. Fixes gdm3 breaking when regolith is installed&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/WhiteSur-gtk-theme/releases/v1.2-2026.09.10" target="_blank" rel="noopener">&lt;code>whitesur-gtk-theme&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-whitesur-gtk-themehttpsgithubcomregolith-linuxwhitesur-gtk-themereleasesv12-20260910">&lt;/span>
+&lt;a href="#changes-in-whitesur-gtk-themehttpsgithubcomregolith-linuxwhitesur-gtk-themereleasesv12-20260910" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">cc66cf9 fix: point Homepage and copyright Source at the upstream project
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1e3c367 feat: update to upstream release 2026-09-10&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/xdg-desktop-portal-regolith/releases/v0.4.0-1" target="_blank" rel="noopener">&lt;code>xdg-desktop-portal-regolith&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-xdg-desktop-portal-regolithhttpsgithubcomregolith-linuxxdg-desktop-portal-regolithreleasesv040-1">&lt;/span>
+&lt;a href="#changes-in-xdg-desktop-portal-regolithhttpsgithubcomregolith-linuxxdg-desktop-portal-regolithreleasesv040-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">1bb2f04 feat: retire the portal backend (#39)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c01a60f feat: expose the accent colour through the Settings portal (#38)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">332bbe0 fix: route X11 Screenshot to the GNOME portal and disable ScreenCast (#34)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">b9c6d72 fix: drop libjsonrpc-glib-1.0-dev from the runtime Depends (#33)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h2>Changes in &lt;code>debian bookworm&lt;/code> since Regolith 3.4&lt;span class="hx-absolute -hx-mt-20" id="changes-in-debian-bookworm-since-regolith-34">&lt;/span>
+&lt;a href="#changes-in-debian-bookworm-since-regolith-34" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-control-center/releases/v1.43.1-10-gnome-43" target="_blank" rel="noopener">&lt;code>regolith-control-center&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-control-centerhttpsgithubcomregolith-linuxregolith-control-centerreleasesv1431-10-gnome-43">&lt;/span>
+&lt;a href="#changes-in-regolith-control-centerhttpsgithubcomregolith-linuxregolith-control-centerreleasesv1431-10-gnome-43" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">a6f6aabcd fix: ship panel desktop files and load them with a regolith- prefix&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-session/releases/v1.1.15-1-debian-bookworm-debian-bookworm" target="_blank" rel="noopener">&lt;code>regolith-session&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-sessionhttpsgithubcomregolith-linuxregolith-sessionreleasesv1115-1-debian-bookworm-debian-bookworm">&lt;/span>
+&lt;a href="#changes-in-regolith-sessionhttpsgithubcomregolith-linuxregolith-sessionreleasesv1115-1-debian-bookworm-debian-bookworm" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">299d1fe fix: rebuild the X resources from scratch on regolith-look set and refresh (#101)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">548fb47 fix(tests): check this source&amp;#39;s packages, not the testbed, in sessions-per-vendor (#103)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cad1114 fix: stop building the sway session for Debian 12 (#86)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">78a9371 fix: make regolith-look refresh merge the X resources in the login order (#94)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">72ff011 fix: keep an earlier session&amp;#39;s SWAYSOCK and I3SOCK out of the next one (#92)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c4cda27 fix(debian): depend on gnome-session-common, which ships the session targets
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c79f6ab fix: keep the PATH from ~/.profile when gnome-session runs the session itself (#81)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">a6c076a fix: recommend regolith-default-settings from the sway session (#74)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">7cdbbdf fix: keep i3 restartable when the session runs gnome-session --builtin (#65)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/xdg-desktop-portal-regolith/releases/v0.4.0-2" target="_blank" rel="noopener">&lt;code>xdg-desktop-portal-regolith&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-xdg-desktop-portal-regolithhttpsgithubcomregolith-linuxxdg-desktop-portal-regolithreleasesv040-2">&lt;/span>
+&lt;a href="#changes-in-xdg-desktop-portal-regolithhttpsgithubcomregolith-linuxxdg-desktop-portal-regolithreleasesv040-2" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">b8881fe feat: retire the portal backend (#40)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">aee8576 fix: stop the deprecated backend from answering file chooser and other portals on jammy and bookworm (#36)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h2>Changes in &lt;code>debian trixie&lt;/code> since Regolith 3.4&lt;span class="hx-absolute -hx-mt-20" id="changes-in-debian-trixie-since-regolith-34">&lt;/span>
+&lt;a href="#changes-in-debian-trixie-since-regolith-34" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/i3status-rs_debian/releases/v0.22.2-3-ubuntu-jammy" target="_blank" rel="noopener">&lt;code>i3status-rs&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-i3status-rshttpsgithubcomregolith-linuxi3status-rs_debianreleasesv0222-3-ubuntu-jammy">&lt;/span>
+&lt;a href="#changes-in-i3status-rshttpsgithubcomregolith-linuxi3status-rs_debianreleasesv0222-3-ubuntu-jammy" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">70790b9 feat: open Settings &amp;gt; Date &amp;amp; Time from the clock (v0.22)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">e2e225a fix: hide the rofication block when Rofication is not installed&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-control-center/releases/v1.48.1-11-gnome-48" target="_blank" rel="noopener">&lt;code>regolith-control-center&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-control-centerhttpsgithubcomregolith-linuxregolith-control-centerreleasesv1481-11-gnome-48">&lt;/span>
+&lt;a href="#changes-in-regolith-control-centerhttpsgithubcomregolith-linuxregolith-control-centerreleasesv1481-11-gnome-48" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">5b1c41d37 fix: load the regolith- panel desktop files this package ships&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h2>Changes in &lt;code>ubuntu jammy&lt;/code> since Regolith 3.4&lt;span class="hx-absolute -hx-mt-20" id="changes-in-ubuntu-jammy-since-regolith-34">&lt;/span>
+&lt;a href="#changes-in-ubuntu-jammy-since-regolith-34" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/i3status-rs_debian/releases/v0.22.2-3-ubuntu-jammy" target="_blank" rel="noopener">&lt;code>i3status-rs&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-i3status-rshttpsgithubcomregolith-linuxi3status-rs_debianreleasesv0222-3-ubuntu-jammy-1">&lt;/span>
+&lt;a href="#changes-in-i3status-rshttpsgithubcomregolith-linuxi3status-rs_debianreleasesv0222-3-ubuntu-jammy-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">70790b9 feat: open Settings &amp;gt; Date &amp;amp; Time from the clock (v0.22)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">e2e225a fix: hide the rofication block when Rofication is not installed&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-control-center/releases/v1.41.21-ubuntu-jammy" target="_blank" rel="noopener">&lt;code>regolith-control-center&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-control-centerhttpsgithubcomregolith-linuxregolith-control-centerreleasesv14121-ubuntu-jammy">&lt;/span>
+&lt;a href="#changes-in-regolith-control-centerhttpsgithubcomregolith-linuxregolith-control-centerreleasesv14121-ubuntu-jammy" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">24860828b fix(debian): make regolith-control-center-dev depend on the package with the keybindings
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ceced8209 fix: load the regolith- panel desktop files this package ships
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">37bbeb887 keyboard: also read keybindings from gnome-control-center/keybindings&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-session/releases/v1.1.15-1-debian-bookworm-debian-bookworm" target="_blank" rel="noopener">&lt;code>regolith-session&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-sessionhttpsgithubcomregolith-linuxregolith-sessionreleasesv1115-1-debian-bookworm-debian-bookworm-1">&lt;/span>
+&lt;a href="#changes-in-regolith-sessionhttpsgithubcomregolith-linuxregolith-sessionreleasesv1115-1-debian-bookworm-debian-bookworm-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">299d1fe fix: rebuild the X resources from scratch on regolith-look set and refresh (#101)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">548fb47 fix(tests): check this source&amp;#39;s packages, not the testbed, in sessions-per-vendor (#103)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cad1114 fix: stop building the sway session for Debian 12 (#86)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">78a9371 fix: make regolith-look refresh merge the X resources in the login order (#94)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">72ff011 fix: keep an earlier session&amp;#39;s SWAYSOCK and I3SOCK out of the next one (#92)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c4cda27 fix(debian): depend on gnome-session-common, which ships the session targets
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">c79f6ab fix: keep the PATH from ~/.profile when gnome-session runs the session itself (#81)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">a6c076a fix: recommend regolith-default-settings from the sway session (#74)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">7cdbbdf fix: keep i3 restartable when the session runs gnome-session --builtin (#65)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/xdg-desktop-portal-regolith/releases/v0.4.0-2" target="_blank" rel="noopener">&lt;code>xdg-desktop-portal-regolith&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-xdg-desktop-portal-regolithhttpsgithubcomregolith-linuxxdg-desktop-portal-regolithreleasesv040-2-1">&lt;/span>
+&lt;a href="#changes-in-xdg-desktop-portal-regolithhttpsgithubcomregolith-linuxxdg-desktop-portal-regolithreleasesv040-2-1" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">b8881fe feat: retire the portal backend (#40)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">aee8576 fix: stop the deprecated backend from answering file chooser and other portals on jammy and bookworm (#36)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h2>Changes in &lt;code>ubuntu noble&lt;/code> since Regolith 3.4&lt;span class="hx-absolute -hx-mt-20" id="changes-in-ubuntu-noble-since-regolith-34">&lt;/span>
+&lt;a href="#changes-in-ubuntu-noble-since-regolith-34" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/xdg-desktop-portal-regolith/releases/v0.4.0-3" target="_blank" rel="noopener">&lt;code>xdg-desktop-portal-regolith&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-xdg-desktop-portal-regolithhttpsgithubcomregolith-linuxxdg-desktop-portal-regolithreleasesv040-3">&lt;/span>
+&lt;a href="#changes-in-xdg-desktop-portal-regolithhttpsgithubcomregolith-linuxxdg-desktop-portal-regolithreleasesv040-3" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">3a49f7e feat: retire the portal backend (#41)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">e3869fb fix: disable the interfaces routed to the deprecated backend on noble (#37)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">8f71e1c fix: route X11 Screenshot to the GNOME portal and disable ScreenCast on noble (#35)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">de8e292 fix: dark mode not working in the X11 session on noble (#32)&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h2>Changes in &lt;code>ubuntu questing&lt;/code> since Regolith 3.4&lt;span class="hx-absolute -hx-mt-20" id="changes-in-ubuntu-questing-since-regolith-34">&lt;/span>
+&lt;a href="#changes-in-ubuntu-questing-since-regolith-34" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Changes in &lt;a href="https://github.com/regolith-linux/regolith-control-center/releases/v1.49.0-5-gnome-49" target="_blank" rel="noopener">&lt;code>regolith-control-center&lt;/code>&lt;/a>&lt;span class="hx-absolute -hx-mt-20" id="changes-in-regolith-control-centerhttpsgithubcomregolith-linuxregolith-control-centerreleasesv1490-5-gnome-49">&lt;/span>
+&lt;a href="#changes-in-regolith-control-centerhttpsgithubcomregolith-linuxregolith-control-centerreleasesv1490-5-gnome-49" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">d2aee238e fix: install the Graphics Tablet panel desktop file too
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">323104614 test: validate the panel desktop files at build time
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">f027652f0 fix: ship panel desktop files and load them with a regolith- prefix
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ae2e1343b region: store the formats in accountsservice too, for Ubuntu&amp;#39;s session
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">213d759dd fix: show the Graphics Tablet panel again&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div></description></item><item><title>3.4 Release Notes</title><link>https://regolith-desktop.com/docs/reference/releases/regolith-3.4-release-notes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/reference/releases/regolith-3.4-release-notes/</guid><description>
 &lt;h2>Regolith 3.4 Release Notes&lt;span class="hx-absolute -hx-mt-20" id="regolith-34-release-notes">&lt;/span>
 &lt;a href="#regolith-34-release-notes" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Regolith 3.4 is a minor release focusing on Ubuntu 25.10 and Debian 13 support.&lt;/p>
 &lt;h2>Features&lt;span class="hx-absolute -hx-mt-20" id="features">&lt;/span>
