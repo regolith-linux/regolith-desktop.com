@@ -11,11 +11,9 @@ prev: /docs/using-regolith
 
 If you're upgrading from an earlier version of Regolith, you may be interested in reading [the release notes](/docs/reference/releases/regolith-3.4-release-notes/) and if coming from 2.x, the [migration guide](/docs/reference/releases/regolith-3.0-release-notes/#migration-guide).
 
-## Supported Operating Systems
+## Ubuntu
 
-### Ubuntu
-
-{{< tabs items="Ubuntu 26.04 (Resolute),Ubuntu 25.10 (Questing),Ubuntu 24.04 (Noble),Ubuntu 22.04 (Jammy)" >}}
+{{< tabs items="26.04 / Resolute,25.10 / Questing,24.04 / Noble,22.04 / Jammy" >}}
 {{< tab >}}
 Regolith can be installed as system packages.  This makes updating and removing easier and more consistent.  The following steps describe how
 to configure your system to read packages from the Regolith package repository and install the desktop package.
@@ -41,16 +39,16 @@ to configure your system to read packages from the Regolith package repository a
    sudo apt update
    ```
 
-   **X11 session (i3):**
-
-   ```bash
-   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
-   ```
-
    **Wayland session (sway):**
 
    ```bash
    sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
+   ```
+
+   **X11 session (i3):**
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
 
    To choose either session at login, install both session packages.
@@ -89,16 +87,16 @@ to configure your system to read packages from the Regolith package repository a
    sudo apt update
    ```
 
-   **X11 session (i3):**
-
-   ```bash
-   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
-   ```
-
    **Wayland session (sway):**
 
    ```bash
    sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
+   ```
+
+   **X11 session (i3):**
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
 
    To choose either session at login, install both session packages.
@@ -137,16 +135,16 @@ to configure your system to read packages from the Regolith package repository a
    sudo apt update
    ```
 
-   **X11 session (i3):**
-
-   ```bash
-   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
-   ```
-
    **Wayland session (sway):**
 
    ```bash
    sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
+   ```
+
+   **X11 session (i3):**
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
 
    To choose either session at login, install both session packages.
@@ -185,16 +183,16 @@ to configure your system to read packages from the Regolith package repository a
    sudo apt update
    ```
 
-   **X11 session (i3):**
-
-   ```bash
-   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
-   ```
-
    **Wayland session (sway):**
 
    ```bash
    sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
+   ```
+
+   **X11 session (i3):**
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
 
    To choose either session at login, install both session packages.
@@ -209,9 +207,9 @@ Replace `amd64` with `arm64` in the two places in the above line to install on A
 {{< /tab >}}
 {{< /tabs >}}
 
-### Debian
+## Debian
 
-{{< tabs items="Debian Testing,Debian Trixie,Debian Bookworm" >}}
+{{< tabs items="Testing,13 / Trixie,12 / Bookworm" >}}
 {{< tab >}}
 For Debian users that use the "Testing" release, Regolith can be installed, however there is no "release" version due to the nature of Debian Testing.  In order to install Regolith into a Debian Testing instance, the `apt` line contains `testing` instead of a `release` string.  For example:
 
@@ -249,16 +247,16 @@ to configure your system to read packages from the Regolith package repository a
    sudo apt update
    ```
 
-   **X11 session (i3):**
-
-   ```bash
-   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
-   ```
-
    **Wayland session (sway):**
 
    ```bash
    sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
+   ```
+
+   **X11 session (i3):**
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
 
    To choose either session at login, install both session packages.

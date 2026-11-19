@@ -7,5 +7,5 @@ sudo tee /etc/apt/sources.list.d/regolith.list
 
 # Update apt
 sudo apt update
-echo "Regolith Desktop can be installed with the X11 session (i3) by executing: sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille"
-echo "or with the Wayland session (sway) by executing: sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille"
+echo "Regolith Desktop can be installed with the Wayland session (sway) by executing: sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille"
+echo "or with the X11 session (i3) by executing: sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille"

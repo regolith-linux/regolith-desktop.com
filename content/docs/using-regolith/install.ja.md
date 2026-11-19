@@ -7,13 +7,9 @@ description: >
 prev: /docs/using-regolith
 ---
 
-## サポートするOS
+## Ubuntu
 
-以下は、Regolithデスクトップのインストールを取り扱っている特定のLinuxベースのOSごとに分割されています。
-
-### Ubuntu
-
-{{< tabs items="Ubuntu 26.04 (Resolute),Ubuntu 25.10 (Questing),Ubuntu 24.04 (Noble),Ubuntu 22.04 (Jammy)" >}}
+{{< tabs items="26.04 / Resolute,25.10 / Questing,24.04 / Noble,22.04 / Jammy" >}}
 {{< tab >}}
 Regolithはシステムパッケージとしてインストールすることができます。これは簡単に更新や削除ができ、一貫することができます。
 下記のステップでは、Regolithのパッケージリポジトリからパッケージを読み込み可能にして、デスクトップパッケージをインストールできるようにシステムを設定する方法について記しています。
@@ -39,16 +35,16 @@ Regolithはシステムパッケージとしてインストールすることが
    sudo apt update
    ```
 
-   **X11セッション(i3):**
-
-   ```bash
-   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
-   ```
-
    **Waylandセッション(sway):**
 
    ```bash
    sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
+   ```
+
+   **X11セッション(i3):**
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
 
    両方のセッションパッケージをインストールすると、ログイン時にどちらかを選べます。
@@ -87,16 +83,16 @@ Regolithはシステムパッケージとしてインストールすることが
    sudo apt update
    ```
 
-   **X11セッション(i3):**
-
-   ```bash
-   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
-   ```
-
    **Waylandセッション(sway):**
 
    ```bash
    sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
+   ```
+
+   **X11セッション(i3):**
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
 
    両方のセッションパッケージをインストールすると、ログイン時にどちらかを選べます。
@@ -135,16 +131,16 @@ Regolithはシステムパッケージとしてインストールすることが
    sudo apt update
    ```
 
-   **X11セッション(i3):**
-
-   ```bash
-   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
-   ```
-
    **Waylandセッション(sway):**
 
    ```bash
    sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
+   ```
+
+   **X11セッション(i3):**
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
 
    両方のセッションパッケージをインストールすると、ログイン時にどちらかを選べます。
@@ -183,16 +179,16 @@ Regolithはシステムパッケージとしてインストールすることが
    sudo apt update
    ```
 
-   **X11セッション(i3):**
-
-   ```bash
-   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
-   ```
-
    **Waylandセッション(sway):**
 
    ```bash
    sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
+   ```
+
+   **X11セッション(i3):**
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
 
    両方のセッションパッケージをインストールすると、ログイン時にどちらかを選べます。
@@ -207,9 +203,9 @@ ARMベースのシステムにインストールするときは、上記の内�
 {{< /tab >}}
 {{< /tabs >}}
 
-### Debian
+## Debian
 
-{{< tabs items="Debian Testing,Debian Trixie,Debian Bookworm" >}}
+{{< tabs items="Testing,13 / Trixie,12 / Bookworm" >}}
 {{< tab >}}
 "Testing"リリースのDebianユーザーであれば、Regolithをインストールすることができますが、Debian Testingの性質上"release"バージョンは存在しません。Debian TestingインスタンスにRegolithをインストールするには、`apt`コマンドのワンライナーの`release`の代わりに`testing`を含める必要があります。例：
 
@@ -247,16 +243,16 @@ Regolithはシステムパッケージとしてインストールすることが
    sudo apt update
    ```
 
-   **X11セッション(i3):**
-
-   ```bash
-   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
-   ```
-
    **Waylandセッション(sway):**
 
    ```bash
    sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
+   ```
+
+   **X11セッション(i3):**
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
 
    両方のセッションパッケージをインストールすると、ログイン時にどちらかを選べます。
