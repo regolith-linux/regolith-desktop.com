@@ -12,7 +12,7 @@ This page takes an Ubuntu 25.10 (Questing) or Ubuntu 25.04 (Plucky) system with 
 The Ubuntu upgrader disables the Regolith package repository and removes a few Regolith packages, so some extra steps are needed before and after it runs. Do them in the order below.
 
 {{< callout type="warning" >}}
-Regolith has no stable release for Ubuntu 26.04 yet: `https://archive.regolith-desktop.com/ubuntu/stable` has no `resolute` suite. Until Regolith 3.5 is released, this page uses the **`testing`** suite. It already carries the Regolith 3.5 packages, built from the same release tags that the stable release will use. [Move to the stable suite](#move-to-the-stable-release-later) once the install page lists it for Ubuntu 26.04.
+Regolith 3.4 has no packages for Ubuntu 26.04. The first Regolith release for it is **Regolith 3.5 beta 1**, published in the `v3.5` component of the `stable` suite (`stable resolute v3.5`), and this page installs it. The [3.5 release notes](/docs/reference/releases/regolith-3.5-release-notes/) describe the beta, how to upgrade to it from Regolith 3.4 without changing your Ubuntu release, and how to install it on a new system. If you followed an earlier version of this page and use the `testing` suite, see [Move from testing to stable](#move-from-testing-to-stable).
 {{< /callout >}}
 
 ## Which release are you on?
@@ -29,7 +29,7 @@ The steps are the same for both releases. Where a command or its output differs,
 1. Install all updates for your current release, pin your look, and remove one stale systemd link.
 1. Run `sudo do-release-upgrade` from a text console.
 1. When the upgrader asks to restart, answer **N**.
-1. On the same console, point Regolith at `testing resolute` and upgrade the Regolith packages.
+1. On the same console, point Regolith at `stable resolute v3.5` and upgrade the Regolith packages.
 1. Reboot, log in to both Regolith sessions, and clean up.
 
 The download is about 2.5 GB, and the upgrade itself takes 45 minutes to an hour on a fast machine with a fast connection. On a laptop, plan 1.5 to 3 hours, and keep it on AC power.
@@ -56,7 +56,7 @@ A system installed from the install page has the key in `/usr/share/keyrings/reg
 
 The key stays valid for Ubuntu 26.04 and is reused below. Write down your line: you need it again only if the upgrader aborts ([Recovery](#recovery)).
 
-If you already use the `testing` or `unstable` suite, the same steps work. Your source file may be called `regolith.sources` instead of `regolith.list`; step 5 replaces either one. If you added the Regolith repository under any other file name, delete that file in step 5, so that the repository isn't listed twice.
+If you already use the `testing` or `unstable` suite, the same steps work and move you to the stable suite. Your source file may be called `regolith.sources` instead of `regolith.list`; step 5 replaces either one. If you added the Regolith repository under any other file name, delete that file in step 5, so that the repository isn't listed twice.
 
 ### Checklist
 
@@ -171,15 +171,15 @@ If the upgrader asks "Required apt sources are missing … Would you like to con
 
 ### 5. Point Regolith at Ubuntu 26.04 (same console, before rebooting)
 
-The upgrader replaced `regolith.list` with a disabled copy (`regolith.list.disabled`). Replace it with a source for `testing resolute`, then upgrade the Regolith packages and install the ones the upgrader removed:
+The upgrader replaced `regolith.list` with a disabled copy (`regolith.list.disabled`). Replace it with a source for `stable resolute v3.5` (Regolith 3.5 beta 1), then upgrade the Regolith packages and install the ones the upgrader removed:
 
 ```bash
 sudo rm -f /etc/apt/sources.list.d/regolith.list /etc/apt/sources.list.d/regolith.list.disabled /etc/apt/sources.list.d/regolith.list.distUpgrade
 sudo tee /etc/apt/sources.list.d/regolith.sources > /dev/null <<'EOF'
 Types: deb
-URIs: https://archive.regolith-desktop.com/ubuntu/testing
+URIs: https://archive.regolith-desktop.com/ubuntu/stable
 Suites: resolute
-Components: main
+Components: v3.5
 Architectures: amd64
 Signed-By: /usr/share/keyrings/regolith-archive-keyring.gpg
 EOF
@@ -203,7 +203,7 @@ Turn `sway-audio-idle-inhibit` back on. It keeps the Wayland session from lockin
 sudo systemctl --global enable sway-audio-idle-inhibit.service
 ```
 
-If you removed the link in step 3, this prints `Created symlink '/etc/systemd/user/graphical-session.target.wants/sway-audio-idle-inhibit.service' → …`. Otherwise it prints nothing, because the package has already enabled itself.
+The `sway-audio-idle-inhibit` package in Regolith 3.5 (2.0.5) turns itself back on when the link of step 3 was removed, so this command usually prints nothing. If it prints `Created symlink '/etc/systemd/user/graphical-session.target.wants/sway-audio-idle-inhibit.service' → …`, it has just turned it on.
 
 Check that the Settings app (opened with {{< keys "super,c" >}}) and the portal configuration are installed:
 
@@ -303,7 +303,7 @@ What to expect:
 - `Ubuntu 26.04.1 LTS` (or a later point release) and `REGOLITH_VERSION=3.5`.
 - `apt update` without errors or warnings. `apt-mark showhold` and `dpkg --audit` print nothing.
 - `apt policy` shows the same `Installed` and `Candidate` versions. The "WARNING: apt does not have a stable CLI interface" line is normal.
-- The `full-upgrade` simulation ends with `0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.` If it shows other lines, `testing` has published updates since step 5. Install them with `sudo apt full-upgrade`, then repeat the check.
+- The `full-upgrade` simulation ends with `0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.` If it shows other lines, Regolith or Ubuntu has published updates since step 5. Install them with `sudo apt full-upgrade`, then repeat the check.
 
 Some packages that both Ubuntu and Regolith ship, such as `trawld`, `gtklock`, `i3-wm` and `swayidle`, can come from Ubuntu rather than from the Regolith repository when Ubuntu 26.04 has the newer version (check with `apt policy <package>`). This is expected; don't pin the Regolith versions.
 
@@ -320,7 +320,7 @@ Some packages that both Ubuntu and Regolith ship, such as `trawld`, `gtklock`, `
 | `apt upgrade` says "The following packages have been kept back" for Regolith packages | Plain `upgrade` doesn't remove or replace packages. | Use `sudo apt full-upgrade`. |
 | Applications from PPAs are missing or old | The upgrader disabled all PPAs. | Re-enable them once they publish for `resolute` (step 8). |
 | The console upgrade seems frozen, or you lost the console | It runs inside `screen`. | `sudo screen -x`. Logs are in `/var/log/dist-upgrade/`. |
-| "System program problem detected" for `sway-audio-idle-inhibit`, once per Wayland login, when sound first plays | Known issue in the current `testing` package (2.0.3): it stops once with "Could not send inhibit signal!", and is restarted 5 seconds later. | Dismiss the dialog. It works normally after the restart. |
+| "System program problem detected" for `sway-audio-idle-inhibit`, once per Wayland login, when sound first plays | `sway-audio-idle-inhibit` 2.0.3 from the `testing` suite stopped once with "Could not send inhibit signal!". Fixed in 2.0.4. | Make sure your source is `stable resolute v3.5` (step 5), then `sudo apt update && sudo apt full-upgrade`. |
 
 ## Recovery
 
@@ -373,7 +373,7 @@ If step 3 was done, the login screen appears and both sessions start with your o
 Log in to **Ubuntu** from the gear menu, or use a text console, then:
 
 ```bash
-cat /etc/apt/sources.list.d/regolith.sources            # testing, resolute, main
+cat /etc/apt/sources.list.d/regolith.sources            # stable, resolute, v3.5
 sudo apt update && sudo apt full-upgrade
 sudo apt install --reinstall regolith-session-common regolith-session-flashback regolith-session-sway regolith-wm-config sway-regolith
 journalctl --user -b -p warning | tail -50              # as your user, after a failed login
@@ -388,20 +388,53 @@ Leave out `regolith-session-sway` and `sway-regolith` if you don't use the Wayla
 
 From a text console, run `sudo ubuntu-drivers install` (or reinstall your `nvidia-driver-NNN` package), then `sudo update-initramfs -u`, and reboot. You can also start the kernel of your old release (6.17 on 25.10, 6.14 on 25.04) from GRUB's "Advanced options" menu, as long as step 8 hasn't removed it: hold Shift or press Esc while the machine boots.
 
-## Move to the stable release later
+## Move from testing to stable
 
-When Regolith 3.5 is released, the [install page](/docs/using-regolith/install/) will list the repository line for Ubuntu 26.04. Switching from `testing` to it is a change of source, because `testing` is built from the same release tags:
+Earlier versions of this page used the `testing` suite, because Regolith had no stable release for Ubuntu 26.04. Regolith 3.5 beta 1 is now in `stable resolute v3.5`, built from the same release tags. Moving there is a change of source: on 2026-11-20, every package in `stable resolute v3.5` had the same version as the newest one in `testing resolute`, so nothing is downgraded.
 
-1. Look up the suite and component for Ubuntu 26.04 on the install page. The examples below assume `stable resolute v3.5`.
-1. Edit the source and upgrade:
+Check which source file you have:
 
-   ```bash
-   sudo sed -i -e 's#/ubuntu/testing#/ubuntu/stable#' -e 's#^Components: .*#Components: v3.5#' /etc/apt/sources.list.d/regolith.sources
-   sudo apt update
-   sudo apt full-upgrade
-   ```
+```bash
+ls /etc/apt/sources.list.d/ | grep -i regolith
+```
 
-If the stable release has lower version numbers than some packages you have from `testing`, `full-upgrade` leaves those packages alone. To move them to the stable versions too, give the Regolith repository priority for one upgrade, then remove the pin and upgrade again:
+Point it at `stable` and the `v3.5` component:
+
+{{< tabs items="regolith.sources,regolith.list" >}}
+{{< tab >}}
+```bash
+sudo sed -i -e 's#/ubuntu/testing#/ubuntu/stable#' -e 's#^Components: .*#Components: v3.5#' /etc/apt/sources.list.d/regolith.sources
+cat /etc/apt/sources.list.d/regolith.sources
+```
+
+It should show `URIs: https://archive.regolith-desktop.com/ubuntu/stable`, `Suites: resolute` and `Components: v3.5`.
+{{< /tab >}}
+{{< tab >}}
+```bash
+sudo sed -i 's#/ubuntu/testing resolute main#/ubuntu/stable resolute v3.5#' /etc/apt/sources.list.d/regolith.list
+cat /etc/apt/sources.list.d/regolith.list
+```
+
+It should show a line ending in `https://archive.regolith-desktop.com/ubuntu/stable resolute v3.5`.
+{{< /tab >}}
+{{< /tabs >}}
+
+Then update, upgrade and check the result:
+
+```bash
+sudo apt update
+sudo apt full-upgrade
+apt policy regolith-desktop | head -6
+cat /etc/regolith/version
+apt list '?obsolete' 2>/dev/null | grep -v '^Listing'
+```
+
+- `apt policy` should show the installed version coming from `https://archive.regolith-desktop.com/ubuntu/stable resolute/v3.5`, and `/etc/regolith/version` should say `REGOLITH_VERSION=3.5`.
+- The last command lists installed packages that no repository offers any more, marked `[installed,local]`. `testing` carries some packages that Regolith 3.5 no longer ships, such as `remontoire`, `fonts-materialdesignicons-webfont` and most `fonts-nerd-font-*` packages. They stay installed but get no more updates. Remove the ones you don't use with `sudo apt remove <names>`.
+
+`picom`, `gtklock`, `python3-i3ipc` and `fonts-jetbrains-mono` come from Ubuntu in Regolith 3.5. If you had Regolith's copies from `testing`, apt replaces each one with Ubuntu's version once Ubuntu's is newer; until then the Regolith copy stays installed.
+
+If you stayed on `testing` after Regolith published newer packages there than in `stable`, `full-upgrade` leaves those packages alone. To move them to the stable versions too, give the Regolith repository priority for one upgrade, then remove the pin and upgrade again:
 
 ```bash
 printf 'Package: *\nPin: origin archive.regolith-desktop.com\nPin-Priority: 1001\n' | sudo tee /etc/apt/preferences.d/regolith-switch.pref
@@ -412,9 +445,6 @@ sudo apt update && sudo apt full-upgrade
 
 The last `full-upgrade` is needed: while the pin is active, apt also downgrades Ubuntu packages that Regolith also ships (such as `trawld` and `gtklock`), and this puts Ubuntu's newer versions back.
 
-Afterwards, `apt policy regolith-desktop` should show the installed version coming from `https://archive.regolith-desktop.com/ubuntu/stable`.
+### Coming from `unstable`
 
-### Why `testing` and not `unstable`
-
-- `unstable` is rebuilt from the development branches after every change, with snapshot version numbers (`…regolith+git<date>…`). These sort above the released versions, so you would get untested changes, and leaving `unstable` later means downgrading.
-- Moving from `testing` to the stable release is a change of source. Moving from `unstable` needs the downgrade procedure above.
+`unstable` is rebuilt from the development branches after every change, with snapshot version numbers (`…regolith+git<date>…`) that sort above the released versions. Leaving it means downgrading: change the source as above, then use the pin procedure.
