@@ -31,6 +31,15 @@ cat install-release-ubuntu-24.04-amd64.txt
 
 Manually execute each step in the text file, or source the file if you're feeling adventurous.  Once complete, the Regolith Desktop package repositories are installed into the new system.
 
+#### Raspberry Pi
+
+On a Raspberry Pi running Ubuntu Server 25.10 (arm64), `lightdm` shows a black screen with a blinking cursor unless the `gldriver-test` package from Raspberry Pi is installed.  The Ubuntu 22.04 and later scripts list these steps in a comment at the bottom:
+
+```bash
+wget https://archive.raspberrypi.org/debian/pool/main/g/gldriver-test/gldriver-test_0.15_all.deb
+sudo apt install ./gldriver-test_0.15_all.deb
+```
+
 ### Install the Regolith Ubuntu System
 
 There is a special package that is used in the ISO that can also be used in a minimal install such as this: `regolith-system-ubuntu`.  This package includes extra branding not used in typical desktop installs which may share multiple desktop environments.  Run the following command to install Regolith Desktop and all of it's dependencies:
