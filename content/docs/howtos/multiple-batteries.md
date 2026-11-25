@@ -15,7 +15,7 @@ Out of the box the bar shows the combined charge of all batteries: in the X11 se
 sudo apt install i3xrocks-battery
 ```
 
-2. [Stage your i3xrocks configuration files]({{< ref "add-remove-blocklets#customize-bar" >}}), including `80_battery`, then open `~/.config/regolith3/i3xrocks/conf.d/80_battery` in your editor of choice. Once `~/.config/regolith3/i3xrocks/conf.d` contains files, the bar shows only the blocklets in that directory, so copy every blocklet you want to keep.
+2. Copy `/usr/share/i3xrocks/conf.d/80_battery` to `~/.config/regolith3/i3xrocks/conf.d/80_battery` and open the copy in your editor of choice. From Regolith 3.6, this one file is enough: it replaces the package's `80_battery`, and the other blocklets stay on the bar. In Regolith 3.5 and earlier, once `~/.config/regolith3/i3xrocks/conf.d` contains files, the bar shows only the blocklets in that directory, so [stage every blocklet you want to keep]({{< ref "add-remove-blocklets#customize-bar-3-5" >}}).
 3. Find the line that pertains to the battery blocklet:
 
 ```toml {filename="~/.config/regolith3/i3xrocks/conf.d/80_battery"}
