@@ -1,103 +1,17 @@
 ---
-title: "3.5 Release Notes (Beta 1)"
-linkTitle: "3.5 Release Notes (Beta 1)"
+title: "3.5 Release Notes"
+linkTitle: "3.5 Release Notes"
 weight: 82
 description: >
-  Release notes for Regolith 3.5 beta 1
+  Release notes for Regolith 3.5
 prev: /docs/reference/releases
 ---
 
-## Regolith 3.5 Beta 1 Release Notes
-
-{{< callout type="warning" >}}
-Regolith 3.5 is in beta. These notes describe Regolith 3.5 beta 1 ([`v3.5.0-beta1`](https://github.com/regolith-linux/voulage/releases/tag/v3.5.0-beta1)), and will be updated for the final release. Until then, the [installation instructions](/docs/using-regolith/install/) install Regolith 3.4. To install or upgrade to the beta, see [Test Regolith 3.5 Beta 1](#test-regolith-35-beta-1).
-{{< /callout >}}
+## Regolith 3.5 Release Notes
 
 Regolith 3.5 is a minor release focusing on Ubuntu 26.04 support, broad quality improvements, and closing gaps between the i3 and Sway sessions.
 
 A special thanks in particular to long-time Regolith contributor [cfsmp3](https://github.com/cfsmp3) who has taken initiative to provide most of the fixes and features in the 3.5 release!
-
-## Test Regolith 3.5 Beta 1
-
-Regolith 3.5 beta 1 is published in the `v3.5` component of the `stable` suite, for Ubuntu 22.04 (Jammy), 24.04 (Noble), 25.10 (Questing) and 26.04 (Resolute), and Debian 12 (Bookworm) and 13 (Trixie), on `amd64` and `arm64`.
-
-{{< callout type="info" >}}
-There is no supported way back from 3.5 to 3.4 other than reinstalling. If that matters to you, test the beta in a virtual machine or on a spare system.
-{{< /callout >}}
-
-### Upgrade from Regolith 3.4
-
-1. Edit the Regolith `apt` line, in `/etc/apt/sources.list.d/regolith.list` if you followed the installation instructions, so that it ends with `v3.5` instead of `v3.4`. For example, on Ubuntu 24.04 (Noble) on `amd64` it should say:
-
-   ```text
-   deb [arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] https://archive.regolith-desktop.com/ubuntu/stable noble v3.5
-   ```
-
-   On other releases, the line differs only in the architecture (`amd64` or `arm64`) and in its end:
-
-   | Release | End of the `apt` line |
-   |:--------|:----------------------|
-   | Ubuntu 26.04 (Resolute) | `https://archive.regolith-desktop.com/ubuntu/stable resolute v3.5` |
-   | Ubuntu 25.10 (Questing) | `https://archive.regolith-desktop.com/ubuntu/stable questing v3.5` |
-   | Ubuntu 24.04 (Noble) | `https://archive.regolith-desktop.com/ubuntu/stable noble v3.5` |
-   | Ubuntu 22.04 (Jammy) | `https://archive.regolith-desktop.com/ubuntu/stable jammy v3.5` |
-   | Debian 13 (Trixie) | `https://archive.regolith-desktop.com/debian/stable trixie v3.5` |
-   | Debian 12 (Bookworm) | `https://archive.regolith-desktop.com/debian/stable bookworm v3.5` |
-
-1. Update `apt` and upgrade:
-
-   ```bash
-   sudo apt update
-   sudo apt full-upgrade
-   ```
-
-1. Log out and back in, or restart your system.
-
-Regolith 3.4 has no packages for Ubuntu 26.04. If you upgraded to 26.04 with Regolith 3.4 installed, `do-release-upgrade` disabled the Regolith line: make it the Ubuntu 26.04 (Resolute) line above, without a leading `#`, then run the commands of step 2.
-
-### Install Regolith 3.5 Beta 1
-
-1. Register the Regolith public key to your local `apt`:
-
-   ```bash
-   wget -qO - https://archive.regolith-desktop.com/regolith.key | \
-   gpg --dearmor | sudo tee /usr/share/keyrings/regolith-archive-keyring.gpg > /dev/null
-   ```
-
-1. Add the `v3.5` repository line for your distribution, codename and architecture to your local `apt`:
-
-   ```bash
-   echo deb "[arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/$(. /etc/os-release && echo "$ID")/stable \
-   $(. /etc/os-release && echo "$VERSION_CODENAME") v3.5" | \
-   sudo tee /etc/apt/sources.list.d/regolith.list
-   ```
-
-   The command prints the line it wrote, for example `deb [arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] https://archive.regolith-desktop.com/ubuntu/stable resolute v3.5`. Check that it names `ubuntu` or `debian` and one of the codenames above.
-
-1. Update `apt` and install Regolith with the X11 session (i3), the Wayland session (sway), or both:
-
-   ```bash
-   sudo apt update
-   ```
-
-   **X11 session (i3):**
-
-   ```bash
-   sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
-   ```
-
-   **Wayland session (sway)**, not available on Debian 12:
-
-   ```bash
-   sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
-   ```
-
-1. Restart your system, then pick the Regolith session on the login screen.
-
-### Report Issues
-
-Report problems with the beta as [issues on `regolith-desktop`](https://github.com/regolith-linux/regolith-desktop/issues), and include your distribution, codename, architecture and session.
 
 ## Features
 
@@ -139,13 +53,47 @@ These packages are no longer part of Regolith. Installed copies are not removed 
 
 * Nerd Fonts 3 removed the old Material Design icons (`nf-mdi-*`, U+F500 to U+FD46). Custom workspace names or bar labels that use them show as boxes after the upgrade. Use the matching `nf-md-*` icon (U+F0001 and up) from the [Nerd Fonts cheat sheet](https://www.nerdfonts.com/cheat-sheet) instead.
 * Regolith now packages 9 Nerd Font families: BitstreamVeraSansMono, Cousine, DejaVuSansMono, Hack, Meslo, Mononoki, RobotoMono, SourceCodePro and Symbols. Other `fonts-nerd-font-*` packages installed from Regolith 3.4 stay installed at version 2.1.0, but receive no further updates.
-* When upgrading Ubuntu using `do-release-upgrade`, the Regolith package repo has to be re-added to your system as the Ubuntu upgrade script disables it. Ensure the Regolith package repository has been added back to your `apt` configuration, with the new codename, after the Ubuntu upgrade script completes.
+* `do-release-upgrade` disables the Regolith `apt` line when it upgrades Ubuntu. After the Ubuntu upgrade, re-enable the line with the new codename. See [Upgrade from Regolith 3.4](#upgrade-from-regolith-34).
 
 ## Installation Instructions
 
-Refer to the [installation instructions](/docs/using-regolith/install/) to install or upgrade from a previous version. During the beta, those instructions install Regolith 3.4: see [Test Regolith 3.5 Beta 1](#test-regolith-35-beta-1) to install or upgrade to the beta.
+To install Regolith 3.5 on a new system, follow the [installation instructions](/docs/using-regolith/install/).
 
-After the Regolith upgrade is complete, verify that Regolith 3.5 is installed by:
+### Upgrade from Regolith 3.4
+
+{{< callout type="info" >}}
+There is no supported way back from 3.5 to 3.4 other than reinstalling.
+{{< /callout >}}
+
+1. Edit the Regolith `apt` line, in `/etc/apt/sources.list.d/regolith.list` if you followed the installation instructions, so that it ends with `v3.5` instead of `v3.4`. For example, on Ubuntu 24.04 (Noble) on `amd64` it should say:
+
+   ```text
+   deb [arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] https://archive.regolith-desktop.com/ubuntu/stable noble v3.5
+   ```
+
+   On other releases, the line differs only in the architecture (`amd64` or `arm64`) and in its end:
+
+   | Release | End of the `apt` line |
+   |:--------|:----------------------|
+   | Ubuntu 26.04 (Resolute) | `https://archive.regolith-desktop.com/ubuntu/stable resolute v3.5` |
+   | Ubuntu 25.10 (Questing) | `https://archive.regolith-desktop.com/ubuntu/stable questing v3.5` |
+   | Ubuntu 24.04 (Noble) | `https://archive.regolith-desktop.com/ubuntu/stable noble v3.5` |
+   | Ubuntu 22.04 (Jammy) | `https://archive.regolith-desktop.com/ubuntu/stable jammy v3.5` |
+   | Debian 13 (Trixie) | `https://archive.regolith-desktop.com/debian/stable trixie v3.5` |
+   | Debian 12 (Bookworm) | `https://archive.regolith-desktop.com/debian/stable bookworm v3.5` |
+
+1. Update `apt` and upgrade:
+
+   ```bash
+   sudo apt update
+   sudo apt full-upgrade
+   ```
+
+1. Log out and back in, or restart your system.
+
+Regolith 3.4 has no packages for Ubuntu 26.04. If you upgraded to 26.04 with Regolith 3.4 installed, `do-release-upgrade` disabled the Regolith line: make it the Ubuntu 26.04 (Resolute) line above, without a leading `#`, then run the commands of step 2.
+
+After the upgrade is complete, verify that Regolith 3.5 is installed by:
 
 ```console
 $ cat /etc/regolith/version 

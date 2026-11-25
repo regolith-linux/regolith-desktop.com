@@ -11,7 +11,7 @@ next: /docs/reference/releases/regolith-3.5-release-notes
 リリースノートとその他のバージョン固有のコンテンツについては、[原文(英語)](/docs/reference/releases/)を参照してください。
 
 {{< cards >}}
-  {{< card link="/docs/reference/releases/regolith-3.5-release-notes/" title="3.5 Release Notes (Beta 1)" >}}
+  {{< card link="/docs/reference/releases/regolith-3.5-release-notes/" title="3.5 Release Notes" >}}
   {{< card link="/docs/reference/releases/regolith-3.4-release-notes/" title="3.4 Release Notes" >}}
   {{< card link="/docs/reference/releases/regolith-3.3-release-notes/" title="3.3 Release Notes" >}}
   {{< card link="/docs/reference/releases/regolith-3.2-release-notes/" title="3.2 Release Notes" >}}
