@@ -7,14 +7,14 @@ description: >
 
 This page lists the changes from Regolith 3.4 to 3.5 that you can see or feel in normal use, with the steps to try each one yourself. Internal fixes (packaging, build, quoting and the like) are left out.
 
-{{< callout type="warning" >}}
-Regolith 3.5 is not released yet. Its packages are in the **`testing`** suite for Ubuntu 26.04 (Resolute), and this page describes what that suite ships today. To get there from Ubuntu 25.10 or 25.04, follow [Upgrade to Ubuntu 26.04](/docs/howtos/upgrade-ubuntu-to-26-04/).
+{{< callout type="info" >}}
+Regolith 3.5 is available for Ubuntu 22.04, 24.04, 25.10 and 26.04, and Debian 12 and 13. To install it, follow the [installation instructions](/docs/using-regolith/install/). To upgrade from Regolith 3.4, see [Upgrade from Regolith 3.4](/docs/reference/releases/regolith-3.5-release-notes/#upgrade-from-regolith-34) in the release notes. Debian 12 has the X11 session only, so the Wayland items don't apply there.
 {{< /callout >}}
 
 Each item says:
 - what changed, and which session it applies to: **X11** ("Regolith / X11", i3) or **Wayland** ("Regolith / Wayland", sway);
 - **Parity** when the feature worked in only one session in 3.4 and now works in both;
-- the package that carries it, with its version in 3.5 today, and the pull request;
+- the package that carries it, with the version that Regolith 3.5 ships, and the pull request;
 - how to try it, and what you should see.
 
 ## Before you begin
@@ -28,7 +28,7 @@ cat /etc/regolith/version
 apt policy regolith-desktop | head -4
 ```
 
-You should see `REGOLITH_VERSION=3.5`, and `Installed: 4.11.0-1regolith-resolute` (or later) with the same `Candidate` version. If the candidate is newer, run `sudo apt update && sudo apt full-upgrade` first.
+You should see `REGOLITH_VERSION=3.5`, and `Installed: 4.11.0-1regolith-<codename>` (or later) with the same `Candidate` version, where `<codename>` is your release, such as `noble` or `trixie`. If the candidate is newer, run `sudo apt update && sudo apt full-upgrade` first.
 
 To see the versions of the packages that the items below refer to:
 
@@ -75,7 +75,7 @@ These features worked in only one session in Regolith 3.4. In 3.5 they work in b
 
 ### Volume indicator on every key press
 
-**Wayland** · **Parity** · `regolith-avizo` 0.1.7 · [avizo#6](https://github.com/regolith-linux/avizo/pull/6)
+**Wayland** · **Parity** · `regolith-avizo` 0.1.8 · [avizo#6](https://github.com/regolith-linux/avizo/pull/6)
 
 On Ubuntu 26.04 the volume keys changed the volume without showing the on-screen indicator, unless the sound was muted.
 
@@ -85,7 +85,7 @@ On Ubuntu 26.04 the volume keys changed the volume without showing the on-screen
 
 ### The indicator goes away after 1.5 seconds
 
-**Wayland** · **Parity** · `regolith-avizo` 0.1.7 · [avizo#8](https://github.com/regolith-linux/avizo/pull/8), [Discussion #1107](https://github.com/orgs/regolith-linux/discussions/1107)
+**Wayland** · **Parity** · `regolith-avizo` 0.1.8 · [avizo#8](https://github.com/regolith-linux/avizo/pull/8), [Discussion #1107](https://github.com/orgs/regolith-linux/discussions/1107)
 
 The indicator used to stay on screen for about 5 seconds. It now hides after 1.5 seconds, as in the X11 session.
 
@@ -95,7 +95,7 @@ The indicator used to stay on screen for about 5 seconds. It now hides after 1.5
 
 ### Volume keys stop at 100%
 
-**Wayland** · **Parity** · `regolith-avizo` 0.1.7 · [avizo#9](https://github.com/regolith-linux/avizo/pull/9)
+**Wayland** · **Parity** · `regolith-avizo` 0.1.8 · [avizo#9](https://github.com/regolith-linux/avizo/pull/9)
 
 The volume keys used to raise the volume past 100% without limit.
 
@@ -107,7 +107,7 @@ The volume keys used to raise the volume past 100% without limit.
 
 ### Fine volume steps and modifier variants
 
-**Wayland** · **Parity** · `regolith-wm-config` 4.12.0 · [regolith-wm-config#98](https://github.com/regolith-linux/regolith-wm-config/pull/98)
+**Wayland** · **Parity** · `regolith-wm-config` 4.13.1 · [regolith-wm-config#98](https://github.com/regolith-linux/regolith-wm-config/pull/98)
 
 The modifier variants of the volume and player keys that the X11 session handles now work in sway too.
 
@@ -119,7 +119,7 @@ The modifier variants of the volume and player keys that the X11 session handles
 
 ### Brightness keys on the lock screen
 
-**Wayland** · **Parity** · `regolith-wm-config` 4.12.0 · [regolith-wm-config#74](https://github.com/regolith-linux/regolith-wm-config/pull/74), fixes [regolith-wm-config#73](https://github.com/regolith-linux/regolith-wm-config/issues/73)
+**Wayland** · **Parity** · `regolith-wm-config` 4.13.1 · [regolith-wm-config#74](https://github.com/regolith-linux/regolith-wm-config/pull/74), fixes [regolith-wm-config#73](https://github.com/regolith-linux/regolith-wm-config/issues/73)
 
 On a laptop, the brightness keys did nothing while the screen was locked, so a screen dimmed all the way stayed dark.
 
@@ -131,7 +131,7 @@ On a laptop, the brightness keys did nothing while the screen was locked, so a s
 
 ### Sharp indicator on scaled displays
 
-**Wayland** · `regolith-avizo` 0.1.7 · [avizo#7](https://github.com/regolith-linux/avizo/pull/7)
+**Wayland** · `regolith-avizo` 0.1.8 · [avizo#7](https://github.com/regolith-linux/avizo/pull/7)
 
 On a display with a scale above 100%, the indicator's icons were blurry.
 
@@ -143,7 +143,7 @@ On a display with a scale above 100%, the indicator's icons were blurry.
 
 ### Calculator and Home Folder keys
 
-**Wayland** · **Parity** · `regolith-wm-config` 4.12.0 · [regolith-wm-config#97](https://github.com/regolith-linux/regolith-wm-config/pull/97)
+**Wayland** · **Parity** · `regolith-wm-config` 4.13.1 · [regolith-wm-config#97](https://github.com/regolith-linux/regolith-wm-config/pull/97)
 
 Keyboards with launcher keys can use them in sway as in the X11 session.
 
@@ -156,7 +156,7 @@ Keyboards with launcher keys can use them in sway as in the X11 session.
 
 ### Print screenshot keys in Wayland
 
-**Wayland** · **Parity** · `regolith-wm-config` 4.12.0 · [regolith-wm-config#78](https://github.com/regolith-linux/regolith-wm-config/pull/78)
+**Wayland** · **Parity** · `regolith-wm-config` 4.13.1 · [regolith-wm-config#78](https://github.com/regolith-linux/regolith-wm-config/pull/78)
 
 In 3.4, plain {{< keys "print" >}} did nothing in sway. It now has the same keys as the X11 session.
 
@@ -174,7 +174,7 @@ In 3.4, plain {{< keys "print" >}} did nothing in sway. It now has the same keys
 
 ### Super+Print screenshot keys in X11
 
-**X11** · **Parity** · `regolith-wm-config` 4.12.0 · [regolith-wm-config#96](https://github.com/regolith-linux/regolith-wm-config/pull/96)
+**X11** · **Parity** · `regolith-wm-config` 4.13.1 · [regolith-wm-config#96](https://github.com/regolith-linux/regolith-wm-config/pull/96)
 
 The three screenshot keys that only the Wayland session had are now in the X11 session too.
 
@@ -228,7 +228,7 @@ sway now provides GNOME's screen saver interface. Before, `xdg-screensaver lock`
 
 ### Switch keyboard layout on the lock screen
 
-**Wayland** · `regolith-wm-config` 4.12.0 · [regolith-wm-config#63](https://github.com/regolith-linux/regolith-wm-config/pull/63)
+**Wayland** · `regolith-wm-config` 4.13.1 · [regolith-wm-config#63](https://github.com/regolith-linux/regolith-wm-config/pull/63)
 
 With more than one input source (Settings › Keyboard › **Add Input Source**), you can now change the layout while the screen is locked, for example to type a password in another layout.
 
@@ -266,7 +266,7 @@ On a laptop, unplug the charger and let the battery run down to the low level (a
 
 ### No more crash reports from the audio idle inhibitor on X11
 
-**X11** · `sway-audio-idle-inhibit` 2.0.4 · [SwayAudioIdleInhibit#9](https://github.com/regolith-linux/SwayAudioIdleInhibit/pull/9)
+**X11** · `sway-audio-idle-inhibit` 2.0.5 · [SwayAudioIdleInhibit#9](https://github.com/regolith-linux/SwayAudioIdleInhibit/pull/9)
 
 The Wayland session's audio idle inhibitor also started in the X11 session, where it crashed and caused "System program problem detected" dialogs.
 
@@ -279,7 +279,7 @@ The Wayland session's audio idle inhibitor also started in the X11 session, wher
 
 ### Keep these display settings?
 
-**Wayland** · **Parity** · `regolith-displayd` 0.5.0 · [regolith-displayd#28](https://github.com/regolith-linux/regolith-displayd/pull/28), fixes [regolith-displayd#15](https://github.com/regolith-linux/regolith-displayd/issues/15)
+**Wayland** · **Parity** · `regolith-displayd` 0.6.0 · [regolith-displayd#28](https://github.com/regolith-linux/regolith-displayd/pull/28), fixes [regolith-displayd#15](https://github.com/regolith-linux/regolith-displayd/issues/15)
 
 A display change from Settings now asks for confirmation, and goes back by itself if you don't confirm, so a wrong mode can't leave you with a black screen.
 
@@ -291,7 +291,7 @@ A display change from Settings now asks for confirmation, and goes back by itsel
 
 ### Monitor numbers on screen
 
-**Wayland** · **Parity** · `regolith-displayd` 0.5.0, `regolith-powerd` 0.10.0 · [regolith-displayd#18](https://github.com/regolith-linux/regolith-displayd/pull/18), [regolith-powerd#28](https://github.com/regolith-linux/regolith-powerd/pull/28), fixes [regolith-displayd#16](https://github.com/regolith-linux/regolith-displayd/issues/16); [regolith-displayd#22](https://github.com/regolith-linux/regolith-displayd/pull/22)
+**Wayland** · **Parity** · `regolith-displayd` 0.6.0, `regolith-powerd` 0.10.0 · [regolith-displayd#18](https://github.com/regolith-linux/regolith-displayd/pull/18), [regolith-powerd#28](https://github.com/regolith-linux/regolith-powerd/pull/28), fixes [regolith-displayd#16](https://github.com/regolith-linux/regolith-displayd/issues/16); [regolith-displayd#22](https://github.com/regolith-linux/regolith-displayd/pull/22)
 
 With two or more monitors, open Settings ({{< keys "super,c" >}}) › **Displays**.
 
@@ -301,7 +301,7 @@ With two or more monitors, open Settings ({{< keys "super,c" >}}) › **Displays
 
 ### Compose key and other keyboard options
 
-**Wayland** · **Parity** · `regolith-inputd` 0.5.0 · [regolith-inputd#12](https://github.com/regolith-linux/regolith-inputd/pull/12), fixes [regolith-inputd#6](https://github.com/regolith-linux/regolith-inputd/issues/6)
+**Wayland** · **Parity** · `regolith-inputd` 0.6.1 · [regolith-inputd#12](https://github.com/regolith-linux/regolith-inputd/pull/12), fixes [regolith-inputd#6](https://github.com/regolith-linux/regolith-inputd/issues/6)
 
 1. Open Settings ({{< keys "super,c" >}}) › **Keyboard** › **Compose Key**, turn it on and choose **Right Alt**.
 1. In a terminal, press and release {{< keys "right alt" >}}, then type `o` `c`; then {{< keys "right alt" >}}, `'`, `e`.
@@ -310,7 +310,7 @@ With two or more monitors, open Settings ({{< keys "super,c" >}}) › **Displays
 
 ### Key repeat settings
 
-**Wayland** · **Parity** · `regolith-inputd` 0.5.0 · [regolith-inputd#14](https://github.com/regolith-linux/regolith-inputd/pull/14)
+**Wayland** · **Parity** · `regolith-inputd` 0.6.1 · [regolith-inputd#14](https://github.com/regolith-linux/regolith-inputd/pull/14)
 
 The repeat settings now apply when you log in, and turning repeat off works.
 
@@ -322,7 +322,7 @@ The repeat settings now apply when you log in, and turning repeat off works.
 
 ### A new account gets the system keyboard layout
 
-**Wayland** · **Parity** · `regolith-session` 1.2.5 · [regolith-session#78](https://github.com/regolith-linux/regolith-session/pull/78)
+**Wayland** · **Parity** · `regolith-session` 1.3.1 · [regolith-session#78](https://github.com/regolith-linux/regolith-session/pull/78)
 
 A user whose first login was "Regolith / Wayland" got the US layout, whatever the system keyboard was set to.
 
@@ -346,7 +346,7 @@ sway has new keyboard accessibility options. The toggles in Settings › Accessi
 
 ### The Wayland bar shows the same blocks
 
-**Wayland** · **Parity** · `i3status-rs` 0.40.0-2 · [i3status-rs_debian#25](https://github.com/regolith-linux/i3status-rs_debian/pull/25)
+**Wayland** · **Parity** · `i3status-rs` 0.40.0-4 · [i3status-rs_debian#25](https://github.com/regolith-linux/i3status-rs_debian/pull/25)
 
 The sway bar has a CPU block, as the X11 bar has, and no longer shows an empty red battery on machines without a battery.
 
@@ -354,7 +354,7 @@ The sway bar has a CPU block, as the X11 bar has, and no longer shows an empty r
 
 ### The Wayland clock follows the time format
 
-**Wayland** · **Parity** · `i3status-rs` 0.40.0-2 · [i3status-rs_debian#26](https://github.com/regolith-linux/i3status-rs_debian/pull/26)
+**Wayland** · **Parity** · `i3status-rs` 0.40.0-4 · [i3status-rs_debian#26](https://github.com/regolith-linux/i3status-rs_debian/pull/26)
 
 1. In the evening, run `gsettings set org.gnome.desktop.interface clock-format 12h` (the Time Format setting of Settings › System › Date & Time).
 1. Wait 5 seconds, then run `gsettings set org.gnome.desktop.interface clock-format 24h`.
@@ -363,7 +363,7 @@ The sway bar has a CPU block, as the X11 bar has, and no longer shows an empty r
 
 ### AM and PM on the X11 clock
 
-**X11** · `regolith-i3xrocks-config` 6.0.0 · [regolith-i3xrocks-config#170](https://github.com/regolith-linux/regolith-i3xrocks-config/pull/170)
+**X11** · `regolith-i3xrocks-config` 6.0.1 · [regolith-i3xrocks-config#170](https://github.com/regolith-linux/regolith-i3xrocks-config/pull/170)
 
 1. Run `gsettings set org.gnome.desktop.interface clock-format 12h`, then press {{< keys "super,shift,r" >}}.
 
@@ -371,7 +371,7 @@ The sway bar has a CPU block, as the X11 bar has, and no longer shows an empty r
 
 ### Volume and microphone blocks on PipeWire
 
-**X11** · **Parity** · `regolith-i3xrocks-config` 6.0.0 · [regolith-i3xrocks-config#161](https://github.com/regolith-linux/regolith-i3xrocks-config/pull/161), [regolith-i3xrocks-config#167](https://github.com/regolith-linux/regolith-i3xrocks-config/pull/167), fixes [regolith-desktop#1087](https://github.com/regolith-linux/regolith-desktop/issues/1087); [regolith-i3xrocks-config#175](https://github.com/regolith-linux/regolith-i3xrocks-config/pull/175)
+**X11** · **Parity** · `regolith-i3xrocks-config` 6.0.1 · [regolith-i3xrocks-config#161](https://github.com/regolith-linux/regolith-i3xrocks-config/pull/161), [regolith-i3xrocks-config#167](https://github.com/regolith-linux/regolith-i3xrocks-config/pull/167), fixes [regolith-desktop#1087](https://github.com/regolith-linux/regolith-desktop/issues/1087); [regolith-i3xrocks-config#175](https://github.com/regolith-linux/regolith-i3xrocks-config/pull/175)
 
 The X11 volume and microphone blocks showed no level on PipeWire, the default on Ubuntu.
 
@@ -382,7 +382,7 @@ The X11 volume and microphone blocks showed no level on PipeWire, the default on
 
 ### The CPU block turns red under load and opens System Monitor
 
-**X11** · `regolith-i3xrocks-config` 6.0.0 · [regolith-i3xrocks-config#168](https://github.com/regolith-linux/regolith-i3xrocks-config/pull/168), [regolith-i3xrocks-config#171](https://github.com/regolith-linux/regolith-i3xrocks-config/pull/171)
+**X11** · `regolith-i3xrocks-config` 6.0.1 · [regolith-i3xrocks-config#168](https://github.com/regolith-linux/regolith-i3xrocks-config/pull/168), [regolith-i3xrocks-config#171](https://github.com/regolith-linux/regolith-i3xrocks-config/pull/171)
 
 1. Load every CPU for 15 seconds: `for i in $(seq $(nproc)); do timeout 15 sh -c 'while :; do :; done' & done`
 1. Click the CPU block.
@@ -391,7 +391,7 @@ The X11 volume and microphone blocks showed no level on PipeWire, the default on
 
 ## Launcher (ilia)
 
-All of these are in `ilia` 0.19.2 and work in both sessions. Open the launcher with {{< keys "super,space" >}}.
+All of these are in `ilia` 0.20.1 and work in both sessions. Open the launcher with {{< keys "super,space" >}}.
 
 ### Search with several words, in any order
 
@@ -468,7 +468,7 @@ Type `htop` and press {{< keys "enter" >}}.
 
 ### Switch back to the previous workspace
 
-**X11 and Wayland** · `regolith-wm-config` 4.12.0 · [regolith-wm-config#80](https://github.com/regolith-linux/regolith-wm-config/pull/80), fixes [regolith-desktop#591](https://github.com/regolith-linux/regolith-desktop/issues/591)
+**X11 and Wayland** · `regolith-wm-config` 4.13.1 · [regolith-wm-config#80](https://github.com/regolith-linux/regolith-wm-config/pull/80), fixes [regolith-desktop#591](https://github.com/regolith-linux/regolith-desktop/issues/591)
 
 1. On workspace 1, press {{< keys "super,3" >}}.
 1. Press {{< keys "super,alt,tab" >}} twice.
@@ -477,7 +477,7 @@ Type `htop` and press {{< keys "enter" >}}.
 
 ### Resize mode arrows go the right way
 
-**X11 and Wayland** · `regolith-wm-config` 4.12.0 · [regolith-wm-config#87](https://github.com/regolith-linux/regolith-wm-config/pull/87)
+**X11 and Wayland** · `regolith-wm-config` 4.13.1 · [regolith-wm-config#87](https://github.com/regolith-linux/regolith-wm-config/pull/87)
 
 1. Open two terminals one above the other: {{< keys "super,enter" >}}, {{< keys "super,v" >}}, {{< keys "super,enter" >}}.
 1. Press {{< keys "super,r" >}}, then {{< keys "up" >}} a few times, then {{< keys "escape" >}}.
@@ -486,7 +486,7 @@ Type `htop` and press {{< keys "enter" >}}.
 
 ### Gap keys in Wayland
 
-**Wayland** · **Parity** · `regolith-wm-config` 4.12.0 · [regolith-wm-config#92](https://github.com/regolith-linux/regolith-wm-config/pull/92)
+**Wayland** · **Parity** · `regolith-wm-config` 4.13.1 · [regolith-wm-config#92](https://github.com/regolith-linux/regolith-wm-config/pull/92)
 
 1. Open two windows side by side.
 1. Press {{< keys "super,=" >}}, then {{< keys "super,shift,=" >}}, then {{< keys "super,minus" >}} and {{< keys "super,shift,minus" >}}.
@@ -495,7 +495,7 @@ Type `htop` and press {{< keys "enter" >}}.
 
 ### Terminate App in Wayland
 
-**Wayland** · **Parity** · `regolith-wm-config` 4.12.0 · [regolith-wm-config#70](https://github.com/regolith-linux/regolith-wm-config/pull/70)
+**Wayland** · **Parity** · `regolith-wm-config` 4.13.1 · [regolith-wm-config#70](https://github.com/regolith-linux/regolith-wm-config/pull/70)
 
 Focus a terminal (foot, a native Wayland app) and press {{< keys "super,alt,q" >}}.
 
@@ -503,7 +503,7 @@ Focus a terminal (foot, a native Wayland app) and press {{< keys "super,alt,q" >
 
 ### Next Free Workspace keys in X11
 
-**X11** · **Parity** · `regolith-wm-config` 4.12.0 · [regolith-wm-config#71](https://github.com/regolith-linux/regolith-wm-config/pull/71)
+**X11** · **Parity** · `regolith-wm-config` 4.13.1 · [regolith-wm-config#71](https://github.com/regolith-linux/regolith-wm-config/pull/71)
 
 With a window open on workspace 1, press {{< keys "super,`" >}}.
 
@@ -511,7 +511,7 @@ With a window open on workspace 1, press {{< keys "super,`" >}}.
 
 ### Swapping Super and Alt works
 
-**X11 and Wayland** · `regolith-wm-config` 4.12.0 · [regolith-wm-config#63](https://github.com/regolith-linux/regolith-wm-config/pull/63), fixes [regolith-desktop#504](https://github.com/regolith-linux/regolith-desktop/issues/504), [regolith-desktop#1098](https://github.com/regolith-linux/regolith-desktop/issues/1098)
+**X11 and Wayland** · `regolith-wm-config` 4.13.1 · [regolith-wm-config#63](https://github.com/regolith-linux/regolith-wm-config/pull/63), fixes [regolith-desktop#504](https://github.com/regolith-linux/regolith-desktop/issues/504), [regolith-desktop#1098](https://github.com/regolith-linux/regolith-desktop/issues/1098)
 
 1. Add `wm.mod: Mod1` and `wm.alt: Mod4` to `~/.config/regolith3/Xresources`, and press {{< keys "super,shift,r" >}}.
 1. Press {{< keys "alt,3" >}}, then {{< keys "alt,1" >}}.
@@ -543,7 +543,7 @@ Every look now sets GNOME's light or dark style, so GTK 4 and libadwaita apps fo
 
 ### X11 apps follow the theme in Wayland
 
-**Wayland** · **Parity** · `regolith-wm-config` 4.12.0 · [regolith-wm-config#69](https://github.com/regolith-linux/regolith-wm-config/pull/69)
+**Wayland** · **Parity** · `regolith-wm-config` 4.13.1 · [regolith-wm-config#69](https://github.com/regolith-linux/regolith-wm-config/pull/69)
 
 Apps that run under XWayland used to get the default light theme, fonts and cursor.
 
@@ -553,7 +553,7 @@ Apps that run under XWayland used to get the default light theme, fonts and curs
 
 ### Look wallpaper colours and gradients in Wayland
 
-**Wayland** · **Parity** · `regolith-wm-config` 4.12.0 · [regolith-wm-config#82](https://github.com/regolith-linux/regolith-wm-config/pull/82)
+**Wayland** · **Parity** · `regolith-wm-config` 4.13.1 · [regolith-wm-config#82](https://github.com/regolith-linux/regolith-wm-config/pull/82)
 
 Looks without a wallpaper picture define colours (`regolith.wallpaper.color.primary`, `…secondary`, `…shading.type`). sway showed black for colour names and drew no gradients.
 
@@ -563,7 +563,7 @@ Looks without a wallpaper picture define colours (`regolith.wallpaper.color.prim
 
 ### Looks in their own style everywhere
 
-**X11 and Wayland** · `regolith-wm-config` 4.12.0, `regolith-ftue` 2.2.3 · [regolith-wm-config#88](https://github.com/regolith-linux/regolith-wm-config/pull/88), [regolith-ftue#10](https://github.com/regolith-linux/regolith-ftue/pull/10)
+**X11 and Wayland** · `regolith-wm-config` 4.13.1, `regolith-ftue` 2.2.4 · [regolith-wm-config#88](https://github.com/regolith-linux/regolith-wm-config/pull/88), [regolith-ftue#10](https://github.com/regolith-linux/regolith-ftue/pull/10)
 
 1. Open the Look Selector with {{< keys "super,alt,l" >}}.
 
@@ -582,7 +582,7 @@ The GTK themes of the Dracula, Nord and Nevil looks are new upstream releases.
 
 ### Workspace names with accents and other non-ASCII text
 
-**X11 and Wayland** · `regolith-session` 1.2.5 · [regolith-session#85](https://github.com/regolith-linux/regolith-session/pull/85)
+**X11 and Wayland** · `regolith-session` 1.3.1 · [regolith-session#85](https://github.com/regolith-linux/regolith-session/pull/85)
 
 1. Add `wm.workspace.02.name: 2:Ñandú café` to `~/.config/regolith3/Xresources`.
 1. Log out and in again, and press {{< keys "super,2" >}}.
@@ -591,7 +591,7 @@ The GTK themes of the Dracula, Nord and Nevil looks are new upstream releases.
 
 ### Removing an override takes effect without logging out
 
-**X11 and Wayland** · `regolith-session` 1.2.5 · [regolith-session#98](https://github.com/regolith-linux/regolith-session/pull/98)
+**X11 and Wayland** · `regolith-session` 1.3.1 · [regolith-session#98](https://github.com/regolith-linux/regolith-session/pull/98)
 
 1. Add `wm.bar.position: top` to `~/.config/regolith3/Xresources` and press {{< keys "super,shift,r" >}}.
 1. Remove the line and press {{< keys "super,shift,r" >}} again.
@@ -614,7 +614,7 @@ Open Settings ({{< keys "super,c" >}}) › **Keyboard** › **View and Customize
 
 ### No GNOME welcome wizard
 
-**X11 and Wayland** · `regolith-session` 1.2.5 · [regolith-session#70](https://github.com/regolith-linux/regolith-session/pull/70)
+**X11 and Wayland** · `regolith-session` 1.3.1 · [regolith-session#70](https://github.com/regolith-linux/regolith-session/pull/70)
 
 Create a user and log in to a Regolith session for the first time.
 
