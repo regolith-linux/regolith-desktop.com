@@ -11,7 +11,9 @@ prev: /docs/reference/releases
 
 Regolith 3.5 is a minor release focusing on Ubuntu 26.04 support, broad quality improvements, and closing gaps between the i3 and Sway sessions.
 
-A special thanks in particular to long-time Regolith contributor [cfsmp3](https://github.com/cfsmp3) who has taken initiative to provide most of the fixes and features in the 3.5 release!
+A special thanks in particular to long-time Regolith contributor [cfsmp3](https://github.com/cfsmp3) who has taken initiative to provide the vast majority of fixes and features in the 3.5 release!
+
+The sheer quantity of fixes as well as the depth in testing in this release is primarily due to usage of LLM-based tools by Carlos, myself, and others.  More details about LLM tooling can be found in a recent [blog post on the topic](/posts/llm-tools/).
 
 ## Features
 
