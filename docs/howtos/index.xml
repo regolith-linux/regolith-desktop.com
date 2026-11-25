@@ -1894,7 +1894,576 @@ title="Copy code"
 &lt;/div>
 &lt;p>See the &lt;a href="https://docs.rs/i3status-rs/latest/i3status_rs/blocks/battery/index.html" target="_blank" rel="noopener">i3status-rust battery block documentation&lt;/a> for further options.&lt;/p>
 &lt;h2>Further Reading&lt;span class="hx-absolute -hx-mt-20" id="further-reading">&lt;/span>
-&lt;a href="#further-reading" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>See the &lt;a href="https://regolith-desktop.com/docs/reference/configurations/" >reference page for configurations&lt;/a> for more details about config files in Regolith.&lt;/p></description></item><item><title>Verify behavior against upstream</title><link>https://regolith-desktop.com/docs/howtos/gnome-flashback-session/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/gnome-flashback-session/</guid><description>
+&lt;a href="#further-reading" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>See the &lt;a href="https://regolith-desktop.com/docs/reference/configurations/" >reference page for configurations&lt;/a> for more details about config files in Regolith.&lt;/p></description></item><item><title>Test What's New in Regolith 3.5</title><link>https://regolith-desktop.com/docs/howtos/test-whats-new-in-3-5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/test-whats-new-in-3-5/</guid><description>
+&lt;p>This page lists the changes from Regolith 3.4 to 3.5 that you can see or feel in normal use, with the steps to try each one yourself. Internal fixes (packaging, build, quoting and the like) are left out.&lt;/p>
+&lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
+&lt;div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2">&lt;/div>
+&lt;div class="hx-w-full hx-min-w-0 hx-leading-7">
+&lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">Regolith 3.5 is available for Ubuntu 22.04, 24.04, 25.10 and 26.04, and Debian 12 and 13. To install it, follow the &lt;a href="https://regolith-desktop.com/docs/using-regolith/install/" >installation instructions&lt;/a>. To upgrade from Regolith 3.4, see &lt;a href="https://regolith-desktop.com/docs/reference/releases/regolith-3.5-release-notes/#upgrade-from-regolith-34" >Upgrade from Regolith 3.4&lt;/a> in the release notes. Debian 12 has the X11 session only, so the Wayland items don&amp;rsquo;t apply there.&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;p>Each item says:&lt;/p>
+&lt;ul>
+&lt;li>what changed, and which session it applies to: &lt;strong>X11&lt;/strong> (&amp;ldquo;Regolith / X11&amp;rdquo;, i3) or &lt;strong>Wayland&lt;/strong> (&amp;ldquo;Regolith / Wayland&amp;rdquo;, sway);&lt;/li>
+&lt;li>&lt;strong>Parity&lt;/strong> when the feature worked in only one session in 3.4 and now works in both;&lt;/li>
+&lt;li>the package that carries it, with the version that Regolith 3.5 ships, and the pull request;&lt;/li>
+&lt;li>how to try it, and what you should see.&lt;/li>
+&lt;/ul>
+&lt;h2>Before you begin&lt;span class="hx-absolute -hx-mt-20" id="before-you-begin">&lt;/span>
+&lt;a href="#before-you-begin" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Check that you have Regolith 3.5&lt;span class="hx-absolute -hx-mt-20" id="check-that-you-have-regolith-35">&lt;/span>
+&lt;a href="#check-that-you-have-regolith-35" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>In a terminal (&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">enter&lt;/span>&lt;/span>):&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">cat /etc/regolith/version
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">apt policy regolith-desktop &lt;span class="p">|&lt;/span> head -4&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>You should see &lt;code>REGOLITH_VERSION=3.5&lt;/code>, and &lt;code>Installed: 4.11.0-1regolith-&amp;lt;codename&amp;gt;&lt;/code> (or later) with the same &lt;code>Candidate&lt;/code> version, where &lt;code>&amp;lt;codename&amp;gt;&lt;/code> is your release, such as &lt;code>noble&lt;/code> or &lt;code>trixie&lt;/code>. If the candidate is newer, run &lt;code>sudo apt update &amp;amp;&amp;amp; sudo apt full-upgrade&lt;/code> first.&lt;/p>
+&lt;p>To see the versions of the packages that the items below refer to:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">dpkg-query -W regolith-wm-config regolith-avizo regolith-powerd regolith-displayd regolith-inputd regolith-session-common ilia i3status-rs regolith-i3xrocks-config regolith-control-center sway-regolith regolith-look-default&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;h3>Switch sessions&lt;span class="hx-absolute -hx-mt-20" id="switch-sessions">&lt;/span>
+&lt;a href="#switch-sessions" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Most items name a session. To change session:&lt;/p>
+&lt;ol>
+&lt;li>Log out: press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">e&lt;/span>&lt;/span>, then &lt;strong>Log Out&lt;/strong> (X11) or &lt;strong>Logout&lt;/strong> (Wayland).&lt;/li>
+&lt;li>On the login screen, click your name, then the gear icon at the bottom right.&lt;/li>
+&lt;li>Pick &lt;strong>Regolith / X11&lt;/strong> or &lt;strong>Regolith / Wayland&lt;/strong>, and type your password.&lt;/li>
+&lt;/ol>
+&lt;p>In a terminal, &lt;code>echo $XDG_SESSION_TYPE&lt;/code> prints &lt;code>x11&lt;/code> or &lt;code>wayland&lt;/code>.&lt;/p>
+&lt;h3>What you need&lt;span class="hx-absolute -hx-mt-20" id="what-you-need">&lt;/span>
+&lt;a href="#what-you-need" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Most checks need only a keyboard and a mouse. A few need hardware: a laptop for the brightness keys and the battery warning, a USB stick for automount, and a second monitor for the monitor labels. Some steps install a package or change a setting; each says how to undo it if it isn&amp;rsquo;t obvious.&lt;/p>
+&lt;h2>Session parity at a glance&lt;span class="hx-absolute -hx-mt-20" id="session-parity-at-a-glance">&lt;/span>
+&lt;a href="#session-parity-at-a-glance" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>These features worked in only one session in Regolith 3.4. In 3.5 they work in both.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Feature&lt;/th>
+&lt;th>3.4&lt;/th>
+&lt;th>3.5&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a href="#volume-indicator-on-every-key-press" >Volume indicator&lt;/a>, &lt;a href="#the-indicator-goes-away-after-15-seconds" >1.5 s timeout&lt;/a>, &lt;a href="#volume-keys-stop-at-100" >100% limit&lt;/a>, &lt;a href="#fine-volume-steps-and-modifier-variants" >fine volume steps&lt;/a>&lt;/td>
+&lt;td>X11&lt;/td>
+&lt;td>both&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="#brightness-keys-on-the-lock-screen" >Brightness keys on the lock screen&lt;/a>&lt;/td>
+&lt;td>X11&lt;/td>
+&lt;td>both&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="#calculator-and-home-folder-keys" >Calculator and Home Folder keys&lt;/a>&lt;/td>
+&lt;td>X11&lt;/td>
+&lt;td>both&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="#print-screenshot-keys-in-wayland" >Print screenshot keys&lt;/a>&lt;/td>
+&lt;td>X11&lt;/td>
+&lt;td>both&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="#superprint-screenshot-keys-in-x11" >Super+Print screenshot keys&lt;/a>&lt;/td>
+&lt;td>Wayland&lt;/td>
+&lt;td>both&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="#screen-blank-follows-settings" >Screen Blank settings&lt;/a>, &lt;a href="#the-screen-turns-off-soon-after-you-lock-it" >screen off after locking&lt;/a>, &lt;a href="#apps-and-loginctl-can-lock-the-screen" >apps that lock the screen&lt;/a>&lt;/td>
+&lt;td>X11&lt;/td>
+&lt;td>both&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="#logout-and-power-off-requests-ask-first" >Logout and power off requests ask first&lt;/a>&lt;/td>
+&lt;td>X11&lt;/td>
+&lt;td>both&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="#usb-sticks-mount-automatically" >Automount&lt;/a>, &lt;a href="#low-battery-warning-and-automatic-power-saver" >low-battery warning&lt;/a>&lt;/td>
+&lt;td>X11&lt;/td>
+&lt;td>both&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="#keep-these-display-settings" >&amp;ldquo;Keep these display settings?&amp;rdquo;&lt;/a>, &lt;a href="#monitor-numbers-on-screen" >monitor labels&lt;/a>&lt;/td>
+&lt;td>X11&lt;/td>
+&lt;td>both&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="#compose-key-and-other-keyboard-options" >Compose key&lt;/a>, &lt;a href="#key-repeat-settings" >key repeat&lt;/a>, &lt;a href="#a-new-account-gets-the-system-keyboard-layout" >system keyboard layout on first login&lt;/a>&lt;/td>
+&lt;td>X11&lt;/td>
+&lt;td>both&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="#settings-sets-the-wayland-wallpaper" >Background from Settings&lt;/a>, &lt;a href="#x11-apps-follow-the-theme-in-wayland" >theme of X11 apps&lt;/a>, &lt;a href="#look-wallpaper-colours-and-gradients-in-wayland" >look wallpaper colours&lt;/a>&lt;/td>
+&lt;td>X11&lt;/td>
+&lt;td>both&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="#the-wayland-bar-shows-the-same-blocks" >CPU block&lt;/a>, &lt;a href="#the-wayland-clock-follows-the-time-format" >12/24-hour clock&lt;/a> on the bar&lt;/td>
+&lt;td>X11&lt;/td>
+&lt;td>both&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="#gap-keys-in-wayland" >Gap keys&lt;/a>, &lt;a href="#terminate-app-in-wayland" >Terminate App&lt;/a>&lt;/td>
+&lt;td>X11&lt;/td>
+&lt;td>both&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="#next-free-workspace-keys-in-x11" >Next Free Workspace keys&lt;/a>, &lt;a href="#dialogs-in-the-window-switcher-on-x11" >dialogs in the window switcher&lt;/a>&lt;/td>
+&lt;td>Wayland&lt;/td>
+&lt;td>both&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2>Volume, brightness and media keys&lt;span class="hx-absolute -hx-mt-20" id="volume-brightness-and-media-keys">&lt;/span>
+&lt;a href="#volume-brightness-and-media-keys" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Volume indicator on every key press&lt;span class="hx-absolute -hx-mt-20" id="volume-indicator-on-every-key-press">&lt;/span>
+&lt;a href="#volume-indicator-on-every-key-press" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>Wayland&lt;/strong> · &lt;strong>Parity&lt;/strong> · &lt;code>regolith-avizo&lt;/code> 0.1.8 · &lt;a href="https://github.com/regolith-linux/avizo/pull/6" target="_blank" rel="noopener">avizo#6&lt;/a>&lt;/p>
+&lt;p>On Ubuntu 26.04 the volume keys changed the volume without showing the on-screen indicator, unless the sound was muted.&lt;/p>
+&lt;ol>
+&lt;li>Press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">volume up&lt;/span>&lt;/span>, then &lt;span class="text-nowrap">&lt;span class="badge badge-warning">volume down&lt;/span>&lt;/span>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> a box in the middle of the screen with a speaker icon and a level bar, on every press. The volume block on the bar follows.&lt;/p>
+&lt;h3>The indicator goes away after 1.5 seconds&lt;span class="hx-absolute -hx-mt-20" id="the-indicator-goes-away-after-15-seconds">&lt;/span>
+&lt;a href="#the-indicator-goes-away-after-15-seconds" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>Wayland&lt;/strong> · &lt;strong>Parity&lt;/strong> · &lt;code>regolith-avizo&lt;/code> 0.1.8 · &lt;a href="https://github.com/regolith-linux/avizo/pull/8" target="_blank" rel="noopener">avizo#8&lt;/a>, &lt;a href="https://github.com/orgs/regolith-linux/discussions/1107" target="_blank" rel="noopener">Discussion #1107&lt;/a>&lt;/p>
+&lt;p>The indicator used to stay on screen for about 5 seconds. It now hides after 1.5 seconds, as in the X11 session.&lt;/p>
+&lt;ol>
+&lt;li>Press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">volume up&lt;/span>&lt;/span> once and count.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> the indicator disappear between one and two seconds after the key press. You can set another time with &lt;code>time = &lt;/code> in &lt;code>~/.config/avizo/config.ini&lt;/code>.&lt;/p>
+&lt;h3>Volume keys stop at 100%&lt;span class="hx-absolute -hx-mt-20" id="volume-keys-stop-at-100">&lt;/span>
+&lt;a href="#volume-keys-stop-at-100" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>Wayland&lt;/strong> · &lt;strong>Parity&lt;/strong> · &lt;code>regolith-avizo&lt;/code> 0.1.8 · &lt;a href="https://github.com/regolith-linux/avizo/pull/9" target="_blank" rel="noopener">avizo#9&lt;/a>&lt;/p>
+&lt;p>The volume keys used to raise the volume past 100% without limit.&lt;/p>
+&lt;ol>
+&lt;li>Set the volume close to the top: &lt;code>pactl set-sink-volume @DEFAULT_SINK@ 97%&lt;/code>&lt;/li>
+&lt;li>Press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">volume up&lt;/span>&lt;/span> twice.&lt;/li>
+&lt;li>Run &lt;code>pactl get-sink-volume @DEFAULT_SINK@&lt;/code>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> &lt;code>100%&lt;/code>, not 105% or more.&lt;/p>
+&lt;h3>Fine volume steps and modifier variants&lt;span class="hx-absolute -hx-mt-20" id="fine-volume-steps-and-modifier-variants">&lt;/span>
+&lt;a href="#fine-volume-steps-and-modifier-variants" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>Wayland&lt;/strong> · &lt;strong>Parity&lt;/strong> · &lt;code>regolith-wm-config&lt;/code> 4.13.1 · &lt;a href="https://github.com/regolith-linux/regolith-wm-config/pull/98" target="_blank" rel="noopener">regolith-wm-config#98&lt;/a>&lt;/p>
+&lt;p>The modifier variants of the volume and player keys that the X11 session handles now work in sway too.&lt;/p>
+&lt;ol>
+&lt;li>Run &lt;code>pactl set-sink-volume @DEFAULT_SINK@ 50%&lt;/code>.&lt;/li>
+&lt;li>Press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">volume up&lt;/span>&lt;/span>, then &lt;span class="text-nowrap">&lt;span class="badge badge-warning">ctrl&lt;/span> &lt;span class="badge badge-warning">volume up&lt;/span>&lt;/span>, then &lt;span class="text-nowrap">&lt;span class="badge badge-warning">alt&lt;/span> &lt;span class="badge badge-warning">volume up&lt;/span>&lt;/span>, running &lt;code>pactl get-sink-volume @DEFAULT_SINK@&lt;/code> after each.&lt;/li>
+&lt;li>Press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">alt&lt;/span> &lt;span class="badge badge-warning">mute&lt;/span>&lt;/span> twice.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> 52% (Shift makes a fine 2% step), then 57% and 62% (Ctrl and Alt act like the plain key). &lt;span class="text-nowrap">&lt;span class="badge badge-warning">alt&lt;/span> &lt;span class="badge badge-warning">mute&lt;/span>&lt;/span> mutes and unmutes.&lt;/p>
+&lt;h3>Brightness keys on the lock screen&lt;span class="hx-absolute -hx-mt-20" id="brightness-keys-on-the-lock-screen">&lt;/span>
+&lt;a href="#brightness-keys-on-the-lock-screen" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>Wayland&lt;/strong> · &lt;strong>Parity&lt;/strong> · &lt;code>regolith-wm-config&lt;/code> 4.13.1 · &lt;a href="https://github.com/regolith-linux/regolith-wm-config/pull/74" target="_blank" rel="noopener">regolith-wm-config#74&lt;/a>, fixes &lt;a href="https://github.com/regolith-linux/regolith-wm-config/issues/73" target="_blank" rel="noopener">regolith-wm-config#73&lt;/a>&lt;/p>
+&lt;p>On a laptop, the brightness keys did nothing while the screen was locked, so a screen dimmed all the way stayed dark.&lt;/p>
+&lt;ol>
+&lt;li>Press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">brightness up&lt;/span>&lt;/span>: the indicator shows a brightness icon and the level.&lt;/li>
+&lt;li>Lock the screen with &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">escape&lt;/span>&lt;/span>.&lt;/li>
+&lt;li>Press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">brightness down&lt;/span>&lt;/span> and &lt;span class="text-nowrap">&lt;span class="badge badge-warning">brightness up&lt;/span>&lt;/span>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> the brightness change while the lock screen is up.&lt;/p>
+&lt;h3>Sharp indicator on scaled displays&lt;span class="hx-absolute -hx-mt-20" id="sharp-indicator-on-scaled-displays">&lt;/span>
+&lt;a href="#sharp-indicator-on-scaled-displays" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>Wayland&lt;/strong> · &lt;code>regolith-avizo&lt;/code> 0.1.8 · &lt;a href="https://github.com/regolith-linux/avizo/pull/7" target="_blank" rel="noopener">avizo#7&lt;/a>&lt;/p>
+&lt;p>On a display with a scale above 100%, the indicator&amp;rsquo;s icons were blurry.&lt;/p>
+&lt;ol>
+&lt;li>Run &lt;code>swaymsg output '*' scale 2&lt;/code> (on a HiDPI display your scale may already be above 1).&lt;/li>
+&lt;li>Press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">volume down&lt;/span>&lt;/span>.&lt;/li>
+&lt;li>Run &lt;code>swaymsg output '*' scale 1&lt;/code> to go back.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> a crisp speaker icon with sharp edges.&lt;/p>
+&lt;h3>Calculator and Home Folder keys&lt;span class="hx-absolute -hx-mt-20" id="calculator-and-home-folder-keys">&lt;/span>
+&lt;a href="#calculator-and-home-folder-keys" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>Wayland&lt;/strong> · &lt;strong>Parity&lt;/strong> · &lt;code>regolith-wm-config&lt;/code> 4.13.1 · &lt;a href="https://github.com/regolith-linux/regolith-wm-config/pull/97" target="_blank" rel="noopener">regolith-wm-config#97&lt;/a>&lt;/p>
+&lt;p>Keyboards with launcher keys can use them in sway as in the X11 session.&lt;/p>
+&lt;ol>
+&lt;li>Press the Calculator key.&lt;/li>
+&lt;li>Press the Home Folder (Explorer) key.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> GNOME Calculator (if it is installed, also as a snap), then Files.&lt;/p>
+&lt;h2>Screenshots&lt;span class="hx-absolute -hx-mt-20" id="screenshots">&lt;/span>
+&lt;a href="#screenshots" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Print screenshot keys in Wayland&lt;span class="hx-absolute -hx-mt-20" id="print-screenshot-keys-in-wayland">&lt;/span>
+&lt;a href="#print-screenshot-keys-in-wayland" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>Wayland&lt;/strong> · &lt;strong>Parity&lt;/strong> · &lt;code>regolith-wm-config&lt;/code> 4.13.1 · &lt;a href="https://github.com/regolith-linux/regolith-wm-config/pull/78" target="_blank" rel="noopener">regolith-wm-config#78&lt;/a>&lt;/p>
+&lt;p>In 3.4, plain &lt;span class="text-nowrap">&lt;span class="badge badge-warning">print&lt;/span>&lt;/span> did nothing in sway. It now has the same keys as the X11 session.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Key&lt;/th>
+&lt;th>Result&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;span class="text-nowrap">&lt;span class="badge badge-warning">print&lt;/span>&lt;/span>&lt;/td>
+&lt;td>Saves the whole screen to &lt;code>~/Pictures&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;span class="text-nowrap">&lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">print&lt;/span>&lt;/span>&lt;/td>
+&lt;td>Drag an area with the mouse; saves it to &lt;code>~/Pictures&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;span class="text-nowrap">&lt;span class="badge badge-warning">alt&lt;/span> &lt;span class="badge badge-warning">print&lt;/span>&lt;/span>&lt;/td>
+&lt;td>Saves the focused window to &lt;code>~/Pictures&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;span class="text-nowrap">&lt;span class="badge badge-warning">ctrl&lt;/span> &lt;span class="badge badge-warning">print&lt;/span>&lt;/span>, &lt;span class="text-nowrap">&lt;span class="badge badge-warning">ctrl&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">print&lt;/span>&lt;/span>, &lt;span class="text-nowrap">&lt;span class="badge badge-warning">ctrl&lt;/span> &lt;span class="badge badge-warning">alt&lt;/span> &lt;span class="badge badge-warning">print&lt;/span>&lt;/span>&lt;/td>
+&lt;td>The same, copied to the clipboard instead&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;ol>
+&lt;li>Press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">print&lt;/span>&lt;/span> and &lt;span class="text-nowrap">&lt;span class="badge badge-warning">alt&lt;/span> &lt;span class="badge badge-warning">print&lt;/span>&lt;/span>, and run &lt;code>ls -t ~/Pictures | head -2&lt;/code>.&lt;/li>
+&lt;li>Press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">ctrl&lt;/span> &lt;span class="badge badge-warning">print&lt;/span>&lt;/span> and run &lt;code>wl-paste -l&lt;/code>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> two new PNG files, then &lt;code>image/png&lt;/code> in the clipboard. Each screenshot adds a notification (the bell count on the bar goes up; &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">n&lt;/span>&lt;/span> lists them). The older &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">print&lt;/span>&lt;/span> keys still work.&lt;/p>
+&lt;h3>Super+Print screenshot keys in X11&lt;span class="hx-absolute -hx-mt-20" id="superprint-screenshot-keys-in-x11">&lt;/span>
+&lt;a href="#superprint-screenshot-keys-in-x11" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>X11&lt;/strong> · &lt;strong>Parity&lt;/strong> · &lt;code>regolith-wm-config&lt;/code> 4.13.1 · &lt;a href="https://github.com/regolith-linux/regolith-wm-config/pull/96" target="_blank" rel="noopener">regolith-wm-config#96&lt;/a>&lt;/p>
+&lt;p>The three screenshot keys that only the Wayland session had are now in the X11 session too.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Key&lt;/th>
+&lt;th>Result&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">print&lt;/span>&lt;/span>&lt;/td>
+&lt;td>Copies the focused window to the clipboard&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">print&lt;/span>&lt;/span>&lt;/td>
+&lt;td>Click a window or drag an area; saves it to &lt;code>~/Pictures&lt;/code> and copies it&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">ctrl&lt;/span> &lt;span class="badge badge-warning">print&lt;/span>&lt;/span>&lt;/td>
+&lt;td>Saves all screens to &lt;code>~/Pictures&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;ol>
+&lt;li>Press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">print&lt;/span>&lt;/span> and run &lt;code>xclip -selection clipboard -t TARGETS -o | grep png&lt;/code>.&lt;/li>
+&lt;li>Press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">print&lt;/span>&lt;/span>, click a window, and run &lt;code>ls -t ~/Pictures | head -1&lt;/code>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> &lt;code>image/png&lt;/code>, then a new &lt;code>Screenshot from …png&lt;/code> with the size of that window, and a &amp;ldquo;Screenshot of anything&amp;rdquo; notification.&lt;/p>
+&lt;h2>Lock screen, idle and power&lt;span class="hx-absolute -hx-mt-20" id="lock-screen-idle-and-power">&lt;/span>
+&lt;a href="#lock-screen-idle-and-power" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Screen Blank follows Settings&lt;span class="hx-absolute -hx-mt-20" id="screen-blank-follows-settings">&lt;/span>
+&lt;a href="#screen-blank-follows-settings" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>Wayland&lt;/strong> · &lt;strong>Parity&lt;/strong> · &lt;code>regolith-powerd&lt;/code> 0.10.0 · &lt;a href="https://github.com/regolith-linux/regolith-powerd/pull/24" target="_blank" rel="noopener">regolith-powerd#24&lt;/a>, &lt;a href="https://github.com/regolith-linux/regolith-powerd/pull/44" target="_blank" rel="noopener">regolith-powerd#44&lt;/a>&lt;/p>
+&lt;p>sway now follows Settings › Power as the X11 session does. In 3.4, turning screen blanking off still blanked the screen after 5 seconds and locked it after 10, and the dim, blank and lock times didn&amp;rsquo;t match the settings.&lt;/p>
+&lt;ol>
+&lt;li>Open Settings (&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">c&lt;/span>&lt;/span>) › &lt;strong>Power&lt;/strong>.&lt;/li>
+&lt;li>Turn &lt;strong>Automatic Screen Blank&lt;/strong> off, and leave the mouse and keyboard alone for two minutes.&lt;/li>
+&lt;li>Turn it back on, set &lt;strong>Delay&lt;/strong> to &lt;strong>1 minute&lt;/strong>, and leave the machine alone for a little over a minute.&lt;/li>
+&lt;li>Set &lt;strong>Delay&lt;/strong> back to your usual value.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> with blanking off, the screen stays on and unlocked (it may dim). With 1 minute, the screen turns off and the session locks after one minute.&lt;/p>
+&lt;h3>The screen turns off soon after you lock it&lt;span class="hx-absolute -hx-mt-20" id="the-screen-turns-off-soon-after-you-lock-it">&lt;/span>
+&lt;a href="#the-screen-turns-off-soon-after-you-lock-it" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>Wayland&lt;/strong> · &lt;strong>Parity&lt;/strong> · &lt;code>regolith-powerd&lt;/code> 0.10.0 · &lt;a href="https://github.com/regolith-linux/regolith-powerd/pull/39" target="_blank" rel="noopener">regolith-powerd#39&lt;/a>&lt;/p>
+&lt;p>After &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">escape&lt;/span>&lt;/span> the lock screen used to stay lit until the normal idle timeout (more than 5 minutes).&lt;/p>
+&lt;ol>
+&lt;li>Lock with &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">escape&lt;/span>&lt;/span>, and don&amp;rsquo;t touch anything.&lt;/li>
+&lt;li>Lock again, press a key to wake the lock screen, and wait.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> the screen turn off about 5 seconds after locking, and 30 seconds after the last key press on the lock screen.&lt;/p>
+&lt;h3>Apps and loginctl can lock the screen&lt;span class="hx-absolute -hx-mt-20" id="apps-and-loginctl-can-lock-the-screen">&lt;/span>
+&lt;a href="#apps-and-loginctl-can-lock-the-screen" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>Wayland&lt;/strong> · &lt;strong>Parity&lt;/strong> · &lt;code>regolith-powerd&lt;/code> 0.10.0 · &lt;a href="https://github.com/regolith-linux/regolith-powerd/pull/25" target="_blank" rel="noopener">regolith-powerd#25&lt;/a>&lt;/p>
+&lt;p>sway now provides GNOME&amp;rsquo;s screen saver interface. Before, &lt;code>xdg-screensaver lock&lt;/code> did nothing, and password managers that lock with the screen (KeePassXC, for example) stayed unlocked.&lt;/p>
+&lt;ol>
+&lt;li>Run &lt;code>loginctl lock-session&lt;/code>, and unlock with your password.&lt;/li>
+&lt;li>Run &lt;code>xdg-screensaver lock&lt;/code>, and unlock.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> the lock screen each time.&lt;/p>
+&lt;h3>Switch keyboard layout on the lock screen&lt;span class="hx-absolute -hx-mt-20" id="switch-keyboard-layout-on-the-lock-screen">&lt;/span>
+&lt;a href="#switch-keyboard-layout-on-the-lock-screen" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>Wayland&lt;/strong> · &lt;code>regolith-wm-config&lt;/code> 4.13.1 · &lt;a href="https://github.com/regolith-linux/regolith-wm-config/pull/63" target="_blank" rel="noopener">regolith-wm-config#63&lt;/a>&lt;/p>
+&lt;p>With more than one input source (Settings › Keyboard › &lt;strong>Add Input Source&lt;/strong>), you can now change the layout while the screen is locked, for example to type a password in another layout.&lt;/p>
+&lt;ol>
+&lt;li>Add a second input source, such as German.&lt;/li>
+&lt;li>Lock with &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">escape&lt;/span>&lt;/span> and press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">alt&lt;/span> &lt;span class="badge badge-warning">backspace&lt;/span>&lt;/span>.&lt;/li>
+&lt;li>Unlock, and run &lt;code>swaymsg -t get_inputs | grep -m1 xkb_active_layout_name&lt;/code>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> the second layout (here &lt;code>&amp;quot;German&amp;quot;&lt;/code>). Press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">alt&lt;/span> &lt;span class="badge badge-warning">backspace&lt;/span>&lt;/span> again to go back.&lt;/p>
+&lt;h3>Logout and power off requests ask first&lt;span class="hx-absolute -hx-mt-20" id="logout-and-power-off-requests-ask-first">&lt;/span>
+&lt;a href="#logout-and-power-off-requests-ask-first" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>Wayland&lt;/strong> · &lt;strong>Parity&lt;/strong> · &lt;code>regolith-powerd&lt;/code> 0.10.0 · &lt;a href="https://github.com/regolith-linux/regolith-powerd/pull/27" target="_blank" rel="noopener">regolith-powerd#27&lt;/a>&lt;/p>
+&lt;p>Logout, restart and power off requests from applications or the command line used to do nothing in sway.&lt;/p>
+&lt;ol>
+&lt;li>Run &lt;code>gnome-session-quit --logout&lt;/code> in a terminal.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> a yellow bar at the top: &amp;ldquo;Do you really want to logout? You will be logged out automatically in 60 seconds.&amp;rdquo; Click &lt;strong>X&lt;/strong> to cancel. &lt;strong>Logout&lt;/strong>, or waiting 60 seconds, logs you out.&lt;/p>
+&lt;h3>USB sticks mount automatically&lt;span class="hx-absolute -hx-mt-20" id="usb-sticks-mount-automatically">&lt;/span>
+&lt;a href="#usb-sticks-mount-automatically" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>Wayland&lt;/strong> · &lt;strong>Parity&lt;/strong> · &lt;code>regolith-powerd&lt;/code> 0.10.0 · &lt;a href="https://github.com/regolith-linux/regolith-powerd/pull/30" target="_blank" rel="noopener">regolith-powerd#30&lt;/a>&lt;/p>
+&lt;p>Plug in a USB stick or an SD card.&lt;/p>
+&lt;p>&lt;strong>You should see:&lt;/strong> it is mounted under &lt;code>/run/media/$USER/&lt;/code> and opens in Files, as in the X11 session (&lt;code>findmnt /run/media/$USER/*&lt;/code> lists it). This follows GNOME&amp;rsquo;s &lt;code>org.gnome.desktop.media-handling&lt;/code> settings.&lt;/p>
+&lt;h3>Low-battery warning and automatic Power Saver&lt;span class="hx-absolute -hx-mt-20" id="low-battery-warning-and-automatic-power-saver">&lt;/span>
+&lt;a href="#low-battery-warning-and-automatic-power-saver" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>Wayland&lt;/strong> · &lt;strong>Parity&lt;/strong> · &lt;code>regolith-powerd&lt;/code> 0.10.0 · &lt;a href="https://github.com/regolith-linux/regolith-powerd/pull/23" target="_blank" rel="noopener">regolith-powerd#23&lt;/a>, fixes &lt;a href="https://github.com/regolith-linux/regolith-desktop/issues/355" target="_blank" rel="noopener">regolith-desktop#355&lt;/a>; &lt;a href="https://github.com/regolith-linux/regolith-powerd/pull/38" target="_blank" rel="noopener">regolith-powerd#38&lt;/a>&lt;/p>
+&lt;p>On a laptop, unplug the charger and let the battery run down to the low level (about 10%).&lt;/p>
+&lt;p>&lt;strong>You should see:&lt;/strong> a &amp;ldquo;Power — Low Battery — 9% battery remaining&amp;rdquo; notification (with your percentage) (&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">n&lt;/span>&lt;/span>), and &lt;code>powerprofilesctl get&lt;/code> switch from &lt;code>balanced&lt;/code> to &lt;code>power-saver&lt;/code>. When you plug the charger back in, the profile goes back to &lt;code>balanced&lt;/code>.&lt;/p>
+&lt;h3>No more crash reports from the audio idle inhibitor on X11&lt;span class="hx-absolute -hx-mt-20" id="no-more-crash-reports-from-the-audio-idle-inhibitor-on-x11">&lt;/span>
+&lt;a href="#no-more-crash-reports-from-the-audio-idle-inhibitor-on-x11" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>X11&lt;/strong> · &lt;code>sway-audio-idle-inhibit&lt;/code> 2.0.5 · &lt;a href="https://github.com/regolith-linux/SwayAudioIdleInhibit/pull/9" target="_blank" rel="noopener">SwayAudioIdleInhibit#9&lt;/a>&lt;/p>
+&lt;p>The Wayland session&amp;rsquo;s audio idle inhibitor also started in the X11 session, where it crashed and caused &amp;ldquo;System program problem detected&amp;rdquo; dialogs.&lt;/p>
+&lt;ol>
+&lt;li>In the X11 session, run &lt;code>systemctl --user is-active sway-audio-idle-inhibit&lt;/code>.&lt;/li>
+&lt;li>In the Wayland session, run it again.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> &lt;code>inactive&lt;/code> on X11 and &lt;code>active&lt;/code> on Wayland.&lt;/p>
+&lt;h2>Displays&lt;span class="hx-absolute -hx-mt-20" id="displays">&lt;/span>
+&lt;a href="#displays" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Keep these display settings?&lt;span class="hx-absolute -hx-mt-20" id="keep-these-display-settings">&lt;/span>
+&lt;a href="#keep-these-display-settings" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>Wayland&lt;/strong> · &lt;strong>Parity&lt;/strong> · &lt;code>regolith-displayd&lt;/code> 0.6.0 · &lt;a href="https://github.com/regolith-linux/regolith-displayd/pull/28" target="_blank" rel="noopener">regolith-displayd#28&lt;/a>, fixes &lt;a href="https://github.com/regolith-linux/regolith-displayd/issues/15" target="_blank" rel="noopener">regolith-displayd#15&lt;/a>&lt;/p>
+&lt;p>A display change from Settings now asks for confirmation, and goes back by itself if you don&amp;rsquo;t confirm, so a wrong mode can&amp;rsquo;t leave you with a black screen.&lt;/p>
+&lt;ol>
+&lt;li>Open Settings (&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">c&lt;/span>&lt;/span>) › &lt;strong>Displays&lt;/strong>.&lt;/li>
+&lt;li>Change &lt;strong>Scale&lt;/strong> (for example to 125%), and click &lt;strong>Apply&lt;/strong>.&lt;/li>
+&lt;li>Don&amp;rsquo;t press anything for 20 seconds.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> &amp;ldquo;Keep these display settings? Settings changes will revert in … seconds&amp;rdquo;, counting down from 20, with &amp;ldquo;Enter: Keep Changes&amp;rdquo; and &amp;ldquo;Esc: Revert Settings&amp;rdquo;. After 20 seconds the old scale comes back. Press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">enter&lt;/span>&lt;/span> instead to keep the change.&lt;/p>
+&lt;h3>Monitor numbers on screen&lt;span class="hx-absolute -hx-mt-20" id="monitor-numbers-on-screen">&lt;/span>
+&lt;a href="#monitor-numbers-on-screen" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>Wayland&lt;/strong> · &lt;strong>Parity&lt;/strong> · &lt;code>regolith-displayd&lt;/code> 0.6.0, &lt;code>regolith-powerd&lt;/code> 0.10.0 · &lt;a href="https://github.com/regolith-linux/regolith-displayd/pull/18" target="_blank" rel="noopener">regolith-displayd#18&lt;/a>, &lt;a href="https://github.com/regolith-linux/regolith-powerd/pull/28" target="_blank" rel="noopener">regolith-powerd#28&lt;/a>, fixes &lt;a href="https://github.com/regolith-linux/regolith-displayd/issues/16" target="_blank" rel="noopener">regolith-displayd#16&lt;/a>; &lt;a href="https://github.com/regolith-linux/regolith-displayd/pull/22" target="_blank" rel="noopener">regolith-displayd#22&lt;/a>&lt;/p>
+&lt;p>With two or more monitors, open Settings (&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">c&lt;/span>&lt;/span>) › &lt;strong>Displays&lt;/strong>.&lt;/p>
+&lt;p>&lt;strong>You should see:&lt;/strong> a number in the top left corner of each monitor, matching the numbers in the panel. The panel names each monitor by maker and size, as in the X11 session.&lt;/p>
+&lt;h2>Keyboard and input&lt;span class="hx-absolute -hx-mt-20" id="keyboard-and-input">&lt;/span>
+&lt;a href="#keyboard-and-input" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Compose key and other keyboard options&lt;span class="hx-absolute -hx-mt-20" id="compose-key-and-other-keyboard-options">&lt;/span>
+&lt;a href="#compose-key-and-other-keyboard-options" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>Wayland&lt;/strong> · &lt;strong>Parity&lt;/strong> · &lt;code>regolith-inputd&lt;/code> 0.6.1 · &lt;a href="https://github.com/regolith-linux/regolith-inputd/pull/12" target="_blank" rel="noopener">regolith-inputd#12&lt;/a>, fixes &lt;a href="https://github.com/regolith-linux/regolith-inputd/issues/6" target="_blank" rel="noopener">regolith-inputd#6&lt;/a>&lt;/p>
+&lt;ol>
+&lt;li>Open Settings (&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">c&lt;/span>&lt;/span>) › &lt;strong>Keyboard&lt;/strong> › &lt;strong>Compose Key&lt;/strong>, turn it on and choose &lt;strong>Right Alt&lt;/strong>.&lt;/li>
+&lt;li>In a terminal, press and release &lt;span class="text-nowrap">&lt;span class="badge badge-warning">right alt&lt;/span>&lt;/span>, then type &lt;code>o&lt;/code> &lt;code>c&lt;/code>; then &lt;span class="text-nowrap">&lt;span class="badge badge-warning">right alt&lt;/span>&lt;/span>, &lt;code>'&lt;/code>, &lt;code>e&lt;/code>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> &lt;code>©&lt;/code> and &lt;code>é&lt;/code>. In 3.4 the setting had no effect in sway.&lt;/p>
+&lt;h3>Key repeat settings&lt;span class="hx-absolute -hx-mt-20" id="key-repeat-settings">&lt;/span>
+&lt;a href="#key-repeat-settings" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>Wayland&lt;/strong> · &lt;strong>Parity&lt;/strong> · &lt;code>regolith-inputd&lt;/code> 0.6.1 · &lt;a href="https://github.com/regolith-linux/regolith-inputd/pull/14" target="_blank" rel="noopener">regolith-inputd#14&lt;/a>&lt;/p>
+&lt;p>The repeat settings now apply when you log in, and turning repeat off works.&lt;/p>
+&lt;ol>
+&lt;li>Open Settings › &lt;strong>Accessibility&lt;/strong> › &lt;strong>Typing&lt;/strong>, turn &lt;strong>Repeat Keys&lt;/strong> off, and run &lt;code>swaymsg -t get_inputs | grep -m1 repeat_rate&lt;/code>: it prints &lt;code>&amp;quot;repeat_rate&amp;quot;: 0&lt;/code>. Turn it back on.&lt;/li>
+&lt;li>Run &lt;code>gsettings set org.gnome.desktop.peripherals.keyboard delay 250&lt;/code>, log out and in again, and run &lt;code>swaymsg -t get_inputs | grep -m1 repeat_delay&lt;/code>.&lt;/li>
+&lt;li>Run &lt;code>gsettings reset org.gnome.desktop.peripherals.keyboard delay&lt;/code> to go back.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> &lt;code>&amp;quot;repeat_delay&amp;quot;: 250&lt;/code> after the new login.&lt;/p>
+&lt;h3>A new account gets the system keyboard layout&lt;span class="hx-absolute -hx-mt-20" id="a-new-account-gets-the-system-keyboard-layout">&lt;/span>
+&lt;a href="#a-new-account-gets-the-system-keyboard-layout" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>Wayland&lt;/strong> · &lt;strong>Parity&lt;/strong> · &lt;code>regolith-session&lt;/code> 1.3.1 · &lt;a href="https://github.com/regolith-linux/regolith-session/pull/78" target="_blank" rel="noopener">regolith-session#78&lt;/a>&lt;/p>
+&lt;p>A user whose first login was &amp;ldquo;Regolith / Wayland&amp;rdquo; got the US layout, whatever the system keyboard was set to.&lt;/p>
+&lt;ol>
+&lt;li>On a system whose keyboard layout isn&amp;rsquo;t US (&lt;code>localectl status&lt;/code> shows it), create a user, and log in to &lt;strong>Regolith / Wayland&lt;/strong> for the first time.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> the system layout on the bar&amp;rsquo;s keyboard block (for example &amp;ldquo;French&amp;rdquo;).&lt;/p>
+&lt;h3>Sticky keys, slow keys, bounce keys and mouse keys in sway&lt;span class="hx-absolute -hx-mt-20" id="sticky-keys-slow-keys-bounce-keys-and-mouse-keys-in-sway">&lt;/span>
+&lt;a href="#sticky-keys-slow-keys-bounce-keys-and-mouse-keys-in-sway" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>Wayland&lt;/strong> · &lt;code>sway-regolith&lt;/code> 1.11.2 · &lt;a href="https://github.com/regolith-linux/sway-regolith/pull/48" target="_blank" rel="noopener">sway-regolith#48&lt;/a>&lt;/p>
+&lt;p>sway has new keyboard accessibility options. The toggles in Settings › Accessibility › Typing don&amp;rsquo;t reach sway yet, so set them with &lt;code>swaymsg&lt;/code> or in your sway configuration.&lt;/p>
+&lt;ol>
+&lt;li>Run &lt;code>swaymsg input type:keyboard sticky_keys enabled&lt;/code>.&lt;/li>
+&lt;li>Press and release &lt;span class="text-nowrap">&lt;span class="badge badge-warning">shift&lt;/span>&lt;/span>, then press &lt;code>a&lt;/code> in a terminal.&lt;/li>
+&lt;li>Run &lt;code>swaymsg input type:keyboard sticky_keys disabled&lt;/code>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> &lt;code>A&lt;/code>. &lt;code>swaymsg -t get_inputs | grep -m1 sticky_keys&lt;/code> shows the state; &lt;code>man sway-input&lt;/code> lists &lt;code>slow_keys&lt;/code>, &lt;code>bounce_keys&lt;/code> and &lt;code>mouse_keys&lt;/code>.&lt;/p>
+&lt;h2>Bar&lt;span class="hx-absolute -hx-mt-20" id="bar">&lt;/span>
+&lt;a href="#bar" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>The Wayland bar shows the same blocks&lt;span class="hx-absolute -hx-mt-20" id="the-wayland-bar-shows-the-same-blocks">&lt;/span>
+&lt;a href="#the-wayland-bar-shows-the-same-blocks" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>Wayland&lt;/strong> · &lt;strong>Parity&lt;/strong> · &lt;code>i3status-rs&lt;/code> 0.40.0-4 · &lt;a href="https://github.com/regolith-linux/i3status-rs_debian/pull/25" target="_blank" rel="noopener">i3status-rs_debian#25&lt;/a>&lt;/p>
+&lt;p>The sway bar has a CPU block, as the X11 bar has, and no longer shows an empty red battery on machines without a battery.&lt;/p>
+&lt;p>&lt;strong>You should see:&lt;/strong> a CPU percentage between the network and disk blocks, and a battery block only on a laptop.&lt;/p>
+&lt;h3>The Wayland clock follows the time format&lt;span class="hx-absolute -hx-mt-20" id="the-wayland-clock-follows-the-time-format">&lt;/span>
+&lt;a href="#the-wayland-clock-follows-the-time-format" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>Wayland&lt;/strong> · &lt;strong>Parity&lt;/strong> · &lt;code>i3status-rs&lt;/code> 0.40.0-4 · &lt;a href="https://github.com/regolith-linux/i3status-rs_debian/pull/26" target="_blank" rel="noopener">i3status-rs_debian#26&lt;/a>&lt;/p>
+&lt;ol>
+&lt;li>In the evening, run &lt;code>gsettings set org.gnome.desktop.interface clock-format 12h&lt;/code> (the Time Format setting of Settings › System › Date &amp;amp; Time).&lt;/li>
+&lt;li>Wait 5 seconds, then run &lt;code>gsettings set org.gnome.desktop.interface clock-format 24h&lt;/code>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> the bar&amp;rsquo;s clock change from 24-hour time (&lt;code>20:05&lt;/code>) to 12-hour time (&lt;code>08:05&lt;/code>) and back, without restarting anything.&lt;/p>
+&lt;h3>AM and PM on the X11 clock&lt;span class="hx-absolute -hx-mt-20" id="am-and-pm-on-the-x11-clock">&lt;/span>
+&lt;a href="#am-and-pm-on-the-x11-clock" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>X11&lt;/strong> · &lt;code>regolith-i3xrocks-config&lt;/code> 6.0.1 · &lt;a href="https://github.com/regolith-linux/regolith-i3xrocks-config/pull/170" target="_blank" rel="noopener">regolith-i3xrocks-config#170&lt;/a>&lt;/p>
+&lt;ol>
+&lt;li>Run &lt;code>gsettings set org.gnome.desktop.interface clock-format 12h&lt;/code>, then press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">r&lt;/span>&lt;/span>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> the time with &lt;code>AM&lt;/code> or &lt;code>PM&lt;/code>, for example &lt;code>09:04 PM&lt;/code>.&lt;/p>
+&lt;h3>Volume and microphone blocks on PipeWire&lt;span class="hx-absolute -hx-mt-20" id="volume-and-microphone-blocks-on-pipewire">&lt;/span>
+&lt;a href="#volume-and-microphone-blocks-on-pipewire" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>X11&lt;/strong> · &lt;strong>Parity&lt;/strong> · &lt;code>regolith-i3xrocks-config&lt;/code> 6.0.1 · &lt;a href="https://github.com/regolith-linux/regolith-i3xrocks-config/pull/161" target="_blank" rel="noopener">regolith-i3xrocks-config#161&lt;/a>, &lt;a href="https://github.com/regolith-linux/regolith-i3xrocks-config/pull/167" target="_blank" rel="noopener">regolith-i3xrocks-config#167&lt;/a>, fixes &lt;a href="https://github.com/regolith-linux/regolith-desktop/issues/1087" target="_blank" rel="noopener">regolith-desktop#1087&lt;/a>; &lt;a href="https://github.com/regolith-linux/regolith-i3xrocks-config/pull/175" target="_blank" rel="noopener">regolith-i3xrocks-config#175&lt;/a>&lt;/p>
+&lt;p>The X11 volume and microphone blocks showed no level on PipeWire, the default on Ubuntu.&lt;/p>
+&lt;ol>
+&lt;li>Install the blocks if you don&amp;rsquo;t have them: &lt;code>sudo apt install i3xrocks-volume i3xrocks-microphone&lt;/code>, then press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">r&lt;/span>&lt;/span>.&lt;/li>
+&lt;li>Scroll up over the volume block until it stops.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> a speaker and a microphone with their levels. Scrolling stops at 100%.&lt;/p>
+&lt;h3>The CPU block turns red under load and opens System Monitor&lt;span class="hx-absolute -hx-mt-20" id="the-cpu-block-turns-red-under-load-and-opens-system-monitor">&lt;/span>
+&lt;a href="#the-cpu-block-turns-red-under-load-and-opens-system-monitor" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>X11&lt;/strong> · &lt;code>regolith-i3xrocks-config&lt;/code> 6.0.1 · &lt;a href="https://github.com/regolith-linux/regolith-i3xrocks-config/pull/168" target="_blank" rel="noopener">regolith-i3xrocks-config#168&lt;/a>, &lt;a href="https://github.com/regolith-linux/regolith-i3xrocks-config/pull/171" target="_blank" rel="noopener">regolith-i3xrocks-config#171&lt;/a>&lt;/p>
+&lt;ol>
+&lt;li>Load every CPU for 15 seconds: &lt;code>for i in $(seq $(nproc)); do timeout 15 sh -c 'while :; do :; done' &amp;amp; done&lt;/code>&lt;/li>
+&lt;li>Click the CPU block.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> the CPU value in red while the load runs (it turns to the warning colour from 50% and to red from 80%). The click opens System Monitor in a floating window.&lt;/p>
+&lt;h2>Launcher (ilia)&lt;span class="hx-absolute -hx-mt-20" id="launcher-ilia">&lt;/span>
+&lt;a href="#launcher-ilia" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>All of these are in &lt;code>ilia&lt;/code> 0.20.1 and work in both sessions. Open the launcher with &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">space&lt;/span>&lt;/span>.&lt;/p>
+&lt;h3>Search with several words, in any order&lt;span class="hx-absolute -hx-mt-20" id="search-with-several-words-in-any-order">&lt;/span>
+&lt;a href="#search-with-several-words-in-any-order" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>X11 and Wayland&lt;/strong> · &lt;a href="https://github.com/regolith-linux/ilia/pull/128" target="_blank" rel="noopener">ilia#128&lt;/a>, fixes &lt;a href="https://github.com/regolith-linux/ilia/issues/77" target="_blank" rel="noopener">ilia#77&lt;/a>; &lt;a href="https://github.com/regolith-linux/ilia/pull/151" target="_blank" rel="noopener">ilia#151&lt;/a>&lt;/p>
+&lt;ol>
+&lt;li>Type &lt;code>monitor system&lt;/code>.&lt;/li>
+&lt;li>Clear it and type &lt;code>editor text&lt;/code>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> System Monitor, then Vim (found by its generic name &amp;ldquo;Text Editor&amp;rdquo;). Each word must match, in any order, in the name, generic name or keywords.&lt;/p>
+&lt;h3>Home and End&lt;span class="hx-absolute -hx-mt-20" id="home-and-end">&lt;/span>
+&lt;a href="#home-and-end" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>X11 and Wayland&lt;/strong> · &lt;a href="https://github.com/regolith-linux/ilia/pull/129" target="_blank" rel="noopener">ilia#129&lt;/a>, fixes &lt;a href="https://github.com/regolith-linux/ilia/issues/36" target="_blank" rel="noopener">ilia#36&lt;/a>&lt;/p>
+&lt;p>Press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">end&lt;/span>&lt;/span>, then &lt;span class="text-nowrap">&lt;span class="badge badge-warning">home&lt;/span>&lt;/span>.&lt;/p>
+&lt;p>&lt;strong>You should see:&lt;/strong> the last row selected, then the first.&lt;/p>
+&lt;h3>Run a command that isn&amp;rsquo;t in the list&lt;span class="hx-absolute -hx-mt-20" id="run-a-command-that-isnt-in-the-list">&lt;/span>
+&lt;a href="#run-a-command-that-isnt-in-the-list" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>X11 and Wayland&lt;/strong> · &lt;a href="https://github.com/regolith-linux/ilia/pull/127" target="_blank" rel="noopener">ilia#127&lt;/a>, fixes &lt;a href="https://github.com/regolith-linux/ilia/issues/3" target="_blank" rel="noopener">ilia#3&lt;/a>&lt;/p>
+&lt;ol>
+&lt;li>Open the command launcher with &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">space&lt;/span>&lt;/span>.&lt;/li>
+&lt;li>Type &lt;code>touch /tmp/ilia-test&lt;/code> and press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">enter&lt;/span>&lt;/span>.&lt;/li>
+&lt;li>Run &lt;code>ls /tmp/ilia-test&lt;/code>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> the file exists. In 3.4, Enter did nothing when the text matched no item.&lt;/p>
+&lt;h3>Terminal applications open in a terminal&lt;span class="hx-absolute -hx-mt-20" id="terminal-applications-open-in-a-terminal">&lt;/span>
+&lt;a href="#terminal-applications-open-in-a-terminal" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>X11 and Wayland&lt;/strong> · &lt;a href="https://github.com/regolith-linux/ilia/pull/131" target="_blank" rel="noopener">ilia#131&lt;/a>, fixes &lt;a href="https://github.com/regolith-linux/ilia/issues/92" target="_blank" rel="noopener">ilia#92&lt;/a>&lt;/p>
+&lt;p>Type &lt;code>htop&lt;/code> and press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">enter&lt;/span>&lt;/span>.&lt;/p>
+&lt;p>&lt;strong>You should see:&lt;/strong> the program running in a terminal window.&lt;/p>
+&lt;h3>Newest notification first, and Delete removes one&lt;span class="hx-absolute -hx-mt-20" id="newest-notification-first-and-delete-removes-one">&lt;/span>
+&lt;a href="#newest-notification-first-and-delete-removes-one" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>X11 and Wayland&lt;/strong> · &lt;a href="https://github.com/regolith-linux/ilia/pull/132" target="_blank" rel="noopener">ilia#132&lt;/a>, fixes &lt;a href="https://github.com/regolith-linux/regolith-desktop/issues/607" target="_blank" rel="noopener">regolith-desktop#607&lt;/a>; &lt;a href="https://github.com/regolith-linux/ilia/pull/137" target="_blank" rel="noopener">ilia#137&lt;/a>&lt;/p>
+&lt;ol>
+&lt;li>Run &lt;code>notify-send first-note; sleep 1; notify-send second-note&lt;/code>.&lt;/li>
+&lt;li>Open the notifications with &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">n&lt;/span>&lt;/span>, and press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">delete&lt;/span>&lt;/span>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> second-note at the top and highlighted; after Delete only first-note is left, highlighted.&lt;/p>
+&lt;h3>Right Super closes, keypad Enter launches&lt;span class="hx-absolute -hx-mt-20" id="right-super-closes-keypad-enter-launches">&lt;/span>
+&lt;a href="#right-super-closes-keypad-enter-launches" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>X11 and Wayland&lt;/strong> · &lt;a href="https://github.com/regolith-linux/ilia/pull/155" target="_blank" rel="noopener">ilia#155&lt;/a>, &lt;a href="https://github.com/regolith-linux/ilia/pull/136" target="_blank" rel="noopener">ilia#136&lt;/a>&lt;/p>
+&lt;ol>
+&lt;li>Open the launcher and press the right &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span>&lt;/span> key.&lt;/li>
+&lt;li>Open it again, type &lt;code>calc&lt;/code>, and press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">enter&lt;/span>&lt;/span> on the numeric keypad.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> the launcher closes, as with the left Super key; then Calculator starts.&lt;/p>
+&lt;h3>Run a key binding from the keybinding viewer&lt;span class="hx-absolute -hx-mt-20" id="run-a-key-binding-from-the-keybinding-viewer">&lt;/span>
+&lt;a href="#run-a-key-binding-from-the-keybinding-viewer" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>X11 and Wayland&lt;/strong> · &lt;a href="https://github.com/regolith-linux/ilia/pull/158" target="_blank" rel="noopener">ilia#158&lt;/a>, &lt;a href="https://github.com/regolith-linux/ilia/pull/159" target="_blank" rel="noopener">ilia#159&lt;/a>, &lt;a href="https://github.com/regolith-linux/ilia/pull/161" target="_blank" rel="noopener">ilia#161&lt;/a>&lt;/p>
+&lt;ol>
+&lt;li>Open the keybinding viewer with &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">?&lt;/span>&lt;/span>.&lt;/li>
+&lt;li>Type &lt;code>terminal&lt;/code>, and press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">enter&lt;/span>&lt;/span> on &amp;ldquo;Launch - Terminal&amp;rdquo;.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> a new terminal window.&lt;/p>
+&lt;h3>Dialogs in the window switcher on X11&lt;span class="hx-absolute -hx-mt-20" id="dialogs-in-the-window-switcher-on-x11">&lt;/span>
+&lt;a href="#dialogs-in-the-window-switcher-on-x11" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>X11&lt;/strong> · &lt;strong>Parity&lt;/strong> · &lt;a href="https://github.com/regolith-linux/ilia/pull/147" target="_blank" rel="noopener">ilia#147&lt;/a>&lt;/p>
+&lt;ol>
+&lt;li>Run &lt;code>zenity --question --title=test-dialog --text=hello &amp;amp;&lt;/code>.&lt;/li>
+&lt;li>Open the window switcher with &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">ctrl&lt;/span> &lt;span class="badge badge-warning">space&lt;/span>&lt;/span>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> test-dialog in the list, as in the Wayland session. In 3.4 the X11 list left dialog windows out.&lt;/p>
+&lt;h2>Windows and workspaces&lt;span class="hx-absolute -hx-mt-20" id="windows-and-workspaces">&lt;/span>
+&lt;a href="#windows-and-workspaces" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Switch back to the previous workspace&lt;span class="hx-absolute -hx-mt-20" id="switch-back-to-the-previous-workspace">&lt;/span>
+&lt;a href="#switch-back-to-the-previous-workspace" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>X11 and Wayland&lt;/strong> · &lt;code>regolith-wm-config&lt;/code> 4.13.1 · &lt;a href="https://github.com/regolith-linux/regolith-wm-config/pull/80" target="_blank" rel="noopener">regolith-wm-config#80&lt;/a>, fixes &lt;a href="https://github.com/regolith-linux/regolith-desktop/issues/591" target="_blank" rel="noopener">regolith-desktop#591&lt;/a>&lt;/p>
+&lt;ol>
+&lt;li>On workspace 1, press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">3&lt;/span>&lt;/span>.&lt;/li>
+&lt;li>Press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">alt&lt;/span> &lt;span class="badge badge-warning">tab&lt;/span>&lt;/span> twice.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> workspace 1, then 3 again. The key is &lt;code>wm.binding.ws_back_and_forth&lt;/code>.&lt;/p>
+&lt;h3>Resize mode arrows go the right way&lt;span class="hx-absolute -hx-mt-20" id="resize-mode-arrows-go-the-right-way">&lt;/span>
+&lt;a href="#resize-mode-arrows-go-the-right-way" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>X11 and Wayland&lt;/strong> · &lt;code>regolith-wm-config&lt;/code> 4.13.1 · &lt;a href="https://github.com/regolith-linux/regolith-wm-config/pull/87" target="_blank" rel="noopener">regolith-wm-config#87&lt;/a>&lt;/p>
+&lt;ol>
+&lt;li>Open two terminals one above the other: &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">enter&lt;/span>&lt;/span>, &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">v&lt;/span>&lt;/span>, &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">enter&lt;/span>&lt;/span>.&lt;/li>
+&lt;li>Press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">r&lt;/span>&lt;/span>, then &lt;span class="text-nowrap">&lt;span class="badge badge-warning">up&lt;/span>&lt;/span> a few times, then &lt;span class="text-nowrap">&lt;span class="badge badge-warning">escape&lt;/span>&lt;/span>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> the focused window grow taller with &lt;span class="text-nowrap">&lt;span class="badge badge-warning">up&lt;/span>&lt;/span> and shorter with &lt;span class="text-nowrap">&lt;span class="badge badge-warning">down&lt;/span>&lt;/span>, like &lt;span class="text-nowrap">&lt;span class="badge badge-warning">k&lt;/span>&lt;/span> and &lt;span class="text-nowrap">&lt;span class="badge badge-warning">j&lt;/span>&lt;/span>. In 3.4 the arrows did the opposite.&lt;/p>
+&lt;h3>Gap keys in Wayland&lt;span class="hx-absolute -hx-mt-20" id="gap-keys-in-wayland">&lt;/span>
+&lt;a href="#gap-keys-in-wayland" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>Wayland&lt;/strong> · &lt;strong>Parity&lt;/strong> · &lt;code>regolith-wm-config&lt;/code> 4.13.1 · &lt;a href="https://github.com/regolith-linux/regolith-wm-config/pull/92" target="_blank" rel="noopener">regolith-wm-config#92&lt;/a>&lt;/p>
+&lt;ol>
+&lt;li>Open two windows side by side.&lt;/li>
+&lt;li>Press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">=&lt;/span>&lt;/span>, then &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">=&lt;/span>&lt;/span>, then &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">minus&lt;/span>&lt;/span> and &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">minus&lt;/span>&lt;/span>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> the gaps between the windows grow, grow more, and shrink back.&lt;/p>
+&lt;h3>Terminate App in Wayland&lt;span class="hx-absolute -hx-mt-20" id="terminate-app-in-wayland">&lt;/span>
+&lt;a href="#terminate-app-in-wayland" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>Wayland&lt;/strong> · &lt;strong>Parity&lt;/strong> · &lt;code>regolith-wm-config&lt;/code> 4.13.1 · &lt;a href="https://github.com/regolith-linux/regolith-wm-config/pull/70" target="_blank" rel="noopener">regolith-wm-config#70&lt;/a>&lt;/p>
+&lt;p>Focus a terminal (foot, a native Wayland app) and press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">alt&lt;/span> &lt;span class="badge badge-warning">q&lt;/span>&lt;/span>.&lt;/p>
+&lt;p>&lt;strong>You should see:&lt;/strong> the window is killed. In 3.4 this key only worked on X11 apps.&lt;/p>
+&lt;h3>Next Free Workspace keys in X11&lt;span class="hx-absolute -hx-mt-20" id="next-free-workspace-keys-in-x11">&lt;/span>
+&lt;a href="#next-free-workspace-keys-in-x11" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>X11&lt;/strong> · &lt;strong>Parity&lt;/strong> · &lt;code>regolith-wm-config&lt;/code> 4.13.1 · &lt;a href="https://github.com/regolith-linux/regolith-wm-config/pull/71" target="_blank" rel="noopener">regolith-wm-config#71&lt;/a>&lt;/p>
+&lt;p>With a window open on workspace 1, press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">`&lt;/span>&lt;/span>.&lt;/p>
+&lt;p>&lt;strong>You should see:&lt;/strong> the first empty workspace. &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">`&lt;/span>&lt;/span> moves the focused window to it, and &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">alt&lt;/span> &lt;span class="badge badge-warning">`&lt;/span>&lt;/span> takes the window and follows it.&lt;/p>
+&lt;h3>Swapping Super and Alt works&lt;span class="hx-absolute -hx-mt-20" id="swapping-super-and-alt-works">&lt;/span>
+&lt;a href="#swapping-super-and-alt-works" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>X11 and Wayland&lt;/strong> · &lt;code>regolith-wm-config&lt;/code> 4.13.1 · &lt;a href="https://github.com/regolith-linux/regolith-wm-config/pull/63" target="_blank" rel="noopener">regolith-wm-config#63&lt;/a>, fixes &lt;a href="https://github.com/regolith-linux/regolith-desktop/issues/504" target="_blank" rel="noopener">regolith-desktop#504&lt;/a>, &lt;a href="https://github.com/regolith-linux/regolith-desktop/issues/1098" target="_blank" rel="noopener">regolith-desktop#1098&lt;/a>&lt;/p>
+&lt;ol>
+&lt;li>Add &lt;code>wm.mod: Mod1&lt;/code> and &lt;code>wm.alt: Mod4&lt;/code> to &lt;code>~/.config/regolith3/Xresources&lt;/code>, and press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">r&lt;/span>&lt;/span>.&lt;/li>
+&lt;li>Press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">alt&lt;/span> &lt;span class="badge badge-warning">3&lt;/span>&lt;/span>, then &lt;span class="text-nowrap">&lt;span class="badge badge-warning">alt&lt;/span> &lt;span class="badge badge-warning">1&lt;/span>&lt;/span>.&lt;/li>
+&lt;li>Remove the two lines and press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">alt&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">r&lt;/span>&lt;/span>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> no configuration error bar, and Alt switching workspaces.&lt;/p>
+&lt;h2>Looks and appearance&lt;span class="hx-absolute -hx-mt-20" id="looks-and-appearance">&lt;/span>
+&lt;a href="#looks-and-appearance" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Dark looks reach GTK 4 apps&lt;span class="hx-absolute -hx-mt-20" id="dark-looks-reach-gtk-4-apps">&lt;/span>
+&lt;a href="#dark-looks-reach-gtk-4-apps" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>X11 and Wayland&lt;/strong> · &lt;code>regolith-look-default&lt;/code> 0.9.0, &lt;code>regolith-look-extra&lt;/code> 0.11.0 · &lt;a href="https://github.com/regolith-linux/regolith-look-default/pull/9" target="_blank" rel="noopener">regolith-look-default#9&lt;/a>, &lt;a href="https://github.com/regolith-linux/regolith-look-default/pull/10" target="_blank" rel="noopener">regolith-look-default#10&lt;/a>, &lt;a href="https://github.com/regolith-linux/regolith-look-extra/pull/25" target="_blank" rel="noopener">regolith-look-extra#25&lt;/a>, fixes &lt;a href="https://github.com/regolith-linux/regolith-look-extra/issues/19" target="_blank" rel="noopener">regolith-look-extra#19&lt;/a>&lt;/p>
+&lt;p>Every look now sets GNOME&amp;rsquo;s light or dark style, so GTK 4 and libadwaita apps follow it.&lt;/p>
+&lt;ol>
+&lt;li>Run &lt;code>gsettings get org.gnome.desktop.interface color-scheme&lt;/code>.&lt;/li>
+&lt;li>Open Settings (&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">c&lt;/span>&lt;/span>) or Calculator.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> &lt;code>'prefer-dark'&lt;/code> with the default look, and dark windows. Settings › &lt;strong>Appearance&lt;/strong> shows &lt;strong>Dark&lt;/strong> selected.&lt;/p>
+&lt;h3>Settings sets the Wayland wallpaper&lt;span class="hx-absolute -hx-mt-20" id="settings-sets-the-wayland-wallpaper">&lt;/span>
+&lt;a href="#settings-sets-the-wayland-wallpaper" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>Wayland&lt;/strong> · &lt;strong>Parity&lt;/strong> · &lt;code>regolith-control-center&lt;/code> 1.50.5 · &lt;a href="https://github.com/regolith-linux/regolith-control-center/pull/31" target="_blank" rel="noopener">regolith-control-center#31&lt;/a>&lt;/p>
+&lt;ol>
+&lt;li>Open Settings (&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">c&lt;/span>&lt;/span>) › &lt;strong>Appearance&lt;/strong>, scroll to &lt;strong>Background&lt;/strong>, and click a picture.&lt;/li>
+&lt;li>Lock the screen with &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">escape&lt;/span>&lt;/span>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> the picture as the desktop background right away, and on the lock screen. It is saved in &lt;code>~/.config/regolith3/Xresources&lt;/code> (&lt;code>regolith.wallpaper.file&lt;/code>); remove those lines and press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">r&lt;/span>&lt;/span> to go back to the look&amp;rsquo;s wallpaper.&lt;/p>
+&lt;h3>X11 apps follow the theme in Wayland&lt;span class="hx-absolute -hx-mt-20" id="x11-apps-follow-the-theme-in-wayland">&lt;/span>
+&lt;a href="#x11-apps-follow-the-theme-in-wayland" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>Wayland&lt;/strong> · &lt;strong>Parity&lt;/strong> · &lt;code>regolith-wm-config&lt;/code> 4.13.1 · &lt;a href="https://github.com/regolith-linux/regolith-wm-config/pull/69" target="_blank" rel="noopener">regolith-wm-config#69&lt;/a>&lt;/p>
+&lt;p>Apps that run under XWayland used to get the default light theme, fonts and cursor.&lt;/p>
+&lt;ol>
+&lt;li>Run &lt;code>GDK_BACKEND=x11 nm-connection-editor&lt;/code>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> the window in the same theme and font as native apps (dark with the default look).&lt;/p>
+&lt;h3>Look wallpaper colours and gradients in Wayland&lt;span class="hx-absolute -hx-mt-20" id="look-wallpaper-colours-and-gradients-in-wayland">&lt;/span>
+&lt;a href="#look-wallpaper-colours-and-gradients-in-wayland" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>Wayland&lt;/strong> · &lt;strong>Parity&lt;/strong> · &lt;code>regolith-wm-config&lt;/code> 4.13.1 · &lt;a href="https://github.com/regolith-linux/regolith-wm-config/pull/82" target="_blank" rel="noopener">regolith-wm-config#82&lt;/a>&lt;/p>
+&lt;p>Looks without a wallpaper picture define colours (&lt;code>regolith.wallpaper.color.primary&lt;/code>, &lt;code>…secondary&lt;/code>, &lt;code>…shading.type&lt;/code>). sway showed black for colour names and drew no gradients.&lt;/p>
+&lt;ol>
+&lt;li>With the default look and no wallpaper picture set, look at the desktop.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> a vertical grey gradient, as in the X11 session.&lt;/p>
+&lt;h3>Looks in their own style everywhere&lt;span class="hx-absolute -hx-mt-20" id="looks-in-their-own-style-everywhere">&lt;/span>
+&lt;a href="#looks-in-their-own-style-everywhere" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>X11 and Wayland&lt;/strong> · &lt;code>regolith-wm-config&lt;/code> 4.13.1, &lt;code>regolith-ftue&lt;/code> 2.2.4 · &lt;a href="https://github.com/regolith-linux/regolith-wm-config/pull/88" target="_blank" rel="noopener">regolith-wm-config#88&lt;/a>, &lt;a href="https://github.com/regolith-linux/regolith-ftue/pull/10" target="_blank" rel="noopener">regolith-ftue#10&lt;/a>&lt;/p>
+&lt;ol>
+&lt;li>Open the Look Selector with &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">alt&lt;/span> &lt;span class="badge badge-warning">l&lt;/span>&lt;/span>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> the selector in the colours of your look, like the launcher. The keybinding help shown on your first login uses the look&amp;rsquo;s style too.&lt;/p>
+&lt;h3>Updated Dracula, Nord and Nevil themes&lt;span class="hx-absolute -hx-mt-20" id="updated-dracula-nord-and-nevil-themes">&lt;/span>
+&lt;a href="#updated-dracula-nord-and-nevil-themes" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>X11 and Wayland&lt;/strong> · &lt;code>dracula-gtk&lt;/code> 4.0.0, &lt;code>nordic&lt;/code> 2.2.0, &lt;code>whitesur-gtk-theme&lt;/code> 1.2 · &lt;a href="https://github.com/regolith-linux/dracula-gtk/pull/3" target="_blank" rel="noopener">dracula-gtk#3&lt;/a>, &lt;a href="https://github.com/regolith-linux/nordic/pull/3" target="_blank" rel="noopener">nordic#3&lt;/a>, &lt;a href="https://github.com/regolith-linux/WhiteSur-gtk-theme/pull/4" target="_blank" rel="noopener">WhiteSur-gtk-theme#4&lt;/a>&lt;/p>
+&lt;p>The GTK themes of the Dracula, Nord and Nevil looks are new upstream releases.&lt;/p>
+&lt;ol>
+&lt;li>Run &lt;code>sudo apt install regolith-look-dracula&lt;/code>.&lt;/li>
+&lt;li>Pick &lt;strong>dracula&lt;/strong> in the Look Selector (&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">alt&lt;/span> &lt;span class="badge badge-warning">l&lt;/span>&lt;/span>), and run &lt;code>gsettings get org.gnome.desktop.interface gtk-theme&lt;/code>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> &lt;code>'Dracula'&lt;/code>, with the Dracula icons. Pick your usual look again afterwards.&lt;/p>
+&lt;h3>Workspace names with accents and other non-ASCII text&lt;span class="hx-absolute -hx-mt-20" id="workspace-names-with-accents-and-other-non-ascii-text">&lt;/span>
+&lt;a href="#workspace-names-with-accents-and-other-non-ascii-text" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>X11 and Wayland&lt;/strong> · &lt;code>regolith-session&lt;/code> 1.3.1 · &lt;a href="https://github.com/regolith-linux/regolith-session/pull/85" target="_blank" rel="noopener">regolith-session#85&lt;/a>&lt;/p>
+&lt;ol>
+&lt;li>Add &lt;code>wm.workspace.02.name: 2:Ñandú café&lt;/code> to &lt;code>~/.config/regolith3/Xresources&lt;/code>.&lt;/li>
+&lt;li>Log out and in again, and press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">2&lt;/span>&lt;/span>.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> &amp;ldquo;Ñandú café&amp;rdquo; on the workspace button, not escape codes.&lt;/p>
+&lt;h3>Removing an override takes effect without logging out&lt;span class="hx-absolute -hx-mt-20" id="removing-an-override-takes-effect-without-logging-out">&lt;/span>
+&lt;a href="#removing-an-override-takes-effect-without-logging-out" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>X11 and Wayland&lt;/strong> · &lt;code>regolith-session&lt;/code> 1.3.1 · &lt;a href="https://github.com/regolith-linux/regolith-session/pull/98" target="_blank" rel="noopener">regolith-session#98&lt;/a>&lt;/p>
+&lt;ol>
+&lt;li>Add &lt;code>wm.bar.position: top&lt;/code> to &lt;code>~/.config/regolith3/Xresources&lt;/code> and press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">r&lt;/span>&lt;/span>.&lt;/li>
+&lt;li>Remove the line and press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">shift&lt;/span> &lt;span class="badge badge-warning">r&lt;/span>&lt;/span> again.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> the bar move to the top, then back to the bottom. In 3.4 a removed value stayed until the next login.&lt;/p>
+&lt;h2>Settings app&lt;span class="hx-absolute -hx-mt-20" id="settings-app">&lt;/span>
+&lt;a href="#settings-app" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>The shortcut list matches the session&lt;span class="hx-absolute -hx-mt-20" id="the-shortcut-list-matches-the-session">&lt;/span>
+&lt;a href="#the-shortcut-list-matches-the-session" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>X11 and Wayland&lt;/strong> · &lt;code>regolith-control-center&lt;/code> 1.50.5 · &lt;a href="https://github.com/regolith-linux/regolith-control-center/pull/30" target="_blank" rel="noopener">regolith-control-center#30&lt;/a>&lt;/p>
+&lt;p>Open Settings (&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">c&lt;/span>&lt;/span>) › &lt;strong>Keyboard&lt;/strong> › &lt;strong>View and Customize Shortcuts&lt;/strong>.&lt;/p>
+&lt;p>&lt;strong>You should see:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>X11: a &lt;strong>Screenshots&lt;/strong> section with the keys the session really uses (&lt;span class="text-nowrap">&lt;span class="badge badge-warning">print&lt;/span>&lt;/span> saves a screenshot, and so on), so you can change them.&lt;/li>
+&lt;li>Wayland: no Navigation, Windows or Screenshots sections, because sway handles those keys.&lt;/li>
+&lt;/ul>
+&lt;h2>Sessions and first login&lt;span class="hx-absolute -hx-mt-20" id="sessions-and-first-login">&lt;/span>
+&lt;a href="#sessions-and-first-login" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>No GNOME welcome wizard&lt;span class="hx-absolute -hx-mt-20" id="no-gnome-welcome-wizard">&lt;/span>
+&lt;a href="#no-gnome-welcome-wizard" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>X11 and Wayland&lt;/strong> · &lt;code>regolith-session&lt;/code> 1.3.1 · &lt;a href="https://github.com/regolith-linux/regolith-session/pull/70" target="_blank" rel="noopener">regolith-session#70&lt;/a>&lt;/p>
+&lt;p>Create a user and log in to a Regolith session for the first time.&lt;/p>
+&lt;p>&lt;strong>You should see:&lt;/strong> the Regolith keybinding help, and no GNOME &amp;ldquo;Welcome&amp;rdquo; window.&lt;/p>
+&lt;h3>The X11 compositor works without 3D acceleration&lt;span class="hx-absolute -hx-mt-20" id="the-x11-compositor-works-without-3d-acceleration">&lt;/span>
+&lt;a href="#the-x11-compositor-works-without-3d-acceleration" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;strong>X11&lt;/strong> · &lt;code>regolith-compositor-picom-glx&lt;/code> 1.4.1 · &lt;a href="https://github.com/regolith-linux/regolith-compositor-picom-glx/pull/17" target="_blank" rel="noopener">regolith-compositor-picom-glx#17&lt;/a>, &lt;a href="https://github.com/regolith-linux/regolith-compositor-picom-glx/pull/16" target="_blank" rel="noopener">regolith-compositor-picom-glx#16&lt;/a>, fixes &lt;a href="https://github.com/regolith-linux/regolith-compositor-picom-glx/issues/4" target="_blank" rel="noopener">regolith-compositor-picom-glx#4&lt;/a>&lt;/p>
+&lt;p>In virtual machines and on machines that render in software, picom now uses its xrender backend, and it starts again if it crashes.&lt;/p>
+&lt;ol>
+&lt;li>Run &lt;code>pgrep -a picom&lt;/code>.&lt;/li>
+&lt;li>Run &lt;code>kill -9 $(pgrep -x picom)&lt;/code>, wait a few seconds, and run &lt;code>pgrep -a picom&lt;/code> again.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>You should see:&lt;/strong> picom running (with &lt;code>--backend xrender&lt;/code> on a software renderer), and running again with a new process ID.&lt;/p></description></item><item><title>Verify behavior against upstream</title><link>https://regolith-desktop.com/docs/howtos/gnome-flashback-session/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/gnome-flashback-session/</guid><description>
 &lt;p>Regolith is composed of several existing open-source projects plus some additional custom packages. Sometimes when a bug is found in Regolith, actually it&amp;rsquo;s a bug in an upstream project. Determining the source of bugs is a first step in getting them fixed.&lt;/p>
 &lt;h2>Check &lt;code>gnome-flashback&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="check-gnome-flashback">&lt;/span>
 &lt;a href="#check-gnome-flashback" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Most of the GNOME support in Regolith&amp;rsquo;s X11 session (&lt;code>regolith-session-flashback&lt;/code>) comes from the &lt;code>gnome-flashback&lt;/code> project. To run a &lt;code>gnome-flashback&lt;/code> session, install the session and log back in to your account after selecting that session from the login screen.&lt;/p>
