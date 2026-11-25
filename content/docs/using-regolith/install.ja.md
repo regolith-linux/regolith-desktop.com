@@ -7,13 +7,9 @@ description: >
 prev: /docs/using-regolith
 ---
 
-## サポートするOS
+## Ubuntu
 
-以下は、Regolithデスクトップのインストールを取り扱っている特定のLinuxベースのOSごとに分割されています。
-
-### Ubuntu
-
-{{< tabs items="Ubuntu 25.10 (Questing),Ubuntu 25.04 (Plucky),Ubuntu 24.04 (Noble),Ubuntu 22.04 (Jammy)" >}}
+{{< tabs items="26.04 / Resolute,25.10 / Questing,24.04 / Noble,22.04 / Jammy" >}}
 {{< tab >}}
 Regolithはシステムパッケージとしてインストールすることができます。これは簡単に更新や削除ができ、一貫することができます。
 下記のステップでは、Regolithのパッケージリポジトリからパッケージを読み込み可能にして、デスクトップパッケージをインストールできるようにシステムを設定する方法について記しています。
@@ -29,7 +25,7 @@ Regolithはシステムパッケージとしてインストールすることが
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/ubuntu/stable questing v3.4" | \
+   https://archive.regolith-desktop.com/ubuntu/stable resolute v3.5" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -37,8 +33,21 @@ Regolithはシステムパッケージとしてインストールすることが
 
    ```bash
    sudo apt update
+   ```
+
+   **Waylandセッション(sway):**
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
+   ```
+
+   **X11セッション(i3):**
+
+   ```bash
    sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
+
+   両方のセッションパッケージをインストールすると、ログイン時にどちらかを選べます。
 
 1. システムを再起動する。
 
@@ -64,7 +73,7 @@ Regolithはシステムパッケージとしてインストールすることが
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/ubuntu/stable plucky v3.4" | \
+   https://archive.regolith-desktop.com/ubuntu/stable questing v3.5" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -72,8 +81,21 @@ Regolithはシステムパッケージとしてインストールすることが
 
    ```bash
    sudo apt update
+   ```
+
+   **Waylandセッション(sway):**
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
+   ```
+
+   **X11セッション(i3):**
+
+   ```bash
    sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
+
+   両方のセッションパッケージをインストールすると、ログイン時にどちらかを選べます。
 
 1. システムを再起動する。
 
@@ -99,7 +121,7 @@ Regolithはシステムパッケージとしてインストールすることが
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/ubuntu/stable noble v3.4" | \
+   https://archive.regolith-desktop.com/ubuntu/stable noble v3.5" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -107,8 +129,21 @@ Regolithはシステムパッケージとしてインストールすることが
 
    ```bash
    sudo apt update
+   ```
+
+   **Waylandセッション(sway):**
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
+   ```
+
+   **X11セッション(i3):**
+
+   ```bash
    sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
+
+   両方のセッションパッケージをインストールすると、ログイン時にどちらかを選べます。
 
 1. システムを再起動する。
 
@@ -134,7 +169,7 @@ Regolithはシステムパッケージとしてインストールすることが
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/ubuntu/stable jammy v3.4" | \
+   https://archive.regolith-desktop.com/ubuntu/stable jammy v3.5" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -142,8 +177,21 @@ Regolithはシステムパッケージとしてインストールすることが
 
    ```bash
    sudo apt update
+   ```
+
+   **Waylandセッション(sway):**
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
+   ```
+
+   **X11セッション(i3):**
+
+   ```bash
    sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
+
+   両方のセッションパッケージをインストールすると、ログイン時にどちらかを選べます。
 
 1. システムを再起動する。
 
@@ -155,9 +203,9 @@ ARMベースのシステムにインストールするときは、上記の内�
 {{< /tab >}}
 {{< /tabs >}}
 
-### Debian
+## Debian
 
-{{< tabs items="Debian Testing,Debian Trixie,Debian Bookworm" >}}
+{{< tabs items="Testing,13 / Trixie,12 / Bookworm" >}}
 {{< tab >}}
 "Testing"リリースのDebianユーザーであれば、Regolithをインストールすることができますが、Debian Testingの性質上"release"バージョンは存在しません。Debian TestingインスタンスにRegolithをインストールするには、`apt`コマンドのワンライナーの`release`の代わりに`testing`を含める必要があります。例：
 
@@ -185,7 +233,7 @@ Regolithはシステムパッケージとしてインストールすることが
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/debian/stable trixie v3.4" | \
+   https://archive.regolith-desktop.com/debian/stable trixie v3.5" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 
@@ -193,8 +241,21 @@ Regolithはシステムパッケージとしてインストールすることが
 
    ```bash
    sudo apt update
+   ```
+
+   **Waylandセッション(sway):**
+
+   ```bash
+   sudo apt install regolith-desktop regolith-session-sway regolith-look-lascaille
+   ```
+
+   **X11セッション(i3):**
+
+   ```bash
    sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
    ```
+
+   両方のセッションパッケージをインストールすると、ログイン時にどちらかを選べます。
 
 1. システムを再起動する。
 
@@ -232,7 +293,7 @@ Debian 12 (Bookworm)では、RegolithはX11セッション(`regolith-session-fla
 
    ```bash
    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
-   https://archive.regolith-desktop.com/debian/stable bookworm v3.4" | \
+   https://archive.regolith-desktop.com/debian/stable bookworm v3.5" | \
    sudo tee /etc/apt/sources.list.d/regolith.list
    ```
 

@@ -147,3 +147,40 @@ a.badge-warning:focus, a.badge-warning.focus {
   background-color: rgb(29 32 39 / var(--tw-bg-opacity)) !important;
 }
 /**************************/
+
+/** Tabs (the install page): draw each tab as a button, filled when selected **/
+.hextra-scrollbar > .hx-flex {
+  flex-wrap: wrap;
+  width: auto;
+}
+.hextra-scrollbar .hextra-tabs-toggle[role="tab"] {
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 0.375rem 0.875rem;
+  border: 1px solid rgb(209 213 219);
+  border-radius: 0.375rem;
+  background-color: transparent;
+  color: rgb(55 65 81);
+  cursor: pointer;
+}
+.hextra-scrollbar .hextra-tabs-toggle[role="tab"]:not([data-state="selected"]):hover {
+  border-color: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
+  color: rgb(0 0 0);
+}
+.hextra-scrollbar .hextra-tabs-toggle[role="tab"][data-state="selected"] {
+  border-color: hsl(var(--primary-hue) var(--primary-saturation) calc(var(--primary-lightness) - 15%));
+  background-color: hsl(var(--primary-hue) var(--primary-saturation) calc(var(--primary-lightness) - 15%));
+  color: rgb(255 255 255);
+}
+.hextra-scrollbar .hextra-tabs-toggle[role="tab"]:focus-visible {
+  outline: 2px solid hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
+  outline-offset: 2px;
+}
+html[class~="dark"] .hextra-scrollbar .hextra-tabs-toggle[role="tab"]:not([data-state="selected"]) {
+  border-color: rgb(82 88 94);
+  color: rgb(229 231 235);
+}
+html[class~="dark"] .hextra-scrollbar .hextra-tabs-toggle[role="tab"]:not([data-state="selected"]):hover {
+  border-color: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
+  color: rgb(255 255 255);
+}
+/**************************/
