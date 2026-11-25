@@ -9,12 +9,14 @@ Adding icons to workspaces can give your desktop a nice and functional look. The
 
 ## Finding icons
 
-Icons are actually characters from fonts installed by Regolith looks. Every look uses a [Nerd Font](https://www.nerdfonts.com/) for the bar, which contains thousands of icons. The bar font is set by the Xresource `wm.bar.font`; you can see the current one with `xrescat wm.bar.font` in the X11 session or `trawlcat wm.bar.font` in the Wayland session. For example, the default look uses _BitstromWera Nerd Font_ (_BitstreamVeraSansMono Nerd Font_ in Regolith 3.5 and earlier).
+Icons are actually characters from fonts installed by Regolith looks. Every look uses a [Nerd Font](https://www.nerdfonts.com/) for the bar, which contains thousands of icons. The bar font is set by the Xresource `wm.bar.font`; you can see the current one with `xrescat wm.bar.font` in the X11 session or `trawlcat wm.bar.font` in the Wayland session. For example, the default look uses _BitstromWera Nerd Font_ (_BitstreamVeraSansMono Nerd Font_ in Regolith 3.4 and earlier).
 
 You can browse the icons on the [Nerd Fonts cheat sheet](https://www.nerdfonts.com/cheat-sheet), or in the font itself using the [GNOME Character Map](https://gitlab.gnome.org/GNOME/gucharmap) application from the `gucharmap` package.
 
 {{< callout type="info" >}}
-The cheat sheet lists Nerd Fonts 3 code points. Regolith 3.6 and later ship Nerd Fonts 3, so any icon on it works. Regolith 3.5 and earlier ship Nerd Fonts 2.1.0, which doesn't have the cheat sheet's Material Design icons (`nf-md-*`, code points U+F0001 and above): they show as boxes. On those releases, use an icon from another set, such as `nf-fa-*`, or pick it from the font itself with Character Map.
+The cheat sheet lists Nerd Fonts 3 code points. Regolith 3.5 and later ship Nerd Fonts 3, so any icon on it works. Regolith 3.4 and earlier ship Nerd Fonts 2.1.0, which doesn't have the cheat sheet's Material Design icons (`nf-md-*`, code points U+F0001 and above): they show as boxes. On those releases, use an icon from another set, such as `nf-fa-*`, or pick it from the font itself with Character Map.
+
+Nerd Fonts 3 also removed the old Material Design icons (`nf-mdi-*`, U+F500 to U+FD46). If your workspace names use them, they show as boxes after upgrading to Regolith 3.5: replace each with the matching `nf-md-*` icon. See the [3.5 release notes](/docs/reference/releases/regolith-3.5-release-notes/#known-issues).
 {{< /callout >}}
 
 To pick an icon with Character Map:
