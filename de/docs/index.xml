@@ -1761,6 +1761,10 @@ das &lt;a href="https://i3wm.org/docs/userguide.html" target="_blank" rel="noope
 &lt;td>Command to execute when scroll wheel down is used on volume indicator (default: decrease volume through amixer)&lt;/td>
 &lt;/tr>
 &lt;tr>
+&lt;td>i3xrocks.critical.color&lt;/td>
+&lt;td>Critical color for bar module&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>i3xrocks.error.color&lt;/td>
 &lt;td>Color for bar module in error mode&lt;/td>
 &lt;/tr>
@@ -2005,6 +2009,14 @@ das &lt;a href="https://i3wm.org/docs/userguide.html" target="_blank" rel="noope
 &lt;td>Wayland (sway) only: &lt;code>enable&lt;/code> (default) hides the pointer while you type, &lt;code>disable&lt;/code> keeps it visible&lt;/td>
 &lt;/tr>
 &lt;tr>
+&lt;td>wm.binding.ws_back_and_forth&lt;/td>
+&lt;td>Key that, pressed with Super+Alt (&lt;code>wm.mod&lt;/code> and &lt;code>wm.alt&lt;/code>), goes back to the previously focused workspace (&lt;code>workspace back_and_forth&lt;/code>), in both sessions. The default is &lt;code>Tab&lt;/code>, so Super+Alt+Tab. In sway, moving a window to another workspace doesn&amp;rsquo;t update the workspace it goes back to (i3 does). Added in regolith-wm-config 4.12.0&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>wm.bar.binding.wheel_up, wm.bar.binding.wheel_down, wm.bar.binding.wheel_left, wm.bar.binding.wheel_right&lt;/td>
+&lt;td>The bar binding for each mouse wheel direction (&lt;code>button4&lt;/code>, &lt;code>button5&lt;/code>, &lt;code>button6&lt;/code>, &lt;code>button7&lt;/code>), in i3bar and swaybar. The defaults (&lt;code>--release button4 nop&lt;/code> and so on) leave the bar&amp;rsquo;s own behaviour alone: scrolling over the workspace buttons switches workspaces. Set them to &lt;code>button4 nop&lt;/code> &amp;hellip; &lt;code>button7 nop&lt;/code> to stop that, or bind another command. Scrolling over a status block still goes to that block. Added in regolith-wm-config 4.12.0&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>i3xrocks.media-player.player-args&lt;/td>
 &lt;td>Optional arguments used by the &lt;code>media-player&lt;/code> i3xrocks block. These arguments are fed straight into &lt;code>playerctl&lt;/code>, eg. setting this value to &lt;code>-p spotify&lt;/code> only makes the bar display/control spotify.&lt;/td>
 &lt;/tr>
@@ -2087,6 +2099,18 @@ das &lt;a href="https://i3wm.org/docs/userguide.html" target="_blank" rel="noope
 &lt;tr>
 &lt;td>i3xrocks.action.battery&lt;/td>
 &lt;td>Override command to run on battery status indicator.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>i3xrocks.cpu-usage.warning_threshold, i3xrocks.cpu-usage.critical_threshold&lt;/td>
+&lt;td>X11 (i3xrocks) only: CPU usage in percent from which the &lt;code>cpu-usage&lt;/code> block shows its value in &lt;code>i3xrocks.warning&lt;/code> or &lt;code>i3xrocks.critical.color&lt;/code> (defaults &lt;code>50&lt;/code> and &lt;code>80&lt;/code>). The block&amp;rsquo;s &lt;code>-w&lt;/code>/&lt;code>-c&lt;/code> switches and its &lt;code>warning_threshold&lt;/code>/&lt;code>critical_threshold&lt;/code> properties take precedence. Added in regolith-i3xrocks-config 6.0.0&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>i3xrocks.memory.warning_threshold, i3xrocks.memory.critical_threshold&lt;/td>
+&lt;td>X11 (i3xrocks) only: used memory in percent (swap for the &lt;code>swap&lt;/code> instance) from which the &lt;code>memory&lt;/code> block shows its value in &lt;code>i3xrocks.warning&lt;/code> or &lt;code>i3xrocks.critical.color&lt;/code> (defaults &lt;code>80&lt;/code> and &lt;code>95&lt;/code>). The block&amp;rsquo;s &lt;code>warning_threshold&lt;/code>/&lt;code>critical_threshold&lt;/code> properties take precedence. Added in regolith-i3xrocks-config 6.0.0&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>i3xrocks.disk-capacity.warning_threshold, i3xrocks.disk-capacity.critical_threshold&lt;/td>
+&lt;td>X11 (i3xrocks) only: how full the disk is, in percent, from which the &lt;code>disk-capacity&lt;/code> block shows its value in &lt;code>i3xrocks.warning&lt;/code> or &lt;code>i3xrocks.critical.color&lt;/code> (defaults &lt;code>80&lt;/code> and &lt;code>90&lt;/code>). The block&amp;rsquo;s &lt;code>warning_threshold&lt;/code>/&lt;code>critical_threshold&lt;/code> properties take precedence. Added in regolith-i3xrocks-config 6.0.0&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table></description></item><item><title>Change Bar Status indicators</title><link>https://regolith-desktop.com/de/docs/howtos/add-remove-blocklets/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/de/docs/howtos/add-remove-blocklets/</guid><description>
