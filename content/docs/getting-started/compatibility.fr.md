@@ -14,24 +14,25 @@ supported on which OS distributions.
 
 ## Ubuntu
 
-| Distro Name / Regolith Version  |  v2.2  |  v3.0  |  v3.1  |  v3.2  |  v3.3  |  v3.4  |
-|:--------------------------------|:------:|:------:|:------:|:------:|:------:|:------:|
-| Focal (20.04 LTS) | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | - | - | - |
-| Jammy (22.04 LTS) | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} |
-| Kinetic (22.10) | {{< icon name="check" attributes="height=21" >}} | - | - | - | - | - |
-| Lunar (23.04) | - | {{< icon name="check" attributes="height=21" >}} | - | - | - | - |
-| Mantic (23.10) | - | - | {{< icon name="check" attributes="height=21" >}} | - | - | - |
-| Noble (24.04 LTS) | - | - | - | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} |
-| Oracular (24.10) | - | - | - | - | {{< icon name="check" attributes="height=21" >}} | - |
-| Plucky (25.04) | - | - | - | - | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} |
-| Questing (25.10) | - | - | - | - | - | {{< icon name="check" attributes="height=21" >}} |
+| Distro Name / Regolith Version  |  v2.2  |  v3.0  |  v3.1  |  v3.2  |  v3.3  |  v3.4  |  v3.5  |
+|:--------------------------------|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| Focal (20.04 LTS) | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | - | - | - | - |
+| Jammy (22.04 LTS) | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} |
+| Kinetic (22.10) | {{< icon name="check" attributes="height=21" >}} | - | - | - | - | - | - |
+| Lunar (23.04) | - | {{< icon name="check" attributes="height=21" >}} | - | - | - | - | - |
+| Mantic (23.10) | - | - | {{< icon name="check" attributes="height=21" >}} | - | - | - | - |
+| Noble (24.04 LTS) | - | - | - | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} |
+| Oracular (24.10) | - | - | - | - | {{< icon name="check" attributes="height=21" >}} | - | - |
+| Plucky (25.04) | - | - | - | - | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | - |
+| Questing (25.10) | - | - | - | - | - | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} |
+| Resolute (26.04 LTS) | - | - | - | - | - | - | {{< icon name="check" attributes="height=21" >}} |
 
 ## Debian
 
-| Distro Name / Regolith Version  |  v2.2  |  v3.0  |  v3.1  |  v3.2  |  v3.3  |  v3.4  |
-|:--------------------------------|:------:|:------:|:------:|:------:|:------:|:------:|
-| Bullseye (11) | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | - | - | - |
-| Bookworm (12) ¹ | - | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} |
-| Trixie (13) | - | - | - | - | - | {{< icon name="check" attributes="height=21" >}} |
+| Distro Name / Regolith Version  |  v2.2  |  v3.0  |  v3.1  |  v3.2  |  v3.3  |  v3.4  |  v3.5  |
+|:--------------------------------|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| Bullseye (11) | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | - | - | - | - |
+| Bookworm (12) ¹ | - | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} |
+| Trixie (13) | - | - | - | - | - | {{< icon name="check" attributes="height=21" >}} | {{< icon name="check" attributes="height=21" >}} |
 
 ¹ Debian 12 (Bookworm) ne propose que la session X11 (`regolith-session-flashback`). La session Wayland (`regolith-session-sway`) n'y est pas disponible.
