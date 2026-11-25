@@ -2472,7 +2472,830 @@ title="Copy code"
 &lt;li>Run &lt;code>pgrep -a picom&lt;/code>.&lt;/li>
 &lt;li>Run &lt;code>kill -9 $(pgrep -x picom)&lt;/code>, wait a few seconds, and run &lt;code>pgrep -a picom&lt;/code> again.&lt;/li>
 &lt;/ol>
-&lt;p>&lt;strong>You should see:&lt;/strong> picom running (with &lt;code>--backend xrender&lt;/code> on a software renderer), and running again with a new process ID.&lt;/p></description></item><item><title>Verify behavior against upstream</title><link>https://regolith-desktop.com/docs/howtos/gnome-flashback-session/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/gnome-flashback-session/</guid><description>
+&lt;p>&lt;strong>You should see:&lt;/strong> picom running (with &lt;code>--backend xrender&lt;/code> on a software renderer), and running again with a new process ID.&lt;/p></description></item><item><title>Upgrade to Ubuntu 26.04</title><link>https://regolith-desktop.com/docs/howtos/upgrade-ubuntu-to-26-04/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/upgrade-ubuntu-to-26-04/</guid><description>
+&lt;p>This page takes an Ubuntu 25.10 (Questing) or Ubuntu 25.04 (Plucky) system with Regolith, installed as described on the &lt;a href="https://regolith-desktop.com/docs/using-regolith/install/" >install page&lt;/a>, through Ubuntu&amp;rsquo;s &lt;code>do-release-upgrade&lt;/code> to Ubuntu 26.04 LTS (Resolute), and then brings Regolith back.&lt;/p>
+&lt;p>The Ubuntu upgrader disables the Regolith package repository and removes a few Regolith packages, so some extra steps are needed before and after it runs. Do them in the order below.&lt;/p>
+&lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-yellow-100 hx-bg-yellow-50 hx-text-yellow-900 dark:hx-border-yellow-200/30 dark:hx-bg-yellow-700/30 dark:hx-text-yellow-200">
+&lt;div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2">&lt;/div>
+&lt;div class="hx-w-full hx-min-w-0 hx-leading-7">
+&lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">Regolith 3.4 has no packages for Ubuntu 26.04. The first Regolith release for it is &lt;strong>Regolith 3.5&lt;/strong>, published in the &lt;code>v3.5&lt;/code> component of the &lt;code>stable&lt;/code> suite (&lt;code>stable resolute v3.5&lt;/code>), and this page installs it. The &lt;a href="https://regolith-desktop.com/docs/reference/releases/regolith-3.5-release-notes/" >3.5 release notes&lt;/a> describe Regolith 3.5 and how to upgrade to it from Regolith 3.4 without changing your Ubuntu release, and the &lt;a href="https://regolith-desktop.com/docs/using-regolith/install/" >install page&lt;/a> covers new systems. If you followed an earlier version of this page and use the &lt;code>testing&lt;/code> suite, see &lt;a href="#move-from-testing-to-stable" >Move from testing to stable&lt;/a>.&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;h2>Which release are you on?&lt;span class="hx-absolute -hx-mt-20" id="which-release-are-you-on">&lt;/span>
+&lt;a href="#which-release-are-you-on" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>You have&lt;/th>
+&lt;th>Regolith&lt;/th>
+&lt;th>What is different&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Ubuntu 25.10&lt;/td>
+&lt;td>3.4&lt;/td>
+&lt;td>Nothing: follow the steps as written.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Ubuntu 25.04&lt;/td>
+&lt;td>3.3 or 3.4&lt;/td>
+&lt;td>You upgrade &lt;strong>directly to 26.04&lt;/strong>, without stopping at 25.10. Ubuntu 25.10 has reached its end of life too, so the upgrader skips it. Don&amp;rsquo;t use &lt;code>do-release-upgrade -d&lt;/code>: it would pick 25.10.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>The steps are the same for both releases. Where a command or its output differs, the step says so, or shows a tab for each release.&lt;/p>
+&lt;h2>Overview&lt;span class="hx-absolute -hx-mt-20" id="overview">&lt;/span>
+&lt;a href="#overview" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;ol>
+&lt;li>Install all updates for your current release, pin your look, and remove one stale systemd link.&lt;/li>
+&lt;li>Run &lt;code>sudo do-release-upgrade&lt;/code> from a text console.&lt;/li>
+&lt;li>When the upgrader asks to restart, answer &lt;strong>N&lt;/strong>.&lt;/li>
+&lt;li>On the same console, point Regolith at &lt;code>stable resolute v3.5&lt;/code> and upgrade the Regolith packages.&lt;/li>
+&lt;li>Reboot, log in to both Regolith sessions, and clean up.&lt;/li>
+&lt;/ol>
+&lt;p>The download is about 2.5 GB, and the upgrade itself takes 45 minutes to an hour on a fast machine with a fast connection. On a laptop, plan 1.5 to 3 hours, and keep it on AC power.&lt;/p>
+&lt;h2>Before you start&lt;span class="hx-absolute -hx-mt-20" id="before-you-start">&lt;/span>
+&lt;a href="#before-you-start" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>Check where you are&lt;span class="hx-absolute -hx-mt-20" id="check-where-you-are">&lt;/span>
+&lt;a href="#check-where-you-are" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">lsb_release -ds
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cat /etc/regolith/version
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cat /etc/apt/sources.list.d/regolith.list
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ls /etc/apt/sources.list.d/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">df -h / /boot&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>A system installed from the install page has the key in &lt;code>/usr/share/keyrings/regolith-archive-keyring.gpg&lt;/code> and one of these lines in &lt;code>/etc/apt/sources.list.d/regolith.list&lt;/code>:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Release&lt;/th>
+&lt;th>Line in &lt;code>regolith.list&lt;/code>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Ubuntu 25.10, Regolith 3.4&lt;/td>
+&lt;td>&lt;code>deb [arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] https://archive.regolith-desktop.com/ubuntu/stable questing v3.4&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Ubuntu 25.04, Regolith 3.3&lt;/td>
+&lt;td>&lt;code>deb [arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] https://archive.regolith-desktop.com/ubuntu/stable plucky v3.3&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Ubuntu 25.04, Regolith 3.4&lt;/td>
+&lt;td>the same line with &lt;code>v3.4&lt;/code> instead of &lt;code>v3.3&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>The key stays valid for Ubuntu 26.04 and is reused below. Write down your line: you need it again only if the upgrader aborts (&lt;a href="#recovery" >Recovery&lt;/a>).&lt;/p>
+&lt;p>If you already use the &lt;code>testing&lt;/code> or &lt;code>unstable&lt;/code> suite, the same steps work and move you to the stable suite. Your source file may be called &lt;code>regolith.sources&lt;/code> instead of &lt;code>regolith.list&lt;/code>; step 5 replaces either one. If you added the Regolith repository under any other file name, delete that file in step 5, so that the repository isn&amp;rsquo;t listed twice.&lt;/p>
+&lt;h3>Checklist&lt;span class="hx-absolute -hx-mt-20" id="checklist">&lt;/span>
+&lt;a href="#checklist" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Check&lt;/th>
+&lt;th>Command&lt;/th>
+&lt;th>What to do&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Free disk space&lt;/td>
+&lt;td>&lt;code>df -h / /boot&lt;/code> (above)&lt;/td>
+&lt;td>Have at least 10 GB free on &lt;code>/&lt;/code> and 300 MB on &lt;code>/boot&lt;/code>.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Third-party repositories and PPAs&lt;/td>
+&lt;td>&lt;code>ls /etc/apt/sources.list.d/&lt;/code> (above)&lt;/td>
+&lt;td>The upgrader disables all of them. Write them down, so you can re-enable each one once it publishes packages for &lt;code>resolute&lt;/code>.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Proprietary graphics drivers&lt;/td>
+&lt;td>&lt;code>ubuntu-drivers list&lt;/code>&lt;/td>
+&lt;td>The upgrader keeps your &lt;code>nvidia-driver-*&lt;/code> series and rebuilds its kernel modules. Have a second way in (text console or ssh) in case the screen stays black; see &lt;a href="#recovery" >Recovery&lt;/a>.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Secure Boot with DKMS modules&lt;/td>
+&lt;td>&lt;code>mokutil --sb-state&lt;/code>&lt;/td>
+&lt;td>You may be asked to enroll a key (MOK) during the upgrade. Choose a one-time password and confirm it on the blue MOK screen at the next boot.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Snaps and Flatpaks&lt;/td>
+&lt;td>&lt;code>snap list&lt;/code>, &lt;code>flatpak list&lt;/code>&lt;/td>
+&lt;td>Snaps are kept and moved to their 26.04 channels. Flatpaks are untouched; run &lt;code>flatpak update&lt;/code> afterwards.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Your Regolith configuration&lt;/td>
+&lt;td>&lt;code>ls ~/.config/regolith3/&lt;/code>&lt;/td>
+&lt;td>Kept unchanged. Back it up anyway (next section).&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3>Back up&lt;span class="hx-absolute -hx-mt-20" id="back-up">&lt;/span>
+&lt;a href="#back-up" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Make a full backup of your home directory with your usual tool. Then save the Regolith configuration, the apt configuration and the list of installed Regolith packages:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">mkdir -p ~/upgrade-backup
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">tar czf ~/upgrade-backup/regolith-user-config.tgz -C ~ .config/regolith3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo tar czf ~/upgrade-backup/etc-regolith-and-apt.tgz /etc/regolith /etc/apt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">dpkg-query -W -f&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;${db:Status-Abbrev} ${Package} ${Version}\n&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> awk &lt;span class="s1">&amp;#39;$1==&amp;#34;ii&amp;#34;{print $2&amp;#34; &amp;#34;$3}&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> grep -E &lt;span class="s1">&amp;#39;regolith|^i3|^sway|ilia|trawl|xrescat|picom|gtklock|rofication|remontoire|avizo|dunst&amp;#39;&lt;/span> &amp;gt; ~/upgrade-backup/regolith-packages-before.txt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">apt-mark showmanual &amp;gt; ~/upgrade-backup/manual-packages-before.txt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">wc -l ~/upgrade-backup/regolith-packages-before.txt&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>It prints two &lt;code>tar: Removing leading '/'&lt;/code> notices and the number of Regolith-related packages. Step 6 uses this list to find anything that the upgrade removed and didn&amp;rsquo;t bring back.&lt;/p>
+&lt;h2>Steps&lt;span class="hx-absolute -hx-mt-20" id="steps">&lt;/span>
+&lt;a href="#steps" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;h3>1. Install all updates for your current release&lt;span class="hx-absolute -hx-mt-20" id="1-install-all-updates-for-your-current-release">&lt;/span>
+&lt;a href="#1-install-all-updates-for-your-current-release" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt update
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt full-upgrade
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span> -f /var/run/reboot-required &lt;span class="o">]&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;reboot first&amp;#34;&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;no reboot needed&amp;#34;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>Reboot if it says so. &lt;code>do-release-upgrade&lt;/code> refuses to start while updates are pending.&lt;/p>
+&lt;p>Ubuntu 25.10 and 25.04 have both reached their end of life:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Ignore the &amp;ldquo;Software updates are no longer provided&amp;rdquo; dialog, and don&amp;rsquo;t use its upgrade button. Use the console steps below instead.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>If &lt;code>apt update&lt;/code> fails with &lt;code>404 Not Found&lt;/code> errors for &lt;code>questing&lt;/code> or &lt;code>plucky&lt;/code>, the archive of your release has moved to &lt;code>old-releases.ubuntu.com&lt;/code>. Point apt there, then continue (the upgrader switches back to the normal mirror):&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo sed -i &lt;span class="s1">&amp;#39;s#http://\(archive\|security\).ubuntu.com#http://old-releases.ubuntu.com#&amp;#39;&lt;/span> /etc/apt/sources.list.d/ubuntu.sources
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt update&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;/li>
+&lt;/ul>
+&lt;p>Then check that Ubuntu 26.04 is offered:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">grep &lt;span class="s1">&amp;#39;^Prompt&amp;#39;&lt;/span> /etc/update-manager/release-upgrades
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">do&lt;/span>-release-upgrade -c&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>It should print &lt;code>Prompt=normal&lt;/code>, &amp;ldquo;Your Ubuntu release is not supported anymore&amp;rdquo;, and &lt;code>New release '26.04.1 LTS' available.&lt;/code> (or a later point release).&lt;/p>
+&lt;ul>
+&lt;li>If it says &lt;code>Prompt=never&lt;/code>, run &lt;code>sudo sed -i 's/^Prompt=.*/Prompt=normal/' /etc/update-manager/release-upgrades&lt;/code> and check again.&lt;/li>
+&lt;li>Don&amp;rsquo;t add &lt;code>-d&lt;/code>. On 25.04, &lt;code>-d&lt;/code> selects 25.10, which no longer receives updates.&lt;/li>
+&lt;/ul>
+&lt;h3>2. Pin your look (recommended)&lt;span class="hx-absolute -hx-mt-20" id="2-pin-your-look-recommended">&lt;/span>
+&lt;a href="#2-pin-your-look-recommended" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>If you never chose a look with &lt;code>regolith-look set&lt;/code>, a later package update can switch you to another one. Pin the current look. Run this in a terminal inside a Regolith session, on X11 or Wayland:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">grep -s regolith.look.path ~/.config/regolith3/Xresources &lt;span class="o">||&lt;/span> regolith-look &lt;span class="nb">set&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="k">$(if&lt;/span> &lt;span class="o">[&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$XDG_SESSION_TYPE&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="o">=&lt;/span> wayland &lt;span class="o">]&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">then&lt;/span> trawlcat regolith.look&lt;span class="p">;&lt;/span> &lt;span class="k">else&lt;/span> xrescat regolith.look&lt;span class="p">;&lt;/span> &lt;span class="k">fi)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;ul>
+&lt;li>If the &lt;code>grep&lt;/code> prints a &lt;code>regolith.look.path&lt;/code> line, your look is already pinned and nothing changes.&lt;/li>
+&lt;li>Otherwise &lt;code>regolith-look set&lt;/code> runs and the screen refreshes. Lines such as &amp;ldquo;Error: No default value provided&amp;rdquo; are harmless. Afterwards, &lt;code>~/.config/regolith3/Xresources&lt;/code> contains &lt;code>regolith.look.path: /usr/share/regolith-look/&amp;lt;your look&amp;gt;&lt;/code>.&lt;/li>
+&lt;li>The command reads the look with &lt;code>trawlcat&lt;/code> in the Wayland session, because &lt;code>xrescat&lt;/code> fails there (&amp;ldquo;Can&amp;rsquo;t obtain RESOURCE_MANAGER&amp;rdquo;).&lt;/li>
+&lt;/ul>
+&lt;h3>3. Remove the stale sway-audio-idle-inhibit link&lt;span class="hx-absolute -hx-mt-20" id="3-remove-the-stale-sway-audio-idle-inhibit-link">&lt;/span>
+&lt;a href="#3-remove-the-stale-sway-audio-idle-inhibit-link" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo rm -fv /etc/systemd/user/default.target.wants/sway-audio-idle-inhibit.service&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>On Regolith 3.4 this prints &lt;code>removed '/etc/systemd/user/default.target.wants/sway-audio-idle-inhibit.service'&lt;/code>. On Regolith 3.3 it prints nothing.&lt;/p>
+&lt;p>The &lt;code>sway-audio-idle-inhibit&lt;/code> 2.0.0 package in Regolith 3.4 enables itself for every user, including the login screen&amp;rsquo;s own user. If this link is still there when you first boot Ubuntu 26.04 with the old package, the login screen fails to start and you get a black screen (&lt;a href="#black-screen-instead-of-the-login-screen" >fix&lt;/a>). Removing it costs nothing: before the upgrade, the link only makes &lt;code>sway-audio-idle-inhibit&lt;/code> crash in X11 sessions (the &amp;ldquo;System program problem detected&amp;rdquo; dialogs). Step 5 installs a newer version, which runs only in the Regolith Wayland session, and turns it back on.&lt;/p>
+&lt;h3>4. Run the release upgrade from a text console&lt;span class="hx-absolute -hx-mt-20" id="4-run-the-release-upgrade-from-a-text-console">&lt;/span>
+&lt;a href="#4-run-the-release-upgrade-from-a-text-console" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;ol>
+&lt;li>
+&lt;p>Save your work and log out.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>At the login screen, press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">ctrl&lt;/span> &lt;span class="badge badge-warning">alt&lt;/span> &lt;span class="badge badge-warning">f3&lt;/span>&lt;/span> and log in on the text console.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Run:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo &lt;span class="k">do&lt;/span>-release-upgrade&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;/li>
+&lt;/ol>
+&lt;p>Notes:&lt;/p>
+&lt;ul>
+&lt;li>Don&amp;rsquo;t run the upgrade from a terminal inside the Regolith session: the packages of that session are replaced while it runs.&lt;/li>
+&lt;li>The upgrader runs inside &lt;code>screen&lt;/code>. If you lose the console, log in again and run &lt;code>sudo screen -x&lt;/code> to reattach. Logs are in &lt;code>/var/log/dist-upgrade/&lt;/code>.&lt;/li>
+&lt;li>Over ssh, the upgrader offers to start a second ssh server on port 1022.&lt;/li>
+&lt;/ul>
+&lt;p>Answer the upgrader&amp;rsquo;s questions as follows. The package counts depend on your system.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Question (abridged)&lt;/th>
+&lt;th>Answer&lt;/th>
+&lt;th>Notes&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Release notes … &lt;code>Continue [yN]&lt;/code>&lt;/td>
+&lt;td>&lt;strong>y&lt;/strong>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Foreign Packages Installed:&lt;/strong> &lt;code>regolith-powerd … Installed from: Regolith&lt;/code> … &amp;ldquo;Do you want to continue the upgrade anyways?&amp;rdquo;&lt;/td>
+&lt;td>&lt;strong>y&lt;/strong>&lt;/td>
+&lt;td>Ubuntu 26.04 has an older package with the same name. Regolith&amp;rsquo;s version is kept.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&amp;ldquo;Do you want to start the upgrade? … packages are going to be removed …&amp;rdquo; &lt;code>Continue [yN] Details [d]&lt;/code>&lt;/td>
+&lt;td>&lt;strong>y&lt;/strong>&lt;/td>
+&lt;td>The removals include Regolith&amp;rsquo;s Settings app (&lt;code>regolith-control-center&lt;/code>, &lt;code>regolith-i3-control-center-regolith&lt;/code>, &lt;code>regolith-sway-control-center-regolith&lt;/code>) and &lt;code>xdg-desktop-portal-regolith&lt;/code> if you have it. Coming from Regolith 3.3, they also include &lt;code>xdg-desktop-portal-regolith-x11-config&lt;/code> and &lt;code>xdg-desktop-portal-regolith-wayland-config&lt;/code>. Step 5 installs them again.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;em>(sometimes)&lt;/em> &amp;ldquo;Lock screen disabled … To continue please press [ENTER]&amp;rdquo;&lt;/td>
+&lt;td>&lt;strong>Enter&lt;/strong>&lt;/td>
+&lt;td>Appears if a graphical session was open earlier in this boot.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&amp;ldquo;Configuring kdump-tools: Should kdump-tools be enabled by default?&amp;rdquo;&lt;/td>
+&lt;td>&lt;strong>Enter&lt;/strong>&lt;/td>
+&lt;td>Ubuntu&amp;rsquo;s crash-dump service. Either answer works.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&amp;ldquo;Remove obsolete packages? … packages are going to be removed.&amp;rdquo; &lt;code>Continue [yN]&lt;/code>&lt;/td>
+&lt;td>&lt;strong>N&lt;/strong>&lt;/td>
+&lt;td>Keep everything until both sessions work; step 8 cleans up.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&amp;ldquo;System upgrade is complete. Restart required … Continue [yN]&amp;rdquo;&lt;/td>
+&lt;td>&lt;strong>N&lt;/strong>&lt;/td>
+&lt;td>Don&amp;rsquo;t reboot yet. Do step 5 first, on the same console.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>If a configuration file question appears (&lt;code>*** file (Y/I/N/O/D/Z) [default=N] ?&lt;/code>) for a file you edited, press &lt;strong>N&lt;/strong> to keep your version. For a file you never touched, &lt;strong>Y&lt;/strong> is fine.&lt;/p>
+&lt;p>If the upgrader asks &amp;ldquo;Required apt sources are missing … Would you like to continue the upgrade using default sources?&amp;rdquo;, a download of the 26.04 package lists failed (for example a dropped connection). Answer &lt;strong>N&lt;/strong>. The upgrader restores your system and stops; press &lt;strong>x&lt;/strong> to close its &lt;code>Command terminated&lt;/code> screen. Then follow &lt;a href="#the-upgrader-stopped-before-installing-anything" >The upgrader stopped before installing anything&lt;/a> and run this step again.&lt;/p>
+&lt;h3>5. Point Regolith at Ubuntu 26.04 (same console, before rebooting)&lt;span class="hx-absolute -hx-mt-20" id="5-point-regolith-at-ubuntu-2604-same-console-before-rebooting">&lt;/span>
+&lt;a href="#5-point-regolith-at-ubuntu-2604-same-console-before-rebooting" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>The upgrader replaced &lt;code>regolith.list&lt;/code> with a disabled copy (&lt;code>regolith.list.disabled&lt;/code>). Replace it with a source for &lt;code>stable resolute v3.5&lt;/code> (Regolith 3.5), then upgrade the Regolith packages and install the ones the upgrader removed:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo rm -f /etc/apt/sources.list.d/regolith.list /etc/apt/sources.list.d/regolith.list.disabled /etc/apt/sources.list.d/regolith.list.distUpgrade
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo tee /etc/apt/sources.list.d/regolith.sources &amp;gt; /dev/null &lt;span class="s">&amp;lt;&amp;lt;&amp;#39;EOF&amp;#39;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">Types: deb
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">URIs: https://archive.regolith-desktop.com/ubuntu/stable
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">Suites: resolute
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">Components: v3.5
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">Architectures: amd64
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">Signed-By: /usr/share/keyrings/regolith-archive-keyring.gpg
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt update
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt full-upgrade
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt install regolith-desktop regolith-session-flashback regolith-session-sway regolith-look-lascaille regolith-control-center regolith-i3-control-center-regolith regolith-sway-control-center-regolith xdg-desktop-portal-regolith-x11-config xdg-desktop-portal-regolith-wayland-config&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;ul>
+&lt;li>Use &lt;code>full-upgrade&lt;/code>, not &lt;code>upgrade&lt;/code>: plain &lt;code>apt upgrade&lt;/code> never removes packages and can keep Regolith packages back (&lt;a href="https://github.com/orgs/regolith-linux/discussions/1154" target="_blank" rel="noopener">Discussion #1154&lt;/a>).&lt;/li>
+&lt;li>In the &lt;code>apt install&lt;/code> line, replace &lt;code>regolith-look-lascaille&lt;/code> with the look you use, and leave out &lt;code>regolith-session-sway&lt;/code> if you don&amp;rsquo;t use the Wayland session. Add any other Regolith packages you installed yourself, or let step 6 find them. Packages that are already installed are left as they are.&lt;/li>
+&lt;li>Answer &lt;strong>Y&lt;/strong> to apt&amp;rsquo;s &amp;ldquo;Do you want to continue?&amp;rdquo; questions.&lt;/li>
+&lt;li>&lt;code>full-upgrade&lt;/code> updates &lt;code>/etc/regolith/version&lt;/code> and may print &amp;ldquo;Pending kernel upgrade!&amp;rdquo; and a list of services to restart. That is expected: you reboot in step 7.&lt;/li>
+&lt;/ul>
+&lt;div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
+&lt;div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2">&lt;/div>
+&lt;div class="hx-w-full hx-min-w-0 hx-leading-7">
+&lt;div class="hx-mt-6 hx-leading-7 first:hx-mt-0">On ARM-based systems, replace &lt;code>amd64&lt;/code> with &lt;code>arm64&lt;/code> in the &lt;code>Architectures:&lt;/code> line.&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;p>Turn &lt;code>sway-audio-idle-inhibit&lt;/code> back on. It keeps the Wayland session from locking or blanking the screen while sound plays:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo systemctl --global &lt;span class="nb">enable&lt;/span> sway-audio-idle-inhibit.service&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>The &lt;code>sway-audio-idle-inhibit&lt;/code> package in Regolith 3.5 (2.0.5) turns itself back on when the link of step 3 was removed, so this command usually prints nothing. If it prints &lt;code>Created symlink '/etc/systemd/user/graphical-session.target.wants/sway-audio-idle-inhibit.service' → …&lt;/code>, it has just turned it on.&lt;/p>
+&lt;p>Check that the Settings app (opened with &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">c&lt;/span>&lt;/span>) and the portal configuration are installed:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">dpkg-query -W -f&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;${db:Status-Abbrev} ${Package} ${Version}\n&amp;#39;&lt;/span> regolith-desktop regolith-control-center regolith-i3-control-center-regolith regolith-sway-control-center-regolith xdg-desktop-portal-regolith-x11-config xdg-desktop-portal-regolith-wayland-config&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>All six lines should start with &lt;code>ii&lt;/code>. The two &lt;code>xdg-desktop-portal-regolith-*-config&lt;/code> packages route file choosers, screenshots and screen sharing to the GTK, GNOME and wlroots portals.&lt;/p>
+&lt;p>&lt;strong>Old portal backend.&lt;/strong> If you had &lt;code>xdg-desktop-portal-regolith&lt;/code> (older versions of the install page installed it), the upgrader removes it. Don&amp;rsquo;t install it again: this backend is deprecated and being retired, and nothing on Ubuntu 26.04 uses it.&lt;/p>
+&lt;h3>6. Check that nothing you had is missing&lt;span class="hx-absolute -hx-mt-20" id="6-check-that-nothing-you-had-is-missing">&lt;/span>
+&lt;a href="#6-check-that-nothing-you-had-is-missing" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">comm -23 &amp;lt;&lt;span class="o">(&lt;/span>awk &lt;span class="s1">&amp;#39;{print $1}&amp;#39;&lt;/span> ~/upgrade-backup/regolith-packages-before.txt &lt;span class="p">|&lt;/span> sort&lt;span class="o">)&lt;/span> &amp;lt;&lt;span class="o">(&lt;/span>dpkg-query -W -f&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;${db:Status-Abbrev} ${Package}\n&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> awk &lt;span class="s1">&amp;#39;$1==&amp;#34;ii&amp;#34;{print $2}&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> sort&lt;span class="o">)&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>This lists the Regolith-related packages you had before the upgrade that are no longer installed. If it prints any, install them with &lt;code>sudo apt install &amp;lt;names&amp;gt;&lt;/code>, except these expected ones:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>xdg-desktop-portal-regolith&lt;/code>: deprecated (see &lt;strong>Old portal backend&lt;/strong> in step 5).&lt;/li>
+&lt;li>&lt;code>regolith-sway-audio-idle-inhibit&lt;/code> (Regolith 3.3): replaced by &lt;code>regolith-session-sway&lt;/code>.&lt;/li>
+&lt;li>Packages that only existed for your old release and have a successor: for example &lt;code>libwlroots-0.18&lt;/code> is replaced by &lt;code>libwlroots-0.19&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;h3>7. Reboot&lt;span class="hx-absolute -hx-mt-20" id="7-reboot">&lt;/span>
+&lt;a href="#7-reboot" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo reboot&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>The login screen should appear as usual. Log in once to &lt;strong>Regolith on X11&lt;/strong> and once to &lt;strong>Regolith on Wayland&lt;/strong> (if you use it), using the gear icon on the password screen, and go through the &lt;a href="#check-the-result" >checks&lt;/a>.&lt;/p>
+&lt;h3>8. Clean up&lt;span class="hx-absolute -hx-mt-20" id="8-clean-up">&lt;/span>
+&lt;a href="#8-clean-up" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Once both sessions work, remove the packages that Ubuntu 26.04 no longer needs:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt autoremove --purge&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>If it lists a Regolith package that you use, answer &lt;strong>n&lt;/strong>, install that package with &lt;code>sudo apt install &amp;lt;name&amp;gt;&lt;/code>, and run it again.&lt;/p>
+&lt;p>The kernel of your old release stays installed as a fallback. Once the new kernel has worked for a few days, list the old kernel packages, review the list, and remove them:&lt;/p>
+&lt;div class="hextra-scrollbar hx-overflow-x-auto hx-overflow-y-hidden hx-overscroll-x-contain">
+&lt;div class="hx-mt-4 hx-flex hx-w-max hx-min-w-full hx-border-b hx-border-gray-200 hx-pb-px dark:hx-border-neutral-800">&lt;button
+class="hextra-tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 data-[state=selected]:dark:hx-border-primary-500 data-[state=selected]:dark:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white"
+role="tab"
+type="button"
+aria-controls="tabs-panel-0" aria-selected="true" tabindex="0" data-state="selected">Ubuntu 25.10 (kernel 6.17)&lt;/button>&lt;button
+class="hextra-tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 data-[state=selected]:dark:hx-border-primary-500 data-[state=selected]:dark:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white"
+role="tab"
+type="button"
+aria-controls="tabs-panel-1">Ubuntu 25.04 (kernel 6.14)&lt;/button>&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div
+class="hextra-tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block"
+id="tabs-panel-0"
+role="tabpanel" tabindex="0" data-state="selected" >&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">dpkg -l &lt;span class="s1">&amp;#39;linux-*6.17.0*&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> awk &lt;span class="s1">&amp;#39;/^ii/{print $2}&amp;#39;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt purge &lt;span class="k">$(&lt;/span>dpkg -l &lt;span class="s1">&amp;#39;linux-*6.17.0*&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> awk &lt;span class="s1">&amp;#39;/^ii/{print $2}&amp;#39;&lt;/span>&lt;span class="k">)&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div
+class="hextra-tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block"
+id="tabs-panel-1"
+role="tabpanel">&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">dpkg -l &lt;span class="s1">&amp;#39;linux-*6.14.0*&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> awk &lt;span class="s1">&amp;#39;/^ii/{print $2}&amp;#39;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt purge &lt;span class="k">$(&lt;/span>dpkg -l &lt;span class="s1">&amp;#39;linux-*6.14.0*&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> awk &lt;span class="s1">&amp;#39;/^ii/{print $2}&amp;#39;&lt;/span>&lt;span class="k">)&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;p>Re-enable your third-party repositories and PPAs one at a time, once each publishes packages for &lt;code>resolute&lt;/code>: set &lt;code>Enabled: yes&lt;/code> in its &lt;code>.sources&lt;/code> file, or add the PPA again.&lt;/p>
+&lt;h2>Check the result&lt;span class="hx-absolute -hx-mt-20" id="check-the-result">&lt;/span>
+&lt;a href="#check-the-result" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>In both sessions:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Check&lt;/th>
+&lt;th>How&lt;/th>
+&lt;th>Expected&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Terminal&lt;/td>
+&lt;td>&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">enter&lt;/span>&lt;/span>&lt;/td>
+&lt;td>A terminal opens.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Launcher&lt;/td>
+&lt;td>&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">space&lt;/span>&lt;/span>, type &amp;ldquo;calc&amp;rdquo;, Enter&lt;/td>
+&lt;td>ilia opens and starts Calculator.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Notifications&lt;/td>
+&lt;td>&lt;code>notify-send test hello&lt;/code>, then &lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">n&lt;/span>&lt;/span>&lt;/td>
+&lt;td>The notification appears, and the notification viewer opens.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Bar&lt;/td>
+&lt;td>Look at the bottom of the screen&lt;/td>
+&lt;td>X11: i3bar with i3xrocks. Wayland: swaybar with i3status-rs.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Lock screen&lt;/td>
+&lt;td>&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">escape&lt;/span>&lt;/span>, then type your password&lt;/td>
+&lt;td>The screen locks and unlocks.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Settings&lt;/td>
+&lt;td>&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">c&lt;/span>&lt;/span>&lt;/td>
+&lt;td>The Settings app opens, including Displays, Network, Sound and Power.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Volume and brightness keys&lt;/td>
+&lt;td>Press them&lt;/td>
+&lt;td>The level changes, and an on-screen indicator shows it.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Look&lt;/td>
+&lt;td>&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">alt&lt;/span> &lt;span class="badge badge-warning">l&lt;/span>&lt;/span>, pick another look, Enter&lt;/td>
+&lt;td>The look changes.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Suspend&lt;/td>
+&lt;td>&lt;code>systemctl suspend&lt;/code>, then wake the machine&lt;/td>
+&lt;td>It resumes to the lock screen, and the password unlocks it.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>On a laptop, also check Wi-Fi (&lt;code>nmcli device&lt;/code>), the backlight (&lt;code>ls /sys/class/backlight/&lt;/code>), external monitors and closing the lid.&lt;/p>
+&lt;p>Then check apt:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">lsb_release -ds
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cat /etc/regolith/version
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt update
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt-get -s full-upgrade &lt;span class="p">|&lt;/span> tail -1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">apt-mark showhold
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo dpkg --audit
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">apt policy regolith-desktop &lt;span class="p">|&lt;/span> head -4&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>What to expect:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Ubuntu 26.04.1 LTS&lt;/code> (or a later point release) and &lt;code>REGOLITH_VERSION=3.5&lt;/code>.&lt;/li>
+&lt;li>&lt;code>apt update&lt;/code> without errors or warnings. &lt;code>apt-mark showhold&lt;/code> and &lt;code>dpkg --audit&lt;/code> print nothing.&lt;/li>
+&lt;li>&lt;code>apt policy&lt;/code> shows the same &lt;code>Installed&lt;/code> and &lt;code>Candidate&lt;/code> versions. The &amp;ldquo;WARNING: apt does not have a stable CLI interface&amp;rdquo; line is normal.&lt;/li>
+&lt;li>The &lt;code>full-upgrade&lt;/code> simulation ends with &lt;code>0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.&lt;/code> If it shows other lines, Regolith or Ubuntu has published updates since step 5. Install them with &lt;code>sudo apt full-upgrade&lt;/code>, then repeat the check.&lt;/li>
+&lt;/ul>
+&lt;p>Some packages that both Ubuntu and Regolith ship, such as &lt;code>trawld&lt;/code>, &lt;code>gtklock&lt;/code>, &lt;code>i3-wm&lt;/code> and &lt;code>swayidle&lt;/code>, can come from Ubuntu rather than from the Regolith repository when Ubuntu 26.04 has the newer version (check with &lt;code>apt policy &amp;lt;package&amp;gt;&lt;/code>). This is expected; don&amp;rsquo;t pin the Regolith versions.&lt;/p>
+&lt;h2>Troubleshooting&lt;span class="hx-absolute -hx-mt-20" id="troubleshooting">&lt;/span>
+&lt;a href="#troubleshooting" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Symptom&lt;/th>
+&lt;th>Cause&lt;/th>
+&lt;th>Fix&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a id="black-screen-instead-of-the-login-screen">&lt;/a>&lt;strong>Black screen instead of the login screen&lt;/strong> on the first 26.04 boot&lt;/td>
+&lt;td>The &lt;code>sway-audio-idle-inhibit&lt;/code> link from step 3 is still there, and the reboot happened before step 5.&lt;/td>
+&lt;td>Press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">ctrl&lt;/span> &lt;span class="badge badge-warning">alt&lt;/span> &lt;span class="badge badge-warning">f3&lt;/span>&lt;/span>, log in, run the command of &lt;a href="#3-remove-the-stale-sway-audio-idle-inhibit-link" >step 3&lt;/a>, and run &lt;code>sudo systemctl restart gdm3&lt;/code>. Then do step 5.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>apt&lt;/code> finds no Regolith packages, and &lt;code>regolith.list.disabled&lt;/code> is in &lt;code>/etc/apt/sources.list.d/&lt;/code>&lt;/td>
+&lt;td>The upgrader disables every third-party repository.&lt;/td>
+&lt;td>Step 5.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;span class="text-nowrap">&lt;span class="badge badge-warning">super&lt;/span> &lt;span class="badge badge-warning">c&lt;/span>&lt;/span> does nothing&lt;/td>
+&lt;td>The upgrader removed the Settings app.&lt;/td>
+&lt;td>The &lt;code>apt install&lt;/code> line of step 5.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>The look changed after an update&lt;/td>
+&lt;td>No look was pinned.&lt;/td>
+&lt;td>&lt;code>regolith-look set &amp;lt;your look&amp;gt;&lt;/code> (step 2).&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>do-release-upgrade&lt;/code> says &amp;ldquo;Please install all available updates for your release before upgrading.&amp;rdquo;&lt;/td>
+&lt;td>Updates for your current release are pending.&lt;/td>
+&lt;td>&lt;code>sudo apt update &amp;amp;&amp;amp; sudo apt full-upgrade&lt;/code>, then try again.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>do-release-upgrade&lt;/code> offers 25.10 instead of 26.04&lt;/td>
+&lt;td>You used &lt;code>-d&lt;/code> on 25.04.&lt;/td>
+&lt;td>Run it without &lt;code>-d&lt;/code>.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>apt upgrade&lt;/code> says &amp;ldquo;The following packages have been kept back&amp;rdquo; for Regolith packages&lt;/td>
+&lt;td>Plain &lt;code>upgrade&lt;/code> doesn&amp;rsquo;t remove or replace packages.&lt;/td>
+&lt;td>Use &lt;code>sudo apt full-upgrade&lt;/code>.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Applications from PPAs are missing or old&lt;/td>
+&lt;td>The upgrader disabled all PPAs.&lt;/td>
+&lt;td>Re-enable them once they publish for &lt;code>resolute&lt;/code> (step 8).&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>The console upgrade seems frozen, or you lost the console&lt;/td>
+&lt;td>It runs inside &lt;code>screen&lt;/code>.&lt;/td>
+&lt;td>&lt;code>sudo screen -x&lt;/code>. Logs are in &lt;code>/var/log/dist-upgrade/&lt;/code>.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&amp;ldquo;System program problem detected&amp;rdquo; for &lt;code>sway-audio-idle-inhibit&lt;/code>, once per Wayland login, when sound first plays&lt;/td>
+&lt;td>&lt;code>sway-audio-idle-inhibit&lt;/code> 2.0.3 from the &lt;code>testing&lt;/code> suite stopped once with &amp;ldquo;Could not send inhibit signal!&amp;rdquo;. Fixed in 2.0.4.&lt;/td>
+&lt;td>Make sure your source is &lt;code>stable resolute v3.5&lt;/code> (step 5), then &lt;code>sudo apt update &amp;amp;&amp;amp; sudo apt full-upgrade&lt;/code>.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2>Recovery&lt;span class="hx-absolute -hx-mt-20" id="recovery">&lt;/span>
+&lt;a href="#recovery" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>There is no supported way back from 26.04 to your old release. Your backup is the real rollback. The cases below get you to a working system.&lt;/p>
+&lt;h3>The upgrader stopped before installing anything&lt;span class="hx-absolute -hx-mt-20" id="the-upgrader-stopped-before-installing-anything">&lt;/span>
+&lt;a href="#the-upgrader-stopped-before-installing-anything" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>This happens when you answer &lt;strong>N&lt;/strong> to &amp;ldquo;Required apt sources are missing&amp;rdquo;, or when the upgrader stops with &amp;ldquo;Could not calculate the upgrade&amp;rdquo; or a network error. It restores your old Ubuntu sources, but leaves the Regolith repository disabled. Put your Regolith line from &lt;a href="#check-where-you-are" >Check where you are&lt;/a> back, then run step 4 again:&lt;/p>
+&lt;div class="hextra-scrollbar hx-overflow-x-auto hx-overflow-y-hidden hx-overscroll-x-contain">
+&lt;div class="hx-mt-4 hx-flex hx-w-max hx-min-w-full hx-border-b hx-border-gray-200 hx-pb-px dark:hx-border-neutral-800">&lt;button
+class="hextra-tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 data-[state=selected]:dark:hx-border-primary-500 data-[state=selected]:dark:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white"
+role="tab"
+type="button"
+aria-controls="tabs-panel-0" aria-selected="true" tabindex="0" data-state="selected">Ubuntu 25.10&lt;/button>&lt;button
+class="hextra-tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 data-[state=selected]:dark:hx-border-primary-500 data-[state=selected]:dark:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white"
+role="tab"
+type="button"
+aria-controls="tabs-panel-1">Ubuntu 25.04&lt;/button>&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div
+class="hextra-tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block"
+id="tabs-panel-0"
+role="tabpanel" tabindex="0" data-state="selected" >&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo rm -f /etc/apt/sources.list.d/regolith.list.disabled /etc/apt/sources.list.d/regolith.list.distUpgrade
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;deb [arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] https://archive.regolith-desktop.com/ubuntu/stable questing v3.4&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> sudo tee /etc/apt/sources.list.d/regolith.list
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt update&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div
+class="hextra-tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block"
+id="tabs-panel-1"
+role="tabpanel">&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo rm -f /etc/apt/sources.list.d/regolith.list.disabled /etc/apt/sources.list.d/regolith.list.distUpgrade
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s2">&amp;#34;deb [arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] https://archive.regolith-desktop.com/ubuntu/stable plucky v3.3&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> sudo tee /etc/apt/sources.list.d/regolith.list
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt update&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>If you have Regolith 3.4, write &lt;code>v3.4&lt;/code> instead of &lt;code>v3.3&lt;/code>.&lt;/p>&lt;/div>
+&lt;/div>
+&lt;p>&lt;code>apt update&lt;/code> should list the &lt;code>stable&lt;/code> Regolith suite again, without errors.&lt;/p>
+&lt;h3>The upgrade stopped halfway&lt;span class="hx-absolute -hx-mt-20" id="the-upgrade-stopped-halfway">&lt;/span>
+&lt;a href="#the-upgrade-stopped-halfway" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>For example after a power loss or a crash. From a text console (press &lt;span class="text-nowrap">&lt;span class="badge badge-warning">ctrl&lt;/span> &lt;span class="badge badge-warning">alt&lt;/span> &lt;span class="badge badge-warning">f3&lt;/span>&lt;/span>), or from the recovery mode root shell after &lt;code>mount -o remount,rw /&lt;/code>:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo dpkg --configure -a
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt -f install
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt full-upgrade
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo &lt;span class="k">do&lt;/span>-release-upgrade &lt;span class="c1"># if it still offers 26.04, it finishes the job&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>Check that &lt;code>/etc/apt/sources.list.d/ubuntu.sources&lt;/code> says &lt;code>resolute&lt;/code>. Look in &lt;code>/var/log/dist-upgrade/main.log&lt;/code> and &lt;code>apt.log&lt;/code> for the package that failed.&lt;/p>
+&lt;h3>You rebooted before step 5&lt;span class="hx-absolute -hx-mt-20" id="you-rebooted-before-step-5">&lt;/span>
+&lt;a href="#you-rebooted-before-step-5" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>If step 3 was done, the login screen appears and both sessions start with your old Regolith packages, without the Settings app; Ubuntu&amp;rsquo;s setup wizard may open. Log in, open a terminal or a text console, and do steps 5 to 8. If you skipped step 3, see &lt;a href="#black-screen-instead-of-the-login-screen" >black screen&lt;/a>.&lt;/p>
+&lt;h3>Regolith doesn&amp;rsquo;t start, or you are sent back to the login screen&lt;span class="hx-absolute -hx-mt-20" id="regolith-doesnt-start-or-you-are-sent-back-to-the-login-screen">&lt;/span>
+&lt;a href="#regolith-doesnt-start-or-you-are-sent-back-to-the-login-screen" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>Log in to &lt;strong>Ubuntu&lt;/strong> from the gear menu, or use a text console, then:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">cat /etc/apt/sources.list.d/regolith.sources &lt;span class="c1"># stable, resolute, v3.5&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt update &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> sudo apt full-upgrade
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt install --reinstall regolith-session-common regolith-session-flashback regolith-session-sway regolith-wm-config sway-regolith
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">journalctl --user -b -p warning &lt;span class="p">|&lt;/span> tail -50 &lt;span class="c1"># as your user, after a failed login&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>Leave out &lt;code>regolith-session-sway&lt;/code> and &lt;code>sway-regolith&lt;/code> if you don&amp;rsquo;t use the Wayland session.&lt;/p>
+&lt;ul>
+&lt;li>To rule out your own configuration, run &lt;code>mv ~/.config/regolith3 ~/.config/regolith3.off&lt;/code>, log in again, and restore pieces from the backup.&lt;/li>
+&lt;li>If the login screen itself fails, run &lt;code>sudo systemctl restart gdm3&lt;/code>, and check that no &lt;code>sway-audio-idle-inhibit.service&lt;/code> link is left in &lt;code>/etc/systemd/user/default.target.wants/&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;h3>Black screen with an NVIDIA GPU&lt;span class="hx-absolute -hx-mt-20" id="black-screen-with-an-nvidia-gpu">&lt;/span>
+&lt;a href="#black-screen-with-an-nvidia-gpu" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>From a text console, run &lt;code>sudo ubuntu-drivers install&lt;/code> (or reinstall your &lt;code>nvidia-driver-NNN&lt;/code> package), then &lt;code>sudo update-initramfs -u&lt;/code>, and reboot. You can also start the kernel of your old release (6.17 on 25.10, 6.14 on 25.04) from GRUB&amp;rsquo;s &amp;ldquo;Advanced options&amp;rdquo; menu, as long as step 8 hasn&amp;rsquo;t removed it: hold Shift or press Esc while the machine boots.&lt;/p>
+&lt;h2>Move from testing to stable&lt;span class="hx-absolute -hx-mt-20" id="move-from-testing-to-stable">&lt;/span>
+&lt;a href="#move-from-testing-to-stable" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Earlier versions of this page used the &lt;code>testing&lt;/code> suite, because Regolith had no stable release for Ubuntu 26.04. Regolith 3.5 is now released in &lt;code>stable resolute v3.5&lt;/code>, built from the same release tags. Moving there is a change of source: on 2026-11-20, every package in &lt;code>stable resolute v3.5&lt;/code> had the same version as the newest one in &lt;code>testing resolute&lt;/code>, so nothing is downgraded.&lt;/p>
+&lt;p>Check which source file you have:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">ls /etc/apt/sources.list.d/ &lt;span class="p">|&lt;/span> grep -i regolith&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>Point it at &lt;code>stable&lt;/code> and the &lt;code>v3.5&lt;/code> component:&lt;/p>
+&lt;div class="hextra-scrollbar hx-overflow-x-auto hx-overflow-y-hidden hx-overscroll-x-contain">
+&lt;div class="hx-mt-4 hx-flex hx-w-max hx-min-w-full hx-border-b hx-border-gray-200 hx-pb-px dark:hx-border-neutral-800">&lt;button
+class="hextra-tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 data-[state=selected]:dark:hx-border-primary-500 data-[state=selected]:dark:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white"
+role="tab"
+type="button"
+aria-controls="tabs-panel-0" aria-selected="true" tabindex="0" data-state="selected">regolith.sources&lt;/button>&lt;button
+class="hextra-tabs-toggle data-[state=selected]:hx-border-primary-500 data-[state=selected]:hx-text-primary-600 data-[state=selected]:dark:hx-border-primary-500 data-[state=selected]:dark:hx-text-primary-600 hx-mr-2 hx-rounded-t hx-p-2 hx-font-medium hx-leading-5 hx-transition-colors -hx-mb-0.5 hx-select-none hx-border-b-2 hx-border-transparent hx-text-gray-600 hover:hx-border-gray-200 hover:hx-text-black dark:hx-text-gray-200 dark:hover:hx-border-neutral-800 dark:hover:hx-text-white"
+role="tab"
+type="button"
+aria-controls="tabs-panel-1">regolith.list&lt;/button>&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;div
+class="hextra-tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block"
+id="tabs-panel-0"
+role="tabpanel" tabindex="0" data-state="selected" >&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo sed -i -e &lt;span class="s1">&amp;#39;s#/ubuntu/testing#/ubuntu/stable#&amp;#39;&lt;/span> -e &lt;span class="s1">&amp;#39;s#^Components: .*#Components: v3.5#&amp;#39;&lt;/span> /etc/apt/sources.list.d/regolith.sources
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cat /etc/apt/sources.list.d/regolith.sources&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>It should show &lt;code>URIs: https://archive.regolith-desktop.com/ubuntu/stable&lt;/code>, &lt;code>Suites: resolute&lt;/code> and &lt;code>Components: v3.5&lt;/code>.&lt;/p>&lt;/div>
+&lt;div
+class="hextra-tabs-panel hx-rounded hx-pt-6 hx-hidden data-[state=selected]:hx-block"
+id="tabs-panel-1"
+role="tabpanel">&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo sed -i &lt;span class="s1">&amp;#39;s#/ubuntu/testing resolute main#/ubuntu/stable resolute v3.5#&amp;#39;&lt;/span> /etc/apt/sources.list.d/regolith.list
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cat /etc/apt/sources.list.d/regolith.list&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>It should show a line ending in &lt;code>https://archive.regolith-desktop.com/ubuntu/stable resolute v3.5&lt;/code>.&lt;/p>&lt;/div>
+&lt;/div>
+&lt;p>Then update, upgrade and check the result:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt update
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt full-upgrade
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">apt policy regolith-desktop &lt;span class="p">|&lt;/span> head -6
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cat /etc/regolith/version
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">apt list &lt;span class="s1">&amp;#39;?obsolete&amp;#39;&lt;/span> 2&amp;gt;/dev/null &lt;span class="p">|&lt;/span> grep -v &lt;span class="s1">&amp;#39;^Listing&amp;#39;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;ul>
+&lt;li>&lt;code>apt policy&lt;/code> should show the installed version coming from &lt;code>https://archive.regolith-desktop.com/ubuntu/stable resolute/v3.5&lt;/code>, and &lt;code>/etc/regolith/version&lt;/code> should say &lt;code>REGOLITH_VERSION=3.5&lt;/code>.&lt;/li>
+&lt;li>The last command lists installed packages that no repository offers any more, marked &lt;code>[installed,local]&lt;/code>. &lt;code>testing&lt;/code> carries some packages that Regolith 3.5 no longer ships, such as &lt;code>remontoire&lt;/code>, &lt;code>fonts-materialdesignicons-webfont&lt;/code> and most &lt;code>fonts-nerd-font-*&lt;/code> packages. They stay installed but get no more updates. Remove the ones you don&amp;rsquo;t use with &lt;code>sudo apt remove &amp;lt;names&amp;gt;&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>picom&lt;/code>, &lt;code>gtklock&lt;/code>, &lt;code>python3-i3ipc&lt;/code> and &lt;code>fonts-jetbrains-mono&lt;/code> come from Ubuntu in Regolith 3.5. If you had Regolith&amp;rsquo;s copies from &lt;code>testing&lt;/code>, apt replaces each one with Ubuntu&amp;rsquo;s version once Ubuntu&amp;rsquo;s is newer; until then the Regolith copy stays installed.&lt;/p>
+&lt;p>If you stayed on &lt;code>testing&lt;/code> after Regolith published newer packages there than in &lt;code>stable&lt;/code>, &lt;code>full-upgrade&lt;/code> leaves those packages alone. To move them to the stable versions too, give the Regolith repository priority for one upgrade, then remove the pin and upgrade again:&lt;/p>
+&lt;div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+&lt;div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">printf&lt;/span> &lt;span class="s1">&amp;#39;Package: *\nPin: origin archive.regolith-desktop.com\nPin-Priority: 1001\n&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> sudo tee /etc/apt/preferences.d/regolith-switch.pref
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt update &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> sudo apt full-upgrade --allow-downgrades
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo rm /etc/apt/preferences.d/regolith-switch.pref
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt update &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> sudo apt full-upgrade&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>&lt;div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+&lt;button
+class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+title="Copy code"
+>
+&lt;div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4">&lt;/div>
+&lt;/button>
+&lt;/div>
+&lt;/div>
+&lt;p>The last &lt;code>full-upgrade&lt;/code> is needed: while the pin is active, apt also downgrades Ubuntu packages that Regolith also ships (such as &lt;code>trawld&lt;/code> and &lt;code>gtklock&lt;/code>), and this puts Ubuntu&amp;rsquo;s newer versions back.&lt;/p>
+&lt;h3>Coming from &lt;code>unstable&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="coming-from-unstable">&lt;/span>
+&lt;a href="#coming-from-unstable" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>&lt;code>unstable&lt;/code> is rebuilt from the development branches after every change, with snapshot version numbers (&lt;code>…regolith+git&amp;lt;date&amp;gt;…&lt;/code>) that sort above the released versions. Leaving it means downgrading: change the source as above, then use the pin procedure.&lt;/p></description></item><item><title>Verify behavior against upstream</title><link>https://regolith-desktop.com/docs/howtos/gnome-flashback-session/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://regolith-desktop.com/docs/howtos/gnome-flashback-session/</guid><description>
 &lt;p>Regolith is composed of several existing open-source projects plus some additional custom packages. Sometimes when a bug is found in Regolith, actually it&amp;rsquo;s a bug in an upstream project. Determining the source of bugs is a first step in getting them fixed.&lt;/p>
 &lt;h2>Check &lt;code>gnome-flashback&lt;/code>&lt;span class="hx-absolute -hx-mt-20" id="check-gnome-flashback">&lt;/span>
 &lt;a href="#check-gnome-flashback" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>Most of the GNOME support in Regolith&amp;rsquo;s X11 session (&lt;code>regolith-session-flashback&lt;/code>) comes from the &lt;code>gnome-flashback&lt;/code> project. To run a &lt;code>gnome-flashback&lt;/code> session, install the session and log back in to your account after selecting that session from the login screen.&lt;/p>
