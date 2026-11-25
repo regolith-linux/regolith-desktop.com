@@ -12,7 +12,7 @@ This page takes an Ubuntu 25.10 (Questing) or Ubuntu 25.04 (Plucky) system with 
 The Ubuntu upgrader disables the Regolith package repository and removes a few Regolith packages, so some extra steps are needed before and after it runs. Do them in the order below.
 
 {{< callout type="warning" >}}
-Regolith 3.4 has no packages for Ubuntu 26.04. The first Regolith release for it is **Regolith 3.5 beta 1**, published in the `v3.5` component of the `stable` suite (`stable resolute v3.5`), and this page installs it. The [3.5 release notes](/docs/reference/releases/regolith-3.5-release-notes/) describe the beta, how to upgrade to it from Regolith 3.4 without changing your Ubuntu release, and how to install it on a new system. If you followed an earlier version of this page and use the `testing` suite, see [Move from testing to stable](#move-from-testing-to-stable).
+Regolith 3.4 has no packages for Ubuntu 26.04. The first Regolith release for it is **Regolith 3.5**, published in the `v3.5` component of the `stable` suite (`stable resolute v3.5`), and this page installs it. The [3.5 release notes](/docs/reference/releases/regolith-3.5-release-notes/) describe Regolith 3.5 and how to upgrade to it from Regolith 3.4 without changing your Ubuntu release, and the [install page](/docs/using-regolith/install/) covers new systems. If you followed an earlier version of this page and use the `testing` suite, see [Move from testing to stable](#move-from-testing-to-stable).
 {{< /callout >}}
 
 ## Which release are you on?
@@ -171,7 +171,7 @@ If the upgrader asks "Required apt sources are missing … Would you like to con
 
 ### 5. Point Regolith at Ubuntu 26.04 (same console, before rebooting)
 
-The upgrader replaced `regolith.list` with a disabled copy (`regolith.list.disabled`). Replace it with a source for `stable resolute v3.5` (Regolith 3.5 beta 1), then upgrade the Regolith packages and install the ones the upgrader removed:
+The upgrader replaced `regolith.list` with a disabled copy (`regolith.list.disabled`). Replace it with a source for `stable resolute v3.5` (Regolith 3.5), then upgrade the Regolith packages and install the ones the upgrader removed:
 
 ```bash
 sudo rm -f /etc/apt/sources.list.d/regolith.list /etc/apt/sources.list.d/regolith.list.disabled /etc/apt/sources.list.d/regolith.list.distUpgrade
@@ -390,7 +390,7 @@ From a text console, run `sudo ubuntu-drivers install` (or reinstall your `nvidi
 
 ## Move from testing to stable
 
-Earlier versions of this page used the `testing` suite, because Regolith had no stable release for Ubuntu 26.04. Regolith 3.5 beta 1 is now in `stable resolute v3.5`, built from the same release tags. Moving there is a change of source: on 2026-11-20, every package in `stable resolute v3.5` had the same version as the newest one in `testing resolute`, so nothing is downgraded.
+Earlier versions of this page used the `testing` suite, because Regolith had no stable release for Ubuntu 26.04. Regolith 3.5 is now released in `stable resolute v3.5`, built from the same release tags. Moving there is a change of source: on 2026-11-20, every package in `stable resolute v3.5` had the same version as the newest one in `testing resolute`, so nothing is downgraded.
 
 Check which source file you have:
 
